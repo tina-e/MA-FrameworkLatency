@@ -17,7 +17,7 @@ class FYALMDController:
         self.complexity = complexity
         self.run_fw_test = False if run_fw_test == 'False' else True
         self.program_name = program_name
-        self.out_path = f"{out_folder}/{uuid.uuid4()}.csv"
+        self.out_path = f"data/{out_folder}/{uuid.uuid4()}.csv"
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = 0
@@ -36,9 +36,7 @@ class FYALMDController:
 
 
     def init_fw_latency_tester(self):
-        # "D:\Studium\Masterarbeit\mine\latency_tester\cmake-build-debug\latency_tester.exe"
-        # D:\Studium\Masterarbeit\mine\FrameworkLatencyTester\test_programs_mine\bitblt
-        cmd = [f'D:\Studium\Masterarbeit\mine\FrameworkLatencyTester\latency_tester\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
+        cmd = [f'.\framework_tester\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True, shell=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
@@ -69,25 +67,28 @@ class FYALMDController:
         df = pd.DataFrame(self.measurements)
         df.to_csv(self.out_path)
 
+
+    def get_latency(self, iteration):
+        ser_bytes = self.yalmd.readline()
+        decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
+        if self.measuring:
+            ete = int(decoded_bytes)
+            diff = (ete - self.last_fw_latency)
+            self.measurements.append({'id': iteration, 
+                                        'framework': self.fw_name, 
+                                        'complexity': self.complexity, 
+                                        'framework_complexity': f'{self.fw_name}_{self.complexity}',
+                                        'program': f'{self.program_name}',
+                                        'fw_running': self.run_fw_test,
+                                        'program_fwrunning': f'{self.program_name}_{self.run_fw_test}', 
+                                        'ete': ete, 
+                                        'fw': self.last_fw_latency, 
+                                        'diff': diff
+                                    })
  
     def measure(self):
         self.start()
         counter = 0
-        # while counter < self.num_measurements:
-        #     self.yalmd.write('m'.encode())
-        #     try:
-        #         yalmd_answer_bytes = self.yalmd.readline()
-        #         decoded_answer_bytes = yalmd_answer_bytes[0:len(yalmd_answer_bytes)-2].decode("utf-8")
-
-        #         ete = int(decoded_answer_bytes)
-        #         diff = (ete - self.last_fw_latency)
-
-        #         self.measurements.append({'id': counter, 'framework': self.fw_name, 'complexity': self.complexity, 'program': f'{self.program_name}_fw{self.run_fw_test}', 'ete': ete, 'fw': self.last_fw_latency, 'diff': diff})
-        #         counter += 1
-        #     except Exception as e:
-        #         print(e)
-        #         break
-
         while True:
             if counter < self.num_measurements:
                 self.yalmd.write('m'.encode())
@@ -96,17 +97,13 @@ class FYALMDController:
                 break
 
             try:
-                ser_bytes = self.yalmd.readline()
-                decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
-                if self.measuring:
-                    ete = int(decoded_bytes)
-                    diff = (ete - self.last_fw_latency)
-                    self.measurements.append({'id': counter, 'framework': self.fw_name, 'complexity': self.complexity, 'program': f'{self.program_name}_fw_{self.run_fw_test}', 'ete': ete, 'fw': self.last_fw_latency, 'diff': diff})
+                self.get_latency(counter)
                 counter += 1
             except Exception as e:
                 print(e)
                 break
         self.stop()
+
 
 
 
@@ -140,7 +137,6 @@ elif len(sys.argv) == 8:
         fyalmd_controller.measure()
         fyalmd_controller.save_data()
         sys.exit(0)
-
 
 print('arguments required: action, num_measurements, fw_name, complexity, run_fw_test, program_name, out_folder')
 sys.exit(-1)
