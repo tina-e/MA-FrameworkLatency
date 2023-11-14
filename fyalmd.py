@@ -8,6 +8,9 @@ import threading
 import numpy as np
 import pandas as pd
 import uuid
+import d3dshot
+import win32api
+
 
 
 class FYALMDController:
@@ -22,9 +25,13 @@ class FYALMDController:
         self.latency_tester_process = None
         self.last_fw_latency = 0
         self.yalmd = serial.Serial('COM6')
-        self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
         self.measurements = []
+        if (program_name == 'windup_python'):
+            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
+        else:
+            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
 
+        
 
     def calibrate_yalmd(self):
         self.yalmd.flushInput()
@@ -35,8 +42,32 @@ class FYALMDController:
         print(decoded_answer_bytes)
 
 
+    # def init_fw_latency_tester_py(self):
+    #     device = d3dshot.create(capture_output="numpy")
+    #     state = win32api.GetKeyState(0x01)
+    #     while True:
+    #         current_state = win32api.GetKeyState(0x01)
+    #         if current_state != state and current_state >= 0:  # click detected
+    #             start = time.time()
+    #             while device.screenshot(region=(0, 0, 1, 1))[0][0][0] != 255:
+    #                 continue
+    #             self.last_fw_latency = int((time.time() - start) * 1000000)
+    #         if self.measuring == False:
+    #             break
+
+
+    def init_fw_latency_tester_py_extern(self):
+        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}']
+        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True, shell=True)
+        for line in self.latency_tester_process.stdout:
+            self.last_fw_latency = int(line)
+            if self.measuring == False:
+                break
+        self.latency_tester_process.kill()
+        
+
     def init_fw_latency_tester(self):
-        cmd = [f'.\framework_tester\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
+        cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True, shell=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
@@ -59,7 +90,10 @@ class FYALMDController:
         self.yalmd.close()
 
         if self.run_fw_test:
-            self.latency_tester_process.kill()
+            try:
+                self.latency_tester_process.kill()
+            except:
+                pass
             #read_latency_tester_thread.join()
 
 
