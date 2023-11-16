@@ -5,7 +5,6 @@
 #include <conio.h>
 #include <chrono>
 #include <zconf.h>
-#include <vector>
 
 using namespace std;
 using namespace std::chrono;
@@ -27,13 +26,15 @@ void waitForWhite(HDC hdcScreen)
 
 int main(int argc, char **argv)
 {
-    int iteration = 0;
     HDC hdcScreen = GetDC(NULL);
+    SHORT state = GetKeyState(VK_LBUTTON);
 
     while (true)
     {
-        if (GetAsyncKeyState(VK_LBUTTON) & 0x8000 != 0)
+        SHORT currentState = GetKeyState(VK_LBUTTON);
+        if (currentState != state && currentState < 0)
         {
+            state = currentState;
             uint64_t start_time = duration_cast<microseconds>(
                     system_clock::now().time_since_epoch())
                     .count();
@@ -43,7 +44,6 @@ int main(int argc, char **argv)
                     .count();
 
             cout << end_time - start_time << endl;
-            iteration++;
         }
     }
     return 0;
