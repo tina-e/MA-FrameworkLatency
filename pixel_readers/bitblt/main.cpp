@@ -42,6 +42,14 @@ void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer)
 
 int main(int argc, char **argv)
 {
+    HWND frameworkWindow = FindWindow(NULL, "framework");
+    if (frameworkWindow != NULL) {
+        BringWindowToTop(frameworkWindow);
+        SetForegroundWindow(frameworkWindow);
+        ShowWindow(frameworkWindow, SW_RESTORE);
+        SetFocus(frameworkWindow);
+    }
+
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
 

@@ -9,12 +9,25 @@ PIXEL_READER=$6
 DATA_DIR=$7
 
 
-FW_PATH="framework_test_programs/$TEST_PROGRAM/bin/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+FW_PATH="framework_test_programs/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
-#mkdir "./data/$DATA_DIR"
+case "$TEST_PROGRAM" in 
 
-python ./$FW_PATH &
-PID_TEST_PROGRAM=$! 
+    *"java"*)
+        java ./$FW_PATH &
+        PID_TEST_PROGRAM=$!
+        ;;
+
+    *"py"*)
+        python ./$FW_PATH.py &
+        PID_TEST_PROGRAM=$! 
+        ;;
+
+    *"tk"*)
+        python ./$FW_PATH.py &
+        PID_TEST_PROGRAM=$! 
+        ;;
+esac
 
 sleep "1s"
 

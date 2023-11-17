@@ -73,7 +73,7 @@ void MainWindow::drawRects(QPainter *painter)
         int w = randint(100, 500);
         int h = randint(100, 500);
         int x = randint(0, 1920 - w);
-        int y = randint(0, 1080 - h);
+        int y = randint(0, 1200 - h);
         int r = randint(0, 255);
         int g = randint(0, 255);
         int b = randint(0, 255);
@@ -104,7 +104,7 @@ void MainWindow::paint()
     else
     {
         painter.setBrush(brush);    
-        painter.drawRect(0, 0, 1920, 1080);
+        painter.drawRect(0, 0, 1920, 1200);
     }
 }
 
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    window.setGeometry(0, 0, 1920, 1080);
+    window.setGeometry(0, 0, 1920, 1200);
     window.setWindowTitle("Qt5 Test Application");
     window.showFullScreen();
     window.show();

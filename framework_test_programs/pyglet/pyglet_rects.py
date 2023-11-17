@@ -18,6 +18,7 @@ rect_h = WINDOW_HEIGHT / n_vertical
 
 # Create a Pyglet window
 win = Window(fullscreen=True)
+win.set_caption('framework')
 
 batch = pyglet.graphics.Batch()
 bg = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))

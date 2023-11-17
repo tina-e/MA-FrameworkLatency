@@ -2,12 +2,12 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class JavaSwing extends JFrame {
+public class javaswing_default extends JFrame {
     private Color color;
 
-    public JavaSwing() {
-        setSize(1920, 1080);
-        setTitle("Swing Test Application");
+    public javaswing_default() {
+        setSize(1920, 1200);
+        setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
         color = new Color(0, 0, 0);
@@ -41,7 +41,7 @@ public class JavaSwing extends JFrame {
     }
 
     public static void main(String[] args) {
-        JavaSwing window = new JavaSwing();
+        javaswing_default window = new javaswing_default();
         window.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 window.mousePressed(e);

@@ -18,7 +18,7 @@ BITMAPINFO createBitmapInfo()
     bitmap.bmiHeader.biWidth = 1;
     bitmap.bmiHeader.biHeight = -1;
     bitmap.bmiHeader.biPlanes = 1;
-    bitmap.bmiHeader.biBitCount = 24;
+    bitmap.bmiHeader.biBitCount = 32;
     bitmap.bmiHeader.biCompression = BI_RGB;
     bitmap.bmiHeader.biSizeImage = 0;
     bitmap.bmiHeader.biClrUsed = 0;
@@ -30,7 +30,6 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
 {
     StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 0, 0, 1, 1, SRCCOPY);
     GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
-    cout << (int)bitPointer[2] << endl;
     return (int)bitPointer[2];
 }
 
@@ -44,6 +43,14 @@ void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPo
 
 int main(int argc, char **argv)
 {
+    HWND frameworkWindow = FindWindow(NULL, "framework");
+    if (frameworkWindow != NULL) {
+        BringWindowToTop(frameworkWindow);
+        SetForegroundWindow(frameworkWindow);
+        ShowWindow(frameworkWindow, SW_RESTORE);
+        SetFocus(frameworkWindow);
+    }
+
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
 

@@ -12,7 +12,7 @@ using namespace std::chrono;
 
 int getPixelData(HDC hdc)
 {
-    COLORREF _color = GetPixel(hdc, 0, 0);
+    COLORREF _color = GetPixel(hdc, 100, 100);
     return int(GetRValue(_color));
 }
 
@@ -26,6 +26,14 @@ void waitForWhite(HDC hdcScreen)
 
 int main(int argc, char **argv)
 {
+    HWND frameworkWindow = FindWindow(NULL, "framework");
+    if (frameworkWindow != NULL) {
+        BringWindowToTop(frameworkWindow);
+        SetForegroundWindow(frameworkWindow);
+        ShowWindow(frameworkWindow, SW_RESTORE);
+        SetFocus(frameworkWindow);
+    }
+
     HDC hdcScreen = GetDC(NULL);
     SHORT state = GetKeyState(VK_LBUTTON);
 

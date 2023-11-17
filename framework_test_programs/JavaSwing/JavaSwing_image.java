@@ -8,8 +8,8 @@ public class JavaSwing_image extends JFrame {
     private boolean pressed = false;
 
     public JavaSwing_image() {
-        setSize(1920, 1080);
-        setTitle("Swing Test Application");
+        setSize(1920, 1200);
+        setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
         color = new Color(0, 0, 0);
