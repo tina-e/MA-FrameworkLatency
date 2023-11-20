@@ -7,7 +7,7 @@ from pyglet.window import Window
 
 # Define the width and height of the window
 WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1080
+WINDOW_HEIGHT = 1200
 
 # Create a Pyglet window
 win = Window(fullscreen=True)

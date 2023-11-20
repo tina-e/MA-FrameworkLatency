@@ -9,8 +9,13 @@ from pyglet.window import Window
 WINDOW_WIDTH = 1920
 WINDOW_HEIGHT = 1200
 
+# WINDOW_WIDTH = 500
+# WINDOW_HEIGHT = 500
+
 # Create a Pyglet window
+#win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, style = 'borderless')
 win = Window(fullscreen=True)
+win.set_caption('framework')
 
 rect = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))
 

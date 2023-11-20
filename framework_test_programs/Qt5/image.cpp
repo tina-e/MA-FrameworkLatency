@@ -70,11 +70,11 @@ void MainWindow::paint()
 
     if (pressed)
     {
-        painter.drawImage(QRect(0, 0, 1920, 1080), img);
+        painter.drawImage(QRect(0, 0, 1920, 1200), img);
     }
     else
     {
-        painter.drawRect(0, 0, 1920, 1080);
+        painter.drawRect(0, 0, 1920, 1200);
     }
     //QGuiApplication::sync();
 }
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    window.setGeometry(0, 0, 1920, 1080);
+    window.setGeometry(0, 0, 1920, 1200);
     window.setWindowTitle("Qt5 Test Application");
     window.showFullScreen();
     window.show();

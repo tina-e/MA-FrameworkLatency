@@ -65,7 +65,7 @@ void MainWindow::paint()
 {
     QPainter painter(this);
     painter.setBrush(brush);    
-    painter.drawRect(0, 0, 1920, 1080);
+    painter.drawRect(0, 0, 1920, 1200);
 }
 
 int main(int argc, char *argv[])
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    window.setGeometry(0, 0, 1920, 1080);
+    window.setGeometry(0, 0, 1920, 1200);
     window.setWindowTitle("Qt5 Test Application");
     window.showFullScreen();
     window.show();

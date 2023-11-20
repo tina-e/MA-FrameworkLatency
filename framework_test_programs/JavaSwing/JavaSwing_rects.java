@@ -3,12 +3,12 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
 
-public class JavaSwing_rects extends JFrame {
+public class javaswing_rects extends JFrame {
     private Color color;
 
-    public JavaSwing_rects() {
-        setSize(1920, 1080);
-        setTitle("Swing Test Application");
+    public javaswing_rects() {
+        setSize(1920, 1200);
+        setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
         color = new Color(0, 0, 0);
@@ -28,9 +28,9 @@ public class JavaSwing_rects extends JFrame {
         Random r = new Random();
         for (int i = 0; i < 1000; i++) {
             int x = r.nextInt(1920);
-            int y = r.nextInt(1080);
+            int y = r.nextInt(1200);
             int width = r.nextInt(1920 - x);
-            int height = r.nextInt(1080 - y);
+            int height = r.nextInt(1200 - y);
             int red = r.nextInt(254);
             int green = r.nextInt(255);
             int blue = r.nextInt(255);
@@ -56,7 +56,7 @@ public class JavaSwing_rects extends JFrame {
     }
 
     public static void main(String[] args) {
-        JavaSwing_rects window = new JavaSwing_rects();
+        javaswing_rects window = new javaswing_rects();
         window.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 window.mousePressed(e);
