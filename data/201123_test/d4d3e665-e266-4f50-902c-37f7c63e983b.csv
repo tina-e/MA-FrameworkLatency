@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyglet,default,pyglet_default,getdbits,True,getdbits_True,51212,0,51212
+1,1,pyglet,default,pyglet_default,getdbits,True,getdbits_True,32476,0,32476
+2,2,pyglet,default,pyglet_default,getdbits,True,getdbits_True,31384,0,31384
+3,3,pyglet,default,pyglet_default,getdbits,True,getdbits_True,40792,0,40792
+4,4,pyglet,default,pyglet_default,getdbits,True,getdbits_True,27792,0,27792

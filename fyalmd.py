@@ -24,8 +24,9 @@ class FYALMDController:
         self.out_path = f"data/{out_folder}/{uuid.uuid4()}.csv"
         self.measuring = False
         self.latency_tester_process = None
-        self.last_fw_latency = 0
+        self.last_fw_latency = -1
         self.yalmd = None
+        self.new_value = False
         self.measurements = []
         if (program_name == 'windup_python'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
@@ -75,6 +76,7 @@ class FYALMDController:
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
+            self.new_value = True
             if self.measuring == False:
                 break
         self.latency_tester_process.kill()
@@ -111,8 +113,11 @@ class FYALMDController:
 
     def get_latency(self, iteration):
         ser_bytes = self.yalmd.readline()
+        time.sleep(5000)
         decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
         if self.measuring:
+            while not self.new_value:
+                time.sleep(1)
             ete = int(decoded_bytes)
             diff = (ete - self.last_fw_latency)
             self.measurements.append({'id': iteration, 

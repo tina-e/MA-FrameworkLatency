@@ -3,10 +3,10 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
 
-public class javaswing_rects extends JFrame {
+public class JavaSwing_rects extends JFrame {
     private Color color;
 
-    public javaswing_rects() {
+    public JavaSwing_rects() {
         setSize(1920, 1200);
         setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -56,7 +56,7 @@ public class javaswing_rects extends JFrame {
     }
 
     public static void main(String[] args) {
-        javaswing_rects window = new javaswing_rects();
+        JavaSwing_rects window = new JavaSwing_rects();
         window.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 window.mousePressed(e);

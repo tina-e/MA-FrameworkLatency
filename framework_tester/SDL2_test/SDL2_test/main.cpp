@@ -36,6 +36,8 @@ int main(int argc, char** argv)
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
 
+    SDL_SetWindowTitle(window, "framework");
+
     SDL_Event event;
 
     while (1)

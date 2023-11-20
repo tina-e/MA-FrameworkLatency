@@ -5,11 +5,17 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import * 
 from PyQt5.QtCore import * 
 import sys
+
+WIDTH = 1920
+HEIGHT = 1200
   
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.setGeometry(0, 0, 1920, 1200)
+        graphicsView = QGraphicsView()
+        graphicsView.setStyleSheet("border: 0px")
+        
+        self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
         #self.setWindowFlags(Qt.X11BypassWindowManagerHint)
         self.showFullScreen()
@@ -21,7 +27,7 @@ class MainWindow(QWidget):
         painter.begin(self)
         brush = QBrush(self.color)
         painter.setBrush(brush)
-        painter.drawRect(0, 0, 1920, 1200)
+        painter.drawRect(0, 0, WIDTH, HEIGHT)
         painter.end()
 
     def mousePressEvent(self, event):

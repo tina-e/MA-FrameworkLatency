@@ -23,8 +23,11 @@ class MainWindow(QWidget):
 
     def __init__(self):
         super().__init__()
+        graphicsView = QGraphicsView()
+        graphicsView.setStyleSheet("border: 0px")
+        
         self.color = QColor(0, 0, 0)
-        self.setGeometry(0, 0, 1920, 1200)
+        self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
         self.showFullScreen()
         self.show()
@@ -34,7 +37,7 @@ class MainWindow(QWidget):
         painter.begin(self)
         brush = QBrush(self.color)
         painter.setBrush(brush)
-        painter.drawRect(0, 0, 1920, 1200)
+        painter.drawRect(0, 0, WIDTH, HEIGHT)
 
         if self.active:
             self.drawRects(painter)

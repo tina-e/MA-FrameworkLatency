@@ -2,10 +2,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class javaswing_default extends JFrame {
+public class JavaSwing_default extends JFrame {
     private Color color;
 
-    public javaswing_default() {
+    public JavaSwing_default() {
         setSize(1920, 1200);
         setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -41,7 +41,7 @@ public class javaswing_default extends JFrame {
     }
 
     public static void main(String[] args) {
-        javaswing_default window = new javaswing_default();
+        JavaSwing_default window = new JavaSwing_default();
         window.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 window.mousePressed(e);

@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2,default,SDL2_default,getpixel,False,getpixel_False,36540,0,36540
+1,1,SDL2,default,SDL2_default,getpixel,False,getpixel_False,18384,0,18384
+2,2,SDL2,default,SDL2_default,getpixel,False,getpixel_False,16128,0,16128
+3,3,SDL2,default,SDL2_default,getpixel,False,getpixel_False,14228,0,14228
+4,4,SDL2,default,SDL2_default,getpixel,False,getpixel_False,15576,0,15576
