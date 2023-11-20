@@ -3,6 +3,7 @@ import io
 import time
 import sys
 import signal
+import os
 from subprocess import Popen, PIPE, CalledProcessError
 import threading
 import numpy as np
@@ -24,7 +25,7 @@ class FYALMDController:
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = 0
-        self.yalmd = serial.Serial('COM6')
+        self.yalmd = None
         self.measurements = []
         if (program_name == 'windup_python'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
@@ -34,12 +35,15 @@ class FYALMDController:
         
 
     def calibrate_yalmd(self):
+        self.yalmd = serial.Serial('COM8')
         self.yalmd.flushInput()
         time.sleep(5)
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
         decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         print(decoded_answer_bytes)
+        self.yalmd.close()
+        self.yalmd = None
 
 
     # def init_fw_latency_tester_py(self):
@@ -57,8 +61,8 @@ class FYALMDController:
 
 
     def init_fw_latency_tester_py_extern(self):
-        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}']
-        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True, shell=True)
+        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py']
+        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
             if self.measuring == False:
@@ -68,7 +72,7 @@ class FYALMDController:
 
     def init_fw_latency_tester(self):
         cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
-        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True, shell=True)
+        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
             if self.measuring == False:
@@ -77,6 +81,7 @@ class FYALMDController:
 
 
     def start(self):
+        self.yalmd = serial.Serial('COM8')
         self.measuring = True
         self.yalmd.flushInput()
         signal.signal(signal.SIGINT, signal_handler)
@@ -88,14 +93,16 @@ class FYALMDController:
     def stop(self):
         self.measuring = False
         self.yalmd.close()
+        self.yalmd = None
 
         if self.run_fw_test:
             try:
-                self.latency_tester_process.kill()
+                self.latency_tester_process.terminate()
+                time.sleep(1)
+                self.read_latency_tester_thread.join()
             except:
                 pass
-            #read_latency_tester_thread.join()
-
+            
 
     def save_data(self):
         df = pd.DataFrame(self.measurements)
@@ -161,13 +168,13 @@ elif len(sys.argv) == 8:
     if sys.argv[1] == 'calibrate_and_measure':
         fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
         fyalmd_controller.calibrate_yalmd()
-        time.sleep(3)
+        time.sleep(1)
         fyalmd_controller.measure()
         fyalmd_controller.save_data()
         sys.exit(0)
     elif sys.argv[1] == 'measure':
         fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
-        time.sleep(3)
+        time.sleep(1)
         fyalmd_controller.measure()
         fyalmd_controller.save_data()
         sys.exit(0)

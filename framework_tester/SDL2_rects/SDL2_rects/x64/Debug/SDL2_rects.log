@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester\SDL2_rects\SDL2_rects\main.cpp(54,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SDL2_rects.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester\SDL2_rects\x64\Debug\SDL2_rects.exe

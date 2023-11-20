@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <windef.h>
 #include <wingdi.h>
@@ -17,7 +18,7 @@ BITMAPINFO createBitmapInfo()
     bitmap.bmiHeader.biWidth = 1;
     bitmap.bmiHeader.biHeight = -1;
     bitmap.bmiHeader.biPlanes = 1;
-    bitmap.bmiHeader.biBitCount = 32;
+    bitmap.bmiHeader.biBitCount = 24;
     bitmap.bmiHeader.biCompression = BI_RGB;
     bitmap.bmiHeader.biSizeImage = 0;
     bitmap.bmiHeader.biClrUsed = 0;
@@ -29,6 +30,7 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
 {
     StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 0, 0, 1, 1, SRCCOPY);
     GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
+    cout << (int)bitPointer[2] << endl;
     return (int)bitPointer[2];
 }
 
@@ -42,8 +44,6 @@ void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPo
 
 int main(int argc, char **argv)
 {
-    int iteration = 0;
-
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
 
@@ -53,10 +53,14 @@ int main(int argc, char **argv)
     HBITMAP hBitmap = CreateCompatibleBitmap(hdcScreen, 1, 1);
     SelectObject(hdcCompatible, hBitmap);
 
+    SHORT state = GetKeyState(VK_LBUTTON);
+
     while (true)
     {
-        if (GetAsyncKeyState(VK_LBUTTON) & 0x8000 != 0)
+        SHORT currentState = GetKeyState(VK_LBUTTON);
+        if (currentState != state && currentState < 0)
         {
+            state = currentState;
             uint64_t start_time = duration_cast<microseconds>(
                     system_clock::now().time_since_epoch())
                     .count();
@@ -66,7 +70,6 @@ int main(int argc, char **argv)
                     .count();
 
             cout << end_time - start_time << endl;
-            iteration++;
         }
     }
     return 0;

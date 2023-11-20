@@ -42,21 +42,23 @@ void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer)
 
 int main(int argc, char **argv)
 {
-    int iteration = 0;
-
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
 
     HDC hdcScreen = GetDC(NULL);
     HDC hdcCompatible = CreateCompatibleDC(hdcScreen);
 
-    HBITMAP hBitmap = CreateDIBSection(hdcCompatible, &bitmapinfo, DIB_RGB_COLORS, (void **)(&bitPointer), NULL, NULL);
+    HBITMAP hBitmap = CreateDIBSection(hdcCompatible, &bitmapinfo, DIB_RGB_COLORS, (void **)(&bitPointer), NULL, 0);
     SelectObject(hdcCompatible, hBitmap);
+
+    SHORT state = GetKeyState(VK_LBUTTON);
 
     while (true)
     {
-        if (GetAsyncKeyState(VK_LBUTTON) & 0x8000 != 0)
+        SHORT currentState = GetKeyState(VK_LBUTTON);
+        if (currentState != state && currentState < 0)
         {
+            state = currentState;
             uint64_t start_time = duration_cast<microseconds>(
                                       system_clock::now().time_since_epoch())
                                       .count();
@@ -66,7 +68,6 @@ int main(int argc, char **argv)
                                     .count();
 
             cout << end_time - start_time << endl;
-            iteration++;
         }
     }
     return 0;
