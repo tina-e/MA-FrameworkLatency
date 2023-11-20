@@ -1,7 +1,14 @@
 import d3dshot
 import time
 import win32api
+import pygetwindow as gw
 
+try:
+    win = gw.getWindowsWithTitle("framework")[0]
+    win.activate()
+    win.maximize()
+except:
+    pass
 
 device = d3dshot.create(capture_output="numpy")
 state = win32api.GetKeyState(0x01)

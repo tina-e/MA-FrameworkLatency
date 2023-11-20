@@ -32,6 +32,8 @@ int main(int argc, char **argv)
         SetForegroundWindow(frameworkWindow);
         ShowWindow(frameworkWindow, SW_RESTORE);
         SetFocus(frameworkWindow);
+    } else {
+        cerr << "no window names framework" << endl;
     }
 
     HDC hdcScreen = GetDC(NULL);

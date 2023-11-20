@@ -30,7 +30,7 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
 {
     StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 0, 0, 1, 1, SRCCOPY);
     GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
-    cout << (int)bitPointer[2] << endl;
+    //cout << (int)bitPointer[2] << endl;
     return (int)bitPointer[2];
 }
 
@@ -50,6 +50,8 @@ int main(int argc, char **argv)
         SetForegroundWindow(frameworkWindow);
         ShowWindow(frameworkWindow, SW_RESTORE);
         SetFocus(frameworkWindow);
+    } else {
+        cerr << "no window named framework" << endl;
     }
 
     BITMAPINFO bitmapinfo = createBitmapInfo();
@@ -73,6 +75,7 @@ int main(int argc, char **argv)
                     system_clock::now().time_since_epoch())
                     .count();
             waitForWhite(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo);
+
             uint64_t end_time = duration_cast<microseconds>(
                     system_clock::now().time_since_epoch())
                     .count();
