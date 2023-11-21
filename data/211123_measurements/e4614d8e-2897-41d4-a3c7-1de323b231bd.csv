@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,45804,-1,45805
+1,1,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,58016,-1,58017
+2,2,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,46028,-1,46029
+3,3,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,57384,-1,57385
+4,4,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,62720,-1,62721
+5,5,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,53428,-1,53429
+6,6,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,55116,-1,55117
+7,7,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,51072,-1,51073
+8,8,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,59044,-1,59045
+9,9,pyqt5,default,pyqt5_default,bitblt,False,bitblt_False,63840,-1,63841

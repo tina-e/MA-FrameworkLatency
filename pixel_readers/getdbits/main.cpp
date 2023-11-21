@@ -18,7 +18,7 @@ BITMAPINFO createBitmapInfo()
     bitmap.bmiHeader.biWidth = 1;
     bitmap.bmiHeader.biHeight = -1;
     bitmap.bmiHeader.biPlanes = 1;
-    bitmap.bmiHeader.biBitCount = 24;
+    bitmap.bmiHeader.biBitCount = 32;
     bitmap.bmiHeader.biCompression = BI_RGB;
     bitmap.bmiHeader.biSizeImage = 0;
     bitmap.bmiHeader.biClrUsed = 0;

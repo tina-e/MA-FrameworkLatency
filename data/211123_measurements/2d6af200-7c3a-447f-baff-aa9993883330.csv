@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,55688,30052,25636
+1,1,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,22624,12068,10556
+2,2,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,27112,13142,13970
+3,3,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,32488,13335,19153
+4,4,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,20512,12041,8471
+5,5,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,37092,27164,9928
+6,6,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,22964,12130,10834
+7,7,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,26768,12180,14588
+8,8,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,29920,13068,16852
+9,9,SDL2,rects,SDL2_rects,getdbits,True,getdbits_True,32036,12951,19085

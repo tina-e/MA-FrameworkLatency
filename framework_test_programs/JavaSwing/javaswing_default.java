@@ -8,7 +8,8 @@ public class JavaSwing_default extends JFrame {
     public JavaSwing_default() {
         setSize(1920, 1200);
         setTitle("framework");
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
     }

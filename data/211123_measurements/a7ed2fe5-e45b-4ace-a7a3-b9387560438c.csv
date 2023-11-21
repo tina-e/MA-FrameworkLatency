@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,60372,20787,39585
+1,1,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,49284,10204,39080
+2,2,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,58604,19492,39112
+3,3,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,59596,20277,39319
+4,4,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,50176,11168,39008
+5,5,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,58948,19736,39212
+6,6,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,49852,9889,39963
+7,7,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,59364,20189,39175
+8,8,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,59144,20006,39138
+9,9,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,56016,16579,39437

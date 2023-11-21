@@ -4,9 +4,10 @@ import win32api
 import pygetwindow as gw
 
 try:
-    win = gw.getWindowsWithTitle("framework")[0]
-    win.activate()
-    win.maximize()
+    for window in gw.getWindowsWithTitle("framework"):
+        if window.title == "framework":
+            window.activate()
+            window.maximize()
 except:
     pass
 

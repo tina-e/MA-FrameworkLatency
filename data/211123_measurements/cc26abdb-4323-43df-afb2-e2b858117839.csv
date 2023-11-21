@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2,default,SDL2_default,getpixel,False,getpixel_False,39988,-1,39989
+1,1,SDL2,default,SDL2_default,getpixel,False,getpixel_False,16588,-1,16589
+2,2,SDL2,default,SDL2_default,getpixel,False,getpixel_False,17600,-1,17601
+3,3,SDL2,default,SDL2_default,getpixel,False,getpixel_False,20168,-1,20169
+4,4,SDL2,default,SDL2_default,getpixel,False,getpixel_False,24860,-1,24861
+5,5,SDL2,default,SDL2_default,getpixel,False,getpixel_False,12876,-1,12877
+6,6,SDL2,default,SDL2_default,getpixel,False,getpixel_False,14784,-1,14785
+7,7,SDL2,default,SDL2_default,getpixel,False,getpixel_False,11552,-1,11553
+8,8,SDL2,default,SDL2_default,getpixel,False,getpixel_False,20720,-1,20721
+9,9,SDL2,default,SDL2_default,getpixel,False,getpixel_False,27668,-1,27669

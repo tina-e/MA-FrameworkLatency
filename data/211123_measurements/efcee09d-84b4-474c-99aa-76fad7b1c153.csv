@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,111776,72385,39391
+1,1,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,115480,75745,39735
+2,2,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,106892,83298,23594
+3,3,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,119856,80958,38898
+4,4,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,109200,69456,39744
+5,5,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,116520,76800,39720
+6,6,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,114728,75550,39178
+7,7,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,116324,77387,38937
+8,8,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,116176,77308,38868
+9,9,tkinter,rects,tkinter_rects,getpixel,True,getpixel_True,108532,69227,39305

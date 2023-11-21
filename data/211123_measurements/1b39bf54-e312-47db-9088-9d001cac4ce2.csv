@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,wxpython,default,wxpython_default,bitblt,False,bitblt_False,49724,-1,49725
+1,1,wxpython,default,wxpython_default,bitblt,False,bitblt_False,48720,-1,48721
+2,2,wxpython,default,wxpython_default,bitblt,False,bitblt_False,53008,-1,53009
+3,3,wxpython,default,wxpython_default,bitblt,False,bitblt_False,54804,-1,54805
+4,4,wxpython,default,wxpython_default,bitblt,False,bitblt_False,52868,-1,52869
+5,5,wxpython,default,wxpython_default,bitblt,False,bitblt_False,59848,-1,59849
+6,6,wxpython,default,wxpython_default,bitblt,False,bitblt_False,51992,-1,51993
+7,7,wxpython,default,wxpython_default,bitblt,False,bitblt_False,45708,-1,45709
+8,8,wxpython,default,wxpython_default,bitblt,False,bitblt_False,57380,-1,57381
+9,9,wxpython,default,wxpython_default,bitblt,False,bitblt_False,49060,-1,49061

@@ -14,7 +14,7 @@ class MainWindow(QWidget):
         super().__init__()
         graphicsView = QGraphicsView()
         graphicsView.setStyleSheet("border: 0px")
-        
+
         self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
         #self.setWindowFlags(Qt.X11BypassWindowManagerHint)
@@ -26,7 +26,9 @@ class MainWindow(QWidget):
         painter = QPainter()
         painter.begin(self)
         brush = QBrush(self.color)
+        pen = QPen(self.color)
         painter.setBrush(brush)
+        painter.setPen(pen)
         painter.drawRect(0, 0, WIDTH, HEIGHT)
         painter.end()
 

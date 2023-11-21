@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,47976,0,47976
+1,1,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,52652,15592,37060
+2,2,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,47376,15593,31783
+3,3,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,54552,0,54552
+4,4,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,53904,15592,38312
+5,5,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,59516,15506,44010
+6,6,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,60180,15623,44557
+7,7,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,57124,15621,41503
+8,8,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,58020,0,58020
+9,9,pyqt5,default,pyqt5_default,windup_python,True,windup_python_True,50736,0,50736

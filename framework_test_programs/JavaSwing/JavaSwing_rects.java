@@ -5,11 +5,14 @@ import java.util.Random;
 
 public class JavaSwing_rects extends JFrame {
     private Color color;
+    private static final int WIDTH = 1920;
+    private static final int HEIGHT = 1200;
 
     public JavaSwing_rects() {
-        setSize(1920, 1200);
+        setSize(1920, HEIGHT);
         setTitle("framework");
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
     }
@@ -27,10 +30,10 @@ public class JavaSwing_rects extends JFrame {
 
         Random r = new Random();
         for (int i = 0; i < 1000; i++) {
-            int x = r.nextInt(1920);
-            int y = r.nextInt(1200);
-            int width = r.nextInt(1920 - x);
-            int height = r.nextInt(1200 - y);
+            int x = r.nextInt(WIDTH);
+            int y = r.nextInt(HEIGHT);
+            int width = r.nextInt(WIDTH - x);
+            int height = r.nextInt(HEIGHT - y);
             int red = r.nextInt(254);
             int green = r.nextInt(255);
             int blue = r.nextInt(255);

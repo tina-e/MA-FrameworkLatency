@@ -5,6 +5,9 @@
 
 import wx
 
+WIDTH = 1920
+HEIGHT = 1200
+
 class TestApp(wx.Frame):
     def __init__(self, *args, **kw):
         super(TestApp, self).__init__(*args, **kw)
@@ -23,7 +26,7 @@ class TestApp(wx.Frame):
 
         dc.SetBrush(wx.Brush(self.color))
         dc.SetPen(wx.TRANSPARENT_PEN)
-        dc.DrawRectangle(0, 0, 1920, 1200)
+        dc.DrawRectangle(0, 0, WIDTH, HEIGHT)
 
     def OnClick(self, e):
         self.color = '#FFFFFF'

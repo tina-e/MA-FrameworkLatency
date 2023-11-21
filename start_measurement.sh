@@ -13,7 +13,7 @@ FW_PATH="framework_test_programs/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY
 
 case "$TEST_PROGRAM" in 
 
-    *"java"*)
+    *"Java"*)
         java ./$FW_PATH &
         PID_TEST_PROGRAM=$!
         ;;
@@ -34,7 +34,7 @@ case "$TEST_PROGRAM" in
         ;;
 esac
 
-sleep "5s"
+sleep "3s"
 
 sigint() {
     kill -INT $PID_TEST_PROGRAM

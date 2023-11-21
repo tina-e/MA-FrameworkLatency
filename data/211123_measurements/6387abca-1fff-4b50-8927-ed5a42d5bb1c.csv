@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,52560,31010,21550
+1,1,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,69556,30405,39151
+2,2,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,68232,28357,39875
+3,3,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,53424,30052,23372
+4,4,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,67312,28313,38999
+5,5,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,54132,30796,23336
+6,6,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,66752,27605,39147
+7,7,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,66676,27817,38859
+8,8,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,59588,20175,39413
+9,9,pyqt5,rects,pyqt5_rects,getpixel,True,getpixel_True,68032,28626,39406

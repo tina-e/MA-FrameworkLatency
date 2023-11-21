@@ -6,17 +6,20 @@ import java.util.Random;
 public class Java2D_rects extends JFrame {
     private Color color;
     private boolean pressed = false;
+    private static final int WIDTH = 1920;
+    private static final int HEIGHT = 1200;
 
     public Java2D_rects() {
-        setSize(1920, 1200);
+        setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
+        // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
         color = new Color(0, 0, 0);
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, getWidth(), getHeight());        
     }
 
     public void paint(Graphics g) {
@@ -48,10 +51,10 @@ public class Java2D_rects extends JFrame {
 
         Random r = new Random();
         for (int i = 0; i < 1000; i++) {
-            int x = r.nextInt(1920);
-            int y = r.nextInt(1080);
-            int width = r.nextInt(1920 - x);
-            int height = r.nextInt(1080 - y);
+            int x = r.nextInt(WIDTH);
+            int y = r.nextInt(HEIGHT);
+            int width = r.nextInt(WIDTH - x);
+            int height = r.nextInt(HEIGHT - y);
             int red = r.nextInt(254);
             int green = r.nextInt(255);
             int blue = r.nextInt(255);

@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,34496,8942,25554
+1,1,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,12432,7712,4720
+2,2,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,22396,13711,8685
+3,3,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,24644,12929,11715
+4,4,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,34496,13737,20759
+5,5,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,22740,14868,7872
+6,6,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,21964,13154,8810
+7,7,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,21068,13265,7803
+8,8,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,23424,14729,8695
+9,9,SDL2,rects,SDL2_rects,windup_python,True,windup_python_True,33396,13291,20105

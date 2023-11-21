@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,tkinter,default,tkinter_default,bitblt,True,bitblt_True,59852,20273,39579
+1,1,tkinter,default,tkinter_default,bitblt,True,bitblt_True,51088,11435,39653
+2,2,tkinter,default,tkinter_default,bitblt,True,bitblt_True,49284,10216,39068
+3,3,tkinter,default,tkinter_default,bitblt,True,bitblt_True,48632,9433,39199
+4,4,tkinter,default,tkinter_default,bitblt,True,bitblt_True,61408,22473,38935
+5,5,tkinter,default,tkinter_default,bitblt,True,bitblt_True,53760,14969,38791
+6,6,tkinter,default,tkinter_default,bitblt,True,bitblt_True,51080,11788,39292
+7,7,tkinter,default,tkinter_default,bitblt,True,bitblt_True,51868,12010,39858
+8,8,tkinter,default,tkinter_default,bitblt,True,bitblt_True,59172,20004,39168
+9,9,tkinter,default,tkinter_default,bitblt,True,bitblt_True,59592,20634,38958

@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,42000,16743,25257
+1,1,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,28696,13333,15363
+2,2,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,28900,13090,15810
+3,3,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,34384,13103,21281
+4,4,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,29584,13115,16469
+5,5,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,33168,13187,19981
+6,6,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,32600,13138,19462
+7,7,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,30128,13203,16925
+8,8,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,22964,11828,11136
+9,9,SDL2,rects,SDL2_rects,getpixel,True,getpixel_True,33944,12994,20950

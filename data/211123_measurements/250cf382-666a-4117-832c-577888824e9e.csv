@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,wxpython,default,wxpython_default,getdbits,True,getdbits_True,65324,25836,39488
+1,1,wxpython,default,wxpython_default,getdbits,True,getdbits_True,54220,13969,40251
+2,2,wxpython,default,wxpython_default,getdbits,True,getdbits_True,45604,5112,40492
+3,3,wxpython,default,wxpython_default,getdbits,True,getdbits_True,45616,5547,40069
+4,4,wxpython,default,wxpython_default,getdbits,True,getdbits_True,46512,6693,39819
+5,5,wxpython,default,wxpython_default,getdbits,True,getdbits_True,60700,19995,40705
+6,6,wxpython,default,wxpython_default,getdbits,True,getdbits_True,58384,17936,40448
+7,7,wxpython,default,wxpython_default,getdbits,True,getdbits_True,47404,7096,40308
+8,8,wxpython,default,wxpython_default,getdbits,True,getdbits_True,51300,11075,40225
+9,9,wxpython,default,wxpython_default,getdbits,True,getdbits_True,44908,4514,40394

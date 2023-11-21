@@ -14,7 +14,7 @@ def randint(a, b):
     return a + int((b - a) * random.random())
 
 root = tk.Tk()
-root.attributes("-zoomed", True)
+#root.attributes("-zoomed", True)
 root.attributes("-fullscreen", True)
 root.title('framework')
 

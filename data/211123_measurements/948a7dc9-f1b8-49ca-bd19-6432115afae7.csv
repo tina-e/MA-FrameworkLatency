@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pygame,default,pygame_default,getpixel,False,getpixel_False,11199624,-1,11199625
+1,1,pygame,default,pygame_default,getpixel,False,getpixel_False,32596,-1,32597
+2,2,pygame,default,pygame_default,getpixel,False,getpixel_False,37876,-1,37877
+3,3,pygame,default,pygame_default,getpixel,False,getpixel_False,42588,-1,42589
+4,4,pygame,default,pygame_default,getpixel,False,getpixel_False,33392,-1,33393
+5,5,pygame,default,pygame_default,getpixel,False,getpixel_False,35280,-1,35281
+6,6,pygame,default,pygame_default,getpixel,False,getpixel_False,29928,-1,29929
+7,7,pygame,default,pygame_default,getpixel,False,getpixel_False,42704,-1,42705
+8,8,pygame,default,pygame_default,getpixel,False,getpixel_False,37408,-1,37409
+9,9,pygame,default,pygame_default,getpixel,False,getpixel_False,39900,-1,39901

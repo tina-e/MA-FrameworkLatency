@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,126084,-1,126085
+1,1,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,130528,-1,130529
+2,2,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,113620,-1,113621
+3,3,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,113252,-1,113253
+4,4,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,127020,-1,127021
+5,5,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,123680,-1,123681
+6,6,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,112952,-1,112953
+7,7,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,127068,-1,127069
+8,8,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,116820,-1,116821
+9,9,tkinter,rects,tkinter_rects,windup_python,False,windup_python_False,118836,-1,118837

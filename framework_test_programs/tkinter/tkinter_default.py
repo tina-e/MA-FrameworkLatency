@@ -5,7 +5,7 @@ WIDTH = 1920
 HEIGHT = 1200
 
 root = tk.Tk()
-root.attributes("-zoomed", True)
+#root.attributes("-zoomed", True)
 root.attributes("-fullscreen", True)
 root.title('framework')
 
@@ -15,7 +15,7 @@ canvas.pack()
 def mousePressed(event):
     root.configure(background="white")
     canvas.configure(background="white")
-    canvas.create_rectangle(0, 0, 1920, 1200, fill="#FFFFFF", outline="")
+    canvas.create_rectangle(0, 0, WIDTH, HEIGHT, fill="#FFFFFF", outline="")
     
 def mouseReleased(event):
     root.configure(background="black")

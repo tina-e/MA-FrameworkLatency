@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ITERATIONS=50
-DATA_DIR="201123_measurements_2"
+ITERATIONS=10
+DATA_DIR="211123_measurements"
 
 #mkdir "./data/$DATA_DIR"
 

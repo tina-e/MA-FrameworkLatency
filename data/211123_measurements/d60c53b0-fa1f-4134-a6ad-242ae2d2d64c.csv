@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,51852,-1,51853
+1,1,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,30800,-1,30801
+2,2,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,36396,-1,36397
+3,3,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,58388,-1,58389
+4,4,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,32056,-1,32057
+5,5,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,49624,-1,49625
+6,6,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,65076,-1,65077
+7,7,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,65336,-1,65337
+8,8,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,61300,-1,61301
+9,9,pyqt5,default,pyqt5_default,getpixel,False,getpixel_False,53456,-1,53457

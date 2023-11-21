@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pygame,default,pygame_default,getdbits,True,getdbits_True,42539372,18367,42521005
+1,1,pygame,default,pygame_default,getdbits,True,getdbits_True,41688,16786,24902
+2,2,pygame,default,pygame_default,getdbits,True,getdbits_True,28020,4203,23817
+3,3,pygame,default,pygame_default,getdbits,True,getdbits_True,40128,14659,25469
+4,4,pygame,default,pygame_default,getdbits,True,getdbits_True,43040,18630,24410
+5,5,pygame,default,pygame_default,getdbits,True,getdbits_True,39432,14950,24482
+6,6,pygame,default,pygame_default,getdbits,True,getdbits_True,43012,17728,25284
+7,7,pygame,default,pygame_default,getdbits,True,getdbits_True,35840,11205,24635
+8,8,pygame,default,pygame_default,getdbits,True,getdbits_True,41220,16371,24849
+9,9,pygame,default,pygame_default,getdbits,True,getdbits_True,28896,3709,25187

@@ -4,11 +4,14 @@ import javax.swing.*;
 
 public class Java2D_default extends JFrame {
     private Color color;
+    private static final int WIDTH = 1920;
+    private static final int HEIGHT = 1200;
 
     public Java2D_default() {
-        setSize(1920, 1200);
+        setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        // setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
     }

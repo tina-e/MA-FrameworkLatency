@@ -12,7 +12,7 @@ using namespace std::chrono;
 
 int getPixelData(HDC hdc)
 {
-    COLORREF _color = GetPixel(hdc, 100, 100);
+    COLORREF _color = GetPixel(hdc, 0, 0);
     return int(GetRValue(_color));
 }
 
