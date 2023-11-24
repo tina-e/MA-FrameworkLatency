@@ -1,5 +1,6 @@
 #include "SDL.h"
 #include <signal.h>
+#include <iostream>
 
 
 // screen size
@@ -11,6 +12,14 @@
 
 // seems to make no big difference, so use full screen for everything
 #define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
+
+#ifndef DRIVER
+    // supported:
+    // opengl
+    // opengles2
+    // software
+#define DRIVER "software"
+#endif
 
 // make sure we clean up when program is interrupted
 void signalHandler(int sig)
@@ -25,7 +34,8 @@ int main(int argc, char** argv)
 
     SDL_Init(SDL_INIT_VIDEO);
 
-    //SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
+    SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
+    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
 
     // create SDL2 window and renderer
     SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
@@ -39,6 +49,10 @@ int main(int argc, char** argv)
     SDL_SetWindowTitle(window, "framework");
 
     SDL_Event event;
+
+    const char* vsync = SDL_GetHint(SDL_HINT_RENDER_VSYNC);
+    //bool vsyncEnabled = std::strcmp(vsync, "1") == 0;
+    //std::cout << vsync << std::endl;
 
     while (1)
     {

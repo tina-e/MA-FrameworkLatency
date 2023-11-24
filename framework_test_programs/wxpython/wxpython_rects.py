@@ -10,9 +10,14 @@ class TestApp(wx.Frame):
     def __init__(self, *args, **kw):
         super(TestApp, self).__init__(*args, **kw)
 
+        self.width = 1920
+        self.height = 1200
+        self.min_x_rects = self.width / 2
+
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_LEFT_DOWN, self.OnClick)
         self.Bind(wx.EVT_LEFT_UP, self.OnRelease)
+        self.SetBackgroundColour(wx.BLACK)
 
         self.clicked = False
 
@@ -30,10 +35,10 @@ class TestApp(wx.Frame):
                 color = wx.Colour(int(r*255), int(g*255), int(b*255))
                 brush = wx.Brush(color)
                 dc.SetBrush(brush)
-                x = random.randint(0,1920)
-                y = random.randint(0,1200)
-                width = random.randint(0,1920-x)
-                height = random.randint(0,1200-y)
+                x = random.randint(self.min_x_rects, self.width)
+                y = random.randint(0, self.height)
+                width = random.randint(0, self.width-x)
+                height = random.randint(0, self.height-y)
                 dc.DrawRectangle(x, y, width, height)
             dc.SetBrush(wx.Brush("white"))
             dc.SetPen(wx.TRANSPARENT_PEN)
@@ -41,7 +46,7 @@ class TestApp(wx.Frame):
         else:
             dc.SetBrush(wx.Brush("black"))
             dc.SetPen(wx.TRANSPARENT_PEN)
-            dc.DrawRectangle(0, 0, 1920, 1200)
+            dc.DrawRectangle(0, 0, self.width, self.height)
 
         
     def OnClick(self, e):

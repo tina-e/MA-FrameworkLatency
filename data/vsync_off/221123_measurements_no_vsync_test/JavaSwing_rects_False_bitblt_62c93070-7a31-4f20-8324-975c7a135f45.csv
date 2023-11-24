@@ -1,0 +1,3 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,JavaSwing,rects,JavaSwing_rects,bitblt,False,bitblt_False,70028,-1,70029
+1,1,JavaSwing,rects,JavaSwing_rects,bitblt,False,bitblt_False,61284,-1,61285

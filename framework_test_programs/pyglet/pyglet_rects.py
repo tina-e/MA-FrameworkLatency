@@ -9,6 +9,7 @@ from random import randint
 # Define the width and height of the window
 WINDOW_WIDTH = 1920
 WINDOW_HEIGHT = 1200
+MIN_X_RECTS = WINDOW_WIDTH / 2
 
 n_rects = 1000
 n_horizontal = 10
@@ -26,7 +27,7 @@ bg = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 
 rects = []
 
 for i in range(n_rects):
-    x = randint(0, WINDOW_WIDTH - rect_w)
+    x = randint(MIN_X_RECTS, WINDOW_WIDTH - rect_w)
     y = randint(0, WINDOW_HEIGHT - rect_h)
     r = randint(0, 255)
     g = randint(0, 255)

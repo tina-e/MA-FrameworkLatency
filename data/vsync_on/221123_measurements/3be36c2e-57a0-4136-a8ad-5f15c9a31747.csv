@@ -1,0 +1,3 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,JavaSwing,default,JavaSwing_default,getpixel,True,getpixel_True,15900,8415,7485
+1,1,JavaSwing,default,JavaSwing_default,getpixel,True,getpixel_True,16124,8142,7982

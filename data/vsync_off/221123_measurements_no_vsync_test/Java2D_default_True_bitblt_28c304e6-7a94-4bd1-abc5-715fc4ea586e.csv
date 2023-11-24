@@ -1,0 +1,3 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,Java2D,default,Java2D_default,bitblt,True,bitblt_True,39316,14520,24796
+1,1,Java2D,default,Java2D_default,bitblt,True,bitblt_True,42336,17208,25128

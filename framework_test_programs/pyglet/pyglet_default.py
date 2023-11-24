@@ -4,6 +4,8 @@ import pyglet
 from pyglet.shapes import Rectangle
 from pyglet import app
 from pyglet.window import Window
+import signal
+import sys
 
 
 # Define the width and height of the window
@@ -22,7 +24,7 @@ win.set_fullscreen(fullscreen=True, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, sc
 # win.set_location(0, 0)
 # win.switch_to()
 # win.activate()
-# print(win.vsync)
+#print(win.vsync)
 
 rect = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))
 
@@ -39,5 +41,12 @@ def on_mouse_release(x, y, button, modifiers):
 def on_draw():
     win.clear()
     rect.draw()
+
+def signal_handler(signal, frame):
+    print('got signal')
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_handler)
+signal.signal(signal.SIGINT, signal_handler)
 
 app.run()

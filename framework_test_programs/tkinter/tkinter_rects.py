@@ -4,6 +4,7 @@ import random
 
 WIDTH = 1920
 HEIGHT = 1200
+MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10
 n_vertical = 10
@@ -18,7 +19,7 @@ root = tk.Tk()
 root.attributes("-fullscreen", True)
 root.title('framework')
 
-canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg="black", borderwidth=0, highlightthickness=0);
+canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg="black", borderwidth=0, highlightthickness=0)
 canvas.pack()
 
 
@@ -31,7 +32,7 @@ def drawNormalRect(color, rect):
 
 def drawRects():
     for i in range(n_rects):
-        x = randint(0, WIDTH - rect_w)
+        x = randint(MIN_X_RECTS, WIDTH - rect_w)
         y = randint(0, HEIGHT - rect_h)
         r = randint(0, 255)
         g = randint(0, 255)
@@ -43,11 +44,7 @@ def drawRects():
         
     
 def mousePressed(event):
-    root.configure(background="white")
-    canvas.configure(background="white")
-    
     drawRects()
-
     color = rgbToHex(255, 255, 255)
     drawNormalRect(color, (0, 0, 300, 300))
 

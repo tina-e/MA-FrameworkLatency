@@ -8,6 +8,7 @@ public class Java2D_rects extends JFrame {
     private boolean pressed = false;
     private static final int WIDTH = 1920;
     private static final int HEIGHT = 1200;
+    private static final int MIN_X_RECTS = WIDTH / 2;
 
     public Java2D_rects() {
         setSize(WIDTH, HEIGHT);
@@ -51,7 +52,7 @@ public class Java2D_rects extends JFrame {
 
         Random r = new Random();
         for (int i = 0; i < 1000; i++) {
-            int x = r.nextInt(WIDTH);
+            int x = r.nextInt(MIN_X_RECTS, WIDTH);
             int y = r.nextInt(HEIGHT);
             int width = r.nextInt(WIDTH - x);
             int height = r.nextInt(HEIGHT - y);

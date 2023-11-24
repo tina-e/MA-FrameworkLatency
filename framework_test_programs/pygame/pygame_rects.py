@@ -13,6 +13,7 @@ pygame.display.set_caption('framework')
 
 WIDTH = pygame.display.Info().current_w
 HEIGHT = pygame.display.Info().current_h
+MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10
 n_vertical = 10
@@ -45,7 +46,7 @@ def drawNormalRect(surface, color, rect):
 
 def drawRects():
     for i in range(n_rects):
-        x = randint(0, WIDTH - rect_w)
+        x = randint(MIN_X_RECTS, WIDTH - rect_w)
         y = randint(0, HEIGHT - rect_h)
         r = randint(0, 255)
         g = randint(0, 255)
@@ -63,7 +64,6 @@ while running:
         running = False
     
     if event.type == pygame.MOUSEBUTTONDOWN:
-        screen.fill(background_color_white)
         drawRects()
     
     if event.type == pygame.MOUSEBUTTONUP:

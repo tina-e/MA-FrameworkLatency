@@ -14,7 +14,7 @@ FW_PATH="framework_test_programs/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY
 case "$TEST_PROGRAM" in 
 
     *"Java"*)
-        java ./$FW_PATH &
+        java ./$FW_PATH.java &
         PID_TEST_PROGRAM=$!
         ;;
 
@@ -45,7 +45,9 @@ trap sigint INT
 python ./fyalmd.py $ACTION $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
 PID_FYALMD=$!
 
-kill -9 $PID_TEST_PROGRAM || powershell kill -n "${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+kill -9 $PID_TEST_PROGRAM
+powershell kill -n "${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+powershell kill -n "java"
 
 
 

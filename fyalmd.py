@@ -1,17 +1,13 @@
 import serial
-import io
 import time
 import sys
 import signal
-import os
-from subprocess import Popen, PIPE, CalledProcessError
+from subprocess import Popen, PIPE
 import threading
-import numpy as np
 import pandas as pd
 import uuid
-import d3dshot
-import win32api
-
+import pyautogui
+import pygetwindow as gw
 
 
 class FYALMDController:
@@ -21,7 +17,7 @@ class FYALMDController:
         self.complexity = complexity
         self.run_fw_test = False if run_fw_test == 'False' else True
         self.program_name = program_name
-        self.out_path = f"data/{out_folder}/{uuid.uuid4()}.csv"
+        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{run_fw_test}_{program_name}_{uuid.uuid4()}.csv"
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = -1
@@ -33,9 +29,26 @@ class FYALMDController:
         else:
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
 
-        
+
+    def ensure_focus(self):
+        try:
+            for window in gw.getWindowsWithTitle("framework"):
+                if window.title == "framework":
+                    window.activate()
+                    window.maximize()
+        except:
+            pass
+        time.sleep(1)
+        pyautogui.click()
+        time.sleep(0.5)
+        pyautogui.click()
+        time.sleep(0.5)
+        pyautogui.click()
+        time.sleep(1)
+
 
     def calibrate_yalmd(self):
+        self.ensure_focus()
         self.yalmd = serial.Serial('COM8')
         self.yalmd.flushInput()
         time.sleep(5)
@@ -84,6 +97,7 @@ class FYALMDController:
 
 
     def start(self):
+        self.ensure_focus()
         self.yalmd = serial.Serial('COM8')
         self.measuring = True
         self.yalmd.flushInput()
@@ -118,7 +132,7 @@ class FYALMDController:
         if self.measuring:
             if self.run_fw_test:
                 while not self.new_value:
-                    time.sleep(1)
+                    time.sleep(0.000001)
             ete = int(decoded_bytes)
             diff = (ete - self.last_fw_latency)
             self.new_value = False

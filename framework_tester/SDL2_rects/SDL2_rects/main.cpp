@@ -4,6 +4,14 @@
 #include <ctime>
 
 
+#ifndef DRIVER
+// supported:
+// opengl
+// opengles2
+// software
+#define DRIVER "software"
+#endif
+
 // screen size
 #define WIDTH 1920
 #define HEIGHT 1200
@@ -34,7 +42,7 @@ void render(SDL_Renderer* renderer)
         uint8_t b = rand() % 255;
         uint8_t a = 255; //55 + rand() % 200;
 
-        int x = rand() % (WIDTH - rect_w);
+        int x = rand() % (WIDTH - rect_w) + (WIDTH / 2);
         int y = rand() % (HEIGHT - rect_h);
 
         SDL_SetRenderDrawColor(renderer, r, g, b, a);
@@ -55,7 +63,7 @@ int main(int argc, char** argv)
 
     SDL_Init(SDL_INIT_VIDEO);
 
-    // SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
+    SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
 
     // create SDL2 window and renderer
     SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
@@ -67,8 +75,6 @@ int main(int argc, char** argv)
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
-
-    SDL_SetWindowTitle(window, "framework");
 
     SDL_Event event;
 

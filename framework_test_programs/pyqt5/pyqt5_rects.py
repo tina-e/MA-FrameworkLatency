@@ -9,6 +9,7 @@ import sys
 
 WIDTH = 1920
 HEIGHT = 1200
+MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10
 n_vertical = 10
@@ -41,16 +42,17 @@ class MainWindow(QWidget):
 
         if self.active:
             self.drawRects(painter)
-
-        brush = QBrush(self.color)
-        painter.setBrush(brush)
-        painter.drawRect(0, 0, 300, 300)
+            self.color = QColor(255, 255, 255)
+            brush = QBrush(self.color)
+            painter.setBrush(brush)
+            painter.setPen(Qt.NoPen)
+            painter.drawRect(0, 0, 300, 300)
 
         painter.end()
 
     def drawRects(self, painter):
         for i in range(n_rects):
-            x = randint(0, WIDTH - rect_w)
+            x = randint(MIN_X_RECTS, WIDTH - rect_w)
             y = randint(0, HEIGHT - rect_h)
             r = randint(0, 255)
             g = randint(0, 255)
@@ -63,7 +65,6 @@ class MainWindow(QWidget):
             painter.drawRect(x, y, int(rect_w), int(rect_h))
 
     def mousePressEvent(self, event):
-        self.color = QColor(255, 255, 255)
         self.active = True
         self.update()
 

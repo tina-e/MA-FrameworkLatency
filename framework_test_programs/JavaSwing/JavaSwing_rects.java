@@ -7,9 +7,10 @@ public class JavaSwing_rects extends JFrame {
     private Color color;
     private static final int WIDTH = 1920;
     private static final int HEIGHT = 1200;
+    private static final int MIN_X_RECTS = WIDTH / 2;
 
     public JavaSwing_rects() {
-        setSize(1920, HEIGHT);
+        setSize(WIDTH, HEIGHT);
         setTitle("framework");
         //setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
@@ -24,13 +25,10 @@ public class JavaSwing_rects extends JFrame {
 
     public void mousePressed(MouseEvent e) {
         color = new Color(255, 255, 255);
-
-
         Graphics g = getGraphics();
-
         Random r = new Random();
         for (int i = 0; i < 1000; i++) {
-            int x = r.nextInt(WIDTH);
+            int x = r.nextInt(MIN_X_RECTS, WIDTH);
             int y = r.nextInt(HEIGHT);
             int width = r.nextInt(WIDTH - x);
             int height = r.nextInt(HEIGHT - y);

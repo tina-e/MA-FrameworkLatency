@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import * 
 from PyQt5.QtCore import * 
 import sys
+import signal
 
 WIDTH = 1920
 HEIGHT = 1200
@@ -44,4 +45,13 @@ class MainWindow(QWidget):
 
 app = QApplication(sys.argv)
 window = MainWindow()
+
+def signal_handler(signal, frame):
+    print('got signal')
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_handler)
+signal.signal(signal.SIGINT, signal_handler)
+
+
 app.exec_()
