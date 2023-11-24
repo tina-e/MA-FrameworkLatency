@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(19,34): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(19,26): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(19,18): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(26,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(27,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(28,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(31,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(32,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\freeglut\main.cpp(33,18): warning C4244: "=": Konvertierung von "double" in "int", möglicher Datenverlust
+  freeglut.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester\freeglut\x64\Debug\freeglut.exe

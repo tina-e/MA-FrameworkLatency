@@ -35,11 +35,13 @@ int main(int argc, char** argv)
     SDL_Init(SDL_INIT_VIDEO);
 
     SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
-    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
+    //SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
 
     // create SDL2 window and renderer
     SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, RENDERER);
+
+    SDL_RenderSetVSync(renderer, SDL_FALSE);
 
     // draw a black image
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);

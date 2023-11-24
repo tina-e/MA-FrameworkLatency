@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ITERATIONS=2
-DATA_DIR="muell"
+ITERATIONS=50
+DATA_DIR="andi_defaultmouse"
 
 mkdir "./data/$DATA_DIR"
 
@@ -18,7 +18,7 @@ mkdir "./data/$DATA_DIR"
 sleep "5s"
 
 # # SDL2 ---------------------------------------------------------------------------------------
-./start_measurement.sh calibrate_and_measure $ITERATIONS wxpython default True windup_python $DATA_DIR
+./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default False windup_python $DATA_DIR
 
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False windup_python $DATA_DIR
