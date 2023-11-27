@@ -1,4 +1,5 @@
 from glumpy import app, gloo, gl
+import numpy as np
 
 WIDTH = 1920
 HEIGHT = 1200
@@ -30,11 +31,11 @@ quad['color'] = BLACK
 
 
 @window.event
-def on_mouse_press(x, y, button):
+def on_mouse_press(x, y, buttons):
     quad['color'] = WHITE
 
 @window.event
-def on_mouse_release(x, y, button):
+def on_mouse_release(x, y, buttons):
     quad['color'] = BLACK
 
 @window.event
