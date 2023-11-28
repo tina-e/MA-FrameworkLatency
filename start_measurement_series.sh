@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="andi_defaultmouse"
+DATA_DIR="480hz_test"
 
 mkdir "./data/$DATA_DIR"
 
@@ -18,7 +18,7 @@ mkdir "./data/$DATA_DIR"
 sleep "5s"
 
 # # SDL2 ---------------------------------------------------------------------------------------
-./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default False windup_python $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default False windup_python $DATA_DIR
 
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False windup_python $DATA_DIR
@@ -76,23 +76,23 @@ sleep "5s"
 
 
 # # # pygame ---------------------------------------------------------------------------------------
-# ./start_measurement.sh measure $ITERATIONS pygame default True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default True getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default True bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default False bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame default False getdbits $DATA_DIR
+./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False getdbits $DATA_DIR
 
-# ./start_measurement.sh measure $ITERATIONS pygame rects True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects True getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects True bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects False bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS pygame rects False getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False getdbits $DATA_DIR
 
 # # # wxpython ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS wxpython default True windup_python $DATA_DIR
