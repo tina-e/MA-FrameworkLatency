@@ -8,15 +8,22 @@ WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 
 # Number of rectangles
-num_rectangles = 2
+num_rectangles = 2000
 
 positions = []
 colors = []
 
 # Generate random rectangles
-for i in range(num_rectangles):
+for i in range(int(num_rectangles / 2)):
     random_pos_x = random() / 2
     random_pos_y = random() / 2
+
+    positions.append((random_pos_x, random_pos_x))
+    positions.append((random_pos_x, random_pos_y))
+    positions.append((random_pos_y, random_pos_x))
+    positions.append((random_pos_y, random_pos_x))
+    positions.append((random_pos_x, random_pos_y))
+    positions.append((random_pos_y, random_pos_y))
 
     positions.append((random_pos_x, random_pos_x))
     positions.append((random_pos_x, random_pos_y))
@@ -28,10 +35,11 @@ for i in range(num_rectangles):
     color1 = random()
     color2 = random()
     color3 = random()
-    colors.append(color1)
-    colors.append(color2)
-    colors.append(color3)
-    colors.append(1)
+    colors.append([color1, color2, color3, 1])
+    # colors.append(color1)
+    # colors.append(color2)
+    # colors.append(color3)
+    # colors.append(1)
 
 
 # Vertex shader code
@@ -54,11 +62,10 @@ fragment = """
 
 window = app.Window(width=WIDTH, height=HEIGHT, color=WHITE, fullscreen=True, decoration=False, title="framework", vsync=False)
 window.set_fullscreen(True)
-# Create glumpy program
+
 program = gloo.Program(vertex, fragment, count=(num_rectangles*6))
 program['position'] = positions
-#program['size'] = sizes
-program['color'] = [(0,1,0,1), (1,0,0,1)]
+program['color'] = colors
 
 print(positions)
 
