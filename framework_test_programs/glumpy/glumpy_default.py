@@ -5,43 +5,46 @@ HEIGHT = 1200
 WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 
-window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, fullscreen=True, decoration=False, title="framework", vsync=False)
-window.set_fullscreen(True)
-
-vertex = """
+VERTEX_SHADER = """
          attribute vec2 position;
          void main()
          {
              gl_Position = vec4(position, 0.0, 1.0);
          } """
 
-fragment = """
+FRAGMENT_SHADER = """
            uniform vec4 color;
            void main() {
                gl_FragColor = color;
            } """
 
-quad = gloo.Program(vertex, fragment, count=4)
 
-quad['position'] = [(-1, -1),
-                    (-1, +1),
-                    (+1, -1),
-                    (+1, +1)]
-quad['color'] = BLACK
+window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, fullscreen=True, decoration=False, title="framework", vsync=False)
+window.set_fullscreen(True)
+
+
+program = gloo.Program(VERTEX_SHADER, FRAGMENT_SHADER, count=6)
+program['position'] = [(-1, -1),
+                        (-1, 1),
+                        (1, -1),
+                        (1, -1),
+                        (-1, 1),
+                        (1, 1)]
+program['color'] = BLACK
 
 
 @window.event
 def on_mouse_press(x, y, buttons):
-    quad['color'] = WHITE
+    program['color'] = WHITE
 
 @window.event
 def on_mouse_release(x, y, buttons):
-    quad['color'] = BLACK
+    program['color'] = BLACK
 
 @window.event
 def on_draw(dt):
     window.clear()
-    quad.draw(gl.GL_TRIANGLE_STRIP)
+    program.draw(gl.GL_TRIANGLES)
 
 app.quit()
 app.run()
