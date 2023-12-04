@@ -1,7 +1,7 @@
 # MA-FrameworkLatency
 
 
-#### Repo Structure
+## Repo Structure
 
 📁 **framework_tester**
 <br>Includes test programs for different frameworks. Default (from black to hwite on click) and Rects (from black to 1000 random rects on click)
@@ -32,12 +32,12 @@
 📁 **pixel_reader_wip**
 <br>Work in progrress for further pixel readers...
 
-📁 **data** measurement data
+📁 **data**: measurement data
 <br>|___📁 glumpy: glumpy measurements
 <br>|___📁 pilot: first few measurements
 <br>|___📁 test: test measurements to make sure script is working
 
-📁 **analysis** notebooks for analysis of measurements
+📁 **analysis**: notebooks for analysis of measurements
 <br>|___📁 glumpy: analysis of glumpy measurements
 <br>|___📁 other: analysis of non-glumpy measurements
 <br>|___📁 test: just messing around
@@ -61,10 +61,10 @@
 <br>just messing around
 
 
-*Testers and Readers compiled for Windows 11.*
+<br><br>*Testers and Readers compiled for Windows 11.*
 
 ---
-#### Usage
+## Usage
 For measurement series with glumpy:
 - adjust number of iterations and directory for resulting data in `start_measurement_series_glumpy.sh`
 - run `./start_measurement_series_glumpy.sh`
@@ -76,7 +76,7 @@ For measurement series without glumpy:
 - just to be safe: minimize/close all windows which do not belong to measurements
 ---
 
-#### Required:
+## Required:
 - Python 3.8
 - pip packages
     - `pip install wxPython`
