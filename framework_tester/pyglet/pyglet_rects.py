@@ -7,18 +7,19 @@ from pyglet.window import Window
 from random import randint
 
 # Define the width and height of the window
-WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1200
-MIN_X_RECTS = WINDOW_WIDTH / 2
+WINDOW_WIDTH = int(1920 * 0.8)
+WINDOW_HEIGHT = int(1200 * 0.8)
+MIN_X_RECTS = int(WINDOW_WIDTH / 2)
 
 n_rects = 1000
 n_horizontal = 10
 n_vertical = 10
-rect_w = WINDOW_WIDTH / n_horizontal
-rect_h = WINDOW_HEIGHT / n_vertical
+rect_w = int(WINDOW_WIDTH / n_horizontal)
+rect_h = int(WINDOW_HEIGHT / n_vertical)
 
 # Create a Pyglet window
-win = Window(fullscreen=True)
+win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless')
+win.set_location(0, 0)
 win.set_caption('framework')
 
 batch = pyglet.graphics.Batch()

@@ -67,8 +67,7 @@ def setup_rects():
         
 
 window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, fullscreen=False, decoration=False, title="framework", vsync=False)
-#window.set_fullscreen(True)
-window.set_position(-100, -100)
+window.set_position(-100, -100) # to make sure to hide (pyglet's) decoration
 
 
 @window.event

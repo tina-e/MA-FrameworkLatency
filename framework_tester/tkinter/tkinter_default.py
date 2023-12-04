@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 import tkinter as tk
 
-WIDTH = 1920
-HEIGHT = 1200
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
 
 root = tk.Tk()
-#root.attributes("-zoomed", True)
-root.attributes("-fullscreen", True)
+root.geometry(f"{WIDTH}x{HEIGHT}+{0}+{0}")
+root.overrideredirect(True) #Remove border  
 root.title('framework')
 
-canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg="black", borderwidth=0, highlightthickness=0);
+canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg="black", borderwidth=0, highlightthickness=0) 
 canvas.pack()
 
 def mousePressed(event):

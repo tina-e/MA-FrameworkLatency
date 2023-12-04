@@ -9,13 +9,13 @@ import sys
 import signal
 import pandas
 
-WIDTH = 1920
-HEIGHT = 1200
-click_timestamps = []
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
+#click_timestamps = []
 
 class TestApp(wx.Frame):
-    def __init__(self, *args, **kw):
-        super(TestApp, self).__init__(*args, **kw)
+    def __init__(self, parent, title, size, position, style):
+        super(TestApp, self).__init__(parent, title=title, size=size, pos=position, style=style)
         
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_LEFT_DOWN, self.OnClick)
@@ -26,9 +26,6 @@ class TestApp(wx.Frame):
         self.timer.Start()
 
         self.color = '#000000'
-
-        self.SetTitle("framework")
-        self.ShowFullScreen(True)
         self.Show()
 
     def OnTimer(self, event):
@@ -54,14 +51,18 @@ class TestApp(wx.Frame):
 
 
 def signal_handler(signal, frame):
-    print("signal wx")
-    df = pandas.DataFrame(data={"wxpython": click_timestamps})
-    df.to_csv("../../data/clicks/wxpython.csv", sep=',',index=False)
+    # df = pandas.DataFrame(data={"wxpython": click_timestamps})
+    # df.to_csv("../../data/clicks/wxpython.csv", sep=',',index=False)
     sys.exit(0)
 
 def main():
     app = wx.App()
-    test_app = TestApp(None)
+
+    size = (WIDTH, HEIGHT)
+    position = (0, 0)
+    style = wx.NO_BORDER
+    test_app = TestApp(None, title="framework", size=size, position=position, style=style)
+
     signal.signal(signal.SIGTERM, signal_handler)
     signal.signal(signal.SIGINT, signal_handler)
     app.MainLoop()

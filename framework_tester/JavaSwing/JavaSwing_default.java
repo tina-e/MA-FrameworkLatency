@@ -4,11 +4,12 @@ import javax.swing.*;
 
 public class JavaSwing_default extends JFrame {
     private Color color;
+    private static final int WIDTH = (int) (1920 * 0.8);
+    private static final int HEIGHT = (int) (1200 * 0.8);
 
     public JavaSwing_default() {
-        setSize(1920, 1200);
+        setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
@@ -16,7 +17,7 @@ public class JavaSwing_default extends JFrame {
 
     public void paint(Graphics g) {
 	    g.setColor(color);
-	    g.fillRect(0, 0, getWidth(), getHeight());
+	    g.fillRect(0, 0, WIDTH, HEIGHT);
     }
 
     public void mousePressed(MouseEvent e) {
@@ -25,7 +26,7 @@ public class JavaSwing_default extends JFrame {
 	Graphics g = getGraphics();
 	if (g != null) {
 		g.setColor(color);
-		g.fillRect(0, 0, getWidth(), getHeight());
+		g.fillRect(0, 0, WIDTH, HEIGHT);
 		Toolkit.getDefaultToolkit().sync();
 	}
     }
@@ -36,7 +37,7 @@ public class JavaSwing_default extends JFrame {
 	Graphics g = getGraphics();
 	if (g != null) {
 		g.setColor(color);
-		g.fillRect(0, 0, getWidth(), getHeight());
+		g.fillRect(0, 0, WIDTH, HEIGHT);
 		Toolkit.getDefaultToolkit().sync();
 	}
     }
@@ -52,8 +53,5 @@ public class JavaSwing_default extends JFrame {
                 window.mouseReleased(e);
             }
         });
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(window);
     }
 }

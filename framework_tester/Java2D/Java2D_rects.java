@@ -6,21 +6,20 @@ import java.util.Random;
 public class Java2D_rects extends JFrame {
     private Color color;
     private boolean pressed = false;
-    private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int WIDTH = (int) (1920 * 0.8);
+    private static final int HEIGHT = (int) (1200 * 0.8);
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public Java2D_rects() {
         setSize(WIDTH, HEIGHT);
         setTitle("framework");
         setUndecorated(true);
-        // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
         color = new Color(0, 0, 0);
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());        
+        g2d.fillRect(0, 0, WIDTH, HEIGHT);        
     }
 
     public void paint(Graphics g) {
@@ -67,7 +66,7 @@ public class Java2D_rects extends JFrame {
         g2d.fillRect(0, 0, 300, 300);
 
         //g2d.setColor(color);
-        //g2d.fillRect(0, 0, getWidth(), getHeight());
+        //g2d.fillRect(0, 0, WIDTH, HEIGHT);
         //pressed = true;
 	    Toolkit.getDefaultToolkit().sync();
     }
@@ -77,7 +76,7 @@ public class Java2D_rects extends JFrame {
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, WIDTH, HEIGHT);
 	    Toolkit.getDefaultToolkit().sync();
     }
 
@@ -92,8 +91,5 @@ public class Java2D_rects extends JFrame {
                 window.mouseReleased(e);
             }
         });
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(window);
     }
 }

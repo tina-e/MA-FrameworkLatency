@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class Java2D_default extends JFrame {
     private Color color;
-    private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int WIDTH = (int) (1920 * 0.8);
+    private static final int HEIGHT = (int) (1200 * 0.8);
 
     public Java2D_default() {
         setSize(WIDTH, HEIGHT);
@@ -19,7 +19,7 @@ public class Java2D_default extends JFrame {
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, WIDTH, HEIGHT);
     }
 
     public void mousePressed(MouseEvent e) {
@@ -27,7 +27,7 @@ public class Java2D_default extends JFrame {
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, WIDTH, HEIGHT);
 	Toolkit.getDefaultToolkit().sync();
     }
 
@@ -36,7 +36,7 @@ public class Java2D_default extends JFrame {
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, WIDTH, HEIGHT);
 	Toolkit.getDefaultToolkit().sync();
     }
 
@@ -51,8 +51,5 @@ public class Java2D_default extends JFrame {
                 window.mouseReleased(e);
             }
         });
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(window);
     }
 }

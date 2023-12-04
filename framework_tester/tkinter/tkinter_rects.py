@@ -2,8 +2,8 @@
 import tkinter as tk
 import random
 
-WIDTH = 1920
-HEIGHT = 1200
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
 MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10
@@ -15,8 +15,8 @@ def randint(a, b):
     return a + int((b - a) * random.random())
 
 root = tk.Tk()
-#root.attributes("-zoomed", True)
-root.attributes("-fullscreen", True)
+root.geometry(f"{WIDTH}x{HEIGHT}+{0}+{0}")
+root.overrideredirect(True) #Remove border  
 root.title('framework')
 
 canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT, bg="black", borderwidth=0, highlightthickness=0)

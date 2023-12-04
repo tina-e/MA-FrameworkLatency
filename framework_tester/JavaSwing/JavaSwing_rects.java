@@ -5,14 +5,13 @@ import java.util.Random;
 
 public class JavaSwing_rects extends JFrame {
     private Color color;
-    private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int WIDTH = (int) (1920 * 0.8);
+    private static final int HEIGHT = (int) (1200 * 0.8);
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public JavaSwing_rects() {
         setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
@@ -20,7 +19,7 @@ public class JavaSwing_rects extends JFrame {
 
     public void paint(Graphics g) {
 	    g.setColor(color);
-	    g.fillRect(0, 0, getWidth(), getHeight());
+	    g.fillRect(0, 0, WIDTH, HEIGHT);
     }
 
     public void mousePressed(MouseEvent e) {
@@ -51,7 +50,7 @@ public class JavaSwing_rects extends JFrame {
         Graphics g = getGraphics();
         if (g != null) {
             g.setColor(color);
-            g.fillRect(0, 0, getWidth(), getHeight());
+            g.fillRect(0, 0, WIDTH, HEIGHT);
             Toolkit.getDefaultToolkit().sync();
         }
     }
@@ -67,8 +66,5 @@ public class JavaSwing_rects extends JFrame {
                 window.mouseReleased(e);
             }
         });
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(window);
     }
 }

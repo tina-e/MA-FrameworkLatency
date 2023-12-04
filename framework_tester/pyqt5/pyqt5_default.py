@@ -7,8 +7,8 @@ from PyQt5.QtCore import *
 import sys
 import signal
 
-WIDTH = 1920
-HEIGHT = 1200
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
   
 class MainWindow(QWidget):
     def __init__(self):
@@ -18,8 +18,8 @@ class MainWindow(QWidget):
 
         self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
+        self.setWindowFlags(Qt.FramelessWindowHint)
         #self.setWindowFlags(Qt.X11BypassWindowManagerHint)
-        self.showFullScreen()
         self.color = QColor(0, 0, 0)
         self.show()
 
@@ -47,7 +47,6 @@ app = QApplication(sys.argv)
 window = MainWindow()
 
 def signal_handler(signal, frame):
-    print('got signal')
     sys.exit(0)
 
 signal.signal(signal.SIGTERM, signal_handler)

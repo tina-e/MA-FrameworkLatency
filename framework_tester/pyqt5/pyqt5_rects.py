@@ -7,8 +7,8 @@ from PyQt5.QtCore import *
 import random
 import sys
 
-WIDTH = 1920
-HEIGHT = 1200
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
 MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10
@@ -29,8 +29,8 @@ class MainWindow(QWidget):
         
         self.color = QColor(0, 0, 0)
         self.setGeometry(0, 0, WIDTH, HEIGHT)
+        self.setWindowFlags(Qt.FramelessWindowHint)
         self.setWindowTitle('framework')
-        self.showFullScreen()
         self.show()
 
     def paintEvent(self, event):

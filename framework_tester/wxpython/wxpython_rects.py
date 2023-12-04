@@ -6,23 +6,22 @@
 import random
 import wx
 
-class TestApp(wx.Frame):
-    def __init__(self, *args, **kw):
-        super(TestApp, self).__init__(*args, **kw)
+WIDTH = int(1920 * 0.8)
+HEIGHT = int(1200 * 0.8)
 
-        self.width = 1920
-        self.height = 1200
+class TestApp(wx.Frame):
+    def __init__(self, parent, title, size, position, style):
+        super(TestApp, self).__init__(parent, title=title, size=size, pos=position, style=style)
+
+        self.width = size[0]
+        self.height = size[1]
         self.min_x_rects = self.width / 2
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_LEFT_DOWN, self.OnClick)
         self.Bind(wx.EVT_LEFT_UP, self.OnRelease)
         self.SetBackgroundColour(wx.BLACK)
-
         self.clicked = False
-
-        self.SetTitle("framework")
-        self.ShowFullScreen(True)
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
@@ -61,7 +60,12 @@ class TestApp(wx.Frame):
 
 def main():
     app = wx.App()
-    test_app = TestApp(None)
+
+    size = (WIDTH, HEIGHT)
+    position = (100, 100)
+    style = wx.NO_BORDER
+    test_app = TestApp(None, title="framework", size=size, position=position, style=style)
+
     test_app.Show()
     app.MainLoop()
 
