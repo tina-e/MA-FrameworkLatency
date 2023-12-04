@@ -4,7 +4,7 @@
 #### Repo Structure
 
 📁 **framework_tester**
-Includes test programs for different frameworks. Default (from black to hwite on click) and Rects (from black to 1000 random rects on click)
+<br>Includes test programs for different frameworks. Default (from black to hwite on click) and Rects (from black to 1000 random rects on click)
 - GLUT
 - (SDL2)
 - SDL2_OpenGl
@@ -20,45 +20,45 @@ Includes test programs for different frameworks. Default (from black to hwite on
 - glumpy (glfw, pyglet, qt, sdl/pygame)
 
 📁 **pixel_readers**
-Includes programs which allow for reading a certain pixels's color. Recognizes a click and waits then for certain pixel to turn white. Measures time passed between these events.
+<br>Includes programs which allow for reading a certain pixels's color. Recognizes a click and waits then for certain pixel to turn white. Measures time passed between these events.
 - windows bitblt
 - windows getdbits
 - windows getpixel
 - windows desktop duplication (based on directX, python bindings)
 
 📁 **framework_tester_wip**
-Work in progress for further frameworks...
+<br>Work in progress for further frameworks...
 
 📁 **pixel_reader_wip**
-Work in progrress for further pixel readers...
+<br>Work in progrress for further pixel readers...
 
 📁 **data** measurement data
-|___📁 glumpy: glumpy measurements
-|___📁 pilot: first few measurements
-|___📁 test: test measurements to make sure script is working
+<br>|___📁 glumpy: glumpy measurements
+<br>|___📁 pilot: first few measurements
+<br>|___📁 test: test measurements to make sure script is working
 
 📁 **analysis** notebooks for analysis of measurements
-|___📁 glumpy: analysis of glumpy measurements
-|___📁 other: analysis of non-glumpy measurements
-|___📁 test: just messing around
+<br>|___📁 glumpy: analysis of glumpy measurements
+<br>|___📁 other: analysis of non-glumpy measurements
+<br>|___📁 test: just messing around
 
 🗎 `fylamd.py`
-controlls yalmd, starts measurement and saves data
+<br>controlls yalmd, starts measurement and saves data
 
 🗎 `start_measuremnet_glumpy.sh`
-starts measurement and `fyalmd` for a given pixel reader and glumpy as framework tester
+<br>starts measurement and `fyalmd` for a given pixel reader and glumpy as framework tester
 
 🗎 `start_measurement_series_glumpy.sh`
-starts a measurement series with each of the available pixel readers for glumpy framework tester (with each of the available backends)
+<br>starts a measurement series with each of the available pixel readers for glumpy framework tester (with each of the available backends)
 
 🗎 `start_measuremnet.sh`
-starts measurement and `fyalmd` for a given pixel reader and a given framework tester
+<br>starts measurement and `fyalmd` for a given pixel reader and a given framework tester
 
 🗎 `start_measurement_series.sh`
-starts a measurement series width each of the available pixel readers for each of the available framework testers (without glumpy)
+<br>starts a measurement series width each of the available pixel readers for each of the available framework testers (without glumpy)
 
 🗎 `test.py`
-just messing around
+<br>just messing around
 
 
 *Testers and Readers compiled for Windows 11.*
