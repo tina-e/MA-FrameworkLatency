@@ -38,6 +38,8 @@ class FYALMDController:
         except:
             pass
         time.sleep(1)
+        pyautogui.moveTo(300, 300)
+        time.sleep(1)
         pyautogui.click()
         time.sleep(0.5)
         pyautogui.click()
