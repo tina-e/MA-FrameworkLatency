@@ -28,9 +28,8 @@ BITMAPINFO createBitmapInfo()
 
 int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo)
 {
-    StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 0, 0, 1, 1, SRCCOPY);
+    StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 5, 5, 1, 1, SRCCOPY);
     GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
-    //cout << (int)bitPointer[2] << endl;
     return (int)bitPointer[2];
 }
 

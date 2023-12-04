@@ -28,7 +28,7 @@ BITMAPINFO createBitmapInfo()
 
 int getPixelData(HDC hdcCompatible, HDC hdcScreen, BYTE *bitPointer)
 {
-    BitBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 0, 0, SRCCOPY);
+    BitBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 5, 5, SRCCOPY);
     return (int)bitPointer[2];
 }
 

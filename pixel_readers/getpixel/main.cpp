@@ -12,7 +12,7 @@ using namespace std::chrono;
 
 int getPixelData(HDC hdc)
 {
-    COLORREF _color = GetPixel(hdc, 0, 0);
+    COLORREF _color = GetPixel(hdc, 5, 5);
     return int(GetRValue(_color));
 }
 
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
         ShowWindow(frameworkWindow, SW_RESTORE);
         SetFocus(frameworkWindow);
     } else {
-        cerr << "no window names framework" << endl;
+        cerr << "no window named framework" << endl;
     }
 
     HDC hdcScreen = GetDC(NULL);

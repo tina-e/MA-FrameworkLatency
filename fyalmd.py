@@ -35,7 +35,6 @@ class FYALMDController:
             for window in gw.getWindowsWithTitle("framework"):
                 if window.title == "framework":
                     window.activate()
-                    window.maximize()
         except:
             pass
         time.sleep(1)
@@ -131,8 +130,12 @@ class FYALMDController:
         decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
         if self.measuring:
             if self.run_fw_test:
+                waiting_start = time.time()
                 while not self.new_value:
-                    time.sleep(0.000001)
+                    # if there is no new value after 5sec, break and append -1 for fw latency
+                    if (time.time() - waiting_start) > 5:  
+                        self.last_fw_latency = -1
+                        break
             ete = int(decoded_bytes)
             diff = (ete - self.last_fw_latency)
             self.new_value = False

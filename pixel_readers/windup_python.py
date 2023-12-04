@@ -33,12 +33,12 @@ def main():
             state = current_state
             start = time.time()
             click_timestamps.append(start)
-            # while True:
-            #     test = device.screenshot(region=(0, 0, 10, 10))
-            #     print(test)
-            #     if test[0][0][0] == 255:
-            #         break
-            while device.screenshot(region=(0, 0, 1, 1))[0][0][0] != 255:
+            # #while True:
+            # test = device.screenshot(region=(5, 5, 6, 6))
+            # print(test)
+            #     #if test[0][0][0] == 255:
+            #     #    break
+            while device.screenshot(region=(5, 5, 6, 6))[0][0][0] != 255:
                 time.sleep(0.000001)
             end = time.time()
             print(int((end - start) * 1000 * 1000))
