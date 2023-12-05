@@ -54,9 +54,9 @@ class TestApp(wx.Frame):
 
 
 def signal_handler(signal, frame):
-    print("signal wx")
-    df = pandas.DataFrame(data={"wxpython": click_timestamps})
-    df.to_csv("../../data/clicks/wxpython.csv", sep=',',index=False)
+    #print("signal wx")
+    #df = pandas.DataFrame(data={"wxpython": click_timestamps})
+    #df.to_csv("../../data/clicks/wxpython.csv", sep=',',index=False)
     sys.exit(0)
 
 def main():

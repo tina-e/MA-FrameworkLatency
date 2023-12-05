@@ -16,12 +16,12 @@ import signal
 # except:
 #     pass
 
-click_timestamps = []
+#click_timestamps = []
 
 def signal_handler(signal, frame):
-    print("signal windup")
-    df = pandas.DataFrame(data={"windup_python": click_timestamps})
-    df.to_csv("../data/clicks/windup_python.csv", sep=',',index=False)
+    #print("signal windup")
+    #df = pandas.DataFrame(data={"windup_python": click_timestamps})
+    #df.to_csv("../data/clicks/windup_python.csv", sep=',',index=False)
     sys.exit(0)
 
 def main():
@@ -32,7 +32,7 @@ def main():
         if current_state != state and current_state >= 0:  # click detected
             state = current_state
             start = time.time()
-            click_timestamps.append(start)
+            #click_timestamps.append(start)
             # #while True:
             # test = device.screenshot(region=(5, 5, 6, 6))
             # print(test)

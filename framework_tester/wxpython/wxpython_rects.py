@@ -62,7 +62,7 @@ def main():
     app = wx.App()
 
     size = (WIDTH, HEIGHT)
-    position = (100, 100)
+    position = (0, 0)
     style = wx.NO_BORDER
     test_app = TestApp(None, title="framework", size=size, position=position, style=style)
 

@@ -26,6 +26,7 @@ class MainWindow(QWidget):
         self.scene = QGraphicsScene(self.graphicsView)
         self.graphicsView.setScene(self.scene)
 
+        #self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.color = QColor(0, 0, 0)
         self.showFullScreen()
         self.setWindowTitle('framework')

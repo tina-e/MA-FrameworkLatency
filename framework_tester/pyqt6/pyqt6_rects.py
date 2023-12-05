@@ -27,7 +27,7 @@ class MainWindow(QWidget):
         self.graphicsView.setScene(self.scene)
 
         self.color = QColor(0, 0, 0)
-        self.setGeometry(100, 100, WIDTH, HEIGHT)
+        self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.setWindowTitle('framework')
         self.show()

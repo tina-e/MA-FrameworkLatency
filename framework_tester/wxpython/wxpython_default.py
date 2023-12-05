@@ -39,7 +39,7 @@ class TestApp(wx.Frame):
         dc.DrawRectangle(0, 0, WIDTH, HEIGHT)
 
     def OnClick(self, e):
-        click_timestamps.append(time.time())
+        #click_timestamps.append(time.time())
         self.color = '#FFFFFF'
         e.Skip()
         self.Refresh()
