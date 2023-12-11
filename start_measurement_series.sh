@@ -104,14 +104,14 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS wxpython default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS wxpython default False getdbits $DATA_DIR
 
-# ./start_measurement.sh calibrate_and_measure $ITERATIONS wxpython rects True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects True getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects True bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects False bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS wxpython rects False getdbits $DATA_DIR
+./start_measurement.sh calibrate_and_measure $ITERATIONS wxpython rects True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects False getdbits $DATA_DIR
 
 
 
@@ -144,33 +144,33 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyqt6 default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt6 default False getdbits $DATA_DIR
 
-./start_measurement.sh calibrate_and_measure $ITERATIONS pyqt6 rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False getdbits $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS pyqt6 rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False getdbits $DATA_DIR
 
-# # tkinter ---------------------------------------------------------------------------------------
-./start_measurement.sh measure $ITERATIONS tkinter default True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False getdbits $DATA_DIR
+# # # tkinter ---------------------------------------------------------------------------------------
+# ./start_measurement.sh measure $ITERATIONS tkinter default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False getdbits $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS tkinter rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False getdbits $DATA_DIR
 
 
 
