@@ -5,14 +5,13 @@ import sys
 import pandas
 import signal
 
-# import pygetwindow as gw
+import pygetwindow as gw
 
 # try:
 #     for window in gw.getWindowsWithTitle("framework"):
-#         print(window)
 #         if window.title == "framework":
 #             window.activate()
-#             window.maximize()
+#             #window.maximize()
 # except:
 #     pass
 

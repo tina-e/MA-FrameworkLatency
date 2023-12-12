@@ -32,9 +32,11 @@ class FYALMDController:
 
     def ensure_focus(self):
         try:
-            for window in gw.getWindowsWithTitle("framework"):
+            for window in gw.getAllWindows():
                 if window.title == "framework":
                     window.activate()
+                elif window.title == "Windows PowerShell":
+                    window.minimize()
         except:
             pass
         time.sleep(1)

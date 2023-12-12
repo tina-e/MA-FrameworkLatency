@@ -32,6 +32,11 @@ case "$TEST_PROGRAM" in
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
+
+    *"GLUT"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
 esac
 
 sleep "3s"

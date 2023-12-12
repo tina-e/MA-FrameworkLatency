@@ -1,36 +1,26 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="python_0512_480hz_55"
+DATA_DIR="other_1212_480hz_55"
 
-#mkdir "./data/$DATA_DIR"
+mkdir "./data/$DATA_DIR"
 
 #killall -9 picom
 
-# ACTION = $1
-# ITERATIONS = $2
-# TEST_PROGRAM = $3
-# TEST_COMPLEXITY = $4
-# FW_RUNNING = $5
-# PIXEL_READER = $6
-# DATA_DIR = $7
+# ACTION=$1
+# ITERATIONS=$2
+# TEST_PROGRAM=$3
+# TEST_COMPLEXITY=$4
+# FW_RUNNING=$5
+# PIXEL_READER=$6
+# DATA_DIR=$7
 
 sleep "5s"
 
 # # SDL2 ---------------------------------------------------------------------------------------
-# ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default False windup_python $DATA_DIR
-
-# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects False windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True windup_python $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False windup_python $DATA_DIR
-
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software default False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_Software default True windup_python $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software default False windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software default True bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software default False bitblt $DATA_DIR
@@ -43,13 +33,17 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False getdbits $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_OPENGL default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL default False windup_python $DATA_DIR
 
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False getdbits $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True getpixel $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False getpixel $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True bitblt $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False bitblt $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True getdbits $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES default False windup_python $DATA_DIR
 
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software rects True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_Software rects False getpixel $DATA_DIR
@@ -65,14 +59,18 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects True bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects False getdbits $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OPENGL rects False windup_python $DATA_DIR
 
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False getpixel $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False bitblt $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True getdbits $DATA_DIR
-# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False getdbits $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True getpixel $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False getpixel $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True bitblt $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False bitblt $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True getdbits $DATA_DIR
+# # ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS SDL2_OpenGLES rects False windup_python $DATA_DIR
 
 
 # # # pygame ---------------------------------------------------------------------------------------
@@ -104,14 +102,14 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS wxpython default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS wxpython default False getdbits $DATA_DIR
 
-./start_measurement.sh calibrate_and_measure $ITERATIONS wxpython rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS wxpython rects False getdbits $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS wxpython rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS wxpython rects False getdbits $DATA_DIR
 
 
 
@@ -177,7 +175,7 @@ sleep "5s"
 
 
 # # JavaSwing ---------------------------------------------------------------------------------------
-# ./start_measurement.sh measure $ITERATIONS JavaSwing default True getpixel $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS JavaSwing default True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS JavaSwing default False getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS JavaSwing default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS JavaSwing default False windup_python $DATA_DIR
@@ -213,3 +211,43 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS Java2D rects False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS Java2D rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS Java2D rects False getdbits $DATA_DIR
+
+
+
+# # # pyglet ---------------------------------------------------------------------------------------
+./start_measurement.sh calibrate_and_measure $ITERATIONS pyglet default True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default False getdbits $DATA_DIR
+
+./start_measurement.sh measure $ITERATIONS pyglet rects True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects False getdbits $DATA_DIR
+
+# # # glut ---------------------------------------------------------------------------------------
+./start_measurement.sh measure $ITERATIONS GLUT default True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default False getdbits $DATA_DIR
+
+./start_measurement.sh measure $ITERATIONS GLUT rects True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects False getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects False getdbits $DATA_DIR

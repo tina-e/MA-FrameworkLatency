@@ -4,21 +4,24 @@
 
 
 // screen size
-#define WIDTH 1920
-#define HEIGHT 1200
+//#define WIDTH 1920 
+//#define HEIGHT 1200
+#define WIDTH (1920 * 0.8) 
+#define HEIGHT (1200 * 0.8)
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED
 
 // seems to make no big difference, so use full screen for everything
-#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
+#define WINDOW_STYLE SDL_WINDOW_BORDERLESS
+// #define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
 
 #ifndef DRIVER
     // supported:
     // opengl
     // opengles2
     // software
-#define DRIVER "software"
+#define DRIVER "opengl"
 #endif
 
 // make sure we clean up when program is interrupted

@@ -41,7 +41,7 @@ def on_draw():
     rect.draw()
 
 def signal_handler(signal, frame):
-    print('got signal')
+    #print('got signal')
     sys.exit(0)
 
 signal.signal(signal.SIGTERM, signal_handler)
