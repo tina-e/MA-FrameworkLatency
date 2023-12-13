@@ -2,7 +2,6 @@ import d3dshot
 import time
 import win32api
 import sys
-import pandas
 import signal
 
 import pygetwindow as gw
