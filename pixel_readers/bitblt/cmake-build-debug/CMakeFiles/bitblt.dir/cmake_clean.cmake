@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bitblt.dir/main.cpp.obj"
-  "CMakeFiles/bitblt.dir/main.cpp.obj.d"
   "bitblt.exe"
   "bitblt.exe.manifest"
   "bitblt.pdb"
