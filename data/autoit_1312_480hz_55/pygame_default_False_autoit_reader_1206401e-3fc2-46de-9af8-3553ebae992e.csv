@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pygame,default,pygame_default,autoit_reader,False,autoit_reader_False,14016,-1,14017
+1,1,pygame,default,pygame_default,autoit_reader,False,autoit_reader_False,15344,-1,15345
+2,2,pygame,default,pygame_default,autoit_reader,False,autoit_reader_False,14792,-1,14793
+3,3,pygame,default,pygame_default,autoit_reader,False,autoit_reader_False,13780,-1,13781
+4,4,pygame,default,pygame_default,autoit_reader,False,autoit_reader_False,13332,-1,13333

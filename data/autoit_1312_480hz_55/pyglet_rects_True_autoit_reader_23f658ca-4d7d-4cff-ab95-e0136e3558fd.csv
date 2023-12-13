@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyglet,rects,pyglet_rects,autoit_reader,True,autoit_reader_True,16472,2,16470
+1,1,pyglet,rects,pyglet_rects,autoit_reader,True,autoit_reader_True,23296,1,23295
+2,2,pyglet,rects,pyglet_rects,autoit_reader,True,autoit_reader_True,24876,2,24874
+3,3,pyglet,rects,pyglet_rects,autoit_reader,True,autoit_reader_True,22288,2,22286
+4,4,pyglet,rects,pyglet_rects,autoit_reader,True,autoit_reader_True,14116,2,14114

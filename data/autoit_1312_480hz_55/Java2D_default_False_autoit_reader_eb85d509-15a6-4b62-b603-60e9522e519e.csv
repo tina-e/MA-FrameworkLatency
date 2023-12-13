@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,Java2D,default,Java2D_default,autoit_reader,False,autoit_reader_False,11756,-1,11757
+1,1,Java2D,default,Java2D_default,autoit_reader,False,autoit_reader_False,11656,-1,11657
+2,2,Java2D,default,Java2D_default,autoit_reader,False,autoit_reader_False,11320,-1,11321
+3,3,Java2D,default,Java2D_default,autoit_reader,False,autoit_reader_False,8736,-1,8737
+4,4,Java2D,default,Java2D_default,autoit_reader,False,autoit_reader_False,11088,-1,11089

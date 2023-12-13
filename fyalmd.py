@@ -26,6 +26,8 @@ class FYALMDController:
         self.measurements = []
         if (program_name == 'windup_python'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
+        elif (program_name == 'autoit_reader'):
+            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_autoit, daemon=True)
         else:
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
 
@@ -87,6 +89,17 @@ class FYALMDController:
                 break
         self.latency_tester_process.kill()
         
+
+    def init_fw_latency_tester_autoit(self):
+        cmd = ['AutoIt3.exe', f'.\pixel_readers\{self.program_name}.au3']
+        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
+        for line in self.latency_tester_process.stdout:
+            self.last_fw_latency = int(line)
+            self.new_value = True
+            if self.measuring == False:
+                break
+        self.latency_tester_process.kill()
+
 
     def init_fw_latency_tester(self):
         cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']

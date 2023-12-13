@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="other_1212_480hz_55"
+DATA_DIR="autoit_1312_480hz_55"
 
 mkdir "./data/$DATA_DIR"
 
@@ -74,7 +74,11 @@ sleep "5s"
 
 
 # # # pygame ---------------------------------------------------------------------------------------
-# ./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True windup_python $DATA_DIR
+./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False autoit_reader $DATA_DIR
+#./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default False getpixel $DATA_DIR
@@ -111,6 +115,11 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS wxpython rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS wxpython rects False getdbits $DATA_DIR
 
+./start_measurement.sh measure $ITERATIONS wxpython default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS wxpython rects False autoit_reader $DATA_DIR
+
 
 
 # # # pyqt5 ---------------------------------------------------------------------------------------
@@ -132,6 +141,11 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyqt5 rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt5 rects False getdbits $DATA_DIR
 
+./start_measurement.sh measure $ITERATIONS pyqt5 default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt5 default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt5 rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt5 rects False autoit_reader $DATA_DIR
+
 # # # pyqt6 ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS pyqt6 default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt6 default False windup_python $DATA_DIR
@@ -150,6 +164,11 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyqt6 rects False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt6 rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt6 rects False getdbits $DATA_DIR
+
+./start_measurement.sh measure $ITERATIONS pyqt6 default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt6 default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt6 rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyqt6 rects False autoit_reader $DATA_DIR
 
 # # # tkinter ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS tkinter default True windup_python $DATA_DIR
@@ -171,7 +190,10 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS tkinter rects False getdbits $DATA_DIR
 
 
-
+./start_measurement.sh measure $ITERATIONS tkinter default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS tkinter default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS tkinter rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS tkinter rects False autoit_reader $DATA_DIR
 
 
 # # JavaSwing ---------------------------------------------------------------------------------------
@@ -193,6 +215,11 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS JavaSwing rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS JavaSwing rects False getdbits $DATA_DIR
 
+./start_measurement.sh measure $ITERATIONS JavaSwing default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS JavaSwing default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS JavaSwing rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS JavaSwing rects False autoit_reader $DATA_DIR
+
 # # Java2D ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS Java2D default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS Java2D default False windup_python $DATA_DIR
@@ -212,42 +239,57 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS Java2D rects True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS Java2D rects False getdbits $DATA_DIR
 
+./start_measurement.sh measure $ITERATIONS Java2D default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS Java2D default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS Java2D rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS Java2D rects False autoit_reader $DATA_DIR
 
 
-# # # pyglet ---------------------------------------------------------------------------------------
-./start_measurement.sh calibrate_and_measure $ITERATIONS pyglet default True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False getdbits $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyglet rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False getdbits $DATA_DIR
+# # # # pyglet ---------------------------------------------------------------------------------------
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS pyglet default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False getdbits $DATA_DIR
 
-# # # glut ---------------------------------------------------------------------------------------
-./start_measurement.sh measure $ITERATIONS GLUT default True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False getdbits $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS GLUT rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pyglet rects False autoit_reader $DATA_DIR
+
+# # # # glut ---------------------------------------------------------------------------------------
+# ./start_measurement.sh measure $ITERATIONS GLUT default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False getdbits $DATA_DIR
+
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False getdbits $DATA_DIR
+
+./start_measurement.sh measure $ITERATIONS GLUT default True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT default False autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects True autoit_reader $DATA_DIR
+./start_measurement.sh measure $ITERATIONS GLUT rects False autoit_reader $DATA_DIR
