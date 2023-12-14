@@ -24,10 +24,10 @@ class FYALMDController:
         self.yalmd = None
         self.new_value = False
         self.measurements = []
-        if (program_name == 'windup_python'):
-            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
-        elif (program_name == 'autoit_reader'):
+        if (program_name == 'autoit_reader'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_autoit, daemon=True)
+        elif (program_name == 'windup_python' or program_name == 'ctypes_reader' or program_name == 'pyautogui_reader'):
+            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
         else:
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
 
