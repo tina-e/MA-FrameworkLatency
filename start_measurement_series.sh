@@ -88,6 +88,12 @@ sleep "5s"
 ./start_measurement.sh measure $ITERATIONS pygame default False pyautogui_reader $DATA_DIR
 ./start_measurement.sh measure $ITERATIONS pygame rects True pyautogui_reader $DATA_DIR
 ./start_measurement.sh measure $ITERATIONS pygame rects False pyautogui_reader $DATA_DIR
+
+./start_measurement.sh measure $ITERATIONS pygame default True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects True windup_python $DATA_DIR
+./start_measurement.sh measure $ITERATIONS pygame rects False windup_python $DATA_DIR
+# # ----------
 #./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default True getpixel $DATA_DIR

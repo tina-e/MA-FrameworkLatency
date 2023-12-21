@@ -37,7 +37,7 @@ def main():
             #     #if test[0][0][0] == 255:
             #     #    break
             while device.screenshot(region=(5, 5, 6, 6))[0][0][0] != 255:
-                time.sleep(0.000001)
+                time.sleep(0.001)
             end = time.time()
             print(int((end - start) * 1000 * 1000))
 

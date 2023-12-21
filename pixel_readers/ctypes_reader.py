@@ -17,7 +17,7 @@ def main():
             state = current_state
             start = time.time()
             while tuple(int.to_bytes(windll.gdi32.GetPixel(dc, 5, 5), 3, "little"))[0] != 255:
-                time.sleep(0.000001)
+                time.sleep(0.001)
             end = time.time()
             print(int((end - start) * 1000 * 1000))
 
