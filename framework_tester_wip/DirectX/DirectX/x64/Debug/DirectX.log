@@ -1,2 +1,0 @@
-﻿main.obj : error LNK2019: unresolved external symbol CreateDXGIFactory1 referenced in function main
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX\x64\Debug\DirectX.exe : fatal error LNK1120: 1 unresolved externals
