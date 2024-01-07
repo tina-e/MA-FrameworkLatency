@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(31,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(32,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(33,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(40,32): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(40,29): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(40,26): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+  FLTK_rects.vcxproj -> C:\Users\tinaemmert\Projects\FLTK_rects\FLTK_rects\x64\Debug\FLTK_rects.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.
