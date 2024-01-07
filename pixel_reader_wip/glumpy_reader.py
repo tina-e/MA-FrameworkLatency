@@ -15,19 +15,29 @@ def render_scene():
     glFlush()
 
 def read_pixel_color(x, y):
+    glReadBuffer(GL_FRONT)
     data = glReadPixels(x, y, 1, 1, GL_RGB, GL_UNSIGNED_BYTE)
     pixel_color = np.frombuffer(data, dtype=np.uint8)
     pixel_color_normalized = pixel_color / 255.0
     return pixel_color_normalized
 
+def display():
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+    # Your OpenGL rendering code here
+    glutSwapBuffers()
+
 def main():
     glutInit()  # Initialize GLUT
-    glutInitWindowSize(width, height)
-    glutCreateWindow("OpenGL Pixel Read")
-    glutDisplayFunc(render_scene)
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
+    glutCreateWindow(b"OpenGL Window")
+    glutDisplayFunc(display)
+    glEnable(GL_DEPTH_TEST)
+    #glutInitWindowSize(width, height)
+    #glutCreateWindow(b'OpenGL Pixel Read')
+    #glutDisplayFunc(render_scene)
 
     # Initialize OpenGL
-    glClearColor(0.0, 0.0, 0.0, 1.0)
+    #glClearColor(0.0, 0.0, 0.0, 1.0)
 
     # Read the pixel color
     x, y = 0, 0
