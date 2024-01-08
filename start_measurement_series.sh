@@ -17,10 +17,52 @@ mkdir "./data/$DATA_DIR"
 
 sleep "5s"
 
+./start_measurements_sep.sh calibrate_and_measure $ITERATIONS Qt5 default True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 default True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 default True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 default False bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False bitblt $DATA_DIR
+
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 default False bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False bitblt $DATA_DIR
+
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 default False bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects True getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects False getpixel $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects True getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects False getdbits $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects True bitblt $DATA_DIR
+./start_measurements_sep.sh measure $ITERATIONS DirectX11 rects False bitblt $DATA_DIR
+
+
+
+
 # ./start_measurement.sh calibrate_and_measure $ITERATIONS FLTK default True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS FLTK default False getpixel $DATA_DIR
-./start_measurement.sh calibrate_and_measure $ITERATIONS FLTK rects True getpixel $DATA_DIR
-./start_measurement.sh measure $ITERATIONS FLTK rects False getpixel $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS FLTK rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK rects False getpixel $DATA_DIR
 # ./start_measurement.sh calibrate_and_measure $ITERATIONS GLEW default True getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW default False getpixel $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW rects True getpixel $DATA_DIR
@@ -32,8 +74,8 @@ sleep "5s"
 
 # ./start_measurement.sh measure $ITERATIONS FLTK default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS FLTK default False getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS FLTK rects True getdbits $DATA_DIR
-./start_measurement.sh measure $ITERATIONS FLTK rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK rects False getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW default True getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW default False getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW rects True getdbits $DATA_DIR
@@ -45,8 +87,8 @@ sleep "5s"
 
 # ./start_measurement.sh measure $ITERATIONS FLTK default True bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS FLTK default False bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS FLTK rects True bitblt $DATA_DIR
-./start_measurement.sh measure $ITERATIONS FLTK rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK rects False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW default True bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW default False bitblt $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLEW rects True bitblt $DATA_DIR
