@@ -1,3 +1,4 @@
 D:\Downloads\Daivuk cpp11-and-DX11-Tutorials master Chapter2-Chapter2_Tutorial6\Debug\Chapter2_Tutorial6.exe
 D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11\Debug\DirectX11_default.exe
 D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Debug\DirectX11_rects.exe
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Debug\DirectX11_rects.exe

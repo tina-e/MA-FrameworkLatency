@@ -37,6 +37,21 @@ case "$TEST_PROGRAM" in
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
+
+    *"GLEW"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
+
+    *"FLTK"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
+
+    *"win32"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
 esac
 
 sleep "3s"

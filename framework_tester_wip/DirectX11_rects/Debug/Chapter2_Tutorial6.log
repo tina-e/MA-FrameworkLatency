@@ -1,3 +1,11 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Chapter2_Tutorial6.vcxproj, DirectX11_default.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (Debug\) enthält freigegebene Dateien aus einem anderen Projekt (Chapter2_Tutorial6.vcxproj, DirectX11_default.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
+  compilation object save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\rectPixelShader.cso
+  compilation object save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\rectVertexShader.cso
+  Renderer.cpp
+  Rect.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(65,36): warning C4305: "Argument": Verkürzung von "double" in "float"
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(66,36): warning C4305: "Argument": Verkürzung von "double" in "float"
   main.cpp
-  Chapter2_Tutorial6.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Debug\DirectX11_rects.exe
+  Window.cpp
+  Code wird generiert...
+  Chapter2_Tutorial6.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Debug\DirectX11_rects.exe

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="other_1312_480hz_55"
+DATA_DIR="news"
 
 mkdir "./data/$DATA_DIR"
 
@@ -16,6 +16,49 @@ mkdir "./data/$DATA_DIR"
 # DATA_DIR=$7
 
 sleep "5s"
+
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS FLTK default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK default False getpixel $DATA_DIR
+./start_measurement.sh calibrate_and_measure $ITERATIONS FLTK rects True getpixel $DATA_DIR
+./start_measurement.sh measure $ITERATIONS FLTK rects False getpixel $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS GLEW default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW default False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default False getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects True getpixel $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects False getpixel $DATA_DIR
+
+# ./start_measurement.sh measure $ITERATIONS FLTK default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK default False getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS FLTK rects True getdbits $DATA_DIR
+./start_measurement.sh measure $ITERATIONS FLTK rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW default False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default False getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects True getdbits $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects False getdbits $DATA_DIR
+
+# ./start_measurement.sh measure $ITERATIONS FLTK default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS FLTK default False bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS FLTK rects True bitblt $DATA_DIR
+./start_measurement.sh measure $ITERATIONS FLTK rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW default False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLEW rects False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 default False bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects True bitblt $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS win32 rects False bitblt $DATA_DIR
+
+
+
+
 
 # # SDL2 ---------------------------------------------------------------------------------------
 # ./start_measurement.sh calibrate_and_measure $ITERATIONS SDL2_Software default True getpixel $DATA_DIR
@@ -79,20 +122,20 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pygame rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pygame default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects False pyautogui_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pygame default True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects True windup_python $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pygame rects False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame default True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects True windup_python $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pygame rects False windup_python $DATA_DIR
 # # ----------
 #./start_measurement.sh calibrate_and_measure $ITERATIONS pygame default True windup_python $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pygame default False windup_python $DATA_DIR
@@ -162,15 +205,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyqt5 rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt5 rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyqt5 default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyqt5 default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt5 rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt5 rects False pyautogui_reader $DATA_DIR
 
 # # # pyqt6 ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS pyqt6 default True windup_python $DATA_DIR
@@ -196,15 +239,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyqt6 rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyqt6 rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyqt6 default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyqt6 default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyqt6 rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyqt6 rects False pyautogui_reader $DATA_DIR
 
 # # # tkinter ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS tkinter default True windup_python $DATA_DIR
@@ -231,15 +274,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS tkinter rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS tkinter rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS tkinter default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS tkinter default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS tkinter rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS tkinter rects False pyautogui_reader $DATA_DIR
 
 
 # # JavaSwing ---------------------------------------------------------------------------------------
@@ -266,15 +309,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS JavaSwing rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS JavaSwing rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS JavaSwing default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS JavaSwing default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS JavaSwing rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS JavaSwing rects False pyautogui_reader $DATA_DIR
 
 # # Java2D ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS Java2D default True windup_python $DATA_DIR
@@ -300,15 +343,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS Java2D rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS Java2D rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS Java2D default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS Java2D default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS Java2D rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS Java2D rects False pyautogui_reader $DATA_DIR
 
 
 
@@ -336,15 +379,15 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS pyglet rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS pyglet rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyglet default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS pyglet default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS pyglet rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS pyglet rects False pyautogui_reader $DATA_DIR
 
 # # # # glut ---------------------------------------------------------------------------------------
 # ./start_measurement.sh measure $ITERATIONS GLUT default True windup_python $DATA_DIR
@@ -370,12 +413,12 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS GLUT rects True autoit_reader $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GLUT rects False autoit_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS GLUT default True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects True ctypes_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True ctypes_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False ctypes_reader $DATA_DIR
 
-./start_measurement.sh measure $ITERATIONS GLUT default True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT default False pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects True pyautogui_reader $DATA_DIR
-./start_measurement.sh measure $ITERATIONS GLUT rects False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT default False pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects True pyautogui_reader $DATA_DIR
+# ./start_measurement.sh measure $ITERATIONS GLUT rects False pyautogui_reader $DATA_DIR

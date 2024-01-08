@@ -1,0 +1,16 @@
+﻿  compilation object save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectPixelShader.cso
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectVertexShader.hlsl(10,11-24): warning X3578: 'main': Top-level return value is not completely initialized
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectVertexShader.hlsl(10,11-24): warning X3578: 'main': Top-level return value is not completely initialized
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectVertexShader.hlsl(10,11-24): warning X3578: 'main': Top-level return value is not completely initialized
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectVertexShader.hlsl(10,11-24): warning X3578: Output value 'main' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\rectVertexShader.cso
+  Renderer.cpp
+  Rect.cpp
+  main.cpp
+  Window.cpp
+  Code wird generiert.
+  Previous IPDB not found, fall back to full compilation.
+  All 204 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Codegenerierung ist abgeschlossen.
+  Chapter2_Tutorial6.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_default\Release\DirectX11_default.exe
