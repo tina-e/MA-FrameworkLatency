@@ -17,33 +17,33 @@ mkdir "./data/$DATA_DIR"
 
 sleep "5s"
 
-./start_measurements_sep.sh calibrate_and_measure $ITERATIONS Qt5 default True getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 default True getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 default True bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 default False bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False bitblt $DATA_DIR
+# ./start_measurements_sep.sh calibrate_and_measure $ITERATIONS Qt5 default True getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 default True getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 default False getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 default True bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 default False bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects True bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt5 rects False bitblt $DATA_DIR
 
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default True bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 default False bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getpixel $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getdbits $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True bitblt $DATA_DIR
-./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default True getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default False getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default True bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 default False bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getpixel $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False getdbits $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects True bitblt $DATA_DIR
+# ./start_measurements_sep.sh measure $ITERATIONS Qt6 rects False bitblt $DATA_DIR
 
-./start_measurements_sep.sh measure $ITERATIONS DirectX11 default True getpixel $DATA_DIR
+./start_measurements_sep.sh calibrate_and_measure $ITERATIONS DirectX11 default True getpixel $DATA_DIR
 ./start_measurements_sep.sh measure $ITERATIONS DirectX11 default False getpixel $DATA_DIR
 ./start_measurements_sep.sh measure $ITERATIONS DirectX11 default True getdbits $DATA_DIR
 ./start_measurements_sep.sh measure $ITERATIONS DirectX11 default False getdbits $DATA_DIR

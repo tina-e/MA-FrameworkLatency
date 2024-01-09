@@ -54,8 +54,10 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"DirectX"*)
-        start ./$FW_PATH.exe &
+        cd "./framework_tester/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+        start "./${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe" &
         PID_TEST_PROGRAM=$! 
+        cd "../../"
         ;;
 
     *"Qt"*)

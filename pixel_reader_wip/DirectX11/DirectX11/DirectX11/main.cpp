@@ -1,81 +1,111 @@
 #include <Windows.h>
+#include <winerror.h>
 #include <dxgi1_2.h>
 #include <d3d11.h>
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 IDXGIFactory1* pFactory;
 IDXGIAdapter1* pAdapter;
 IDXGIOutput* pOutput;
-
-using namespace std;
-
-// init DXGI
-CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void**)&pFactory);
-pFactory->EnumAdapters1(0, &pAdapter);
-pAdapter->EnumOutputs(0, &pOutput);
-
-
-// init D3D
+ID3D11Texture2D* pBackBuffer;
 ID3D11Device* pDevice;
 ID3D11DeviceContext* pContext;
 IDXGISwapChain* pSwapChain;
-
-// Create Direct3D device and swap chain
-D3D11CreateDeviceAndSwapChain(pAdapter, D3D_DRIVER_TYPE_UNKNOWN, NULL, 0, NULL, 0, D3D11_SDK_VERSION, &sd, &pSwapChain, &pDevice, NULL, &pContext);
-
-
-
-
+IDXGIOutput1* pOutput1;
 ID3D11Texture2D* pStagingTexture;
-
-D3D11_TEXTURE2D_DESC desc;
-desc.Width = screenWidth;
-desc.Height = screenHeight;
-desc.MipLevels = 1;
-desc.ArraySize = 1;
-desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-desc.SampleDesc.Count = 1;
-desc.SampleDesc.Quality = 0;
-desc.Usage = D3D11_USAGE_STAGING;
-desc.BindFlags = 0;
-desc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
-desc.MiscFlags = 0;
-
-pDevice->CreateTexture2D(&desc, NULL, &pStagingTexture);
-
-
-
-// Capture screen
 IDXGIOutputDuplication* pDeskDupl;
-pOutput->DuplicateOutput(pDevice, &pDeskDupl);
 
+void InitDXGI() {
+	// init DXGI
+	CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void**)&pFactory);
+	pFactory->EnumAdapters1(0, &pAdapter);
+	pAdapter->EnumOutputs(0, &pOutput);
+}
 
+void CreateDevice() {
+	//DXGI_SWAP_CHAIN_DESC swapChainDesc;
+	//ZeroMemory(&swapChainDesc, sizeof(swapChainDesc));
+	//swapChainDesc.BufferCount = 1;
+	//swapChainDesc.BufferDesc.Width = 1920;
+	//swapChainDesc.BufferDesc.Height = 1080; // TODO: anpassen!
+	//swapChainDesc.BufferDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+	//swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+	//swapChainDesc.OutputWindow = nullptr;
+	//swapChainDesc.SampleDesc.Count = 1;
+	//swapChainDesc.SampleDesc.Quality = 0;
+	//swapChainDesc.Windowed = TRUE; // for sure?
 
-// read pixel data
-D3D11_MAPPED_SUBRESOURCE resource;
-pContext->CopyResource(pStagingTexture, pBackBuffer);
-pContext->Map(pStagingTexture, 0, D3D11_MAP_READ, 0, &resource);
+	D3D_FEATURE_LEVEL featureLevel;
+	HRESULT hr = D3D11CreateDevice(pAdapter, D3D_DRIVER_TYPE_UNKNOWN, nullptr, 0, nullptr, 0, D3D11_SDK_VERSION, &pDevice, &featureLevel, &pContext);
+	if (FAILED(hr)) {
+		cout << "err" << endl;
+	}
+	/*HRESULT hr = D3D11CreateDeviceAndSwapChain(pAdapter, D3D_DRIVER_TYPE_UNKNOWN, NULL, 0, NULL, 0, D3D11_SDK_VERSION, &swapChainDesc, &pSwapChain, &pDevice, NULL, &pContext);
+	if (FAILED(hr)) {
+		cout << "err" << endl;
+	}*/
+	//pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+}
 
-cout << resource.pData()[0] << endl;
-cout << resource.pData()[1] << endl;
-cout << resource.pData()[2] << endl;
+void PerformDuplication() {
+	D3D11_TEXTURE2D_DESC desc;
+	desc.Width = 1920;
+	desc.Height = 1080;
+	desc.MipLevels = 1;
+	desc.ArraySize = 1;
+	desc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+	desc.SampleDesc.Count = 1;
+	desc.SampleDesc.Quality = 0;
+	desc.Usage = D3D11_USAGE_STAGING;
+	desc.BindFlags = 0;
+	desc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
+	desc.MiscFlags = 0;
+	pDevice->CreateTexture2D(&desc, NULL, &pStagingTexture);
 
-pContext->Unmap(pStagingTexture, 0);
+	// Capture screen
+	pOutput->QueryInterface(__uuidof(IDXGIOutput1), (void**)&pOutput1);
+	
+	pOutput1->DuplicateOutput(pDevice, &pDeskDupl);
+}
 
+void CleanUp() {
+	pStagingTexture->Release();
+	pDeskDupl->Release();
+	pOutput->Release();
+	pOutput1->Release();
+	pAdapter->Release();
+	pFactory->Release();
+	pSwapChain->Release();
+	pContext->Release();
+	pDevice->Release();
+}
 
+void doStuff() {
+	InitDXGI();
+	CreateDevice();
+	PerformDuplication();
 
-// cleanup
-pStagingTexture->Release();
-pDeskDupl->Release();
-pOutput->Release();
-pAdapter->Release();
-pFactory->Release();
-pSwapChain->Release();
-pContext->Release();
-pDevice->Release();
+	// read pixel data
+	D3D11_MAPPED_SUBRESOURCE resource;
+	pContext->CopyResource(pStagingTexture, pBackBuffer);
+	pContext->Map(pStagingTexture, 0, D3D11_MAP_READ, 0, &resource);
 
+	std::vector<BYTE> pixelData(4);
+	memcpy(&pixelData, resource.pData, sizeof(BYTE) * 4 * 200);
+	cout << resource.pData << endl;
 
+	pContext->Unmap(pStagingTexture, 0);
 
+	
+}
+
+int main() {
+	doStuff();
+	CleanUp();
+}
 
 
 
