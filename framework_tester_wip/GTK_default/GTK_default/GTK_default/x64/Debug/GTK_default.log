@@ -1,4 +1,4 @@
-﻿  main.cpp
-C:\Users\tinaemmert\vcpkg\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gtk\gtk.h(30,10): error C1083: Datei (Include) kann nicht geöffnet werden: "gtk/css/gtkcss.h": No such file or directory
-  (Quelldatei „main.cpp“ wird kompiliert)
+﻿  main.c
+C:\Users\tina\vcpkg\installed\x64-windows\include\gtk-4.0\gtk\gtk.h(30,10): error C1083: Cannot open include file: 'gtk/css/gtkcss.h': No such file or directory
+  (compiling source file 'main.c')
   
