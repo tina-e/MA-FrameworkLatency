@@ -1,2 +1,36 @@
-﻿  DisplayManager.cpp
-  DesktopDuplication.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\DesktopDuplication.exe
+﻿  compilation header save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_reader_wip\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\PixelShader.h
+  compilation header save succeeded; see C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_reader_wip\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\VertexShader.h
+  DesktopDuplication.cpp
+  DisplayManager.cpp
+  DuplicationManager.cpp
+  OutputManager.cpp
+  ThreadManager.cpp
+  Generating Code...
+  DesktopDuplication.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_reader_wip\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\DesktopDuplication.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.
+  Set-Content : Ein Teil des Pfades "C:\WINDOWS\System32\WindowsPowerShell\v1.0\x64\Debug\vcpkg.applocal.log" konnte 
+  nicht gefunden werden.
+  In C:\Users\tina\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:12 Zeichen:5
+  +     Set-Content -Path $copiedFilesLog -Value "" -Encoding UTF8
+  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\WINDOWS\Syst...kg.applocal.log:String) [Set-Content], DirectoryNotFo 
+     undException
+      + FullyQualifiedErrorId : GetContentWriterDirectoryNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+   
+  Split-Path : Das Argument kann nicht an den Parameter "Path" gebunden werden, da es NULL ist.
+  In C:\Users\tina\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:76 Zeichen:39
+  +     $baseTargetBinaryDir = Split-Path $baseBinaryPath -parent
+  +                                       ~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
+  Split-Path : Das Argument kann nicht an den Parameter "Path" gebunden werden, da es NULL ist.
+  In C:\Users\tina\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:94 Zeichen:35
+  +     $targetBinaryDir = Split-Path $targetBinaryPath -parent
+  +                                   ~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
