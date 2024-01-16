@@ -13,7 +13,7 @@ x, y = 0, 0
 os.environ['SDL_VIDEO_WINDOW_POS'] = f'{x},{y}'
 
 running = True
-screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME)
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME, vsync=0)
 pygame.display.set_caption('framework')
 
 WIDTH = pygame.display.Info().current_w
