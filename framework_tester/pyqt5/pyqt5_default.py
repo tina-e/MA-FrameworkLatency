@@ -14,17 +14,12 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        #format = QSurfaceFormat()
-        #format.setSwapInterval(0)  # 0 for no vsync, 1 for vsync
-        #self.setFormat(format)
-
         graphicsView = QGraphicsView()
         graphicsView.setStyleSheet("border: 0px")
 
         self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
         self.setWindowFlags(Qt.FramelessWindowHint)
-        #self.setWindowFlags(Qt.X11BypassWindowManagerHint)
         self.color = QColor(0, 0, 0)
         self.show()
 
@@ -40,12 +35,10 @@ class MainWindow(QWidget):
 
     def mousePressEvent(self, event):
         self.color = QColor(255, 255, 255)
-        #self.repaint()
         self.update()
 
     def mouseReleaseEvent(self, event):
         self.color = QColor(0, 0, 0)
-        #self.repaint()
         self.update()
 
 app = QApplication(sys.argv)

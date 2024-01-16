@@ -39,9 +39,10 @@ void mouse(int button, int state, int x, int y) {
 int main(int argc, char** argv) {
     signal(SIGINT, signalHandler);
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA); // double buffering (??)
     glutInitWindowSize(windowWidth, windowHeight);
     glutCreateWindow("framework");
+    // is this working? wglSwapIntervalEXT(1);
     // glutFullScreen();
 
 
