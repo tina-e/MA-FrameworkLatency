@@ -110,7 +110,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>gtk.lib;cairo.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\tina\vcpkg\installed\x64-windows\include\gtk-4.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gsk;C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gdk;C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gtk;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
