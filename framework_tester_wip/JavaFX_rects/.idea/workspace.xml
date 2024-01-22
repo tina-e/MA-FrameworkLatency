@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8a444b0-371f-4c0c-9837-1e0686e0621c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../JavaFX_default/src/main/java/com/example/javafx_default/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaFX_default/.idea/artifacts/JavaFX_default_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFX_default/.idea/artifacts/JavaFX_default_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaFX_default/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFX_default/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFX_default/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFX_default/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +24,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2axCvVuFb05ggnhIRVZmFQylT9T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,15 +34,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/JavaFX_rects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -59,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705251077299</updated>
       <workItem from="1705251078326" duration="6046000" />
+      <workItem from="1705914914502" duration="644000" />
     </task>
     <servers />
   </component>

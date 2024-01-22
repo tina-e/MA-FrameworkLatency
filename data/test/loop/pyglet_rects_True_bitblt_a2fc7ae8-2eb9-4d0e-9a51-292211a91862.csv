@@ -1,0 +1,3 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyglet,rects,pyglet_rects,bitblt,True,bitblt_True,18476,10710,7766
+1,1,pyglet,rects,pyglet_rects,bitblt,True,bitblt_True,12768,2733,10035
