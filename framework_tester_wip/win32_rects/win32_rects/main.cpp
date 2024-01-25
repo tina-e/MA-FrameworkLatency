@@ -18,6 +18,12 @@ const int n_rects = 1000;
 bool isPressed = false;
 
 
+int randint(int low, int high)
+{
+    return low + rand() % (high - low);
+}
+
+
 void DrawRects() {
     int rectW = ClientWidth / 5;
     int rectH = ClientHeight / 5;
@@ -25,18 +31,17 @@ void DrawRects() {
         int rectX = (rand() % (ClientWidth / 2 - rectW)) + ClientWidth / 2;
         int rectY = rand() % (ClientHeight - rectH);
 
-        //u32 rectColor = rand();
-        std::random_device rd;
-        std::default_random_engine generator(rd());
-        std::uniform_int_distribution<uint32_t> distribution;
-        u32 rectColor = distribution(generator);
+        int r = randint(0, 255);
+        int g = randint(0, 255);
+        int b = randint(0, 255);
+        u32 color = (255 << 24) + (int(r) << 16) + (int(g) << 8) + int(b);
 
         u32* pixel = (u32*)BitmapMemory;
         pixel += rectY * BitmapWidth + rectX;
 
         for (int y = 0; y < rectH; ++y) {
             for (int x = 0; x < rectW; ++x) {
-                *pixel++ = rectColor;
+                *pixel++ = color;
             }
             pixel += BitmapWidth - rectW;
         }

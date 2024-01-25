@@ -23,7 +23,7 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$! 
         ;;
 
-    *"tk"*)
+    *"tkinter"*)
         python ./$FW_PATH.py &
         PID_TEST_PROGRAM=$! 
         ;;
@@ -42,6 +42,11 @@ case "$TEST_PROGRAM" in
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
+
+    # *"GTK"*)
+    #     start ./$FW_PATH.exe &
+    #     PID_TEST_PROGRAM=$! 
+    #     ;;
 
     *"FLTK"*)
         start ./$FW_PATH.exe &

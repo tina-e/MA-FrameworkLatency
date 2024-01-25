@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8a444b0-371f-4c0c-9837-1e0686e0621c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../JavaFX_default/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFX_default/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705251077299</updated>
       <workItem from="1705251078326" duration="6046000" />
-      <workItem from="1705914914502" duration="644000" />
+      <workItem from="1705914914502" duration="2445000" />
     </task>
     <servers />
   </component>
