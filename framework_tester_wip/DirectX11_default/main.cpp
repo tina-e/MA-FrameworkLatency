@@ -7,8 +7,8 @@
 
 int CALLBACK WinMain(HINSTANCE appInstance, HINSTANCE prevInstance, LPSTR cmdLine, int cmdCount) {
 
-	int width = GetSystemMetrics(SM_CXSCREEN);
-	int height = GetSystemMetrics(SM_CYSCREEN);
+	int width = GetSystemMetrics(SM_CXSCREEN) * 0.8;
+	int height = GetSystemMetrics(SM_CYSCREEN) * 0.8;
 
 	Window window(width, height);
 	Renderer renderer(window);

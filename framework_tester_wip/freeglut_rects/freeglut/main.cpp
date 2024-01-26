@@ -3,8 +3,8 @@
 #include <cstdlib>
 
 /* define the window size */
-#define WIDTH 1920
-#define HEIGHT 1200
+int WIDTH = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+int HEIGHT = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
 
 const int n_rects = 1000;
 int n_horizontal = 10;
@@ -107,9 +107,10 @@ int main(int argc, char** argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutCreateWindow("framework");
-    glutInitWindowSize(WIDTH, HEIGHT);
+    
+    glutInitWindowPosition(0, 0);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glutFullScreen();
+    //glutFullScreen();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutMouseFunc(input);
@@ -120,7 +121,7 @@ int main(int argc, char** argv)
     glutSwapBuffers();
     glutPostRedisplay();
     glFlush();
-
+    glutInitWindowSize(1000, 1000);
     glutMainLoop();
     return 0;
 }

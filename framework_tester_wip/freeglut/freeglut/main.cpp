@@ -41,12 +41,13 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA); // double buffering (??)
     glutInitWindowSize(windowWidth, windowHeight);
+    glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
     // is this working? wglSwapIntervalEXT(1);
     // glutFullScreen();
 
 
-    HWND frameworkWindow = FindWindow(NULL, "framework");
+    /*HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL) {
         std::cout << "found" << std::endl;
         SetWindowPos(frameworkWindow, NULL, 0, 0, windowWidth, windowHeight, SWP_NOZORDER | SWP_NOSIZE);
@@ -54,7 +55,7 @@ int main(int argc, char** argv) {
     }
     else {
         std::cerr << "no window named framework" << std::endl;
-    }
+    }*/
 
 
     glutDisplayFunc(display);
