@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
     w.setAutoFillBackground(true);
     w.setPalette(pal);
 
-    w.showFullScreen();
-    //w.show();
+    //w.showFullScreen();
+
+    //w.resize(1920 * 0.8, 1200 * 0.8);
+    w.show();
     return a.exec();
 }

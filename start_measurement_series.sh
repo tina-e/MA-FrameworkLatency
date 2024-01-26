@@ -1,15 +1,15 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="win32_rects_second_attempt"
+DATA_DIR="end-to-end-no-fullscreen"
 
 READERS=("getpixel" "bitblt" "getdbits")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 
-#FRAMEWORKS=("GLEW" "win32" "FLTK" "GLUT" "pyglet" "Java2D" "JavaSwing" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "SDL2_OpenGLES" "SDL2_OPENGL" "SDL2_Software")
+FRAMEWORKS=("win32" "pyglet" "Java2D" "JavaSwing" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "SDL2_OpenGLES" "SDL2_OPENGL" "SDL2_Software")
 #FRAMEWORKS_SEP_FOLDERS=("Qt5" "Qt6" "DirectX11")
 #FRAMEWORKS_GLUMPY=("pyglet" "glfw" "qt5" "sdl")
-FRAMEWORKS=("win32")
+#FRAMEWORKS=("win32")
 
 mkdir "./data/$DATA_DIR"
 #killall -9 picom
@@ -30,27 +30,41 @@ sleep "5s"
 # ./start_measurement.sh measure $ITERATIONS GTK default True pixelreader_getdbits $DATA_DIR
 # ./start_measurement.sh measure $ITERATIONS GTK default False pixelreader_getdbits $DATA_DIR
 
-
+# measure end to end only
 for f in "${!FRAMEWORKS[@]}";
 do
-    for r in "${!READERS[@]}";
-    do
-        if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
-        then
-            ./start_measurement.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        else
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        fi
-        r=$((r+1));
-    done
+    if [ "$f" -eq 0 ]
+    then
+        ./start_measurement.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default False getpixel $DATA_DIR
+        ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False getpixel $DATA_DIR
+    else
+        ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False getpixel $DATA_DIR
+        ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False getpixel $DATA_DIR
+    fi
     f=$((f+1));
 done
+
+
+# for f in "${!FRAMEWORKS[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
+#         then
+#             ./start_measurement.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+#         else
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+#         fi
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
 
 
 # # for frameworks where default and rects are not in the same directory

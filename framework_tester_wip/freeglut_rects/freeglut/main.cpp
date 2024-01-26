@@ -107,7 +107,7 @@ int main(int argc, char** argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutCreateWindow("framework");
-    
+    glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     //glutFullScreen();
@@ -121,7 +121,7 @@ int main(int argc, char** argv)
     glutSwapBuffers();
     glutPostRedisplay();
     glFlush();
-    glutInitWindowSize(1000, 1000);
+
     glutMainLoop();
     return 0;
 }

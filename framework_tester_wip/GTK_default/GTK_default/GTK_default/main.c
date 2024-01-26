@@ -52,7 +52,7 @@ static void activate(GtkApplication* app, gpointer user_data)
 {
     GtkWidget* window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "framework");
-    //gtk_window_fullscreen(GTK_WINDOW(window));
+    gtk_window_fullscreen(GTK_WINDOW(window));
     //gtk_window_set_decorated(GTK_WINDOW(window), false);
     gtk_window_present(GTK_WINDOW(window));
 
@@ -70,10 +70,10 @@ static void activate(GtkApplication* app, gpointer user_data)
 
 int main(int argc, char** argv)
 {
-    /*width = GetSystemMetrics(SM_CXSCREEN);
-    height = GetSystemMetrics(SM_CYSCREEN);*/
-    width = 1000;
-    height = 1000;
+    width = GetSystemMetrics(SM_CXSCREEN);
+    height = GetSystemMetrics(SM_CYSCREEN);
+    /*width = 1000;
+    height = 1000;*/
 
     GtkApplication* app;
     int status;

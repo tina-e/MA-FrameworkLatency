@@ -9,7 +9,7 @@ PIXEL_READER=$6
 DATA_DIR=$7
 
 
-FW_PATH="framework_tester/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+FW_PATH="framework_tester_no_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
 
@@ -43,10 +43,10 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$! 
         ;;
 
-    # *"GTK"*)
-    #     start ./$FW_PATH.exe &
-    #     PID_TEST_PROGRAM=$! 
-    #     ;;
+    *"GTK"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
 
     *"FLTK"*)
         start ./$FW_PATH.exe &
