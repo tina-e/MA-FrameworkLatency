@@ -2,11 +2,10 @@
 #include <signal.h>
 #include <iostream>
 
-
 // screen size
-//#define WIDTH 1920 
-//#define HEIGHT 1200
-#define WIDTH (1920 * 0.8) 
+// #define WIDTH 1920
+// #define HEIGHT 1200
+#define WIDTH (1920 * 0.8)
 #define HEIGHT (1200 * 0.8)
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
@@ -17,10 +16,13 @@
 // #define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
 
 #ifndef DRIVER
-    // supported:
-    // opengl
-    // opengles2
-    // software
+// supported:
+// direct3d
+// opengl
+// opengles2
+// opengles
+// metal (apple)
+// software
 #define DRIVER "opengl"
 #endif
 
@@ -31,18 +33,18 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     signal(SIGINT, signalHandler);
 
     SDL_Init(SDL_INIT_VIDEO);
 
     SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
-    //SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
+    // SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
 
     // create SDL2 window and renderer
-    SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, RENDERER);
+    SDL_Window *window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
+    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, RENDERER);
 
     SDL_RenderSetVSync(renderer, SDL_FALSE);
 
@@ -55,9 +57,9 @@ int main(int argc, char** argv)
 
     SDL_Event event;
 
-    const char* vsync = SDL_GetHint(SDL_HINT_RENDER_VSYNC);
-    //bool vsyncEnabled = std::strcmp(vsync, "1") == 0;
-    //std::cout << vsync << std::endl;
+    const char *vsync = SDL_GetHint(SDL_HINT_RENDER_VSYNC);
+    // bool vsyncEnabled = std::strcmp(vsync, "1") == 0;
+    // std::cout << vsync << std::endl;
 
     while (1)
     {

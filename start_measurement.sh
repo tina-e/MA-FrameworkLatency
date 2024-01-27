@@ -44,6 +44,7 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"GTK"*)
+        set GDK_BACKEND=win32
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
