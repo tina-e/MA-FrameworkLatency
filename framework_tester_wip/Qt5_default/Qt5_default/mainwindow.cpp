@@ -10,8 +10,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    width = QGuiApplication::primaryScreen()->geometry().width();
-    height = QGuiApplication::primaryScreen()->geometry().height();
+    width = QGuiApplication::primaryScreen()->geometry().width() * 0.8;
+    height = QGuiApplication::primaryScreen()->geometry().height()* 0.8;
+    setFixedSize(width, height);
+    setGeometry(0, 0, width, height);
+    setWindowFlags(Qt::FramelessWindowHint);
 }
 
 MainWindow::~MainWindow()

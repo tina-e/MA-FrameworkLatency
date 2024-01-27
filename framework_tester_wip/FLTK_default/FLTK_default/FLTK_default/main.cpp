@@ -5,6 +5,8 @@
 #include <iostream>
 
 using namespace std;
+//int width = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+//int height = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
 int width = GetSystemMetrics(SM_CXSCREEN);
 int height = GetSystemMetrics(SM_CYSCREEN);
 
@@ -15,6 +17,7 @@ class MainWindow : public Fl_Window {
 		{
 			color(FL_BLACK);
 			label("framework");
+			//border(0);
 			fullscreen();
 		}
 	private:

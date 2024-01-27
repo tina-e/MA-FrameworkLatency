@@ -70,6 +70,9 @@ int main() {
     int height = mode->height;
 
     GLFWwindow* window = glfwCreateWindow(width, height, "framework", monitor, NULL);
+    //glfwWindowHint(GLFW_DECORATED, 0);
+    //GLFWwindow* window = glfwCreateWindow(width * 0.8, height * 0.8, "framework", NULL, NULL);
+    
     glfwMakeContextCurrent(window);
     glfwSetMouseButtonCallback(window, mouse_button_callback);
 

@@ -67,12 +67,15 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
     WindowClass.lpszClassName = ClassName;
     RegisterClass(&WindowClass);
 
-    int w = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-    int h = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
+    /*int w = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+    int h = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);*/
+    int w = GetSystemMetrics(SM_CXSCREEN);
+    int h = GetSystemMetrics(SM_CYSCREEN);
 
     HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
     if (!Window) return 0;
-    ShowWindow(Window, SW_SHOW);
+    ShowWindow(Window, SW_SHOWMAXIMIZED);
+    //ShowWindow(Window, SW_SHOW);
 
 
     // Get client area dimensions 

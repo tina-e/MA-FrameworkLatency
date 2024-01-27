@@ -2,6 +2,8 @@
 #include <FL/Fl_Double_Window.H>
 #include <FL/fl_draw.H>
 
+//int width = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+//int height = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
 int width = GetSystemMetrics(SM_CXSCREEN);
 int height = GetSystemMetrics(SM_CYSCREEN);
 
@@ -17,6 +19,7 @@ public:
     {
         color(FL_BLACK);
         label("framework");
+        //border(0);
         fullscreen();
     }
     bool pressed = false;

@@ -1,1 +1,2 @@
 C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Release\DirectX11_rects.exe
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Release\DirectX11_rects.exe

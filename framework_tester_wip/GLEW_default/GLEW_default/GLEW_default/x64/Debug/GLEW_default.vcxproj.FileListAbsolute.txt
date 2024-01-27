@@ -1,1 +1,2 @@
 C:\Users\Martina Emmert\Projects\GLEW_default\GLEW_default\GLEW_default\x64\Debug\GLEW_default.vcxproj.CopyComplete
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\x64\Debug\GLEW_default.vcxproj.CopyComplete

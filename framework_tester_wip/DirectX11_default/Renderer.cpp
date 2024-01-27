@@ -22,6 +22,8 @@ void Renderer::createDevice(Window& window) {
 		&swapChainDesc, &m_swapChain,
 		&m_device, nullptr, &m_deviceContext);
 
+	m_swapChain->SetFullscreenState(1, NULL);
+
 	// Check for error
 	if (result != S_OK) {
 		MessageBox(nullptr, "Error creating DX11", "Error", MB_OK);
