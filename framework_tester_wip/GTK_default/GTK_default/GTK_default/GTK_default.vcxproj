@@ -78,7 +78,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -92,7 +92,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -108,7 +108,7 @@
       <AdditionalOptions>/IC:/gtk-build/gtk/x64/release/bin/../include/gtk-4.0 /IC:/gtk-build/gtk/x64/release/bin/../include/pango-1.0 /IC:/gtk-build/gtk/x64/release/bin/../include/harfbuzz /IC:/gtk-build/gtk/x64/release/bin/../include/gdk-pixbuf-2.0 /IC:/gtk-build/gtk/x64/release/bin/../include/cairo /IC:/gtk-build/gtk/x64/release/bin/../include/graphene-1.0 /IC:/gtk-build/gtk/x64/release/bin/../lib/graphene-1.0/include /IC:/gtk-build/gtk/x64/release/bin/../include /IC:/gtk-build/gtk/x64/release/bin/../include/glib-2.0 /IC:/gtk-build/gtk/x64/release/bin/../lib/glib-2.0/include /IC:/gtk-build/gtk/x64/release/bin/../include/fribidi /IC:/gtk-build/gtk/x64/release/bin/../include/freetype2 /IC:/gtk-build/gtk/x64/release/bin/../include/libpng16 /IC:/gtk-build/gtk/x64/release/bin/../include/pixman-1 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gsk;C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gdk;C:\Users\tina\vcpkg\packages\gtk_x64-windows\include\gtk-4.0\gtk;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -125,7 +125,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
