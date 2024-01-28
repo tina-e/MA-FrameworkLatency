@@ -1,4 +1,5 @@
 #include <gtk/gtk.h>
+#include <gdk/gdkwin32.h>
 #include <Windows.h>
 
 
@@ -52,8 +53,11 @@ static void activate(GtkApplication* app, gpointer user_data)
 {
     GtkWidget* window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "framework");
+    gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
+
+    // for fullscreen / no-fullscreen
     gtk_window_fullscreen(GTK_WINDOW(window));
-    //gtk_window_set_decorated(GTK_WINDOW(window), false);
+
     gtk_window_present(GTK_WINDOW(window));
 
     GtkWidget* area = gtk_drawing_area_new();
@@ -66,6 +70,11 @@ static void activate(GtkApplication* app, gpointer user_data)
     g_signal_connect(click_gesture, "pressed", G_CALLBACK(on_click_event), area);
     g_signal_connect(click_gesture, "released", G_CALLBACK(on_release_event), area);
     gtk_widget_add_controller(window, GTK_EVENT_CONTROLLER(click_gesture));
+
+    // TODO: check if this is working
+    GdkWindow* gdkWindow = gtk_widget_get_window(window);
+    HWND hwnd = GDK_WINDOW_HWND(gdkWindow);
+    MoveWindow(hwnd, 0, 0, width, height, FALSE);
 }
 
 int main(int argc, char** argv)
