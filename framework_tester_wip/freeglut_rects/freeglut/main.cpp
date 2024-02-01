@@ -3,8 +3,8 @@
 #include <cstdlib>
 
 /* define the window size */
-int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+int WIDTH = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+int HEIGHT = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
 
 const int n_rects = 1000;
 int n_horizontal = 10;
@@ -109,12 +109,20 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     argv[0] = _strdup("framework");
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-    glutCreateWindow("framework");
     glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
+    glutCreateWindow("framework");
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glutFullScreen();
 
+    //glutFullScreen();
+    HWND frameworkWindow = FindWindow(NULL, L"framework");
+    if (frameworkWindow != NULL) {
+        MoveWindow(frameworkWindow, -50, -50, WIDTH, HEIGHT, FALSE);
+        BringWindowToTop(frameworkWindow);
+        SetForegroundWindow(frameworkWindow);
+        SetFocus(frameworkWindow);
+    }
+    
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutMouseFunc(input);

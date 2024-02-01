@@ -191,7 +191,7 @@ build Qt6_default_autogen/timestamp Qt6_default_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles\Qt6_default_autogen_timestamp_deps
 
-build CMakeFiles/Qt6_default_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt6_default_autogen_timestamp_deps: phony C$:/Qt/6.6.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.6.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.6.1/mingw_64/./bin/moc.exe C$:/Qt/6.6.1/mingw_64/./bin/uic.exe
+build CMakeFiles/Qt6_default_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt6_default_autogen_timestamp_deps: phony C$:/Qt/6.6.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.6.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.6.1/mingw_64/./bin/moc.exe C$:/Qt/6.6.1/mingw_64/./bin/uic.exe
 
 
 #############################################

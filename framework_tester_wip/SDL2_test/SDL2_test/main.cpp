@@ -5,8 +5,8 @@
 // screen size
 // #define WIDTH 1920
 // #define HEIGHT 1200
-#define WIDTH (1920 * 0.8)
-#define HEIGHT (1200 * 0.8)
+#define WIDTH 1920
+#define HEIGHT 1200
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED
@@ -23,7 +23,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "opengl"
+#define DRIVER "direct3d"
 #endif
 
 // make sure we clean up when program is interrupted
@@ -47,6 +47,7 @@ int main(int argc, char **argv)
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, RENDERER);
 
     SDL_RenderSetVSync(renderer, SDL_FALSE);
+    SDL_SetWindowFullscreen(window, NULL);
 
     // draw a black image
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);

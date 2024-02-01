@@ -7,16 +7,18 @@
 #ifndef DRIVER
 // supported:
 // opengl
+// opengles
 // opengles2
 // software
-#define DRIVER "opengles2"
+// direct3d
+#define DRIVER "software"
 #endif
 
 // screen size
 //#define WIDTH 1920
 //#define HEIGHT 1200
-#define WIDTH (int) (1920 * 0.8)
-#define HEIGHT (int) (1200 * 0.8)
+#define WIDTH 1920
+#define HEIGHT 1200
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED
@@ -72,6 +74,7 @@ int main(int argc, char** argv)
     SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, RENDERER);
 
+    SDL_SetWindowFullscreen(window, NULL);
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
     // draw a black image

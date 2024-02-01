@@ -1,4 +1,4 @@
-# Install script for directory: D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_rects
+# Install script for directory: C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_rects
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/Qt5_rects.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/Qt5_rects.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Qt5_rects.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Qt5_rects.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

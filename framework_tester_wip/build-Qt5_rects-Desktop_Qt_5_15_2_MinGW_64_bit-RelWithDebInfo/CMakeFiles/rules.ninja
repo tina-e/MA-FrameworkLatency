@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SD:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\Qt5_rects -BD:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo
+  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SC:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\Qt5_rects -BC:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo
   description = Re-running CMake...
   generator = 1
 
