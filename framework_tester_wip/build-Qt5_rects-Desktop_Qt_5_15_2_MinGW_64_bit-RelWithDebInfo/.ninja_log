@@ -1,0 +1,12 @@
+# ninja log v5
+3	686	7285029190018587	Qt5_rects_autogen/timestamp	87b43e095719291f
+3	686	7285029190018587	Qt5_rects_autogen/mocs_compilation.cpp	87b43e095719291f
+3	686	7285029190018587	D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/Qt5_rects_autogen/timestamp	87b43e095719291f
+3	686	7285029190018587	D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/Qt5_rects_autogen/mocs_compilation.cpp	87b43e095719291f
+688	870	7280722545375554	D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_rects/Qt5_rects_en_DE.ts	523981f5ec976c21
+688	870	7280722545375554	CMakeFiles/Qt5_rects_en_DE.ts_lst_file	523981f5ec976c21
+688	870	7280722545375554	D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_rects-Desktop_Qt_5_15_2_MinGW_64_bit-RelWithDebInfo/CMakeFiles/Qt5_rects_en_DE.ts_lst_file	523981f5ec976c21
+871	3031	7285029214233116	CMakeFiles/Qt5_rects.dir/Qt5_rects_autogen/mocs_compilation.cpp.obj	8f70aec468e9e0c8
+881	3085	7285029214821075	CMakeFiles/Qt5_rects.dir/main.cpp.obj	66a21a1fa137d992
+875	3349	7285029217431373	CMakeFiles/Qt5_rects.dir/mainwindow.cpp.obj	7a8df572ba158dc2
+3349	3678	7285029220671012	Qt5_rects.exe	f30851c14968a048
