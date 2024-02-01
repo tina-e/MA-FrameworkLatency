@@ -3,8 +3,8 @@
 #include <cstdlib>
 
 /* define the window size */
-int WIDTH = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-int HEIGHT = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 const int n_rects = 1000;
 int n_horizontal = 10;
@@ -102,15 +102,19 @@ void reshape(int w, int h)
     gluOrtho2D(0.0, (GLdouble)WIDTH, 0.0, (GLdouble)HEIGHT);
 }
 
-int main(int argc, char** argv)
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow) 
 {
+    char* argv[1];
+    int argc = 1;
+    argv[0] = _strdup("framework");
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutCreateWindow("framework");
     glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    //glutFullScreen();
+    glutFullScreen();
+
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutMouseFunc(input);

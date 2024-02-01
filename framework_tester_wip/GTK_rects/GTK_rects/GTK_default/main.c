@@ -1,5 +1,4 @@
 #include <gtk/gtk.h>
-#include <gdk/gdkwin32.h>
 #include <Windows.h>
 
 
@@ -76,7 +75,7 @@ static void activate(GtkApplication* app, gpointer user_data)
     gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
     
     // for fullscreen / no-fullscreen
-    gtk_window_fullscreen(GTK_WINDOW(window));
+    //gtk_window_fullscreen(GTK_WINDOW(window));
     
     gtk_window_present(GTK_WINDOW(window));
 
@@ -91,16 +90,19 @@ static void activate(GtkApplication* app, gpointer user_data)
     g_signal_connect(click_gesture, "released", G_CALLBACK(on_release_event), area);
     gtk_widget_add_controller(window, GTK_EVENT_CONTROLLER(click_gesture));
 
-    // TODO: check if this is working
-    GdkWindow* gdkWindow = gtk_widget_get_window(window);
-    HWND hwnd = GDK_WINDOW_HWND(gdkWindow);
-    MoveWindow(hwnd, 0, 0, width, height, FALSE);
+    HWND frameworkWindow = FindWindow(NULL, L"framework");
+    if (frameworkWindow != NULL) {
+        BringWindowToTop(frameworkWindow);
+        SetForegroundWindow(frameworkWindow);
+        MoveWindow(frameworkWindow, 0, 0, width, height, FALSE);
+        SetFocus(frameworkWindow);
+    }
 }
 
-int main(int argc, char** argv)
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
-    width = GetSystemMetrics(SM_CXSCREEN);
-    height = GetSystemMetrics(SM_CYSCREEN);
+    width = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
+    height = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
     /*width = 1000;
     height = 1000;*/
 
@@ -109,7 +111,7 @@ int main(int argc, char** argv)
 
     app = gtk_application_new("framework.rects", G_APPLICATION_DEFAULT_FLAGS);
     g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
-    status = g_application_run(G_APPLICATION(app), argc, argv);
+    status = g_application_run(G_APPLICATION(app), NULL, NULL);
     g_object_unref(app);
 
     return status;

@@ -9,8 +9,8 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int windowWidth = (int) 1920 * 0.8;
-int windowHeight = (int) 1200 * 0.8;
+int windowWidth = (int) 1920;
+int windowHeight = (int) 1200;
 
 int colorR = 0;
 int colorG = 0;
@@ -36,27 +36,27 @@ void mouse(int button, int state, int x, int y) {
     glutPostRedisplay();
 }
 
-int main(int argc, char** argv) {
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow) {
     signal(SIGINT, signalHandler);
+
+    char* argv[1];
+    int argc = 1;
+    argv[0] = _strdup("framework");
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA); // double buffering (??)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA ); // double buffering (??)
     glutInitWindowSize(windowWidth, windowHeight);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
-    // is this working? wglSwapIntervalEXT(1);
-    // glutFullScreen();
-
+    // ?? glSwapIntervalEXT(1);
+    glutFullScreen();
 
     /*HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL) {
-        std::cout << "found" << std::endl;
-        SetWindowPos(frameworkWindow, NULL, 0, 0, windowWidth, windowHeight, SWP_NOZORDER | SWP_NOSIZE);
+        MoveWindow(frameworkWindow, -50, -50, windowWidth, windowHeight, FALSE);
+        BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
-    }
-    else {
-        std::cerr << "no window named framework" << std::endl;
+        SetFocus(frameworkWindow);
     }*/
-
 
     glutDisplayFunc(display);
     glutMouseFunc(mouse);

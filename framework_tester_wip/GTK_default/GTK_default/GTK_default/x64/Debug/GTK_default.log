@@ -1,4 +1,6 @@
 ﻿  main.c
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_default\GTK_default\GTK_default\main.c(99,52): warning C4047: 'function': 'int' differs in levels of indirection from 'void *'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_default\GTK_default\GTK_default\main.c(99,52): warning C4024: 'g_application_run': different types for formal and actual parameter 2
   GTK_default.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_default\GTK_default\x64\Debug\GTK_default.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

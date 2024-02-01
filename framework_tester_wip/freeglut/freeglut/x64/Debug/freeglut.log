@@ -1,6 +1,4 @@
 ﻿  main.cpp
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(12,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(13,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,34): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
 C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,26): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
 C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,18): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
