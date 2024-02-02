@@ -107,7 +107,9 @@ void WinDesktopDup::Close() {
 }
 
 int WinDesktopDup::GetColorValueAt(int x, int y) {
-	if (!DeskDupl) return false;
+	
+	if (!DeskDupl)
+		return -1;
 
 	HRESULT hr;
 
@@ -118,19 +120,21 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 		HaveFrameLock = false;
 		hr = DeskDupl->ReleaseFrame();
 	}
+	hr = DeskDupl->ReleaseFrame();
 
 	IDXGIResource* deskRes = nullptr;
 	DXGI_OUTDUPL_FRAME_INFO frameInfo;
-	hr = DeskDupl->AcquireNextFrame(0, &frameInfo, &deskRes);
+	hr = DeskDupl->AcquireNextFrame(INFINITE, &frameInfo, &deskRes);
 	if (hr == DXGI_ERROR_WAIT_TIMEOUT) {
-		return false;
+		return -1;
 	}
 	if (FAILED(hr)) {
 		// perhaps shutdown and reinitialize
 		auto msg = "Acquire failed: " + hr;
 		OutputDebugStringA(msg);
-		return false;
+		return -1;
 	}
+
 
 	HaveFrameLock = true;
 
@@ -139,14 +143,14 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	deskRes->Release();
 	deskRes = nullptr;
 	if (FAILED(hr)) {
-		return false;
+		return -1;
 	}
 
 	bool ok = true;
 
 	D3D11_TEXTURE2D_DESC desc;
 	gpuTex->GetDesc(&desc);
-	desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE | D3D11_CPU_ACCESS_READ;
+	desc.CPUAccessFlags = D3D11_CPU_ACCESS_READ; // D3D11_CPU_ACCESS_WRITE
 	desc.Usage = D3D11_USAGE_STAGING;
 	desc.BindFlags = 0;
 	desc.MiscFlags = 0; // D3D11_RESOURCE_MISC_GDI_COMPATIBLE ?
@@ -166,6 +170,7 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	UINT rowPitch   = sr.RowPitch; 
 	UINT byteOffset = (x * rowPitch) + (y * sizeof(UINT)); 
 	UINT colorValue = *reinterpret_cast<UINT*>(pixels + byteOffset);
+	
 	if (colorValue != 0) {
 		BYTE red   = (colorValue >> 16) & 0xFF;
 		BYTE green = (colorValue >> 8) & 0xFF;
@@ -176,6 +181,7 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 		cpuTex->Release();
 		gpuTex->Release();
 
+		/*cout << "color: " << red << endl;*/
 		return static_cast<int>(red);
 	}
 
