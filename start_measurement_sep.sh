@@ -9,7 +9,7 @@ PIXEL_READER=$6
 DATA_DIR=$7
 
 
-FW_PATH="framework_tester_no_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+FW_PATH="framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
 
@@ -59,7 +59,7 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"DirectX"*)
-        cd "./framework_tester_no_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+        cd "./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
         start "./${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe" &
         PID_TEST_PROGRAM=$! 
         cd "../../"
