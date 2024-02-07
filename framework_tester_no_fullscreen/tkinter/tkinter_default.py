@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import tkinter as tk
 
-WIDTH = int(1920 * 0.8)
-HEIGHT = int(1200 * 0.8)
+WIDTH = 1920 
+HEIGHT = 1200
 
 root = tk.Tk()
 root.geometry(f"{WIDTH}x{HEIGHT}+{0}+{0}")

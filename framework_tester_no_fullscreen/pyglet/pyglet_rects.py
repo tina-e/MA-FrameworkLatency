@@ -7,8 +7,8 @@ from pyglet.window import Window
 from random import randint
 
 # Define the width and height of the window
-WINDOW_WIDTH = int(1920 * 0.8)
-WINDOW_HEIGHT = int(1200 * 0.8)
+WINDOW_WIDTH = 1920
+WINDOW_HEIGHT = 1200
 MIN_X_RECTS = int(WINDOW_WIDTH / 2)
 
 n_rects = 1000

@@ -2,8 +2,8 @@ import numpy as np
 from glumpy import app, gloo, gl
 from random import random, uniform
 
-WIDTH = int(1920 / 2)
-HEIGHT = 1000
+WIDTH = 1920
+HEIGHT = 1200
 WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 NUM_RECTS = 1000
@@ -67,7 +67,7 @@ def setup_rects():
         
 
 window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, fullscreen=False, decoration=False, title="framework", vsync=False)
-window.set_position(-100, -100) # to make sure to hide (pyglet's) decoration
+window.set_position(0, 0) # to make sure to hide (pyglet's) decoration
 
 
 @window.event

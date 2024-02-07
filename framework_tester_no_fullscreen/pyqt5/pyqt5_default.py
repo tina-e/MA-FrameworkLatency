@@ -7,8 +7,8 @@ from PyQt5.QtCore import *
 import sys
 import signal
 
-WIDTH = int(1920 * 0.8)
-HEIGHT = int(1200 * 0.8)
+WIDTH = 1920
+HEIGHT = 1200
   
 class MainWindow(QWidget):
     def __init__(self):

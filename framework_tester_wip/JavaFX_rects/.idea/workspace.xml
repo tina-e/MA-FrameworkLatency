@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8a444b0-371f-4c0c-9837-1e0686e0621c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_default.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_default.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_default.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_default.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_rects.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_rects.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_rects.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/Java2D/Java2D_rects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_default.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_default.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_default.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_default.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_rects.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_rects.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_rects.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/JavaSwing/JavaSwing_rects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/glumpy/glumpy_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/glumpy/glumpy_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/glumpy/glumpy_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/glumpy/glumpy_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pygame/pygame_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pygame/pygame_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pygame/pygame_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pygame/pygame_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyglet/pyglet_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyglet/pyglet_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyglet/pyglet_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyglet/pyglet_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt5/pyqt5_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt5/pyqt5_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt5/pyqt5_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt5/pyqt5_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt6/pyqt6_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt6/pyqt6_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt6/pyqt6_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/pyqt6/pyqt6_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/tkinter/tkinter_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/tkinter/tkinter_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/tkinter/tkinter_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/tkinter/tkinter_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/wxpython/wxpython_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/wxpython/wxpython_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/wxpython/wxpython_rects.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/wxpython/wxpython_rects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFX_default/src/main/java/com/example/javafx_default/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFX_default/src/main/java/com/example/javafx_default/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx_rects/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx_rects/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,28 +53,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/JavaFX_rects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/JavaFX_rects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,6 +93,7 @@
       <updated>1705251077299</updated>
       <workItem from="1705251078326" duration="6046000" />
       <workItem from="1705914914502" duration="2445000" />
+      <workItem from="1707224963049" duration="173000" />
     </task>
     <servers />
   </component>

@@ -1,15 +1,13 @@
-﻿  compilation object save succeeded; see D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\rectPixelShader.cso
-  compilation object save succeeded; see D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\rectVertexShader.cso
+﻿  Rect.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(65,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(66,36): warning C4305: 'argument': truncation from 'double' to 'float'
   Renderer.cpp
-  Rect.cpp
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(65,36): warning C4305: "Argument": Verkürzung von "double" in "float"
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Rect.cpp(66,36): warning C4305: "Argument": Verkürzung von "double" in "float"
-  main.cpp
   Window.cpp
-  Code wird generiert.
+  main.cpp
+  Generating code
   Previous IPDB was built with incompatible compiler, fall back to full compilation.
   All 221 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Codegenerierung ist abgeschlossen.
-  Chapter2_Tutorial6.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Release\DirectX11_rects.exe
+  Finished generating code
+  Chapter2_Tutorial6.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_rects\Release\DirectX11_rects.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

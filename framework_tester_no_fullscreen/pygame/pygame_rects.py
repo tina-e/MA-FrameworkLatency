@@ -6,8 +6,8 @@ import sys
 import time
 import random
 
-WIDTH = int(1920 * 0.8)
-HEIGHT = int(1200 * 0.8)
+WIDTH = 1920
+HEIGHT = 1200
 
 x, y = 0, 0
 os.environ['SDL_VIDEO_WINDOW_POS'] = f'{x},{y}'

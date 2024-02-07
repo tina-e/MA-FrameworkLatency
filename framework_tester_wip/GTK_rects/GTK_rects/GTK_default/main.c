@@ -101,8 +101,8 @@ static void activate(GtkApplication* app, gpointer user_data)
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
-    width = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-    height = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
+    width = GetSystemMetrics(SM_CXSCREEN);
+    height = GetSystemMetrics(SM_CYSCREEN);
     /*width = 1000;
     height = 1000;*/
 

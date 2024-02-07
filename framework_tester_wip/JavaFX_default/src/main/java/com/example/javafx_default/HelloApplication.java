@@ -27,8 +27,8 @@ public class HelloApplication extends Application {
         // --- start: not fullscreen; otherwise just:
         // stage.setFullScreen(true);
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-        double width = screenBounds.getWidth() * 0.8;
-        double height = screenBounds.getHeight() * 0.8;
+        double width = screenBounds.getWidth();
+        double height = screenBounds.getHeight();
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setX(0);
         stage.setY(0);

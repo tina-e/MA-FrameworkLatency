@@ -23,8 +23,8 @@ public class HelloApplication extends Application {
     Rectangle[] rects = new Rectangle[1000];
     Random r = new Random();
     Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-    private final int WIDTH = (int) (screenBounds.getWidth() * 0.8);
-    private final int HEIGHT = (int) (screenBounds.getHeight() * 0.8);
+    private final int WIDTH = (int) (screenBounds.getWidth());
+    private final int HEIGHT = (int) (screenBounds.getHeight());
 
 
     @Override

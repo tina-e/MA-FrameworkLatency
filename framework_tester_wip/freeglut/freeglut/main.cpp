@@ -48,15 +48,15 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
     // ?? glSwapIntervalEXT(1);
-    glutFullScreen();
+    //glutFullScreen();
 
-    /*HWND frameworkWindow = FindWindow(NULL, L"framework");
+    HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL) {
-        MoveWindow(frameworkWindow, -50, -50, windowWidth, windowHeight, FALSE);
+        MoveWindow(frameworkWindow, -10, -32, windowWidth, windowHeight, FALSE);
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
         SetFocus(frameworkWindow);
-    }*/
+    }
 
     glutDisplayFunc(display);
     glutMouseFunc(mouse);

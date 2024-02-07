@@ -1,7 +1,7 @@
 from glumpy import app, gloo, gl
 
-WIDTH = int(1920 * 0.8)
-HEIGHT = int(1200 * 0.8)
+WIDTH = 1920
+HEIGHT = 1200
 WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 
@@ -20,7 +20,7 @@ FRAGMENT_SHADER = """
 
 
 window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, decoration=False, fullscreen=False, title="framework", vsync=False)
-window.set_position(-100, -100) # to make sure to hide (pyglet's) decoration
+window.set_position(0, 0) # to make sure to hide (pyglet's) decoration
 
 
 program = gloo.Program(VERTEX_SHADER, FRAGMENT_SHADER, count=6)

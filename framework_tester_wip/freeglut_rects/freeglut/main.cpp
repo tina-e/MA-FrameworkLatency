@@ -3,8 +3,8 @@
 #include <cstdlib>
 
 /* define the window size */
-int WIDTH = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-int HEIGHT = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 const int n_rects = 1000;
 int n_horizontal = 10;
@@ -117,7 +117,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     //glutFullScreen();
     HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL) {
-        MoveWindow(frameworkWindow, -50, -50, WIDTH, HEIGHT, FALSE);
+        MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
         SetFocus(frameworkWindow);

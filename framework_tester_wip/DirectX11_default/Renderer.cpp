@@ -22,7 +22,7 @@ void Renderer::createDevice(Window& window) {
 		&swapChainDesc, &m_swapChain,
 		&m_device, nullptr, &m_deviceContext);
 
-	m_swapChain->SetFullscreenState(1, NULL);
+	m_swapChain->SetFullscreenState(0, NULL);
 
 	// Check for error
 	if (result != S_OK) {
