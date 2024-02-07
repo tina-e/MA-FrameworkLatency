@@ -17,8 +17,8 @@ class MainWindow : public Fl_Window {
 		{
 			color(FL_BLACK);
 			label("framework");
-			//border(0);
-			fullscreen();
+			border(0);
+			//fullscreen();
 		}
 	private:
 		int handle(int event) override

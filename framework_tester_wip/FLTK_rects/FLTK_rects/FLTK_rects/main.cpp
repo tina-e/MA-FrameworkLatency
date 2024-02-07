@@ -19,8 +19,8 @@ public:
     {
         color(FL_BLACK);
         label("framework");
-        //border(0);
-        fullscreen();
+        border(0);
+        //fullscreen();
     }
     bool pressed = false;
 
