@@ -11,7 +11,7 @@
 // opengles2
 // software
 // direct3d
-#define DRIVER "software"
+#define DRIVER "direct3d"
 #endif
 
 // screen size

@@ -1,14 +1,18 @@
 #!/bin/sh
 
-ITERATIONS=200
-DATA_DIR="newer5_windup_attempt"
+ITERATIONS=100
+DATA_DIR="newer6_windup_attempt_non-fullscreen"
 
 #READERS=("getpixel" "bitblt" "getdbits")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 READERS=("windup")
 
-FRAMEWORKS=("GTK" "FLTK" "win32" "pyglet" "Java2D" "JavaSwing" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "SDL2_OpenGLES" "SDL2_OpenGLES2" "SDL2_OpenGL" "SDL2_Software" "SDL2_Direct3D" "GLEW" "GLUT")
-FRAMEWORKS_SEP_FOLDERS=("Qt5" "Qt6" "DirectX11")
+# FRAMEWORKS=("GTK" "FLTK" "win32" "pyglet" "Java2D" "JavaSwing" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "SDL2_OpenGLES" "SDL2_OpenGLES2" "SDL2_OpenGL" "SDL2_Software" "SDL2_Direct3D" "GLEW" "GLUT")
+# FRAMEWORKS_SEP_FOLDERS=("Qt5" "Qt6" "DirectX11")
+
+FRAMEWORKS=("Java2D" "JavaSwing" "GLEW")
+FRAMEWORKS_SEP_FOLDERS=("DirectX11")
+
 #FRAMEWORKS_GLUMPY=("pyglet" "glfw" "qt5" "sdl")
 #FRAMEWORKS=("win32")
 

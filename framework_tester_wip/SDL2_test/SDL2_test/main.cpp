@@ -23,7 +23,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "software"
 #endif
 
 // make sure we clean up when program is interrupted

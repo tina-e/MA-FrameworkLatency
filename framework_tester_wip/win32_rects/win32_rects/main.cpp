@@ -108,8 +108,8 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
 
     HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
     if (!Window) return 0;
-    //ShowWindow(Window, SW_SHOW);
-    ShowWindow(Window, SW_SHOWMAXIMIZED);
+    ShowWindow(Window, SW_SHOW);
+    //ShowWindow(Window, SW_SHOWMAXIMIZED);
 
 
     // Get client area dimensions 
