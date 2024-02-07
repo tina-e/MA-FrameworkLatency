@@ -42,7 +42,7 @@ public class JavaSwing_rects extends JFrame {
         g.setColor(new Color(255, 255, 255));
         g.fillRect(0, 0, 300, 300);
 
-        Toolkit.getDefaultToolkit().sync();
+        //Toolkit.getDefaultToolkit().sync();
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -52,7 +52,7 @@ public class JavaSwing_rects extends JFrame {
         if (g != null) {
             g.setColor(color);
             g.fillRect(0, 0, getWidth(), getHeight());
-            Toolkit.getDefaultToolkit().sync();
+            //Toolkit.getDefaultToolkit().sync();
         }
     }
 

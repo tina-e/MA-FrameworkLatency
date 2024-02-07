@@ -9,7 +9,7 @@ PIXEL_READER=$6
 DATA_DIR=$7
 
 
-FW_PATH="framework_tester_no_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+FW_PATH="framework_tester_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
 

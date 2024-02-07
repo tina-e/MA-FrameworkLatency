@@ -28,7 +28,7 @@ public class Java2D_default extends JFrame {
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
         g2d.fillRect(0, 0, getWidth(), getHeight());
-	Toolkit.getDefaultToolkit().sync();
+	    //Toolkit.getDefaultToolkit().sync();
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -37,7 +37,7 @@ public class Java2D_default extends JFrame {
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
         g2d.fillRect(0, 0, getWidth(), getHeight());
-	Toolkit.getDefaultToolkit().sync();
+	    //Toolkit.getDefaultToolkit().sync();
     }
 
     public static void main(String[] args) {

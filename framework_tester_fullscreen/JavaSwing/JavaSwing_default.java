@@ -26,7 +26,7 @@ public class JavaSwing_default extends JFrame {
 	if (g != null) {
 		g.setColor(color);
 		g.fillRect(0, 0, getWidth(), getHeight());
-		Toolkit.getDefaultToolkit().sync();
+		//Toolkit.getDefaultToolkit().sync();
 	}
     }
 
@@ -37,7 +37,7 @@ public class JavaSwing_default extends JFrame {
 	if (g != null) {
 		g.setColor(color);
 		g.fillRect(0, 0, getWidth(), getHeight());
-		Toolkit.getDefaultToolkit().sync();
+		//Toolkit.getDefaultToolkit().sync();
 	}
     }
 
