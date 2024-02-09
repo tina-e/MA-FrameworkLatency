@@ -1,5 +1,5 @@
 ﻿  main.cpp
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_rects\SDL2_rects\main.cpp(67,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  SDL2_rects.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_rects\x64\Debug\SDL2_rects.exe
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_rects\SDL2_rects\main.cpp(63,15): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+  SDL2_rects.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_rects\x64\Debug\SDL2_rects.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

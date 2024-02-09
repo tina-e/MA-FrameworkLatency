@@ -3,29 +3,25 @@
 #include <cstdlib>
 #include <ctime>
 
-
-#ifndef DRIVER
 // supported:
-// opengl
-// opengles
-// opengles2
-// software
 // direct3d
+// opengl
+// opengles2
+// opengles
+// metal (apple)
+// software
 #define DRIVER "direct3d"
-#endif
 
 // screen size
-//#define WIDTH 1920
-//#define HEIGHT 1200
 #define WIDTH 1920
 #define HEIGHT 1200
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED
+//#define RENDERER SDL_RENDERER_PRESENTVSYNC
 
-// seems to make no big difference, so use full screen for everything
-//#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
-#define WINDOW_STYLE SDL_WINDOW_BORDERLESS
+#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
+// #define WINDOW_STYLE SDL_WINDOW_BORDERLESS
 
 // make sure we clean up when program is interrupted
 void signalHandler(int sig)
@@ -67,14 +63,15 @@ int main(int argc, char** argv)
     srand(time(NULL));
 
     SDL_Init(SDL_INIT_VIDEO);
-
     SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
 
     // create SDL2 window and renderer
     SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, RENDERER);
+    SDL_SetWindowTitle(window, "framework");
 
-    SDL_SetWindowFullscreen(window, NULL);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, RENDERER);
+    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
+    SDL_RenderSetVSync(renderer, SDL_FALSE);
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
     // draw a black image

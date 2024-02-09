@@ -9,26 +9,30 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int windowWidth = (int) 1920;
-int windowHeight = (int) 1200;
+int windowWidth = (int)1920;
+int windowHeight = (int)1200;
 
 int colorR = 0;
 int colorG = 0;
 int colorB = 0;
 
-void display() {
+void display()
+{
     glClearColor(colorR, colorG, colorB, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glutSwapBuffers();
 }
 
-void mouse(int button, int state, int x, int y) {
-    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+void mouse(int button, int state, int x, int y)
+{
+    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+    {
         colorR = 1.0;
         colorG = 1.0;
         colorB = 1.0;
     }
-    else if (button == GLUT_LEFT_BUTTON && state == GLUT_UP) {
+    else if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
+    {
         colorR = 0.0;
         colorG = 0.0;
         colorB = 0.0;
@@ -36,22 +40,25 @@ void mouse(int button, int state, int x, int y) {
     glutPostRedisplay();
 }
 
-int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow) {
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
+{
     signal(SIGINT, signalHandler);
 
-    char* argv[1];
+    char *argv[1];
     int argc = 1;
     argv[0] = _strdup("framework");
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA ); // double buffering (??)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA); // double buffering (??)
     glutInitWindowSize(windowWidth, windowHeight);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
     // ?? glSwapIntervalEXT(1);
-    //glutFullScreen();
+    // glutFullScreen();
+    // test this for vsync: glXSwapInterval( display, drawable, 1)
 
     HWND frameworkWindow = FindWindow(NULL, L"framework");
-    if (frameworkWindow != NULL) {
+    if (frameworkWindow != NULL)
+    {
         MoveWindow(frameworkWindow, -10, -32, windowWidth, windowHeight, FALSE);
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
