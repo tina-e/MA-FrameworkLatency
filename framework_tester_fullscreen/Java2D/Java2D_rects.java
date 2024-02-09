@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import org.w3c.dom.events.MouseEvent;
+
 import java.util.Random;
 
 public class Java2D_rects extends JFrame {
@@ -11,6 +14,7 @@ public class Java2D_rects extends JFrame {
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public Java2D_rects() {
+        createBufferStrategy(1);
         setSize(WIDTH, HEIGHT);
         setTitle("framework");
         setUndecorated(true);
@@ -20,29 +24,28 @@ public class Java2D_rects extends JFrame {
 
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
-        g2d.fillRect(0, 0, getWidth(), getHeight());        
+        g2d.fillRect(0, 0, getWidth(), getHeight());
     }
 
     public void paint(Graphics g) {
-        if(pressed)
-        {
-            //Graphics2D g2d = (Graphics2D) g;
-            //Random r = new Random();
-            //for (int i = 0; i < 1000; i++) {
-            //    int x = r.nextInt(1920);
-            //    int y = r.nextInt(1080);
-            //    int width = r.nextInt(1920 - x);
-            //    int height = r.nextInt(1080 - y);
-            //    float red = r.nextInt(255);
-            //    float green = r.nextFloat();
-            //    float blue = r.nextFloat();
-            //    float alpha = 255; //r.nextFloat();
-            //    g2d.setColor(new Color(red, green, blue, alpha));
-            //    g2d.fillRect(x, y, width, height);
-            //}
-            //g2d.setColor(new Color(255.0f, 255.0f, 255.0f, 255.0f));
-            //g2d.fillRect(0, 0, 300, 300);
-            //pressed = false;
+        if (pressed) {
+            // Graphics2D g2d = (Graphics2D) g;
+            // Random r = new Random();
+            // for (int i = 0; i < 1000; i++) {
+            // int x = r.nextInt(1920);
+            // int y = r.nextInt(1080);
+            // int width = r.nextInt(1920 - x);
+            // int height = r.nextInt(1080 - y);
+            // float red = r.nextInt(255);
+            // float green = r.nextFloat();
+            // float blue = r.nextFloat();
+            // float alpha = 255; //r.nextFloat();
+            // g2d.setColor(new Color(red, green, blue, alpha));
+            // g2d.fillRect(x, y, width, height);
+            // }
+            // g2d.setColor(new Color(255.0f, 255.0f, 255.0f, 255.0f));
+            // g2d.fillRect(0, 0, 300, 300);
+            // pressed = false;
         }
     }
 
@@ -59,17 +62,17 @@ public class Java2D_rects extends JFrame {
             int red = r.nextInt(254);
             int green = r.nextInt(255);
             int blue = r.nextInt(255);
-            float alpha = 255; //r.nextFloat();
+            float alpha = 255; // r.nextFloat();
             g2d.setColor(new Color(red, green, blue));
             g2d.fillRect(x, y, width, height);
         }
         g2d.setColor(new Color(255, 255, 255));
         g2d.fillRect(0, 0, 300, 300);
 
-        //g2d.setColor(color);
-        //g2d.fillRect(0, 0, getWidth(), getHeight());
-        //pressed = true;
-	    //Toolkit.getDefaultToolkit().sync();
+        // g2d.setColor(color);
+        // g2d.fillRect(0, 0, getWidth(), getHeight());
+        // pressed = true;
+        // Toolkit.getDefaultToolkit().sync();
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -78,7 +81,7 @@ public class Java2D_rects extends JFrame {
         Graphics2D g2d = (Graphics2D) getGraphics();
         g2d.setColor(color);
         g2d.fillRect(0, 0, getWidth(), getHeight());
-	    //Toolkit.getDefaultToolkit().sync();
+        // Toolkit.getDefaultToolkit().sync();
     }
 
     public static void main(String[] args) {

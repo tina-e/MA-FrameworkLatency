@@ -2,43 +2,46 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import org.w3c.dom.events.MouseEvent;
+
 public class JavaSwing_default extends JFrame {
     private Color color;
 
     public JavaSwing_default() {
+        createBufferStrategy(1);
         setSize(1920, 1200);
         setTitle("framework");
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
     }
 
     public void paint(Graphics g) {
-	    g.setColor(color);
-	    g.fillRect(0, 0, getWidth(), getHeight());
+        g.setColor(color);
+        g.fillRect(0, 0, getWidth(), getHeight());
     }
 
     public void mousePressed(MouseEvent e) {
         color = new Color(255, 255, 255);
 
-	Graphics g = getGraphics();
-	if (g != null) {
-		g.setColor(color);
-		g.fillRect(0, 0, getWidth(), getHeight());
-		//Toolkit.getDefaultToolkit().sync();
-	}
+        Graphics g = getGraphics();
+        if (g != null) {
+            g.setColor(color);
+            g.fillRect(0, 0, getWidth(), getHeight());
+            // Toolkit.getDefaultToolkit().sync();
+        }
     }
 
     public void mouseReleased(MouseEvent e) {
         color = new Color(0, 0, 0);
 
-	Graphics g = getGraphics();
-	if (g != null) {
-		g.setColor(color);
-		g.fillRect(0, 0, getWidth(), getHeight());
-		//Toolkit.getDefaultToolkit().sync();
-	}
+        Graphics g = getGraphics();
+        if (g != null) {
+            g.setColor(color);
+            g.fillRect(0, 0, getWidth(), getHeight());
+            // Toolkit.getDefaultToolkit().sync();
+        }
     }
 
     public static void main(String[] args) {

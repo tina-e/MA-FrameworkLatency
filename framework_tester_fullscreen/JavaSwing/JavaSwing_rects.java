@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import org.w3c.dom.events.MouseEvent;
+
 import java.util.Random;
 
 public class JavaSwing_rects extends JFrame {
@@ -10,17 +13,18 @@ public class JavaSwing_rects extends JFrame {
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public JavaSwing_rects() {
+        createBufferStrategy(1);
         setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);
     }
 
     public void paint(Graphics g) {
-	    g.setColor(color);
-	    g.fillRect(0, 0, getWidth(), getHeight());
+        g.setColor(color);
+        g.fillRect(0, 0, getWidth(), getHeight());
     }
 
     public void mousePressed(MouseEvent e) {
@@ -35,14 +39,14 @@ public class JavaSwing_rects extends JFrame {
             int red = r.nextInt(254);
             int green = r.nextInt(255);
             int blue = r.nextInt(255);
-            float alpha = 255; //r.nextFloat();
+            float alpha = 255; // r.nextFloat();
             g.setColor(new Color(red, green, blue));
             g.fillRect(x, y, width, height);
         }
         g.setColor(new Color(255, 255, 255));
         g.fillRect(0, 0, 300, 300);
 
-        //Toolkit.getDefaultToolkit().sync();
+        // Toolkit.getDefaultToolkit().sync();
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -52,7 +56,7 @@ public class JavaSwing_rects extends JFrame {
         if (g != null) {
             g.setColor(color);
             g.fillRect(0, 0, getWidth(), getHeight());
-            //Toolkit.getDefaultToolkit().sync();
+            // Toolkit.getDefaultToolkit().sync();
         }
     }
 
