@@ -50,7 +50,7 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"FLTK"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 

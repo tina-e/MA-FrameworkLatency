@@ -1,7 +1,8 @@
 #!/bin/sh
 
 ITERATIONS=2
-DATA_DIR="SDL_vsync_1002_test"
+#DATA_DIR="SDL_vsync_1002_test"
+DATA_DIR="remote_test"
 
 #READERS=("getpixel" "bitblt" "getdbits")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
@@ -12,11 +13,11 @@ READERS=("windup" "getpixel")
 # FRAMEWORKS=("GTK" "FLTK" "win32" "pyglet" "Java2D" "JavaSwing" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "SDL2_OpenGLES" "SDL2_OpenGLES2" "SDL2_OpenGL" "SDL2_Software" "SDL2_Direct3D" "GLEW" "GLUT")
 # FRAMEWORKS_SEP_FOLDERS=("Qt5" "Qt6" "DirectX11")
 
-# FRAMEWORKS=("Java2D" "JavaSwing")
+FRAMEWORKS=("FLTK" "pyglet")
 # FRAMEWORKS_SEP_FOLDERS=("DirectX11")
 
 #FRAMEWORKS=("SDL2_OpenGLES" "SDL2_OpenGLES2" "SDL2_OpenGL" "SDL2_Software" "SDL2_Direct3D" "SDL2_OpenGLES_vsync" "SDL2_OpenGLES2_vsync" "SDL2_OpenGL_vsync" "SDL2_Software_vsync" "SDL2_Direct3D_vsync" "GLEW_SDL" "GLEW_SDL_vsync")
-FRAMEWORKS=("SDL2_OpenGLES" "SDL2_Direct3D_vsync" "GLEW_SDL" "GLEW_SDL_vsync")
+#FRAMEWORKS=("SDL2_OpenGLES" "SDL2_Direct3D_vsync" "GLEW_SDL" "GLEW_SDL_vsync")
 
 #FRAMEWORKS_GLUMPY=("pyglet" "glfw" "qt5" "sdl")
 #FRAMEWORKS=("win32")
@@ -60,48 +61,48 @@ sleep "5s"
 # done
 
 # measure SDLs
-for f in "${!FRAMEWORKS[@]}";
-do
-    for r in "${!READERS[@]}";
-    do
-        if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
-        then
-            ./start_measurement_SDL.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        else
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        fi
-        r=$((r+1));
-    done
-    f=$((f+1));
-done
-
-
 # for f in "${!FRAMEWORKS[@]}";
 # do
 #     for r in "${!READERS[@]}";
 #     do
 #         if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
 #         then
-#             ./start_measurement.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
 #         else
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-#             ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+#             ./start_measurement_SDL.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
 #         fi
 #         r=$((r+1));
 #     done
 #     f=$((f+1));
 # done
+
+
+for f in "${!FRAMEWORKS[@]}";
+do
+    for r in "${!READERS[@]}";
+    do
+        if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
+        then
+            ./start_measurement.sh calibrate_and_measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+        else
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh measure $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
+        fi
+        r=$((r+1));
+    done
+    f=$((f+1));
+done
 
 
 # # for frameworks where default and rects are not in the same directory
