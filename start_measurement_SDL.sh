@@ -8,7 +8,7 @@ FW_RUNNING=$5
 PIXEL_READER=$6
 DATA_DIR=$7
 
-
+# removed "start"s to make executable from bash
 FW_PATH="framework_tester_SDL/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
@@ -29,33 +29,33 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"SDL"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
     *"GLUT"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
     *"GLEW"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
     *"GTK"*)
         set GDK_BACKEND=win32
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
     *"FLTK"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
     *"win32"*)
-        start ./$FW_PATH.exe &
+        ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 esac
