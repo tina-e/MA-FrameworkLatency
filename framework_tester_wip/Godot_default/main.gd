@@ -5,6 +5,7 @@ var rect
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	DisplayServer.window_set_title("framework")
 	rect = ColorRect.new()
 	rect.color = Color(0, 0, 0, 1)
 	rect.position = Vector2(0, 0)
