@@ -10,6 +10,9 @@ import pyautogui
 import pygetwindow as gw
 
 
+pyautogui.FAILSAFE = False
+
+
 class FYALMDController:
     def __init__(self, num_measurements, fw_name, complexity, run_fw_test, program_name, out_folder) -> None:
         self.num_measurements = int(num_measurements)
