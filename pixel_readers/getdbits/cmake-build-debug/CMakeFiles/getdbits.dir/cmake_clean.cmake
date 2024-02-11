@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/getdbits.dir/main.cpp.obj"
-  "CMakeFiles/getdbits.dir/main.cpp.obj.d"
   "getdbits.exe"
   "getdbits.exe.manifest"
   "getdbits.pdb"

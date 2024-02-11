@@ -33,11 +33,25 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
     return (int)bitPointer[2];
 }
 
-void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo)
+/*void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo)
 {
     while (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) != 255)
     {
         usleep(1);
+    }
+}*/
+
+void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo, uint64_t start_time)
+{
+    while(true) {
+        if (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) == 255) {
+            uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            cout << end_time - start_time << endl;
+            return;
+        } else if (duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() - start_time > 5000000) {
+            cout << -1 << endl;
+            return;
+        }
     }
 }
 
@@ -70,16 +84,11 @@ int main(int argc, char **argv)
         if (currentState != state && currentState < 0)
         {
             state = currentState;
-            uint64_t start_time = duration_cast<microseconds>(
-                    system_clock::now().time_since_epoch())
-                    .count();
-            waitForWhite(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo);
+            uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            waitForWhite(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo, start_time);
 
-            uint64_t end_time = duration_cast<microseconds>(
-                    system_clock::now().time_since_epoch())
-                    .count();
-
-            cout << end_time - start_time << endl;
+            //uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            //cout << end_time - start_time << endl;
         }
     }
     return 0;

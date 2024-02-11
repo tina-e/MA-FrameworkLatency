@@ -35,4 +35,7 @@ source_folder_path = "./data/sdl_1112_480hz_55"
 destination_folder_path = "./data/sdl_1112_480hz_55_error"
 prefix_to_match = "-"
 
-move_files_with_prefix(source_folder_path, destination_folder_path, prefix_to_match)
+#move_files_with_prefix(source_folder_path, destination_folder_path, prefix_to_match)
+
+while(1):
+    pass

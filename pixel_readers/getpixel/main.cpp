@@ -16,12 +16,22 @@ int getPixelData(HDC hdc)
     return int(GetRValue(_color));
 }
 
-void waitForWhite(HDC hdcScreen)
+void waitForWhite(HDC hdcScreen, uint64_t start_time)
 {
-    while (getPixelData(hdcScreen) != 255)
+    while(true) {
+        if (getPixelData(hdcScreen) == 255) {
+            uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            cout << end_time - start_time << endl;
+            return;
+        } else if (duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() - start_time > 5000000) {
+            cout << -1 << endl;
+            return;
+        }
+    }
+    /*while (getPixelData(hdcScreen) != 255)
     {
         usleep(1);
-    }
+    }*/
 }
 
 int main(int argc, char **argv)
@@ -45,15 +55,10 @@ int main(int argc, char **argv)
         if (currentState != state && currentState < 0)
         {
             state = currentState;
-            uint64_t start_time = duration_cast<microseconds>(
-                    system_clock::now().time_since_epoch())
-                    .count();
-            waitForWhite(hdcScreen);
-            uint64_t end_time = duration_cast<microseconds>(
-                    system_clock::now().time_since_epoch())
-                    .count();
-
-            cout << end_time - start_time << endl;
+            uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            waitForWhite(hdcScreen, start_time);
+            //uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            //cout << end_time - start_time << endl;
         }
     }
     return 0;

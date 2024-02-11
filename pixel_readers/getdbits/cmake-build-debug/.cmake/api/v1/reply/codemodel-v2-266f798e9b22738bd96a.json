@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.17"
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "getdbits::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-getdbits-Debug-c7bb3e53b4fd992b8964.json",
+					"jsonFile" : "target-getdbits-Debug-0412f6eabca45b5e890e.json",
 					"name" : "getdbits",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_readers/getdbits/cmake-build-debug",
-		"source" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_readers/getdbits"
+		"build" : "D:/Studium/Masterarbeit/MA-FrameworkLatency/pixel_readers/getdbits/cmake-build-debug",
+		"source" : "D:/Studium/Masterarbeit/MA-FrameworkLatency/pixel_readers/getdbits"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 0
 	}
 }
