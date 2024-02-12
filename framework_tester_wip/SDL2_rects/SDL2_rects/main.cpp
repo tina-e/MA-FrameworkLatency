@@ -10,7 +10,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "software"
 
 // screen size
 #define WIDTH 1920
