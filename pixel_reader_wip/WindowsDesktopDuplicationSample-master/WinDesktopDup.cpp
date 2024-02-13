@@ -131,7 +131,7 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	if (FAILED(hr)) {
 		// perhaps shutdown and reinitialize
 		auto msg = "Acquire failed: " + hr;
-		OutputDebugStringA(msg);
+		//OutputDebugStringA(msg);
 		return -1;
 	}
 

@@ -58,6 +58,11 @@ case "$TEST_PROGRAM" in
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
+
+    *"Godot"*)
+        start ./framework_tester_fullscreen/GameEngines/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
+        PID_TEST_PROGRAM=$!
+        ;;
 esac
 
 sleep "3s"

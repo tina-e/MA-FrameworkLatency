@@ -10,6 +10,9 @@
 import os
 import shutil
 
+from subprocess import Popen, PIPE
+import threading
+
 def move_files_with_prefix(source_folder, destination_folder, prefix):
     # Ensure the destination folder exists
     if not os.path.exists(destination_folder):
@@ -37,5 +40,21 @@ prefix_to_match = "-"
 
 #move_files_with_prefix(source_folder_path, destination_folder_path, prefix_to_match)
 
-while(1):
-    pass
+
+def init_fw_latency_tester_windup():
+        cmd = [f'..\pixel_readers\windup_errorout.exe']
+        latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
+        print(latency_tester_process)
+        for line in latency_tester_process.stdout:
+            print(line)
+            try:
+                last_fw_latency = int(line)
+            except:
+                pass
+            
+            new_value = True
+            #if measuring == False:
+            #    break
+        latency_tester_process.kill()
+
+init_fw_latency_tester_windup()

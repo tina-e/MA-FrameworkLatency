@@ -29,7 +29,7 @@ class FYALMDController:
         self.measurements = []
         if (program_name == 'autoit_reader'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_autoit, daemon=True)
-        elif (program_name == 'windup'):
+        elif (program_name == 'windup' or program_name == 'windup_test' or program_name == 'windup_errorout'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_windup, daemon=True)
         elif (program_name == 'windup_python' or program_name == 'ctypes_reader' or program_name == 'pyautogui_reader'):
             self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
@@ -120,8 +120,10 @@ class FYALMDController:
     def init_fw_latency_tester_windup(self):
         cmd = [f'.\pixel_readers\{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
+        print(self.latency_tester_process)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
+            print(self.last_fw_latency)
             self.new_value = True
             if self.measuring == False:
                 break
@@ -165,10 +167,11 @@ class FYALMDController:
             if self.run_fw_test:
                 #waiting_start = time.time()
                 while not self.new_value:
+                    #print("waiting")
                     pass
                     # time.sleep(0.000001) # sleep 1 us
                     # if there is no new value after 5sec, break and append -1 for fw latency
-                    #if (time.time() - waiting_start) > 5:  
+                    # if (time.time() - waiting_start) > 5:  
                     #    self.last_fw_latency = -1
                     #    break
             ete = int(decoded_bytes)
