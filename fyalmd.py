@@ -11,6 +11,7 @@ import pygetwindow as gw
 
 
 pyautogui.FAILSAFE = False
+DEVICE = 'COM7'
 
 
 class FYALMDController:
@@ -27,14 +28,7 @@ class FYALMDController:
         self.yalmd = None
         self.new_value = False
         self.measurements = []
-        if (program_name == 'autoit_reader'):
-            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_autoit, daemon=True)
-        elif (program_name == 'windup' or program_name == 'windup_test' or program_name == 'windup_errorout'):
-            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_windup, daemon=True)
-        elif (program_name == 'windup_python' or program_name == 'ctypes_reader' or program_name == 'pyautogui_reader'):
-            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester_py_extern, daemon=True)
-        else:
-            self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
+        self.read_latency_tester_thread = threading.Thread(target=self.init_fw_latency_tester, daemon=True)
 
 
     def ensure_focus(self):
@@ -49,29 +43,23 @@ class FYALMDController:
         time.sleep(1)
         pyautogui.moveTo(300, 300)
         time.sleep(1)
-        pyautogui.click()
-        time.sleep(0.5)
-        pyautogui.click()
-        time.sleep(0.5)
-        pyautogui.click()
-        time.sleep(1)
+        for i in range(3):
+            pyautogui.click()
+            time.sleep(0.5)
 
 
     def calibrate_yalmd(self):
         self.ensure_focus()
-        self.yalmd = serial.Serial('COM7')
+        self.yalmd = serial.Serial(DEVICE)
         self.yalmd.flushInput()
-        time.sleep(5)
+        time.sleep(5)  # to make sure framework tester is ready steady go
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
-        print(yalmd_answer_byte)
-        #decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         print(decoded_answer_bytes)
-        #self.yalmd.close()
-        #self.yalmd = None
 
 
+    ## to start windup_python without extern script
     # def init_fw_latency_tester_py(self):
     #     device = d3dshot.create(capture_output="numpy")
     #     state = win32api.GetKeyState(0x01)
@@ -86,30 +74,14 @@ class FYALMDController:
     #             break
 
 
-    def init_fw_latency_tester_py_extern(self):
-        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py']
-        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
-        for line in self.latency_tester_process.stdout:
-            self.last_fw_latency = int(line)
-            self.new_value = True
-            if self.measuring == False:
-                break
-        self.latency_tester_process.kill()
-        
-
-    def init_fw_latency_tester_autoit(self):
-        cmd = ['AutoIt3.exe', f'.\pixel_readers\{self.program_name}.au3']
-        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
-        for line in self.latency_tester_process.stdout:
-            self.last_fw_latency = int(line)
-            self.new_value = True
-            if self.measuring == False:
-                break
-        self.latency_tester_process.kill()
-
-
     def init_fw_latency_tester(self):
-        cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
+        if (self.program_name == 'windup' or self.program_name == 'windup_test'):
+            cmd = [f'.\pixel_readers\{self.program_name}.exe']
+        elif (self.program_name == 'windup_python' or self.program_name == 'ctypes_reader' or self.program_name == 'pyautogui_reader'):
+            cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py']
+        else:
+            cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
+
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
@@ -118,23 +90,11 @@ class FYALMDController:
                 break
         self.latency_tester_process.kill()
 
-
-    def init_fw_latency_tester_windup(self):
-        cmd = [f'.\pixel_readers\{self.program_name}.exe']
-        self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
-        for line in self.latency_tester_process.stdout:
-            self.last_fw_latency = int(line)
-            self.new_value = True
-            if self.measuring == False:
-                break
-        self.latency_tester_process.kill()
 
 
     def start(self):
         self.ensure_focus()
-        #self.yalmd = serial.Serial('COM7')
         self.measuring = True
-        #self.yalmd.flushInput()
         signal.signal(signal.SIGINT, signal_handler)
         if self.run_fw_test:
             self.read_latency_tester_thread.start()
@@ -162,9 +122,7 @@ class FYALMDController:
 
     def get_latency(self, iteration):
         ser_bytes = self.yalmd.readline()
-        print(ser_bytes)
         decoded_bytes = ser_bytes[0:len(ser_bytes)-1].decode("utf-8")
-        print("result: " + decoded_bytes)
         if self.measuring:
             if self.run_fw_test:
                 #waiting_start = time.time()
@@ -222,27 +180,15 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 
-if len(sys.argv) == 2:
-    if sys.argv[1] == 'calibrate':
-        fyalmd_controller = FYALMDController(None, None, None, None, None, None)
-        fyalmd_controller.calibrate_yalmd()
-        sys.exit(0)
+if len(sys.argv) == 7:
+    fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
+    fyalmd_controller.calibrate_yalmd()
+    time.sleep(1)
+    fyalmd_controller.measure()
+    fyalmd_controller.save_data()
+    sys.exit(0)
 
-elif len(sys.argv) == 8:
-    if sys.argv[1] == 'calibrate_and_measure':
-        fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
-        fyalmd_controller.calibrate_yalmd()
-        time.sleep(1)
-        fyalmd_controller.measure()
-        fyalmd_controller.save_data()
-        sys.exit(0)
-    elif sys.argv[1] == 'measure':
-        fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
-        time.sleep(1)
-        fyalmd_controller.measure()
-        fyalmd_controller.save_data()
-        sys.exit(0)
 
-print('arguments required: action, num_measurements, fw_name, complexity, run_fw_test, program_name, out_folder')
+print('arguments required: num_measurements, fw_name, complexity, run_fw_test, program_name, out_folder')
 sys.exit(-1)
     
