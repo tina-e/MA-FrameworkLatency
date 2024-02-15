@@ -59,15 +59,17 @@ class FYALMDController:
 
     def calibrate_yalmd(self):
         self.ensure_focus()
-        self.yalmd = serial.Serial('COM8')
+        self.yalmd = serial.Serial('COM7')
         self.yalmd.flushInput()
         time.sleep(5)
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
+        print(yalmd_answer_byte)
+        #decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         print(decoded_answer_bytes)
-        self.yalmd.close()
-        self.yalmd = None
+        #self.yalmd.close()
+        #self.yalmd = None
 
 
     # def init_fw_latency_tester_py(self):
@@ -120,10 +122,8 @@ class FYALMDController:
     def init_fw_latency_tester_windup(self):
         cmd = [f'.\pixel_readers\{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
-        print(self.latency_tester_process)
         for line in self.latency_tester_process.stdout:
             self.last_fw_latency = int(line)
-            print(self.last_fw_latency)
             self.new_value = True
             if self.measuring == False:
                 break
@@ -132,9 +132,9 @@ class FYALMDController:
 
     def start(self):
         self.ensure_focus()
-        self.yalmd = serial.Serial('COM8')
+        #self.yalmd = serial.Serial('COM7')
         self.measuring = True
-        self.yalmd.flushInput()
+        #self.yalmd.flushInput()
         signal.signal(signal.SIGINT, signal_handler)
         if self.run_fw_test:
             self.read_latency_tester_thread.start()
@@ -162,7 +162,9 @@ class FYALMDController:
 
     def get_latency(self, iteration):
         ser_bytes = self.yalmd.readline()
-        decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
+        print(ser_bytes)
+        decoded_bytes = ser_bytes[0:len(ser_bytes)-1].decode("utf-8")
+        print("result: " + decoded_bytes)
         if self.measuring:
             if self.run_fw_test:
                 #waiting_start = time.time()

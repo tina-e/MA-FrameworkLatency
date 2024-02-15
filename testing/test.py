@@ -41,20 +41,51 @@ prefix_to_match = "-"
 #move_files_with_prefix(source_folder_path, destination_folder_path, prefix_to_match)
 
 
-def init_fw_latency_tester_windup():
-        cmd = [f'..\pixel_readers\windup_errorout.exe']
-        latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
-        print(latency_tester_process)
-        for line in latency_tester_process.stdout:
-            print(line)
-            try:
-                last_fw_latency = int(line)
-            except:
-                pass
+# def init_fw_latency_tester_windup():
+#         cmd = [f'..\pixel_readers\windup_errorout.exe']
+#         latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
+#         print(latency_tester_process)
+#         for line in latency_tester_process.stdout:
+#             print(line)
+#             try:
+#                 last_fw_latency = int(line)
+#             except:
+#                 pass
             
-            new_value = True
-            #if measuring == False:
-            #    break
-        latency_tester_process.kill()
+#             new_value = True
+#             #if measuring == False:
+#             #    break
+#         latency_tester_process.kill()
 
-init_fw_latency_tester_windup()
+# init_fw_latency_tester_windup()
+
+
+import serial
+import time
+
+ser = serial.Serial('COM7')  # open serial port
+ser.flushInput()
+
+time.sleep(5)
+
+ser.write('c'.encode())
+
+ser_bytes = ser.readline()
+print(ser_bytes)
+decoded_bytes = ser_bytes.decode("utf-8")
+print(decoded_bytes)
+
+ser.close()
+
+time.sleep(2)
+
+ser = serial.Serial('COM7')  # open serial port
+ser.flushInput()
+
+for i in range(100):
+    ser.write('m'.encode())
+    ser_bytes = ser.readline()
+    print(ser_bytes)
+    decoded_bytes = ser_bytes.decode("utf-8")
+    print(decoded_bytes)
+    time.sleep(1)
