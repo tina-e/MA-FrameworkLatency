@@ -16,7 +16,7 @@ int getPixelData(HDC hdc)
     return int(GetRValue(_color));
 }
 
-void waitForWhite(HDC hdcScreen, uint64_t start_time)
+/*void waitForWhite(HDC hdcScreen, uint64_t start_time)
 {
     while(true) {
         if (getPixelData(hdcScreen) == 255) {
@@ -28,15 +28,19 @@ void waitForWhite(HDC hdcScreen, uint64_t start_time)
             return;
         }
     }
-    /*while (getPixelData(hdcScreen) != 255)
+}*/
+
+void waitForWhite(HDC hdcScreen)
+{
+    while (getPixelData(hdcScreen) != 255)
     {
         usleep(1);
-    }*/
+    }
 }
 
 int main(int argc, char **argv)
 {
-    HWND frameworkWindow = FindWindow(NULL, "framework");
+    /*HWND frameworkWindow = FindWindow(NULL, "framework");
     if (frameworkWindow != NULL) {
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
@@ -44,7 +48,7 @@ int main(int argc, char **argv)
         SetFocus(frameworkWindow);
     } else {
         cerr << "no window named framework" << endl;
-    }
+    }*/
 
     HDC hdcScreen = GetDC(NULL);
     SHORT state = GetKeyState(VK_LBUTTON);
@@ -56,9 +60,9 @@ int main(int argc, char **argv)
         {
             state = currentState;
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            waitForWhite(hdcScreen, start_time);
-            //uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            //cout << end_time - start_time << endl;
+            waitForWhite(hdcScreen);
+            uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            cout << end_time - start_time << endl;
         }
     }
     return 0;

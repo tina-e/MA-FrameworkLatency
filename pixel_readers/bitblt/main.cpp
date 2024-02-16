@@ -32,15 +32,15 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, BYTE *bitPointer)
     return (int)bitPointer[2];
 }
 
-/*void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer)
+void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer)
 {
     while (getPixelData(hdcCompatible, hdcScreen, bitPointer) != 255)
     {
         usleep(1);
     }
-}*/
+}
 
-void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer, uint64_t start_time)
+/*void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer, uint64_t start_time)
 {
     while(true) {
         if (getPixelData(hdcCompatible, hdcScreen, bitPointer) == 255) {
@@ -52,17 +52,19 @@ void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer, uint64_t s
             return;
         }
     }
-}
+}*/
 
 int main(int argc, char **argv)
 {
-    HWND frameworkWindow = FindWindow(NULL, "framework");
+    /*HWND frameworkWindow = FindWindow(NULL, "framework");
     if (frameworkWindow != NULL) {
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
         ShowWindow(frameworkWindow, SW_RESTORE);
         SetFocus(frameworkWindow);
-    }
+    } else {
+        cerr << "no window named framework" << endl;
+    }*/
 
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
@@ -82,9 +84,9 @@ int main(int argc, char **argv)
         {
             state = currentState;
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            waitForWhite(hdcScreen, hdcCompatible, bitPointer, start_time);
-            //uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            //cout << end_time - start_time << endl;
+            waitForWhite(hdcScreen, hdcCompatible, bitPointer);
+            uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+            cout << end_time - start_time << endl;
         }
     }
     return 0;
