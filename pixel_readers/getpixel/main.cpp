@@ -63,7 +63,7 @@ int main(int argc, char **argv)
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
             waitForWhite(hdcScreen);
             uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            printf("%d", end_time - start_time);
+            printf("%d\n", end_time - start_time);
             //cout << end_time - start_time << endl;
         }
     }

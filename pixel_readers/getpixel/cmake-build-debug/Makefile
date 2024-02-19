@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_readers\getpixel
+CMAKE_SOURCE_DIR = D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_readers\getpixel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_readers\getpixel\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_readers\getpixel\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
