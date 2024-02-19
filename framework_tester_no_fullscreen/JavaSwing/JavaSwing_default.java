@@ -5,7 +5,7 @@ import javax.swing.*;
 public class JavaSwing_default extends JFrame {
     private Color color;
     private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int HEIGHT = 1080;
 
     public JavaSwing_default() {
         setSize(WIDTH, HEIGHT);

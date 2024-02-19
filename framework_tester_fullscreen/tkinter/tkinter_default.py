@@ -2,7 +2,7 @@
 import tkinter as tk
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 
 root = tk.Tk()
 #root.attributes("-zoomed", True)

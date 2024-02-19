@@ -10,7 +10,7 @@ public class Java2D_rects extends JFrame {
     private Color color;
     private boolean pressed = false;
     private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int HEIGHT = 1080;
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public Java2D_rects() {

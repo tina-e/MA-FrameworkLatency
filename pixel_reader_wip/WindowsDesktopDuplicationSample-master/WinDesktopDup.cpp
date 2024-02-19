@@ -126,13 +126,13 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	DXGI_OUTDUPL_FRAME_INFO frameInfo;
 	hr = DeskDupl->AcquireNextFrame(INFINITE, &frameInfo, &deskRes);
 	if (hr == DXGI_ERROR_WAIT_TIMEOUT) {
-		return -1;
+		return -2;
 	}
 	if (FAILED(hr)) {
 		// perhaps shutdown and reinitialize
 		auto msg = "Acquire failed: " + hr;
 		//OutputDebugStringA(msg);
-		return -1;
+		return -3;
 	}
 
 
@@ -143,7 +143,7 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	deskRes->Release();
 	deskRes = nullptr;
 	if (FAILED(hr)) {
-		return -1;
+		return -4;
 	}
 
 	bool ok = true;
@@ -171,7 +171,7 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 	UINT byteOffset = (x * rowPitch) + (y * sizeof(UINT)); 
 	UINT colorValue = *reinterpret_cast<UINT*>(pixels + byteOffset);
 	
-	if (colorValue != 0) {
+	//if (colorValue != 0) {
 		BYTE red   = (colorValue >> 16) & 0xFF;
 		BYTE green = (colorValue >> 8) & 0xFF;
 		BYTE blue  = colorValue & 0xFF;
@@ -183,10 +183,10 @@ int WinDesktopDup::GetColorValueAt(int x, int y) {
 
 		/*cout << "color: " << red << endl;*/
 		return static_cast<int>(red);
-	}
+	//}
 
 	D3DDeviceContext->Unmap(cpuTex, 0);
 	cpuTex->Release();
 	gpuTex->Release();
-	return -1;
+	return -5;
 }

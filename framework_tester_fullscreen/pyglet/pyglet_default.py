@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import pyglet
-from pyglet.shapes import Rectangle
+from pyglet import shapes
 from pyglet import app
 from pyglet.window import Window
 import signal
@@ -10,7 +10,7 @@ import sys
 
 # Define the width and height of the window
 WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1200
+WINDOW_HEIGHT = 1080
 
 display = pyglet.canvas.get_display()
 screen = display.get_screens()[0]
@@ -26,7 +26,7 @@ win.set_fullscreen(fullscreen=True, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, sc
 # win.activate()
 #print(win.vsync)
 
-rect = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))
+rect = shapes.Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))
 
 @win.event
 def on_mouse_press(x, y, button, modifiers):

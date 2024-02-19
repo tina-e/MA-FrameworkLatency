@@ -3,7 +3,7 @@ import tkinter as tk
 import random
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 MIN_X_RECTS = WIDTH / 2
 n_rects = 1000
 n_horizontal = 10

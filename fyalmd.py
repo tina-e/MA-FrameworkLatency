@@ -32,30 +32,33 @@ class FYALMDController:
 
 
     def ensure_focus(self):
-        try:
-            for window in gw.getAllWindows():
-                if window.title == "framework":
-                    window.activate()
-                elif window.title == "Windows PowerShell":
-                    window.minimize()
-        except:
-            pass
+        # try:
+        #     for window in gw.getAllWindows():
+        #         if window.title == "framework":
+        #             window.activate()
+        #         elif window.title == "Windows PowerShell":
+        #             window.minimize()
+        # except:
+        #     pass
         time.sleep(1)
         pyautogui.moveTo(300, 300)
         time.sleep(1)
-        for i in range(3):
-            pyautogui.click()
-            time.sleep(0.5)
+        self.yalmd.write('o'.encode())
+        time.sleep(1)
+        self.yalmd.write('o'.encode())
+        # for i in range(3):
+        #     pyautogui.click()
+        #     time.sleep(0.5)
 
 
     def calibrate_yalmd(self):
-        self.ensure_focus()
         self.yalmd = serial.Serial(DEVICE)
         self.yalmd.flushInput()
-        time.sleep(5)  # to make sure framework tester is ready steady go
+        self.ensure_focus()
+        time.sleep(5)  
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
-        decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
+        decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-1].decode("utf-8")
         print(decoded_answer_bytes)
 
 
@@ -98,7 +101,6 @@ class FYALMDController:
         signal.signal(signal.SIGINT, signal_handler)
         if self.run_fw_test:
             self.read_latency_tester_thread.start()
-        time.sleep(1)
         
 
     def stop(self):
@@ -125,15 +127,15 @@ class FYALMDController:
         decoded_bytes = ser_bytes[0:len(ser_bytes)-1].decode("utf-8")
         if self.measuring:
             if self.run_fw_test:
-                #waiting_start = time.time()
+                waiting_start = time.time()
                 while not self.new_value:
-                    #print("waiting")
-                    pass
+                    # print("waiting")
+                    # pass
                     # time.sleep(0.000001) # sleep 1 us
                     # if there is no new value after 5sec, break and append -1 for fw latency
-                    # if (time.time() - waiting_start) > 5:  
-                    #    self.last_fw_latency = -1
-                    #    break
+                    if (time.time() - waiting_start) > 5:  
+                       self.last_fw_latency = -1
+                       break
             ete = int(decoded_bytes)
             diff = (ete - self.last_fw_latency)
             self.new_value = False
@@ -151,6 +153,11 @@ class FYALMDController:
  
     def measure(self):
         self.start()
+        time.sleep(2)
+        self.yalmd.write('o'.encode())
+        time.sleep(0.1)
+        self.yalmd.write('o'.encode())
+        time.sleep(4)
         counter = 0
         while True:
             if counter < self.num_measurements:
@@ -179,11 +186,11 @@ def signal_handler(sig, frame):
         time.sleep(1)
     sys.exit(0)
 
-
+print(sys.argv)
 if len(sys.argv) == 7:
-    fyalmd_controller = FYALMDController(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
+    fyalmd_controller = FYALMDController(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     fyalmd_controller.calibrate_yalmd()
-    time.sleep(1)
+    time.sleep(5)  # to make sure framework tester is ready steady go 
     fyalmd_controller.measure()
     fyalmd_controller.save_data()
     sys.exit(0)

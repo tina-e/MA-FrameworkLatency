@@ -10,7 +10,7 @@ import signal
 import pandas
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 click_timestamps = []
 
 class TestApp(wx.Frame):

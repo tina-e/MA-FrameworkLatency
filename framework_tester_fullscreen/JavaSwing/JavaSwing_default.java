@@ -9,7 +9,7 @@ public class JavaSwing_default extends JFrame {
 
     public JavaSwing_default() {
         createBufferStrategy(1);
-        setSize(1920, 1200);
+        setSize(1920, 1080);
         setTitle("framework");
         // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);

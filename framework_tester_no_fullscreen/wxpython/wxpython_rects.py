@@ -7,7 +7,7 @@ import random
 import wx
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 
 class TestApp(wx.Frame):
     def __init__(self, parent, title, size, position, style):

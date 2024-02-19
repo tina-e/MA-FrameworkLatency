@@ -10,7 +10,7 @@ import sys
 
 # Define the width and height of the window
 WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1200
+WINDOW_HEIGHT = 1080
 
 # display = pyglet.canvas.get_display()
 # screen = display.get_screens()[0]

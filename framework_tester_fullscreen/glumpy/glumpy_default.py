@@ -1,7 +1,7 @@
 from glumpy import app, gloo, gl
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 

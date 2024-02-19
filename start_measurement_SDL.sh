@@ -1,60 +1,17 @@
 #!/bin/sh
 
-ACTION=$1
-ITERATIONS=$2
-TEST_PROGRAM=$3
-TEST_COMPLEXITY=$4
-FW_RUNNING=$5
-PIXEL_READER=$6
-DATA_DIR=$7
+ITERATIONS=$1
+TEST_PROGRAM=$2
+TEST_COMPLEXITY=$3
+FW_RUNNING=$4
+PIXEL_READER=$5
+DATA_DIR=$6
 
 # removed "start"s to make executable from bash
 FW_PATH="framework_tester_SDL/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
-
-    *"Java"*)
-        java ./$FW_PATH.java &
-        PID_TEST_PROGRAM=$!
-        ;;
-
-    *"py"*)
-        python ./$FW_PATH.py &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"tkinter"*)
-        python ./$FW_PATH.py &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
     *"SDL"*)
-        ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"GLUT"*)
-        ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"GLEW"*)
-        ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"GTK"*)
-        set GDK_BACKEND=win32
-        ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"FLTK"*)
-        ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
-    *"win32"*)
         ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
@@ -68,7 +25,7 @@ sigint() {
 
 trap sigint INT
 
-python ./fyalmd.py $ACTION $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
+python ./fyalmd.py $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
 PID_FYALMD=$!
 
 kill -9 $PID_TEST_PROGRAM
