@@ -5,7 +5,7 @@ import sys
 import signal
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
   
 class MainWindow(QWidget):
     def __init__(self):

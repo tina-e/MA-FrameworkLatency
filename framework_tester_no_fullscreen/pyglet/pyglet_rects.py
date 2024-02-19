@@ -8,7 +8,7 @@ from random import randint
 
 # Define the width and height of the window
 WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1200
+WINDOW_HEIGHT = 1080
 MIN_X_RECTS = int(WINDOW_WIDTH / 2)
 
 n_rects = 1000

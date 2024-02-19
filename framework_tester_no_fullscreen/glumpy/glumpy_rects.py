@@ -3,7 +3,7 @@ from glumpy import app, gloo, gl
 from random import random, uniform
 
 WIDTH = 1920
-HEIGHT = 1200
+HEIGHT = 1080
 WHITE = 1,1,1,1
 BLACK = 0,0,0,1
 NUM_RECTS = 1000

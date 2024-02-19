@@ -8,7 +8,7 @@ public class JavaSwing_image extends JFrame {
     private boolean pressed = false;
 
     public JavaSwing_image() {
-        setSize(1920, 1200);
+        setSize(1920, 1080);
         setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);

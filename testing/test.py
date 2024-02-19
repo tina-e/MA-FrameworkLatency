@@ -58,34 +58,58 @@ prefix_to_match = "-"
 #         latency_tester_process.kill()
 
 # init_fw_latency_tester_windup()
+# import random
+# for i in range(10):
+#     print(random.random() * (-1 if random.randint(0, 1) else 1))
+# import serial
+# import time
+
+# ser = serial.Serial('COM7')  # open serial port
+# ser.flushInput()
+
+# time.sleep(5)
+
+# ser.write('c'.encode())
+
+# ser_bytes = ser.readline()
+# print(ser_bytes)
+# decoded_bytes = ser_bytes.decode("utf-8")
+# print(decoded_bytes)
+
+# time.sleep(2)
+
+# for i in range(10):
+#     ser.write('m'.encode())
+#     ser_bytes = ser.readline()
+#     print(ser_bytes)
+#     decoded_bytes = ser_bytes.decode("utf-8")
+#     print(decoded_bytes)
+#     time.sleep(1)
 
 
-import serial
-import time
+import pygame
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 
-ser = serial.Serial('COM7')  # open serial port
-ser.flushInput()
 
-time.sleep(5)
+(width, height) = (0,0)
+running = True
+screen = pygame.display.set_mode((width, height), pygame.FULLSCREEN)
+pygame.display.set_caption('framework')
 
-ser.write('c'.encode())
+background_color_black = (0,0,0)
+background_color_white = (255,255,255)
 
-ser_bytes = ser.readline()
-print(ser_bytes)
-decoded_bytes = ser_bytes.decode("utf-8")
-print(decoded_bytes)
+screen.fill(background_color_black)
 
-ser.close()
+measure_counter = 0
 
-time.sleep(2)
-
-ser = serial.Serial('COM7')  # open serial port
-ser.flushInput()
-
-for i in range(100):
-    ser.write('m'.encode())
-    ser_bytes = ser.readline()
-    print(ser_bytes)
-    decoded_bytes = ser_bytes.decode("utf-8")
-    print(decoded_bytes)
-    time.sleep(1)
+pygame.display.flip()
+clock = pygame.time.Clock()
+state = 0
+for i in range(8000):
+    #clock.tick(500)
+    #print(clock.get_fps())
+    state = not state
+    screen.fill(background_color_black if state else background_color_white)
+    pygame.display.update()

@@ -2,6 +2,7 @@
 #include <signal.h>
 #include <cstdlib>
 #include <ctime>
+#include <Windows.h>
 
 // supported:
 // direct3d
@@ -13,8 +14,8 @@
 #define DRIVER "software"
 
 // screen size
-#define WIDTH 1920
-#define HEIGHT 1200
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED

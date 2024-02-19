@@ -9,7 +9,7 @@ import java.util.Random;
 public class JavaSwing_rects extends JFrame {
     private Color color;
     private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1200;
+    private static final int HEIGHT = 1080;
     private static final int MIN_X_RECTS = WIDTH / 2;
 
     public JavaSwing_rects() {

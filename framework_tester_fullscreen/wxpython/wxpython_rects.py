@@ -11,7 +11,7 @@ class TestApp(wx.Frame):
         super(TestApp, self).__init__(*args, **kw)
 
         self.width = 1920
-        self.height = 1200
+        self.height = 1080
         self.min_x_rects = self.width / 2
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)

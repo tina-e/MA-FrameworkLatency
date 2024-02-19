@@ -1,12 +1,11 @@
 #!/bin/sh
 
-ACTION=$1
-ITERATIONS=$2
-TEST_PROGRAM=$3
-TEST_COMPLEXITY=$4
-FW_RUNNING=$5
-PIXEL_READER=$6
-DATA_DIR=$7
+ITERATIONS=$1
+TEST_PROGRAM=$2
+TEST_COMPLEXITY=$3
+FW_RUNNING=$4
+PIXEL_READER=$5
+DATA_DIR=$6
 
 
 FW_PATH="framework_tester_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
@@ -63,9 +62,27 @@ case "$TEST_PROGRAM" in
         start ./framework_tester_fullscreen/GameEngines/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
         PID_TEST_PROGRAM=$!
         ;;
+
+    *"Unity"*)
+        start ./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/framework.exe &
+        PID_TEST_PROGRAM=$!
+        ;;
+
+    *"DirectX"*)
+        cd "./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+        start "./${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe" &
+        PID_TEST_PROGRAM=$! 
+        cd "../../"
+        ;;
+
+    *"Qt"*)
+        start ./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
+
 esac
 
-sleep "3s"
+sleep "7s"
 
 sigint() {
     kill -INT $PID_TEST_PROGRAM
@@ -73,11 +90,12 @@ sigint() {
 
 trap sigint INT
 
-python ./fyalmd.py $ACTION $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
+python ./fyalmd.py $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
 PID_FYALMD=$!
 
 kill -9 $PID_TEST_PROGRAM
 powershell kill -n "${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+powershell kill -n "framework"
 powershell kill -n "java"
 
 
