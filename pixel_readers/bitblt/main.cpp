@@ -87,8 +87,8 @@ int main(int argc, char **argv)
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
             waitForWhite(hdcScreen, hdcCompatible, bitPointer);
             uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            //cout << end_time - start_time << endl;
-            printf("%d\n", end_time - start_time);
+            cout << end_time - start_time << endl;
+            //printf("%d\n", end_time - start_time);
         }
     }
     return 0;
