@@ -1,14 +1,15 @@
 #!/bin/sh
 
-ITERATIONS=100
-DATA_DIR="1902_newsetup_100_printf"
+ITERATIONS=5
+#DATA_DIR="1902_newsetup_100_printf"
+DATA_DIR="1902_test"
 
 #READERS=("windup" "getpixel" "bitblt" "getdbits")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 READERS=("windup" "getpixel" "bitblt" "getdbits")
 
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "Direct3D" "Java2D" "JavaSwing" "Godot" "psychopy")
-FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "Direct3D" "Java2D" "JavaSwing")
+FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "Direct3D" "JavaSwing" "Java2D")
 
 #FRAMEWORKS_GLUMPY=("pyglet" "glfw" "qt5" "sdl")
 
@@ -47,8 +48,8 @@ do
     do
         if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
         then
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
             ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
             ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
             ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
         else

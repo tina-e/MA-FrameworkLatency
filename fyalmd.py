@@ -58,7 +58,7 @@ class FYALMDController:
         time.sleep(5)  
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
-        decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-1].decode("utf-8")
+        decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
         print(decoded_answer_bytes)
 
 
@@ -91,6 +91,7 @@ class FYALMDController:
             self.new_value = True
             if self.measuring == False:
                 break
+        #print(self.latency_tester_process.poll())
         self.latency_tester_process.kill()
 
 
@@ -124,7 +125,7 @@ class FYALMDController:
 
     def get_latency(self, iteration):
         ser_bytes = self.yalmd.readline()
-        decoded_bytes = ser_bytes[0:len(ser_bytes)-1].decode("utf-8")
+        decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
         if self.measuring:
             if self.run_fw_test:
                 waiting_start = time.time()
