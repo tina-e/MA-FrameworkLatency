@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 #include <signal.h>
 #include <iostream>
+#include <windows.h>
 
 // make sure we clean up when program is interrupted
 void signalHandler(int sig)
@@ -9,8 +10,8 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int windowWidth = (int)1920;
-int windowHeight = (int)1200;
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 int colorR = 0;
 int colorG = 0;
@@ -49,7 +50,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     argv[0] = _strdup("framework");
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA); // double buffering (??)
-    glutInitWindowSize(windowWidth, windowHeight);
+    glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
     // ?? glSwapIntervalEXT(1);
@@ -59,7 +60,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL)
     {
-        MoveWindow(frameworkWindow, -10, -32, windowWidth, windowHeight, FALSE);
+        MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
         BringWindowToTop(frameworkWindow);
         SetForegroundWindow(frameworkWindow);
         SetFocus(frameworkWindow);
