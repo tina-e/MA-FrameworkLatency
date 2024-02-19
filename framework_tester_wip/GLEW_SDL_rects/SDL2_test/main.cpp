@@ -4,9 +4,10 @@
 #include <GL/glew.h>
 #include <cstdlib>
 #include <signal.h>
+#include <windows.h>
 
-#define WIDTH 1920
-#define HEIGHT 1200
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 bool running = true;
 

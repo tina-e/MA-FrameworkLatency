@@ -2,6 +2,7 @@
 #include <signal.h>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 
 // supported:
 // direct3d
@@ -10,11 +11,11 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "software"
+#define DRIVER "opengles"
 
 // screen size
-#define WIDTH 1920
-#define HEIGHT 1200
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 #define RENDERER SDL_RENDERER_ACCELERATED
