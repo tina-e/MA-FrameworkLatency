@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_readers\pixelreader_getdbits Select CMakeLists.txt

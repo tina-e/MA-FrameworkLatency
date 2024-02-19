@@ -114,15 +114,11 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     glutCreateWindow("framework");
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-    //glutFullScreen();
-    HWND frameworkWindow = FindWindow(NULL, L"framework");
-    if (frameworkWindow != NULL) {
-        MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
-        BringWindowToTop(frameworkWindow);
-        SetForegroundWindow(frameworkWindow);
-        SetFocus(frameworkWindow);
-    }
-    
+    glutFullScreen();
+
+    glutGameModeString("1920x1080:16@500");
+    glutEnterGameMode();
+
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutMouseFunc(input);

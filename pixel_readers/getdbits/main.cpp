@@ -35,9 +35,10 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
 
 void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo)
 {
-    while (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) != 255)
-    {
-        usleep(1);
+    while(1) {
+        if (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) == 255) {
+            break;
+        }
     }
 }
 
@@ -87,7 +88,8 @@ int main(int argc, char **argv)
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
             waitForWhite(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo);
             uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            cout << end_time - start_time << endl;
+            //cout << end_time - start_time << endl;
+            printf("%d", end_time - start_time);
         }
     }
     return 0;

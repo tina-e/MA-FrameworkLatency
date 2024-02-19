@@ -2,12 +2,16 @@
 #include <windows.h>
 #include <signal.h>
 #include <iostream>
-
-#include <iostream>
+//#include <GL/glut.h>
+//#include <GL/gl.h>
 #include <chrono>
 
 using namespace std;
 using namespace chrono;
+//typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALFARPROC)(int);
+//typedef int(APIENTRY* PFNWGLGETSWAPINTERVALEXTPROC)();
+//PFNWGLSWAPINTERVALFARPROC wglSwapIntervalEXT = nullptr;
+//PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
 
 // screen size
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
@@ -28,7 +32,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 // opengles
 // metal (apple)
 // software
-#define DRIVER "software"
+#define DRIVER "opengl"
 //#endif
 
 // make sure we clean up when program is interrupted
@@ -77,6 +81,31 @@ int main(int argc, char **argv)
 
         cout << 1000000 / (end_time - start_time) << endl;
     }*/
+
+
+
+
+    //wglSwapIntervalEXT = (PFNWGLSWAPINTERVALFARPROC)wglGetProcAddress("wglSwapIntervalEXT");
+    //wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC)wglGetProcAddress("wglGetSwapIntervalEXT");
+
+    //if (wglSwapIntervalEXT == nullptr) {
+    //    std::cerr << "wglSwapIntervalEXT not supported!" << std::endl;
+    //    return 1;
+    //}
+
+    //HWND frameworkWindow = FindWindow(NULL, L"framework");
+    //HDC hdc = GetDC(frameworkWindow);
+    //HGLRC hglrc = wglCreateContext(hdc);
+    //wglMakeCurrent(hdc, hglrc);
+
+    //int vsyncEnabled = wglGetSwapIntervalEXT();
+    ////std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
+
+    //wglSwapIntervalEXT(1);
+
+    //vsyncEnabled = wglGetSwapIntervalEXT();
+    // std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
+
 
     while (1)
     {

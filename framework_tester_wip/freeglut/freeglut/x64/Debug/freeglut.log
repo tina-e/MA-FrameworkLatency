@@ -1,13 +1,13 @@
 ﻿  main.cpp
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,34): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,26): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(20,18): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(27,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(28,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(29,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(32,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(33,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(34,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(33,34): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(33,26): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(33,18): warning C4244: 'argument': conversion from 'int' to 'GLclampf', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(43,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(44,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(45,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(49,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(50,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\freeglut\main.cpp(51,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   freeglut.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\x64\Debug\freeglut.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.
