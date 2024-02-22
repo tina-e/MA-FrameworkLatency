@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,FLTK,default,FLTK_default,bitblt,False,bitblt_False,12168,-1,12169
+1,1,FLTK,default,FLTK_default,bitblt,False,bitblt_False,12629,-1,12630
+2,2,FLTK,default,FLTK_default,bitblt,False,bitblt_False,11745,-1,11746
+3,3,FLTK,default,FLTK_default,bitblt,False,bitblt_False,11697,-1,11698
+4,4,FLTK,default,FLTK_default,bitblt,False,bitblt_False,8709,-1,8710
