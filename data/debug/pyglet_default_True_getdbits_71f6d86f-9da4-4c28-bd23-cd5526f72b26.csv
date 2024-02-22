@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,pyglet,default,pyglet_default,getdbits,True,getdbits_True,9716,5624,4092
+1,1,pyglet,default,pyglet_default,getdbits,True,getdbits_True,21711,18001,3710
+2,2,pyglet,default,pyglet_default,getdbits,True,getdbits_True,13685,7223,6462
+3,3,pyglet,default,pyglet_default,getdbits,True,getdbits_True,21717,15262,6455
+4,4,pyglet,default,pyglet_default,getdbits,True,getdbits_True,10683,4518,6165
+5,5,pyglet,default,pyglet_default,getdbits,True,getdbits_True,21711,15238,6473
+6,6,pyglet,default,pyglet_default,getdbits,True,getdbits_True,11699,8105,3594
+7,7,pyglet,default,pyglet_default,getdbits,True,getdbits_True,13686,7304,6382
+8,8,pyglet,default,pyglet_default,getdbits,True,getdbits_True,11746,7851,3895
+9,9,pyglet,default,pyglet_default,getdbits,True,getdbits_True,17702,11873,5829

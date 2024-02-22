@@ -1,0 +1,3 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,psychopy_pyglet,default,psychopy_pyglet_default,getpixel,True,getpixel_True,7055,3050,4005
+1,1,psychopy_pyglet,default,psychopy_pyglet_default,getpixel,True,getpixel_True,7685,1775,5910
