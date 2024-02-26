@@ -104,16 +104,19 @@ prefix_to_match = "-"
 
 # measure_counter = 0
 
-# pygame.display.flip()
-# clock = pygame.time.Clock()
-# state = 0
-# for i in range(8000):
-#     #clock.tick(500)
-#     #print(clock.get_fps())
-#     state = not state
-#     screen.fill(background_color_black if state else background_color_white)
-#     pygame.display.update()
+pygame.display.flip()
+clock = pygame.time.Clock()
+state = 0
+for i in range(8000):
+    #clock.tick(500)
+    #print(clock.get_fps())
+    state = not state
+    screen.fill(background_color_black if state else background_color_white)
+    pygame.display.update()
 
-import datetime
-seconds_since_epoch = datetime.datetime.now().timestamp() * 1000 * 1000
-print(seconds_since_epoch)
+
+
+import pyttsx3
+engine = pyttsx3.init()
+engine.say("Hallo Nici! Wie geht es dir heute? Ich piepse jetzt dann 200-mal. Ich hoffe, das stört nicht. Mit freundlichen Füßen!")
+engine.runAndWait()
