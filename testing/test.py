@@ -87,29 +87,36 @@ prefix_to_match = "-"
 #     time.sleep(1)
 
 
-import pygame
-import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+# import pygame
+# import os
+# os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 
 
-(width, height) = (0,0)
-running = True
-screen = pygame.display.set_mode((width, height), pygame.FULLSCREEN)
-pygame.display.set_caption('framework')
+# (width, height) = (0,0)
+# running = True
+# screen = pygame.display.set_mode((width, height), pygame.FULLSCREEN)
+# pygame.display.set_caption('framework')
 
-background_color_black = (0,0,0)
-background_color_white = (255,255,255)
+# background_color_black = (0,0,0)
+# background_color_white = (255,255,255)
 
-screen.fill(background_color_black)
+# screen.fill(background_color_black)
 
-measure_counter = 0
+# measure_counter = 0
 
-pygame.display.flip()
-clock = pygame.time.Clock()
-state = 0
-for i in range(8000):
-    #clock.tick(500)
-    #print(clock.get_fps())
-    state = not state
-    screen.fill(background_color_black if state else background_color_white)
-    pygame.display.update()
+# pygame.display.flip()
+# clock = pygame.time.Clock()
+# state = 0
+# for i in range(8000):
+#     #clock.tick(500)
+#     #print(clock.get_fps())
+#     state = not state
+#     screen.fill(background_color_black if state else background_color_white)
+#     pygame.display.update()
+
+
+
+import pyttsx3
+engine = pyttsx3.init()
+engine.say("Hallo Nici! Wie geht es dir heute? Ich piepse jetzt dann 200-mal. Ich hoffe, das stört nicht. Mit freundlichen Füßen!")
+engine.runAndWait()
