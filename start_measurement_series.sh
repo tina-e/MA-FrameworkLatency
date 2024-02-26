@@ -1,18 +1,27 @@
 #!/bin/sh
 
-ITERATIONS=5
-#DATA_DIR="1902_newsetup_100_printf"
-DATA_DIR="1902_test"
+ITERATIONS=200
+#DATA_DIR="2002_gdi_readers_newsetup"
+#DATA_DIR="debug"
+#DATA_DIR="1902_test"
+DATA_DIR="2002_newsetup_printf"
 
 #READERS=("windup" "getpixel" "bitblt" "getdbits")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
-READERS=("windup" "getpixel" "bitblt" "getdbits")
+#READERS=("windup_stem")
+READERS=("windup")
 
-#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "Direct3D" "Java2D" "JavaSwing" "Godot" "psychopy")
-FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "Direct3D" "JavaSwing" "Java2D")
+#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "psychopy_pyglet" "psychopy_pygame" "psychopy_glfw")
+#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "psychopy_pyglet" "psychopy_pygame" "psychopy_glfw")
+FRAMEWORKS=("GLEW_SDL")
+
+# to debug
+#FRAMEWORKS=("SDL2_OpenGL" "SDL2_OpenGLES2")
+
+#FRAMEWORKS=("SDL2_OpenGLES2")
+
 
 #FRAMEWORKS_GLUMPY=("pyglet" "glfw" "qt5" "sdl")
-
 
 
 mkdir "./data/$DATA_DIR"
@@ -46,18 +55,10 @@ for f in "${!FRAMEWORKS[@]}";
 do
     for r in "${!READERS[@]}";
     do
-        if [ "$f" -eq 0 ] && [ "$r" -eq 0 ]
-        then
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        else
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
-            ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
-        fi
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));

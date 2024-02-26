@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,7988,-1,7989
+1,1,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,7600,4554,3046
+2,2,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6714,3642,3072
+3,3,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6713,3403,3310
+4,4,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6713,3554,3159
+5,5,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6712,3568,3144
+6,6,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6674,3592,3082
+7,7,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,7728,4622,3106
+8,8,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,7685,4531,3154
+9,9,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6716,3756,2960

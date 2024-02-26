@@ -2,7 +2,7 @@ import serial
 import time
 import sys
 import signal
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, STDOUT
 import threading
 import pandas as pd
 import uuid
@@ -44,7 +44,11 @@ class FYALMDController:
         pyautogui.moveTo(300, 300)
         time.sleep(1)
         self.yalmd.write('o'.encode())
+        time.sleep(0.5)
+        self.yalmd.write('o'.encode())
         time.sleep(1)
+        self.yalmd.write('o'.encode())
+        time.sleep(0.5)
         self.yalmd.write('o'.encode())
         # for i in range(3):
         #     pyautogui.click()
@@ -58,9 +62,9 @@ class FYALMDController:
         time.sleep(5)  
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
-        decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8")
-        print(decoded_answer_bytes)
-
+        print(yalmd_answer_byte)
+        #decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8").split('#')
+        
 
     ## to start windup_python without extern script
     # def init_fw_latency_tester_py(self):
@@ -78,16 +82,26 @@ class FYALMDController:
 
 
     def init_fw_latency_tester(self):
-        if (self.program_name == 'windup' or self.program_name == 'windup_test'):
-            cmd = [f'.\pixel_readers\{self.program_name}.exe']
-        elif (self.program_name == 'windup_python' or self.program_name == 'ctypes_reader' or self.program_name == 'pyautogui_reader'):
+        if 'y' in self.program_name:
             cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py']
         else:
-            cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
+            cmd = [f'.\pixel_readers\{self.program_name}.exe']
+
+        # if (self.program_name == 'windup' or self.program_name == 'windup_test'):
+        #     cmd = [f'.\pixel_readers\{self.program_name}.exe']
+        # elif (self.program_name == 'windup_python' or self.program_name == 'ctypes_reader' or self.program_name == 'pyautogui_reader'):
+        #     cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py']
+        # else:
+        #     cmd = [f'.\pixel_readers\{self.program_name}\cmake-build-debug\{self.program_name}.exe']
 
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
+        # self.latency_tester_process = Popen(cmd, stdout=PIPE, stderr=PIPE, bufsize=1, universal_newlines=True)
+        # for error_line in self.latency_tester_process.stderr:
+        #     print(error_line)
         for line in self.latency_tester_process.stdout:
+            #print("received: ", line)
             self.last_fw_latency = int(line)
+            #print("set: ", self.last_fw_latency)
             self.new_value = True
             if self.measuring == False:
                 break
