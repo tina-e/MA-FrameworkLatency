@@ -1,0 +1,9 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,58053,-1,58054
+1,1,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,264841,-1,264842
+2,2,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,26708,-1,26709
+3,3,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,90278,-1,90279
+4,4,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,18072,-1,18073
+5,5,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,22074,-1,22075
+6,6,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,57291,-1,57292
+7,7,GLEW_SDL,rects,GLEW_SDL_rects,windup,False,windup_False,1539806,-1,1539807

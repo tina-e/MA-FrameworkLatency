@@ -8,6 +8,8 @@ import pandas as pd
 import uuid
 import pyautogui
 import pygetwindow as gw
+import pyttsx3
+
 
 
 pyautogui.FAILSAFE = False
@@ -16,6 +18,7 @@ DEVICE = 'COM7'
 
 class FYALMDController:
     def __init__(self, num_measurements, fw_name, complexity, run_fw_test, program_name, out_folder) -> None:
+        self.da_schmatzer = pyttsx3.init()
         self.num_measurements = int(num_measurements)
         self.fw_name = fw_name
         self.complexity = complexity
@@ -168,12 +171,16 @@ class FYALMDController:
  
     def measure(self):
         self.start()
-        time.sleep(2)
+        time.sleep(2.5)
+        self.da_schmatzer.say("7 Sekunden sind vorbei!")
+        self.da_schmatzer.runAndWait()
         self.yalmd.write('o'.encode())
-        time.sleep(0.1)
+        time.sleep(0.3)
         self.yalmd.write('o'.encode())
         time.sleep(4)
         counter = 0
+        self.da_schmatzer.say("Obacht! Gleich gehts los!")
+        self.da_schmatzer.runAndWait()
         while True:
             if counter < self.num_measurements:
                 self.yalmd.write('m'.encode())

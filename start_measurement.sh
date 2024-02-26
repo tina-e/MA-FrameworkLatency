@@ -36,20 +36,20 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$! 
         ;;
 
-    *"SDL"*)
-        start ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
+    # *"SDL"*)
+    #     start ./$FW_PATH.exe &
+    #     PID_TEST_PROGRAM=$! 
+    #     ;;
 
     *"GLUT"*)
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
-    *"GLEW"*)
-        start ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
+    # *"GLEW"*)
+    #     start ./$FW_PATH.exe &
+    #     PID_TEST_PROGRAM=$! 
+    #     ;;
 
     *"GTK"*)
         #set GDK_BACKEND=win32
@@ -104,8 +104,8 @@ python ./fyalmd.py $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL
 PID_FYALMD=$!
 
 kill -9 $PID_TEST_PROGRAM
-powershell kill -n "${TEST_PROGRAM}_${TEST_COMPLEXITY}"
-powershell kill -n "framework"
+# powershell kill -n "${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+# powershell kill -n "framework"
 powershell kill -n "java"
 
 

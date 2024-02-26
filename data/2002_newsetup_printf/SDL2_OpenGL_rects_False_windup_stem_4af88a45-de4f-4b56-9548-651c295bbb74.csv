@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,5579,-1,5580
+1,1,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,4648,-1,4649
+2,2,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,6717,-1,6718
+3,3,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,6713,-1,6714
+4,4,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,5699,-1,5700
+5,5,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,5700,-1,5701
+6,6,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,5742,-1,5743
+7,7,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,5699,-1,5700
+8,8,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,6714,-1,6715
+9,9,SDL2_OpenGL,rects,SDL2_OpenGL_rects,windup_stem,False,windup_stem_False,4728,-1,4729
