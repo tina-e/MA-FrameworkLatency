@@ -1,0 +1,6 @@
+,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6379,-1,6380
+1,1,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6503,3471,3032
+2,2,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,7685,4431,3254
+3,3,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,6672,3305,3367
+4,4,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,windup_stem,True,windup_stem_True,5742,2670,3072

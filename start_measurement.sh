@@ -12,6 +12,15 @@ FW_PATH="framework_tester_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLE
 
 case "$TEST_PROGRAM" in 
 
+    *"psychopy"*)
+        cd ./venv
+        source Scripts/activate
+        python ../$FW_PATH.py &
+        PID_TEST_PROGRAM=$!
+        deactivate
+        cd ../
+        ;;
+
     *"Java"*)
         java ./$FW_PATH.java &
         PID_TEST_PROGRAM=$!
@@ -43,7 +52,8 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"GTK"*)
-        set GDK_BACKEND=win32
+        #set GDK_BACKEND=win32
+        set GDK_BACKEND=OpenGL #????
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
