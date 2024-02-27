@@ -5,10 +5,12 @@ TEST_PROGRAM=$2
 TEST_COMPLEXITY=$3
 FW_RUNNING=$4
 PIXEL_READER=$5
-DATA_DIR=$6
+FULLSCREEN_OPTION=$6
+DATA_DIR=$7
 
 
-FW_PATH="framework_tester_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+FW_PATH="framework_tester_${FULLSCREEN_OPTION}/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+# FW_PATH="framework_tester_fullscreen/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
 
 case "$TEST_PROGRAM" in 
 
@@ -46,14 +48,14 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$! 
         ;;
 
-    # *"GLEW"*)
-    #     start ./$FW_PATH.exe &
-    #     PID_TEST_PROGRAM=$! 
-    #     ;;
+    *"GLEW"*)
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
+        ;;
 
     *"GTK"*)
-        #set GDK_BACKEND=win32
-        set GDK_BACKEND=OpenGL #????
+        # set GDK_BACKEND=win32
+        # set GDK_BACKEND=OpenGL #????
         start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
@@ -69,24 +71,24 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"Godot"*)
-        start ./framework_tester_fullscreen/GameEngines/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
+        start ./framework_tester_${FULLSCREEN_OPTION}/GameEngines/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
         PID_TEST_PROGRAM=$!
         ;;
 
     *"Unity"*)
-        start ./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/framework.exe &
+        start ./framework_tester_${FULLSCREEN_OPTION}/${TEST_PROGRAM}_${TEST_COMPLEXITY}/framework.exe &
         PID_TEST_PROGRAM=$!
         ;;
 
     *"DirectX"*)
-        cd "./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
+        cd "./framework_tester_${FULLSCREEN_OPTION}/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
         start "./${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe" &
         PID_TEST_PROGRAM=$! 
         cd "../../"
         ;;
 
     *"Qt"*)
-        start ./framework_tester_fullscreen/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
+        start ./framework_tester_${FULLSCREEN_OPTION}/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 
@@ -100,7 +102,7 @@ sigint() {
 
 trap sigint INT
 
-python ./fyalmd.py $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $DATA_DIR 
+python ./fyalmd.py $ITERATIONS $TEST_PROGRAM $TEST_COMPLEXITY $FW_RUNNING $PIXEL_READER $FULLSCREEN_OPTION $DATA_DIR 
 PID_FYALMD=$!
 
 kill -9 $PID_TEST_PROGRAM
