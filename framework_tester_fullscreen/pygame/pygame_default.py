@@ -7,7 +7,7 @@ import time
 
 (width, height) = (0,0)
 running = True
-screen = pygame.display.set_mode((width, height), pygame.FULLSCREEN)
+screen = pygame.display.set_mode((width, height), pygame.FULLSCREEN, vsync=0)
 pygame.display.set_caption('framework')
 
 background_color_black = (0,0,0)

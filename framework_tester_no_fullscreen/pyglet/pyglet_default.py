@@ -17,7 +17,7 @@ WINDOW_HEIGHT = 1080
 # screen_mode = screen.get_mode()
 
 # Create a Pyglet window
-win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless')
+win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless', fullscreen=False)
 win.set_location(0, 0)
 win.set_caption('framework')
 # win.switch_to()

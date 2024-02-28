@@ -62,7 +62,7 @@ class TestApp(wx.Frame):
 def main():
     app = wx.App()
     test_app = TestApp(None)
-    test_app.Show()
+    #test_app.Show()
     app.MainLoop()
 
 

@@ -29,7 +29,7 @@ class TestApp(wx.Frame):
 
         self.SetTitle("framework")
         self.ShowFullScreen(True)
-        self.Show()
+        #self.Show()
 
     def OnTimer(self, event):
         pass

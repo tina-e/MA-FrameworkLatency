@@ -12,15 +12,15 @@ import sys
 WINDOW_WIDTH = 1920
 WINDOW_HEIGHT = 1080
 
-display = pyglet.canvas.get_display()
-screen = display.get_screens()[0]
-screen_mode = screen.get_mode()
+#display = pyglet.canvas.get_display()
+#screen = display.get_screens()[0]
+#screen_mode = screen.get_mode()
 
 
 # Create a Pyglet window
 win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False)
 win.set_caption('framework')
-win.set_fullscreen(fullscreen=True, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, screen=screen, mode=screen_mode)
+win.set_fullscreen(fullscreen=True, width=WINDOW_WIDTH, height=WINDOW_HEIGHT)
 # win.set_location(0, 0)
 # win.switch_to()
 # win.activate()

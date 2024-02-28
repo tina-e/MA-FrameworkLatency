@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 
     SDL_Init(SDL_INIT_VIDEO); // maybe we have to reduce this?
 
-    SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, SDL_WINDOW_FULLSCREEN | SDL_WINDOW_OPENGL);
+    SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(window);
     SDL_GL_SetSwapInterval(0); // 0 immediate, 1 vsync, -1 adaptive sync
 

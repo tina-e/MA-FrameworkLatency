@@ -31,7 +31,7 @@ class MainWindow(QWidget):
         self.setGeometry(0, 0, WIDTH, HEIGHT)
         self.setWindowTitle('framework')
         self.showFullScreen()
-        self.show()
+        #self.show()
 
     def paintEvent(self, event):
         painter = QPainter()

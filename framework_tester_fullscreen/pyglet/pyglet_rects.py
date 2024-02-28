@@ -18,7 +18,7 @@ rect_w = WINDOW_WIDTH / n_horizontal
 rect_h = WINDOW_HEIGHT / n_vertical
 
 # Create a Pyglet window
-win = Window(fullscreen=True)
+win = Window(fullscreen=True, vsync=False)
 win.set_caption('framework')
 
 batch = pyglet.graphics.Batch()

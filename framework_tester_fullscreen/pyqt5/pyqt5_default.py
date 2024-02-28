@@ -21,7 +21,7 @@ class MainWindow(QWidget):
         #self.setWindowFlags(Qt.X11BypassWindowManagerHint)
         self.showFullScreen()
         self.color = QColor(0, 0, 0)
-        self.show()
+        #self.show()
 
     def paintEvent(self, event):
         painter = QPainter()

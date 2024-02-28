@@ -5,6 +5,7 @@ WIDTH = 1920
 HEIGHT = 1080
 
 root = tk.Tk()
+root.attributes("-fullscreen", False)
 root.geometry(f"{WIDTH}x{HEIGHT}+{0}+{0}")
 root.overrideredirect(True) #Remove border  
 root.title('framework')

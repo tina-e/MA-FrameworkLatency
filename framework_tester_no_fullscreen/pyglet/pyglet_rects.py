@@ -18,7 +18,7 @@ rect_w = int(WINDOW_WIDTH / n_horizontal)
 rect_h = int(WINDOW_HEIGHT / n_vertical)
 
 # Create a Pyglet window
-win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless')
+win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless', fullscreen=False)
 win.set_location(0, 0)
 win.set_caption('framework')
 
