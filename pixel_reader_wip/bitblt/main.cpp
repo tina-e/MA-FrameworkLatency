@@ -6,6 +6,7 @@
 #include <chrono>
 #include <zconf.h>
 #include <vector>
+#include <windows.h>
 
 using namespace std;
 using namespace chrono;
@@ -43,14 +44,29 @@ void waitForWhite(HDC hdcScreen, HDC hdcCompatible, BYTE *bitPointer)
 
 int main(int argc, char **argv)
 {
+    //self.start()
+    //time.sleep(4.5)
+    Sleep(4000);
     BITMAPINFO bitmapinfo = createBitmapInfo();
     BYTE *bitPointer = new BYTE[bitmapinfo.bmiHeader.biSizeImage];
-
     HDC hdcScreen = GetDC(NULL);
     HDC hdcCompatible = CreateCompatibleDC(hdcScreen);
-
     HBITMAP hBitmap = CreateDIBSection(hdcCompatible, &bitmapinfo, DIB_RGB_COLORS, (void **)(&bitPointer), NULL, 0);
     SelectObject(hdcCompatible, hBitmap);
+    Beep(500, 2000); // schmatzer 7 sek, klick
+
+    // time.sleep(4)
+    Sleep(2500);
+    Beep(500, 200);
+    Sleep(500);
+    Beep(500, 200);
+    //schmatzer obacht
+
+    // is fullscreen exclusive?
+    QUERY_USER_NOTIFICATION_STATE nstate;
+    SHQueryUserNotificationState(&nstate);
+    printf("mode:%d\n", nstate);
+    fflush(stdout);
 
     SHORT state = GetKeyState(VK_LBUTTON);
 
@@ -63,7 +79,8 @@ int main(int argc, char **argv)
             uint64_t start_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
             waitForWhite(hdcScreen, hdcCompatible, bitPointer);
             uint64_t end_time = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-            //cout << end_time - start_time << endl;
+
+            Beep(659, 300); // E
             printf("%d\n", end_time - start_time);
             fflush(stdout);
         }

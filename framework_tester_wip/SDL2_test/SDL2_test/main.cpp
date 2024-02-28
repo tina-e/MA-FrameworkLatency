@@ -22,7 +22,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 #define RENDERER SDL_RENDERER_PRESENTVSYNC
 
 // #define WINDOW_STYLE SDL_WINDOW_BORDERLESS
-#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
+#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN_DESKTOP
 
 //#ifndef DRIVER
 // supported:
@@ -32,7 +32,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 // opengles
 // metal (apple)
 // software
-#define DRIVER "opengl"
+#define DRIVER "direct3d"
 //#endif
 
 // make sure we clean up when program is interrupted

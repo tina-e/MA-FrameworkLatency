@@ -11,7 +11,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "opengles"
+#define DRIVER "direct3d"
 
 // screen size
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);

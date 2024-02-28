@@ -4,8 +4,8 @@ from PyQt6.QtCore import Qt
 import sys
 import signal
 
-WIDTH = int(1920 * 0.8)
-HEIGHT = int(1080 * 0.8)
+WIDTH = 1920
+HEIGHT = 1080
   
 class MainWindow(QWidget):
     def __init__(self):

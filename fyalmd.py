@@ -24,6 +24,7 @@ class FYALMDController:
         self.run_fw_test = False if run_fw_test == 'False' else True
         self.program_name = program_name
         self.is_fullscreen = fullscreen_option == 'fullscreen'
+        self.fullscreen_mode = None
         self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{run_fw_test}_{program_name}_{fullscreen_option}_{uuid.uuid4()}.csv"
         self.measuring = False
         self.latency_tester_process = None
@@ -78,10 +79,13 @@ class FYALMDController:
         cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py'] if 'y' in self.program_name else [f'.\pixel_readers\{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
-            self.last_fw_latency = int(line)
-            self.new_value = True
-            if self.measuring == False:
-                break
+            if line.startswith('mode'):
+                self.fullscreen_mode = line.split(':')[1]
+            else:
+                self.last_fw_latency = int(line)
+                self.new_value = True
+                if self.measuring == False:
+                    break
         self.latency_tester_process.kill()
 
 
@@ -134,6 +138,7 @@ class FYALMDController:
                                         'complexity': self.complexity, 
                                         'framework_complexity': f'{self.fw_name}_{self.complexity}',
                                         'fullscreen': self.is_fullscreen,
+                                        'fullscreen_mode': self.fullscreen_mode,
                                         'program': f'{self.program_name}',
                                         'fw_running': self.run_fw_test,
                                         'program_fwrunning': f'{self.program_name}_{self.run_fw_test}', 

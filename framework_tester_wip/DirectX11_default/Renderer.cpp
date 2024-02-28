@@ -13,7 +13,7 @@ void Renderer::createDevice(Window& window) {
 	swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	swapChainDesc.OutputWindow = window.getHandle();
 	swapChainDesc.SampleDesc.Count = 1;
-	swapChainDesc.Windowed = true;
+	swapChainDesc.Windowed = FALSE;
 	
 	// Create the swap chain, device and device context
 	auto result = D3D11CreateDeviceAndSwapChain(
@@ -22,7 +22,7 @@ void Renderer::createDevice(Window& window) {
 		&swapChainDesc, &m_swapChain,
 		&m_device, nullptr, &m_deviceContext);
 
-	m_swapChain->SetFullscreenState(0, NULL);
+	m_swapChain->SetFullscreenState(TRUE, NULL);
 
 	// Check for error
 	if (result != S_OK) {
