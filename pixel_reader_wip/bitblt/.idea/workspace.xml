@@ -21,177 +21,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b47bdf-1212-4e7e-afa1-d7929b4cda6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/psychopy/psychopy_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/psychopy/psychopy_rects.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/DirectX11_default/DirectX11_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/DirectX11_default/DirectX11_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/GLUT/GLUT_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/GLUT/GLUT_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/pyqt6/pyqt6_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/pyqt6/pyqt6_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.vcxproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.vcxproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/fxc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/fxc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.iobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.ipdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Rect.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Rect.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Renderer.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Chapter2_Tutorial6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/DirectX11_rects.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/DirectX11_rects.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Rect.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Rect.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Renderer.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Chapter2_Tutorial6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.iobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.ipdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Renderer.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectPixelShader.cso" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectPixelShader.cso" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectVertexShader.cso" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectVertexShader.cso" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QList.10E03A4296F712FD.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QList.10E03A4296F712FD.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QMouseEvent.915A4B2A1F0E56A1.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QMouseEvent.915A4B2A1F0E56A1.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QObject.6970A8F69698DF54.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QObject.6970A8F69698DF54.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QPainter.3B025E526FD30C21.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QPainter.3B025E526FD30C21.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QRect.79A06B016510AEB1.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QRect.79A06B016510AEB1.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QScreen.2FF7E964C78A852E.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QScreen.2FF7E964C78A852E.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSize.F73FE3F2E33A226A.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSize.F73FE3F2E33A226A.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSizeF.09DE3A0897FFCB62.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSizeF.09DE3A0897FFCB62.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QTransform.0096A4DD8CEFAD92.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QTransform.0096A4DD8CEFAD92.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/mainwindow.cpp.F468ADD9C6FCA1CE.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/mainwindow.cpp.F468ADD9C6FCA1CE.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qevent.h.CCF22C1616A3DC68.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qevent.h.CCF22C1616A3DC68.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfile.h.3328399C0817BD1F.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfile.h.3328399C0817BD1F.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfiledevice.h.974956746D0BF75D.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfiledevice.h.974956746D0BF75D.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qpainter.h.2FACC58532DAAFC8.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qpainter.h.2FACC58532DAAFC8.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qscreen.h.E5FD48A49C5241D9.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qscreen.h.E5FD48A49C5241D9.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qset.h.59AA419B1C606380.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qset.h.59AA419B1C606380.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtextoption.h.3D330CFD0E6E0908.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtextoption.h.3D330CFD0E6E0908.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtouchdevice.h.D3DF5908BFFE263A.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtouchdevice.h.D3DF5908BFFE263A.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qurl.h.2E3238F8430CD0AD.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qurl.h.2E3238F8430CD0AD.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qvector2d.h.C3E76D9F5D7DD146.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qvector2d.h.C3E76D9F5D7DD146.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt5_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt5_default.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/SDL2_rects.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/SDL2_rects.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../fyalmd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindowsDesktopDuplicationSample-master/windup.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../WindowsDesktopDuplicationSample-master/windup.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/bitblt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/cache-v2-59aed9524beddc3f74d1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c24ef1031c5633de48e2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a1a364faa9ad0a1af393.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-12T14-21-44-0608.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/target-bitblt-Debug-4b94e240398ca1f77a6b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/bitblt.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/bitblt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/getdbits.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8fe2186be7d60dfc8964.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-edad21f6cb5941d58c91.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-266f798e9b22738bd96a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/index-2024-02-11T14-59-12-0108.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/target-getdbits-Debug-0412f6eabca45b5e890e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/getdbits.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/getdbits.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/getpixel.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b4279f95ff6f1cd3ceab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3b6ca3f1a91c0b9ded6e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8e573ad1285966277aa1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/index-2024-02-19T10-45-16-0235.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/target-getpixel-Debug-8f61aa0c893716209990.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/getpixel.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/getpixel.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/windup.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pixel_readers/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../pixel_readers/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pixel_readers/windup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../pixel_readers/windup.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getdbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getdbits/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/getpixel.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/getpixel.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../windup/windup.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../windup/windup.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,18 +174,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -251,6 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708506961728</updated>
       <workItem from="1708506962925" duration="47000" />
+      <workItem from="1709129202420" duration="820000" />
     </task>
     <servers />
   </component>

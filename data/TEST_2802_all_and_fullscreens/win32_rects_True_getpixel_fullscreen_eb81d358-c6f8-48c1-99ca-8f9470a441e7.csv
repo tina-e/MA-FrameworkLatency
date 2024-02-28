@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,win32,rects,win32_rects,True,"2
+",getpixel,True,getpixel_True,20490,13906,6584
+1,1,win32,rects,win32_rects,True,"2
+",getpixel,True,getpixel_True,19562,13509,6053
+2,2,win32,rects,win32_rects,True,"2
+",getpixel,True,getpixel_True,19641,13392,6249
+3,3,win32,rects,win32_rects,True,"2
+",getpixel,True,getpixel_True,20609,14600,6009
+4,4,win32,rects,win32_rects,True,"2
+",getpixel,True,getpixel_True,17656,11914,5742

@@ -20,7 +20,7 @@ FRAGMENT_SHADER = """
 
 
 window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, decoration=False, fullscreen=False, title="framework", vsync=False)
-window.set_position(0, 0) # to make sure to hide (pyglet's) decoration
+window.set_position(-50, -50) # to make sure to hide (pyglet's) decoration
 
 
 program = gloo.Program(VERTEX_SHADER, FRAGMENT_SHADER, count=6)

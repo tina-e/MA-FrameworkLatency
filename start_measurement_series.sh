@@ -3,7 +3,7 @@
 ITERATIONS=200
 DATA_DIR="2802_all_and_fullscreens"
 
-READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits")
+READERS=("getpixel" "bitblt" "getdbits" "windup_fullscreen")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "psychopy_pyglet")
@@ -13,6 +13,7 @@ FRAMEWORKS_GLUMPY=("qt5" "sdl" "glfw" "pyglet")
 
 mkdir "./data/$DATA_DIR"
 sleep "3s"
+
 
 for f in "${!FRAMEWORKS[@]}";
 do
@@ -25,15 +26,13 @@ do
 
         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" no_fullscreen $DATA_DIR
         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" no_fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" no_fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" no_fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));
 done
 
 
-# # for glumpy frameworks
+# for glumpy frameworks
 for f in "${!FRAMEWORKS_GLUMPY[@]}";
 do
     for r in "${!READERS[@]}";
@@ -45,8 +44,6 @@ do
 
         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default True "${READERS[$r]}" no_fullscreen $DATA_DIR
         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default False "${READERS[$r]}" no_fullscreen $DATA_DIR
-        ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" rects True "${READERS[$r]}" no_fullscreen $DATA_DIR
-        ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" rects False "${READERS[$r]}" no_fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));

@@ -104,19 +104,20 @@ prefix_to_match = "-"
 
 # measure_counter = 0
 
-pygame.display.flip()
-clock = pygame.time.Clock()
-state = 0
-for i in range(8000):
-    #clock.tick(500)
-    #print(clock.get_fps())
-    state = not state
-    screen.fill(background_color_black if state else background_color_white)
-    pygame.display.update()
+# pygame.display.flip()
+# clock = pygame.time.Clock()
+# state = 0
+# for i in range(8000):
+#     #clock.tick(500)
+#     #print(clock.get_fps())
+#     state = not state
+#     screen.fill(background_color_black if state else background_color_white)
+#     pygame.display.update()
 
 
 
 import pyttsx3
 engine = pyttsx3.init()
+engine.setProperty('rate', 130)
 engine.say("Hallo Nici! Wie geht es dir heute? Ich piepse jetzt dann 200-mal. Ich hoffe, das stört nicht. Mit freundlichen Füßen!")
 engine.runAndWait()

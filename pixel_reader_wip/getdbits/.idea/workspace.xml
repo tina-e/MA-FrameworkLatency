@@ -21,176 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c98ba6-495b-469e-b866-3a446c0aab35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/psychopy/psychopy_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/psychopy/psychopy_rects.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../fyalmd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindowsDesktopDuplicationSample-master/windup.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../WindowsDesktopDuplicationSample-master/windup.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/bitblt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/cache-v2-59aed9524beddc3f74d1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c24ef1031c5633de48e2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a1a364faa9ad0a1af393.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-12T14-21-44-0608.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/.cmake/api/v1/reply/target-bitblt-Debug-4b94e240398ca1f77a6b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/bitblt.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/bitblt.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/bitblt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/bitblt/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/getdbits.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8fe2186be7d60dfc8964.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-edad21f6cb5941d58c91.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-266f798e9b22738bd96a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/index-2024-02-11T14-59-12-0108.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/.cmake/api/v1/reply/target-getdbits-Debug-0412f6eabca45b5e890e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/getdbits.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/cmake-build-debug/getdbits.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getdbits/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/getpixel.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b4279f95ff6f1cd3ceab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3b6ca3f1a91c0b9ded6e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8e573ad1285966277aa1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/index-2024-02-19T10-45-16-0235.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/.cmake/api/v1/reply/target-getpixel-Debug-8f61aa0c893716209990.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/linkLibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/objects.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/getpixel.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/cmake-build-debug/getpixel.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/getpixel/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readers_printf/windup.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pixel_readers/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../pixel_readers/getdbits/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pixel_readers/windup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../pixel_readers/windup.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bitblt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bitblt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../start_measurement_glumpy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_glumpy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,15 +61,14 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="getdbits" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="getdbits" TARGET_NAME="getdbits" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="getdbits" RUN_TARGET_NAME="getdbits">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -251,6 +84,8 @@
       <option name="presentableId" value="Default" />
       <updated>1708506783755</updated>
       <workItem from="1708506784991" duration="176000" />
+      <workItem from="1709129309700" duration="712000" />
+      <workItem from="1709134412435" duration="91000" />
     </task>
     <servers />
   </component>

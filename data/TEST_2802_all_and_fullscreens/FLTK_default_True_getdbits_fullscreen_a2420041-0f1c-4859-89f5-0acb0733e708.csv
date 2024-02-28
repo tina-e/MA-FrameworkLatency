@@ -1,0 +1,11 @@
+,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
+0,0,FLTK,default,FLTK_default,True,"2
+",getdbits,True,getdbits_True,9124,3739,5385
+1,1,FLTK,default,FLTK_default,True,"2
+",getdbits,True,getdbits_True,7604,1415,6189
+2,2,FLTK,default,FLTK_default,True,"2
+",getdbits,True,getdbits_True,7136,3656,3480
+3,3,FLTK,default,FLTK_default,True,"2
+",getdbits,True,getdbits_True,8658,2737,5921
+4,4,FLTK,default,FLTK_default,True,"2
+",getdbits,True,getdbits_True,6629,2674,3955

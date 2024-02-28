@@ -18,6 +18,7 @@ DEVICE = 'COM7'
 class FYALMDController:
     def __init__(self, num_measurements, fw_name, complexity, run_fw_test, program_name, fullscreen_option, out_folder) -> None:
         self.da_schmatzer = pyttsx3.init()
+        #self.da_schmatzer.setProperty('rate', 120)
         self.num_measurements = int(num_measurements)
         self.fw_name = fw_name
         self.complexity = complexity
@@ -80,7 +81,7 @@ class FYALMDController:
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             if line.startswith('mode'):
-                self.fullscreen_mode = line.split(':')[1]
+                self.fullscreen_mode = line.split(':')[1].strip()
             else:
                 self.last_fw_latency = int(line)
                 self.new_value = True
@@ -92,6 +93,8 @@ class FYALMDController:
     # make sure focus is in framework test applications and start pixel reader
     def start(self):
         self.ensure_focus()
+        self.da_schmatzer.say(f'Ich teste jetzt {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}.')
+        self.da_schmatzer.runAndWait()
         self.measuring = True
         signal.signal(signal.SIGINT, signal_handler)
         if self.run_fw_test:
@@ -115,6 +118,13 @@ class FYALMDController:
     def save_data(self):
         df = pd.DataFrame(self.measurements)
         df.to_csv(self.out_path)
+        num_negative_diff = df[df['diff'] < 0].count().iloc[0]
+        if num_negative_diff == 0:
+            self.da_schmatzer.say(f'Ohhhhh yeah, keine negative Werte für {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}')
+            self.da_schmatzer.runAndWait()
+        else:
+            self.da_schmatzer.say(f'{str(num_negative_diff)} negative Werte für {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}')
+            self.da_schmatzer.runAndWait()
 
 
     # read yalmd's answer and pixel reader's answer
@@ -146,7 +156,7 @@ class FYALMDController:
                                         'fw': self.last_fw_latency, 
                                         'diff': diff
                                     })
- 
+            
 
     # make sure pixel reader windup has initializes its context before starting measurements
     def wait_for_windup_initialization(self):
