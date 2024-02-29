@@ -14,8 +14,10 @@ using namespace chrono;
 //PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
 
 // screen size
-int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+//int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+//int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+int WIDTH = 100;
+int HEIGHT = 100;
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
 //#define RENDERER SDL_RENDERER_ACCELERATED
