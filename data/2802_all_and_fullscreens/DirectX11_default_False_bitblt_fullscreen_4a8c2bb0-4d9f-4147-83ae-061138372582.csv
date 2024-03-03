@@ -1,5 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,DirectX11,default,DirectX11_default,True,,bitblt,False,bitblt_False,334316,-1,334317
-1,1,DirectX11,default,DirectX11_default,True,,bitblt,False,bitblt_False,834239,-1,834240
-2,2,DirectX11,default,DirectX11_default,True,,bitblt,False,bitblt_False,7187,-1,7188
-3,3,DirectX11,default,DirectX11_default,True,,bitblt,False,bitblt_False,633027,-1,633028
