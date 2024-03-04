@@ -5,15 +5,12 @@
 #include <windows.h>
 #include <GL/gl.h>
 
-
 using namespace std;
 
-//typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALFARPROC)(int);
-//typedef int(APIENTRY* PFNWGLGETSWAPINTERVALEXTPROC)();
-//PFNWGLSWAPINTERVALFARPROC wglSwapIntervalEXT = nullptr;
-//PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
-
-
+// typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALFARPROC)(int);
+// typedef int(APIENTRY* PFNWGLGETSWAPINTERVALEXTPROC)();
+// PFNWGLSWAPINTERVALFARPROC wglSwapIntervalEXT = nullptr;
+// PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
 
 // make sure we clean up when program is interrupted
 void signalHandler(int sig)
@@ -21,8 +18,10 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+// int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+// int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+int WIDTH = 100;
+int HEIGHT = 100;
 
 int colorR = 0;
 int colorG = 0;
@@ -33,7 +32,7 @@ void display()
     glClearColor(colorR, colorG, colorB, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glutSwapBuffers();
-    //glFlush();
+    // glFlush();
 }
 
 void mouse(int button, int state, int x, int y)
@@ -65,45 +64,39 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");
-    glutFullScreen();
-    glutGameModeString("1920x1080:16@500");
-    glutEnterGameMode();
-    
+    // glutFullScreen();
+    // glutGameModeString("1920x1080:16@500");
+    // glutEnterGameMode();
 
-
-
-    //HWND frameworkWindow = FindWindow(NULL, L"framework");
-    //if (frameworkWindow != NULL)
+    // HWND frameworkWindow = FindWindow(NULL, L"framework");
+    // if (frameworkWindow != NULL)
     //{
-    //    MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
-    //    BringWindowToTop(frameworkWindow);
-    //    SetForegroundWindow(frameworkWindow);
-    //    SetFocus(frameworkWindow);
-    //}
-
-    
+    //     MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
+    //     BringWindowToTop(frameworkWindow);
+    //     SetForegroundWindow(frameworkWindow);
+    //     SetFocus(frameworkWindow);
+    // }
 
     /*wglSwapIntervalEXT = (PFNWGLSWAPINTERVALFARPROC)wglGetProcAddress("wglSwapIntervalEXT");
     wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC)wglGetProcAddress("wglGetSwapIntervalEXT");*/
 
-    //if (wglSwapIntervalEXT == nullptr) {
-    //    std::cerr << "wglSwapIntervalEXT not supported!" << std::endl;
-    //    return 1;
-    //}
+    // if (wglSwapIntervalEXT == nullptr) {
+    //     std::cerr << "wglSwapIntervalEXT not supported!" << std::endl;
+    //     return 1;
+    // }
 
-    //HWND frameworkWindow = FindWindow(NULL, L"framework");
-    //HDC hdc = GetDC(frameworkWindow);
-    //HGLRC hglrc = wglCreateContext(hdc);
-    //wglMakeCurrent(hdc, hglrc);
+    // HWND frameworkWindow = FindWindow(NULL, L"framework");
+    // HDC hdc = GetDC(frameworkWindow);
+    // HGLRC hglrc = wglCreateContext(hdc);
+    // wglMakeCurrent(hdc, hglrc);
 
-    //int vsyncEnabled = wglGetSwapIntervalEXT();
+    // int vsyncEnabled = wglGetSwapIntervalEXT();
     ////std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
 
-    //wglSwapIntervalEXT(1);
+    // wglSwapIntervalEXT(1);
 
-    //vsyncEnabled = wglGetSwapIntervalEXT();
-    //std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
-
+    // vsyncEnabled = wglGetSwapIntervalEXT();
+    // std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
 
     glutDisplayFunc(display);
     glutMouseFunc(mouse);

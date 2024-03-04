@@ -6,12 +6,13 @@
 #include <QScreen>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    width = QGuiApplication::primaryScreen()->geometry().width();
-    height = QGuiApplication::primaryScreen()->geometry().height();
+    // width = QGuiApplication::primaryScreen()->geometry().width();
+    // height = QGuiApplication::primaryScreen()->geometry().height();
+    width = 100;
+    heigth = 100;
     setFixedSize(width, height);
     setGeometry(0, 0, width, height);
     setWindowFlags(Qt::FramelessWindowHint);
@@ -24,7 +25,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::mousePressEvent(QMouseEvent *e)
 {
-    if(e->button() == Qt::LeftButton)
+    if (e->button() == Qt::LeftButton)
     {
         click();
         repaint();
@@ -33,7 +34,7 @@ void MainWindow::mousePressEvent(QMouseEvent *e)
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *e)
 {
-    if(e->button() == Qt::LeftButton)
+    if (e->button() == Qt::LeftButton)
     {
         release();
         repaint();
