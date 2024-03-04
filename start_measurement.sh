@@ -48,11 +48,6 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$! 
         ;;
 
-    *"GLEW"*)
-        start ./$FW_PATH.exe &
-        PID_TEST_PROGRAM=$! 
-        ;;
-
     *"GTK"*)
         # set GDK_BACKEND=win32
         # set GDK_BACKEND=OpenGL #????
@@ -88,7 +83,7 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"Qt"*)
-        start ./framework_tester_${FULLSCREEN_OPTION}/${TEST_PROGRAM}_${TEST_COMPLEXITY}/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
+        start ./$FW_PATH.exe &
         PID_TEST_PROGRAM=$! 
         ;;
 

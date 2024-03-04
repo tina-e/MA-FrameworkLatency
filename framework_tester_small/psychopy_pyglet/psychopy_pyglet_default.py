@@ -2,8 +2,8 @@ from psychopy import visual, event  # import some libraries from PsychoPy
 from psychopy.hardware import mouse
 
 
-WIDTH = 1920
-HEIGHT = 1080
+WIDTH = 100
+HEIGHT = 100
 is_clicked = False
 
 mywin = visual.Window([WIDTH, HEIGHT], fullscr=False, winType='pyglet')

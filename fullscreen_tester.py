@@ -6,14 +6,13 @@ import serial
 
 
 DEVICE = 'COM7'
-FRAMEWORK = sys.args(1)
-FULLSCREEN = sys.args(2)
+FRAMEWORK = sys.argv[1]
+FULLSCREEN = sys.argv[2]
 
-
-# todo: ensure focus
+# ensure focus
 yalmd = serial.Serial(DEVICE)
 yalmd.flushInput()
-pyautogui.moveTo(300, 300)
+pyautogui.moveTo(30, 30)
 time.sleep(1)
 yalmd.write('o'.encode())
 time.sleep(0.3)
@@ -22,21 +21,16 @@ time.sleep(0.7)
 yalmd.write('o'.encode())
 time.sleep(0.3)
 yalmd.write('o'.encode())
-time.sleep(0.7)
+time.sleep(2)
 yalmd.close()
 
-
-file = open("./data/fullscreen_states/testing_fullscreen_0403.csv", "w")
-file.close()
-
-
 # open tester
-cmd = '.\notification_tester.exe'
+cmd = './fullscreen_tester.exe'
 notification_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
 for line in notification_tester_process.stdout:
     print(f'{FRAMEWORK} - {FULLSCREEN}: {line}')
-    file = open("./data/fullscreen_states/testing_fullscreen_0403.csv", "a")
-    file.write(f'{FRAMEWORK},{FULLSCREEN},{line}\n')
+    file = open("./data/fullscreen_states/testing_fullscreen_0403_3.csv", "a")
+    file.write(f'{FRAMEWORK},{FULLSCREEN},{line}')
     file.close()
 
 notification_tester_process.kill()

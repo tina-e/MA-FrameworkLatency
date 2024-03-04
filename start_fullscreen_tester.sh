@@ -1,11 +1,17 @@
 #!/bin/sh
 
-FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "psychopy_pyglet")
+#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "psychopy_pyglet" "Unity")
+#FRAMEWORKS=("FLTK" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "JavaSwing" "Java2D")
+FRAMEWORKS=("pygame")
 FULLSCREEN_OPTIONS=("fullscreen" "no_fullscreen")
+#FULLSCREEN_OPTIONS=("small")
 
-for framework in $FRAMEWORKS;
+sleep "5s"
+touch ./data/fullscreen_states/testing_fullscreen_0403_3.csv
+
+for framework in "${FRAMEWORKS[@]}";
 do
-    for fullscreen_option in $FULLSCREEN_OPTIONS
+    for fullscreen_option in "${FULLSCREEN_OPTIONS[@]}";
     do
         FW_PATH="framework_tester_${fullscreen_option}/$framework/${framework}_default"
         case "$framework" in 
@@ -95,7 +101,7 @@ do
         PID_FYALMD=$!
 
         kill -9 $PID_framework
-        powershell kill -n "${framework}_${TEST_COMPLEXITY}"
+        powershell kill -n "${framework}_default"
         powershell kill -n "framework"
         powershell kill -n "java"
     done
