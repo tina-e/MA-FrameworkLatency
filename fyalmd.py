@@ -20,6 +20,7 @@ class FYALMDController:
         self.da_schmatzer = pyttsx3.init()
         #self.da_schmatzer.setProperty('rate', 120)
         self.num_measurements = int(num_measurements)
+        self.threshold = 0
         self.fw_name = fw_name
         self.complexity = complexity
         self.run_fw_test = False if run_fw_test == 'False' else True
@@ -56,7 +57,8 @@ class FYALMDController:
         time.sleep(5)  
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
-        print(yalmd_answer_byte)
+        calibtration_answer = str(yalmd_answer_byte)
+        self.threshold = calibtration_answer.split(': ')[-1] # todod: test!
         #decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8").split('#')
         
 
@@ -144,6 +146,7 @@ class FYALMDController:
             diff = (ete - self.last_fw_latency)
             self.new_value = False
             self.measurements.append({'id': iteration, 
+                                        'threshold': self.threshold,
                                         'framework': self.fw_name, 
                                         'complexity': self.complexity, 
                                         'framework_complexity': f'{self.fw_name}_{self.complexity}',
