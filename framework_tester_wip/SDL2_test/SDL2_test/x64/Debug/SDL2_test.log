@@ -1,2 +1,4 @@
 ﻿  main.cpp
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_test\SDL2_test\main.cpp(1,10): error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  SDL2_test.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_test\x64\Debug\SDL2_test.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

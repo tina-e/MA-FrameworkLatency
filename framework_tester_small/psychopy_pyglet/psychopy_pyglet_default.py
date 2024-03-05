@@ -6,7 +6,7 @@ WIDTH = 100
 HEIGHT = 100
 is_clicked = False
 
-mywin = visual.Window([WIDTH, HEIGHT], fullscr=False, winType='pyglet')
+mywin = visual.Window(pos=[0,0], size=[WIDTH, HEIGHT], fullscr=False, allowGUI=False, winType='pyglet')
 mywin.color = 'black'
 
 mouse = event.Mouse()

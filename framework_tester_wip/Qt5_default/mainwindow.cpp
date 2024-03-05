@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     // width = QGuiApplication::primaryScreen()->geometry().width();
     // height = QGuiApplication::primaryScreen()->geometry().height();
     width = 100;
-    heigth = 100;
+    height = 100;
     setFixedSize(width, height);
     setGeometry(0, 0, width, height);
     setWindowFlags(Qt::FramelessWindowHint);

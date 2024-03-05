@@ -54,6 +54,7 @@ static void activate(GtkApplication *app, gpointer user_data)
 
     // for fullscreen / no-fullscreen
     // gtk_window_fullscreen(GTK_WINDOW(window));
+    gtk_widget_set_size_request(window, width, height);
 
     gtk_window_present(GTK_WINDOW(window));
 
@@ -68,18 +69,10 @@ static void activate(GtkApplication *app, gpointer user_data)
     g_signal_connect(click_gesture, "released", G_CALLBACK(on_release_event), area);
     gtk_widget_add_controller(window, GTK_EVENT_CONTROLLER(click_gesture));
 
-    // TODO: check if this is working
-    /*GdkWindow* gdkWindow = gtk_widget_get_window(window);
-    HWND hwnd = GDK_WINDOW_HWND(gdkWindow);
-    MoveWindow(hwnd, 0, 0, width, height, FALSE);*/
-
     HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL)
     {
         MoveWindow(frameworkWindow, 0, 0, width, height, FALSE);
-        BringWindowToTop(frameworkWindow);
-        SetForegroundWindow(frameworkWindow);
-        SetFocus(frameworkWindow);
     }
 }
 

@@ -1,13 +1,16 @@
 #!/bin/sh
 
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "psychopy_pyglet" "Unity")
-#FRAMEWORKS=("FLTK" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "JavaSwing" "Java2D")
-FRAMEWORKS=("pygame")
-FULLSCREEN_OPTIONS=("fullscreen" "no_fullscreen")
+#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2")
+FRAMEWORKS=("psychopy_pyglet")
+FULLSCREEN_OPTIONS=("fullscreen" "no_fullscreen" "small")
 #FULLSCREEN_OPTIONS=("small")
 
+DATA_DIR="./data/fullscreen_states/testing_fullscreen_options_0503_noopt.csv"
+
+
 sleep "5s"
-touch ./data/fullscreen_states/testing_fullscreen_0403_3.csv
+#touch $DATA_DIR
 
 for framework in "${FRAMEWORKS[@]}";
 do
@@ -85,7 +88,7 @@ do
                 ;;
 
             *"Qt"*)
-                start ./framework_tester_${fullscreen_option}/${framework}_default/${framework}_default.exe &
+                start ./$FW_PATH.exe &
                 PID_framework=$! 
                 ;;
         esac
@@ -97,7 +100,7 @@ do
         }
         trap sigint INT
 
-        python ./fullscreen_tester.py $framework $fullscreen_option
+        python ./fullscreen_tester.py $framework $fullscreen_option $DATA_DIR
         PID_FYALMD=$!
 
         kill -9 $PID_framework

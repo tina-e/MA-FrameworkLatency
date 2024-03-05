@@ -8,6 +8,7 @@ import serial
 DEVICE = 'COM7'
 FRAMEWORK = sys.argv[1]
 FULLSCREEN = sys.argv[2]
+PATH = sys.argv[3]
 
 # ensure focus
 yalmd = serial.Serial(DEVICE)
@@ -29,7 +30,7 @@ cmd = './fullscreen_tester.exe'
 notification_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
 for line in notification_tester_process.stdout:
     print(f'{FRAMEWORK} - {FULLSCREEN}: {line}')
-    file = open("./data/fullscreen_states/testing_fullscreen_0403_3.csv", "a")
+    file = open(PATH, "a")
     file.write(f'{FRAMEWORK},{FULLSCREEN},{line}')
     file.close()
 

@@ -1,9 +1,2 @@
 ﻿  main.cpp
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(39,63): warning C4244: "Argument": Konvertierung von "double" in "int", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(39,49): warning C4244: "Argument": Konvertierung von "double" in "int", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,28): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,25): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,22): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-  GLEW_default.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\x64\Debug\GLEW_default.exe
-  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
-  konnte nicht gefunden werden.
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\glew_default\GLEW_default\GLEW_default\main.cpp(1,10): error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
