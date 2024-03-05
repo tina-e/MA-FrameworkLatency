@@ -3,7 +3,7 @@
 ITERATIONS=100
 DATA_DIR="2802_all_and_fullscreens"
 
-READERS=("getpixel" "bitblt" "getdbits" "windup_fullscreen")
+READERS=("getpixel" "bitblt" "getdbits" "windup_fullscreen" "none")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "Unity" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "psychopy_pyglet")
@@ -20,13 +20,9 @@ for f in "${!FRAMEWORKS[@]}";
 do
     for r in "${!READERS[@]}";
     do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" fullscreen $DATA_DIR
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects True "${READERS[$r]}" fullscreen $DATA_DIR
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects False "${READERS[$r]}" fullscreen $DATA_DIR
-
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default True "${READERS[$r]}" no_fullscreen $DATA_DIR
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default False "${READERS[$r]}" no_fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));
@@ -38,13 +34,9 @@ done
 # do
 #     for r in "${!READERS[@]}";
 #     do
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default True "${READERS[$r]}" fullscreen $DATA_DIR
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default False "${READERS[$r]}" fullscreen $DATA_DIR
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" rects True "${READERS[$r]}" fullscreen $DATA_DIR
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" rects False "${READERS[$r]}" fullscreen $DATA_DIR
-
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default True "${READERS[$r]}" no_fullscreen $DATA_DIR
-#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default False "${READERS[$r]}" no_fullscreen $DATA_DIR
+#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement_glumpy.sh $ITERATIONS "${FRAMEWORKS_GLUMPY[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
 #         r=$((r+1));
 #     done
 #     f=$((f+1));
@@ -54,10 +46,8 @@ done
 # # java fx no auto start fullscreen
 # for r in "${!READERS[@]}";
 # do
-    # ./start_measurement.sh $ITERATIONS FX default True "${READERS[$r]}" fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX default False "${READERS[$r]}" fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX rects True "${READERS[$r]}" fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX rects False "${READERS[$r]}" fullscreen $DATA_DIR
+    # ./start_measurement.sh $ITERATIONS FX default "${READERS[$r]}" fullscreen $DATA_DIR
+    # ./start_measurement.sh $ITERATIONS FX rects "${READERS[$r]}" fullscreen $DATA_DIR
 #     r=$((r+1));
 # done
 
@@ -65,9 +55,7 @@ done
 # # java fx no auto start no-fullscreen
 # for r in "${!READERS[@]}";
 # do
-    # ./start_measurement.sh $ITERATIONS FX default True "${READERS[$r]}" no_fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX default False "${READERS[$r]}" no_fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX rects True "${READERS[$r]}" no_fullscreen $DATA_DIR
-    # ./start_measurement.sh $ITERATIONS FX rects False "${READERS[$r]}" no_fullscreen $DATA_DIR
+    # ./start_measurement.sh $ITERATIONS FX default "${READERS[$r]}" no_fullscreen $DATA_DIR
+    # ./start_measurement.sh $ITERATIONS FX rects "${READERS[$r]}" no_fullscreen $DATA_DIR
 #     r=$((r+1));
 # done
