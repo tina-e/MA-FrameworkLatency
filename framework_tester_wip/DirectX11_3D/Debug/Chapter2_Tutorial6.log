@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (Debug\) enthält freigegebene Dateien aus einem anderen Projekt (Chapter2_Tutorial6.vcxproj, DirectX11_default.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
+  Rect.cpp
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(81,36): warning C4305: "Argument": Verkürzung von "double" in "float"
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(82,36): warning C4305: "Argument": Verkürzung von "double" in "float"
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(83,36): warning C4305: "Argument": Verkürzung von "double" in "float"
+  Chapter2_Tutorial6.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Debug\DirectX11_rects.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

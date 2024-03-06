@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Release\DirectX11_rects.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectVertexShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

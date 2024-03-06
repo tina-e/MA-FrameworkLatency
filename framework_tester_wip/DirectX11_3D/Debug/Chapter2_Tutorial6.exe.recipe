@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11\Debug\Chapter2_Tutorial6.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11\trianglePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11\triangleVertexShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
