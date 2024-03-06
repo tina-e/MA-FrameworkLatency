@@ -204,7 +204,7 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 print(sys.argv)
-if len(sys.argv) == 8:
+if len(sys.argv) == 7:
     fyalmd_controller = FYALMDController(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     fyalmd_controller.calibrate_yalmd()
     time.sleep(3)  # to make sure framework tester has started

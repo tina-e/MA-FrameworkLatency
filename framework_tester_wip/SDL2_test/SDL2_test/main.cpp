@@ -23,8 +23,8 @@ int HEIGHT = 100;
 //#define RENDERER SDL_RENDERER_ACCELERATED
 #define RENDERER SDL_RENDERER_PRESENTVSYNC
 
-// #define WINDOW_STYLE SDL_WINDOW_BORDERLESS
-#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN_DESKTOP
+#define WINDOW_STYLE SDL_WINDOW_BORDERLESS
+// #define WINDOW_STYLE SDL_WINDOW_FULLSCREEN_DESKTOP
 
 //#ifndef DRIVER
 // supported:
@@ -34,7 +34,7 @@ int HEIGHT = 100;
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "software"
 //#endif
 
 // make sure we clean up when program is interrupted

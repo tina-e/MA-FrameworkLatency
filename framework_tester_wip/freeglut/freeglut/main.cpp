@@ -68,14 +68,11 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     // glutGameModeString("1920x1080:16@500");
     // glutEnterGameMode();
 
-    // HWND frameworkWindow = FindWindow(NULL, L"framework");
-    // if (frameworkWindow != NULL)
-    //{
-    //     MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
-    //     BringWindowToTop(frameworkWindow);
-    //     SetForegroundWindow(frameworkWindow);
-    //     SetFocus(frameworkWindow);
-    // }
+     HWND frameworkWindow = FindWindow(NULL, L"framework");
+     if (frameworkWindow != NULL)
+    {
+         MoveWindow(frameworkWindow, -10, -32, WIDTH, HEIGHT, FALSE);
+     }
 
     /*wglSwapIntervalEXT = (PFNWGLSWAPINTERVALFARPROC)wglGetProcAddress("wglSwapIntervalEXT");
     wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC)wglGetProcAddress("wglGetSwapIntervalEXT");*/

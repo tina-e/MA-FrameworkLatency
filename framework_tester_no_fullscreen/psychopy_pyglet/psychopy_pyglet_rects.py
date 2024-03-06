@@ -8,7 +8,7 @@ HEIGHT = 1080
 NUM_RECTS = 999
 is_clicked = False
 
-mywin = visual.Window([WIDTH, HEIGHT], fullscr=False, units='pix', winType='pyglet')
+mywin = visual.Window([WIDTH, HEIGHT], fullscr=False, allowGUI=False, units='pix', winType='pyglet')
 win_x, win_y = -mywin.size[0] / 2, mywin.size[1] / 2
 mywin.color = 'black'
 
