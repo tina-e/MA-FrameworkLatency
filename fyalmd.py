@@ -26,7 +26,7 @@ class FYALMDController:
         self.program_name = program_name
         self.fullscreen_option = fullscreen_option
         self.fullscreen_mode = None
-        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{fullscreen_option}_{uuid.uuid4()}.csv"
+        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{fullscreen_option}_{uuid.uuid4()}_2.csv"
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = -1
@@ -39,7 +39,7 @@ class FYALMDController:
 
     def ensure_focus(self):
         time.sleep(0.2)
-        pyautogui.moveTo(300, 300)
+        pyautogui.moveTo(10, 30)
         time.sleep(0.2)
         self.yalmd.write('o'.encode())
         time.sleep(0.5)
