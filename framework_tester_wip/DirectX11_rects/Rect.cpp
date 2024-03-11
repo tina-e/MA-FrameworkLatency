@@ -19,7 +19,7 @@ float getRandomBoundedFloat(float min, float max) {
 Vertex vertices[6000] = {};
 
 Rect::Rect(Renderer& renderer) {
-	createMesh(renderer);
+	//createMesh(renderer);
 	createShaders(renderer);
 	//createRenderStates(renderer);
 }
@@ -35,7 +35,7 @@ Rect::~Rect() {
 }
 
 void Rect::draw(Renderer& renderer) {
-	//createMesh(renderer);
+	createMesh(renderer);
 	auto deviceContext = renderer.getDeviceContext();
 
 	// Set render states

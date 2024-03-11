@@ -7,8 +7,10 @@ int CALLBACK WinMain(HINSTANCE appInstance, HINSTANCE prevInstance, LPSTR cmdLin
 
 	/*int width = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
 	int height = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);*/
-	int width = GetSystemMetrics(SM_CXSCREEN);
-	int height = GetSystemMetrics(SM_CYSCREEN);
+	/*int width = GetSystemMetrics(SM_CXSCREEN);
+	int height = GetSystemMetrics(SM_CYSCREEN);*/
+	int width = 500;
+	int height = 500;
 
 	Window window(width, height);
 	Renderer renderer(window);
@@ -34,3 +36,5 @@ int CALLBACK WinMain(HINSTANCE appInstance, HINSTANCE prevInstance, LPSTR cmdLin
 
 	return 0;
 }
+
+

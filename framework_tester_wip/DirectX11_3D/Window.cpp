@@ -32,7 +32,7 @@ Window::Window(int width, int height) {
 	// Create the window
 	m_handle = CreateWindow("DX11Tutorial", "framework",
 		WS_POPUP | WS_VISIBLE,
-		0, 0, width, height,
+		1000, 100, width, height,
 		nullptr, nullptr, nullptr, nullptr);
 }
 

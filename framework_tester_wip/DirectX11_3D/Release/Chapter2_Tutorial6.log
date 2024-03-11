@@ -1,2 +1,13 @@
-﻿  compilation object save succeeded; see D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectVertexShader.cso
-  Chapter2_Tutorial6.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Release\DirectX11_rects.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (DirectX11_rects.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Rect.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(161,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(162,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Rect.cpp(163,36): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating code
+  0 of 231 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Chapter2_Tutorial6.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Release\DirectX11_3D.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.
