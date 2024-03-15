@@ -16,7 +16,7 @@ FW_PATH="framework_tester_${FULLSCREEN_OPTION}/glumpy/glumpy_${TEST_COMPLEXITY}"
 python ./$FW_PATH.py --backend $BACKEND -f 0 &
 PID_TEST_PROGRAM=$!
 
-sleep "10s"
+sleep "7s"
 
 sigint() {
     kill -INT $PID_TEST_PROGRAM
