@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\Direct3D\Direct3D_3D\Direct3D_3D\main.cpp(137,17): warning C4244: "return": Konvertierung von "WPARAM" in "int", möglicher Datenverlust
+  Direct3D_3D.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\Direct3D\Direct3D_3D\x64\Debug\Direct3D_3D.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

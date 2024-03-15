@@ -14,7 +14,7 @@ void Renderer::createDevice(Window& window) {
 	swapChainDesc.OutputWindow = window.getHandle();
 	swapChainDesc.SampleDesc.Count = 1;
 	swapChainDesc.Windowed = true;
-	
+
 	// Create the swap chain, device and device context
 	auto result = D3D11CreateDeviceAndSwapChain(
 		nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, 0,
@@ -32,10 +32,9 @@ void Renderer::createDevice(Window& window) {
 }
 
 void Renderer::createRenderTarget() {
-	ID3D11Texture3D* backBuffer;
-	m_swapChain->GetBuffer(0, __uuidof(ID3D11Texture3D), (void**) &backBuffer);
-	HRESULT hr = m_device->CreateRenderTargetView(backBuffer, nullptr, &m_renderTargetView);
-
+	ID3D11Texture2D* backBuffer;
+	m_swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backBuffer);
+	m_device->CreateRenderTargetView(backBuffer, nullptr, &m_renderTargetView);
 
 	backBuffer->GetDesc(&m_backBufferDesc);
 	backBuffer->Release();
@@ -46,7 +45,7 @@ void Renderer::beginFrame() {
 	m_deviceContext->OMSetRenderTargets(1, &m_renderTargetView, nullptr);
 
 	// Set viewport
-	auto viewport = CD3D11_VIEWPORT(0.f, 0.f, (float) m_backBufferDesc.Width, (float) m_backBufferDesc.Height);
+	auto viewport = CD3D11_VIEWPORT(0.f, 0.f, (float)m_backBufferDesc.Width, (float)m_backBufferDesc.Height);
 	m_deviceContext->RSSetViewports(1, &viewport);
 
 	// Set the background color

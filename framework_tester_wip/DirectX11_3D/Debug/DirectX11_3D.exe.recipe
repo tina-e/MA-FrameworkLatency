@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Debug\DirectX11_3D.exe</FullPath>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\Debug\DirectX11_3D.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectPixelShader.cso</FullPath>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectPixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectVertexShader.cso</FullPath>
+      <FullPath>D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\DirectX11_3D\rectVertexShader.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

@@ -13,9 +13,37 @@ struct Vertex {
 	float r, g, b;
 };
 
-struct ConstantBuffer
-{
-	XMMATRIX rotationMatrix;
+float full = 100;
+Vertex vertices[8] = {
+	{-full, full, -full, 1, 1, 1},
+	{full, full, -full, 1, 1, 1},
+	{-full, -full, -full, 1, 1, 1},
+	{full, -full, -full, 1, 1, 1},
+	{-full, full, full, 1, 1, 1},
+	{full, full, full, 1, 1, 1},
+	{-full, -full, full, 1, 1, 1},
+	{full, -full, full, 1, 1, 1}
+};
+
+WORD cubeIndices[] = {
+	0, 1, 2, // Front face
+	0, 2, 3,
+	4, 5, 6, // Back face
+	4, 6, 7,
+	0, 1, 5, // Left face
+	0, 5, 4,
+	2, 3, 7, // Right face
+	2, 7, 6,
+	1, 2, 6, // Top face
+	1, 6, 5,
+	0, 3, 7, // Bottom face
+	0, 7, 4
+};
+
+
+
+struct ConstantBuffer {
+	XMMATRIX WorldViewProjection;
 };
 
 float getRandomBoundedFloat(float min, float max) {
@@ -25,7 +53,7 @@ float getRandomBoundedFloat(float min, float max) {
 	return distribution(gen);
 }
 
-Vertex vertices[48] = {};
+//Vertex vertices[48] = {};
 float rotationAngle = 0.0f;
 ConstantBuffer constantBufferData;
 bool firstDraw = false;
@@ -42,6 +70,13 @@ DirectX::XMMATRIX rotationMatrixX;
 DirectX::XMMATRIX rotationMatrixY;
 DirectX::XMMATRIX rotationMatrixZ;
 DirectX::XMMATRIX rotationMatrix;
+
+
+//XMMATRIX worldMatrix = XMMatrixIdentity();
+//XMMATRIX viewMatrix = XMMatrixLookAtLH(XMLoadFloat3(&eyePosition), XMLoadFloat3(&focusPosition), XMLoadFloat3(&upDirection));
+//XMMATRIX projectionMatrix = XMMatrixPerspectiveFovLH(XMConvertToRadians(fov), aspectRatio, nearPlane, farPlane);
+//XMMATRIX worldViewProjectionMatrix = worldMatrix * viewMatrix * projectionMatrix;
+
 
 Rect::Rect(Renderer& renderer) {
 	//createMesh(renderer);
@@ -79,12 +114,18 @@ void Rect::draw(Renderer& renderer) {
 	//cb.rotationMatrix = rotationMatrix;
 	//deviceContext->UpdateSubresource(m_vertexBuffer, 0, NULL, &cb, 0, 0);
 
+	ConstantBuffer cb;
+	cb.WorldViewProjection = XMMatrixTranspose(rotationMatrix); // Transpose the matrix for HLSL
+	renderer.getDeviceContext()->UpdateSubresource(m_constantBuffer, 0, nullptr, &cb, 0, 0);
+
 	// Bind the vertex buffer
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
 	deviceContext->IASetVertexBuffers(0, 1, &m_vertexBuffer, &stride, &offset);
+	deviceContext->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R16_UINT, 0);
+	deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-	for (int i = 0; i < 48; i++) {
+	/*for (int i = 0; i < 48; i++) {
 		DirectX::XMVECTOR position = DirectX::XMVectorSet(vertices[i].x, vertices[i].y, vertices[i].z, 1);
 		position = DirectX::XMVector3Transform(position, rotationMatrix);
 		XMFLOAT3 floatthree;
@@ -93,14 +134,31 @@ void Rect::draw(Renderer& renderer) {
 		vertices[i].y = floatthree.y;
 		vertices[i].z = floatthree.z;
 
-	}
-
-	for (int i = 0; i < 2; i++) {
+	}*/
+	deviceContext->DrawIndexed(36, 0, 0);
+	/*for (int i = 0; i < 1; ++i) {
+		
 		deviceContext->Draw(24, i * 24);
-	}
+	}*/
+
+	//for (int i = 0; i < 6; ++i) {
+	//	// Draw the face using 4 vertices
+	//	deviceContext->Draw(4, i * 4);
+	//}
 }
 
 void Rect::createRandomVertices() {
+
+	//Vertex cubeVertices[] = {
+	//	{ XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(1.0f, 0.0f, 0.0f, 1.0f) }, // Vertex 0 (Front, Bottom, Left) - Red
+	//	{ XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f) },  // Vertex 1 (Front, Top, Left) - Green
+	//	{ XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT4(0.0f, 0.0f, 1.0f, 1.0f) },   // Vertex 2 (Front, Top, Right) - Blue
+	//	{ XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT4(1.0f, 1.0f, 0.0f, 1.0f) },  // Vertex 3 (Front, Bottom, Right) - Yellow
+	//	{ XMFLOAT3(-1.0f, -1.0f, 1.0f), XMFLOAT4(1.0f, 0.0f, 1.0f, 1.0f) },  // Vertex 4 (Back, Bottom, Left) - Magenta
+	//	{ XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT4(0.0f, 1.0f, 1.0f, 1.0f) },   // Vertex 5 (Back, Top, Left) - Cyan
+	//	{ XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f) },    // Vertex 6 (Back, Top, Right) - White
+	//	{ XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f) }    // Vertex 7 (Back, Bottom, Right) - Gray
+	//};
 
 	//const float sideLength = 1.0f;
 	//const float halfLength = sideLength / 2.0f;
@@ -156,17 +214,17 @@ void Rect::createRandomVertices() {
 		vertices[i + 4] = { x, y, r, g, b };
 		vertices[i + 5] = { y, y, r, g, b };
 	}*/
-	float r = getRandomBoundedFloat(0, 1);
+	/*float r = getRandomBoundedFloat(0, 1);
 	float g = getRandomBoundedFloat(0, 1);
 	float b = getRandomBoundedFloat(0, 1);
 
-	for (int i = 0; i < 48; i += 24) {
+	for (int i = 0; i < 24; i += 24) {*/
 
-		float x = getRandomBoundedFloat(-0.7, 1);
-		float y = getRandomBoundedFloat(-0.7, 1);
-		float z = getRandomBoundedFloat(-0.7, 1);
+	//	float x = getRandomBoundedFloat(-0.7, 1);
+	//	float y = getRandomBoundedFloat(-0.7, 1);
+	//	float z = getRandomBoundedFloat(-0.7, 1);
 
-		int index = i;
+	//	int index = i;
 
 		//vertices[i] = { x, y, z, r, g, b };
 		//vertices[i + 1] = { x, y + 0.1f, z, r, g, b };
@@ -212,60 +270,94 @@ void Rect::createRandomVertices() {
 		//vertices[i + 35] = { x + 0.1f, y, z, r, g, b };
 
 
-		x = 0.5;
-		y = 0.5;
-		z = 0.5;
+		//x = 0.5;
+		//y = 0.5;
+		//z = 0.5;
 
-		float full = 0.5f;
-		float half = 0.25f;
+		/*float full = 0.5f;
+		float half = 0.25f;*/
 
-		// top
-		vertices[i] = { full, full, -full, r, g, b };
-		vertices[i + 1] = { -full, full, -full, r, g, b };
-		vertices[i + 2] = { -full, full, full, r, g, b };
-		vertices[i + 3] = { full, full, full, r, g, b };
-
-		// bottom
-		vertices[i + 4] = { full, -full, full, r, g, b };
-		vertices[i + 5] = { full, -full, full, r, g, b };
-		vertices[i + 6] = { -full, -full, full, r, g, b };
-		vertices[i + 7] = { full, -full, -full, r, g, b };
-
-		vertices[i + 8] = { full, full, full, r, g, b };
-		vertices[i + 9] = {-full, full, full, r, g, b };
-		vertices[i + 10] = {-full, -full, full, r, g, b };
-		vertices[i + 11] = {full, -full, full, r, g, b };
-
-		vertices[i + 12] = {full, -full, -full, r, g, b };
-		vertices[i + 13] = {-full, -full, -full, r, g, b };
-		vertices[i + 14] = {-full, full, -full, r, g, b };
-		vertices[i + 15] = { full, full, -full, r, g, b };
-
-		vertices[i + 16] = {full, -full, -full , r, g, b };
-		vertices[i + 17] = { -full, full, -full, r, g, b };
-		vertices[i + 18] = {-full, -full, -full , r, g, b };
-		vertices[i + 19] = {-full, -full, full , r, g, b };
-
-		vertices[i + 20] = { full, full, -full, r, g, b };
-		vertices[i + 21] = { full, full, full, r, g, b };
-		vertices[i + 22] = { full, -full, full, r, g, b };
-		vertices[i + 23] = { -full, -full, full, r, g, b };
+		//vertices = {
+		//	{-full, full, -full, 1, 1,1, 1, 1},
+		//	{full, full, -full, 1, 1, 1, 1},
+		//	{-full, -full, -full, 1, 1, 1, 1},
+		//	{full, -full, -full, 1, 1, 1, 1},
+		//	{-full, full, full, 1, 1, 1, 1},
+		//	{full, full, full, 1, 1, 1, 1},
+		//	{-full, -full, full, 1, 1, 1, 1},
+		//	{full, -full, full, 1, 1, 1 ,1}
+		//}
 
 
+	//	r = 1;
+	//	g = 0;
+	//	b = 0;
+	//	// front
+	//	vertices[i] = { -full, -full, -full, r, g, b };
+	//	vertices[i + 1] = { -full, full, -full, r, g, b };
+	//	vertices[i + 2] = { full, full, -full, r, g, b };
+	//	vertices[i + 3] = { full, -full, -full, r, g, b };
 
-	}
+	//	// back
+	//	r = 0.8;
+	//	g = 0.8;
+	//	b = 0.8;
+	//	vertices[i + 4] = { -full, -full, full, 1, 0, 0 };
+	//	vertices[i + 5] = { -full, full, full, 0, 1, 0 };
+	//	vertices[i + 6] = { full, full, full, 0, 0, 1 };
+	//	vertices[i + 7] = { full, -full, full, 1, 1, 1 }; 
 
-	/*rotationAngleX = 0.1f;
-	rotationAngleY = 0.2f;
-	rotationAngleZ = 0.3f;*/
-	rotationMatrixX = DirectX::XMMatrixRotationX(rotationAngleX);
-	rotationMatrixY = DirectX::XMMatrixRotationY(rotationAngleY);
-	rotationMatrixZ = DirectX::XMMatrixRotationZ(rotationAngleZ);
-	rotationMatrix = rotationMatrixX * rotationMatrixY * rotationMatrixZ;
+	//	//left
+	//	r = 0;
+	//	g = 0;
+	//	b = 1;
+	//	vertices[i + 8] = { -full, -full, full, 1, 0, 0 };
+	//	vertices[i + 9] = {-full, full, full, 0, 1, 0 };
+	//	vertices[i + 10] = {-full, full, -full, 0, 0, 1 };
+	//	vertices[i + 11] = {-full, -full, -full, 1, 1, 1 };
+
+	//	//right
+	//	r = 0;
+	//	g = 1;
+	//	b = 0;
+	//	vertices[i + 12] = {full, -full, -full, r, g, b };
+	//	vertices[i + 13] = {full, full, -full, r, g, b };
+	//	vertices[i + 14] = {full, full, full, r, g, b };
+	//	vertices[i + 15] = { full, -full, full, r, g, b };
+
+	//	//top
+	//	r = 1;
+	//	g = 1;
+	//	b = 1;
+	//	vertices[i + 16] = {-full, full, -full , r, g, b };
+	//	vertices[i + 17] = { -full, full, full, r, g, b };
+	//	vertices[i + 18] = {full, full, full , r, g, b };
+	//	vertices[i + 19] = {full, full, -full , r, g, b };
+
+	//	//bottom
+	//	r = 0.2;
+	//	g = 0.2;
+	//	b = 0.2;
+	//	vertices[i + 20] = { -full, -full, -full, r, g, b };
+	//	vertices[i + 21] = { -full, -full, full, r, g, b };
+	//	vertices[i + 22] = { full, -full, full, r, g, b };
+	//	vertices[i + 23] = { full, -full, -full, r, g, b };
 
 
 
-	
+	//}
+
+	///*rotationAngleX = 0.1f;
+	//rotationAngleY = 0.2f;
+	//rotationAngleZ = 0.3f;*/
+	//rotationMatrixX = DirectX::XMMatrixRotationX(rotationAngleX);
+	//rotationMatrixY = DirectX::XMMatrixRotationY(rotationAngleY);
+	//rotationMatrixZ = DirectX::XMMatrixRotationZ(rotationAngleZ);
+	//rotationMatrix = rotationMatrixX * rotationMatrixY * rotationMatrixZ;
+
+
+
+	//
 
 
 
@@ -300,11 +392,36 @@ void Rect::createRandomVertices() {
 }
 
 void Rect::createMesh(Renderer& renderer) {
-	auto vertexBufferDesc = CD3D11_BUFFER_DESC(sizeof(vertices), D3D11_BIND_VERTEX_BUFFER);
+	/*auto vertexBufferDesc = CD3D11_BUFFER_DESC(sizeof(vertices), D3D11_BIND_VERTEX_BUFFER);
 	D3D11_SUBRESOURCE_DATA vertexData = { 0 };
-	vertexData.pSysMem = vertices;
+	vertexData.pSysMem = vertices;*/
 
+	D3D11_BUFFER_DESC constantBufferDesc = {};
+	constantBufferDesc.Usage = D3D11_USAGE_DEFAULT;
+	constantBufferDesc.ByteWidth = sizeof(ConstantBuffer);
+	constantBufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+	constantBufferDesc.CPUAccessFlags = 0;
+	constantBufferDesc.MiscFlags = 0;
+	constantBufferDesc.StructureByteStride = 0;
+	renderer.getDevice()->CreateBuffer(&constantBufferDesc, nullptr, &m_constantBuffer);
+
+	D3D11_BUFFER_DESC vertexBufferDesc = {};
+	vertexBufferDesc.Usage = D3D11_USAGE_DEFAULT;
+	vertexBufferDesc.ByteWidth = sizeof(vertices);
+	vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+	D3D11_SUBRESOURCE_DATA vertexData = { vertices, 0, 0 };
 	renderer.getDevice()->CreateBuffer(&vertexBufferDesc, &vertexData, &m_vertexBuffer);
+
+	// hier neu
+	D3D11_BUFFER_DESC indexBufferDesc = {};
+	indexBufferDesc.Usage = D3D11_USAGE_DEFAULT;
+	indexBufferDesc.ByteWidth = sizeof(cubeIndices);
+	indexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
+	D3D11_SUBRESOURCE_DATA indexData = { cubeIndices, 0, 0 };
+	renderer.getDevice()->CreateBuffer(&indexBufferDesc, &indexData, &m_indexBuffer);
+	// ende neu
+
+	//renderer.getDevice()->CreateBuffer(&vertexBufferDesc, &vertexData, &m_vertexBuffer);
 }
 
 void Rect::createShaders(Renderer& renderer) {
