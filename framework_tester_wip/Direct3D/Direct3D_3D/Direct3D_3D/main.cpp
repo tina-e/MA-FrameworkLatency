@@ -22,17 +22,15 @@ struct ConstantBuffer
 	XMMATRIX transform;
 };
 
-const Vertex vertices[] =
-{
-	{-1, -1, -1, 1, 1, 1},
-	{1, -1, -1, 1, 1, 1},
-	{-1, 1, -1, 1, 1, 1},
-	{1, 1, -1, 1, 1, 1},
-	{-1, -1, 1, 1, 1, 1},
-	{1, -1, 1, 1, 1, 1},
-	{-1, 1, 1, 1, 1, 1},
-	{1, 1, 1, 1, 1, 1},
-};
+
+const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+//const int WIDTH = 800;
+//const int HEIGHT = 800;
+const int NUM_CUBES = 166;
+const int NUM_VERTICES = 8;
+const int X_RECT = -WIDTH / 2 + 200;
+const int Y_RECT = -HEIGHT / 2 + 200;
 
 const unsigned short indices[] =
 {
@@ -45,24 +43,34 @@ const unsigned short indices[] =
 
 };
 
-float getRandomBoundedFloat(float min, float max) {
-	return min + static_cast<float>(rand()) / static_cast<float>(RAND_MAX / (max - min));
-}
+Vertex vertices[NUM_VERTICES] = {};
 
-const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+float reds[NUM_CUBES];
+float greens[NUM_CUBES];
+float blues[NUM_CUBES];
 
-const int NUM_RECTS = 1;
-const int NUM_VERTICES = 8;
+float positionX[NUM_CUBES];
+float positionY[NUM_CUBES];
+float positionZ[NUM_CUBES];
 
-float angle = 0;
-bool wasPressed = false;
+float rotationX[NUM_CUBES];
+float rotationY[NUM_CUBES];
+float rotationZ[NUM_CUBES];
+float rotationXTemp[NUM_CUBES];
+float rotationYTemp[NUM_CUBES];
+float rotationZTemp[NUM_CUBES];
+
+float scalingX[NUM_CUBES];
+float scalingY[NUM_CUBES];
+float scalingZ[NUM_CUBES];
 
 ID3D11Device* pDevice = nullptr;
 IDXGISwapChain* pSwapChain = nullptr;
 ID3D11DeviceContext* pContext = nullptr;
 ID3D11RenderTargetView* pTarget = nullptr;
+
 ID3D11Buffer* pConstantBuffer = nullptr;
+bool wasPressed = false;
 
 
 void CreateGraphics(HWND hWnd) {
@@ -83,7 +91,6 @@ void CreateGraphics(HWND hWnd) {
 	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	sd.Flags = 0;
 
-
 	D3D11CreateDeviceAndSwapChain(
 		nullptr,
 		D3D_DRIVER_TYPE_HARDWARE,
@@ -98,6 +105,8 @@ void CreateGraphics(HWND hWnd) {
 		nullptr,
 		&pContext
 	);
+
+	pSwapChain->SetFullscreenState(0, NULL);
 
 	ID3D11Resource* pBackBuffer = nullptr;
 	pSwapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));
@@ -126,6 +135,7 @@ void SetupRenderer()
 	pDevice->CreateInputLayout(inputElemDesc, (UINT)std::size(inputElemDesc), pBlob->GetBufferPointer(), pBlob->GetBufferSize(), &pInputLayout);
 	pContext->IASetInputLayout(pInputLayout);
 
+
 	pContext->OMSetRenderTargets(1, &pTarget, nullptr);
 	pContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
@@ -139,8 +149,31 @@ void SetupRenderer()
 	pContext->RSSetViewports(1, &viewport);
 }
 
-void CreateVertxAndIndexBuffers() {
-	//vertex buffer
+
+void SetupRandomCubeValues()
+{
+	for (int i = 0; i < NUM_CUBES; i++) {
+		reds[i] = (float)rand() / RAND_MAX;
+		greens[i] = (float)rand() / RAND_MAX;
+		blues[i] = (float)rand() / RAND_MAX;
+
+		positionX[i] = (rand() % (WIDTH / 2 - (X_RECT)+1)) + X_RECT;
+		positionY[i] = (rand() % (HEIGHT / 2 - (-HEIGHT / 2) + 1)) - HEIGHT / 2;
+		positionZ[i] = rand() % 100;
+
+		rotationX[i] = ((float)rand() / RAND_MAX) / 100;
+		rotationY[i] = ((float)rand() / RAND_MAX) / 100;
+		rotationZ[i] = ((float)rand() / RAND_MAX) / 100;
+
+		scalingX[i] = rand() % 100;
+		scalingY[i] = rand() % 100;
+		scalingZ[i] = rand() % 100;
+	}
+}
+
+
+void CreateVertexBuffer()
+{
 	ID3D11Buffer* pVertexBuffer;
 	D3D11_BUFFER_DESC vertexBufferDesc = {};
 	vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
@@ -157,8 +190,10 @@ void CreateVertxAndIndexBuffers() {
 	const UINT stride = sizeof(Vertex);
 	const UINT offset = 0;
 	pContext->IASetVertexBuffers(0, 1, &pVertexBuffer, &stride, &offset);
+	pVertexBuffer->Release();
+}
 
-	// index buffer
+void CreateIndexBuffers() {
 	ID3D11Buffer* pIndexBuffer;
 	D3D11_BUFFER_DESC indexBufferDesc = {};
 	indexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
@@ -172,33 +207,43 @@ void CreateVertxAndIndexBuffers() {
 	indexSubresourceData.pSysMem = indices;
 
 	pDevice->CreateBuffer(&indexBufferDesc, &indexSubresourceData, &pIndexBuffer);
-	pContext->IASetIndexBuffer(pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
-
-
-	pVertexBuffer->Release();
+	pContext->IASetIndexBuffer(pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);	
 	pIndexBuffer->Release();
 }
 
-void ClearBuffer(float red, float green, float blue)
-{
-	const float color[] = { red, green, blue, 1.0f };
-	pContext->ClearRenderTargetView(pTarget, color);
-}
-
-void CreateConstantBuffer() {
-	// constant buffer
-	const ConstantBuffer constantBuffer =
-	{
+void CreateConstantBuffer(int index) {
+	ConstantBuffer constantBuffer;
+	if (index == -1) {
+		constantBuffer =
 		{
-			XMMatrixTranspose(
-				XMMatrixRotationZ(angle) *
-				XMMatrixRotationX(angle) *
-				XMMatrixTranslation(1, 1, 4.0f) *
-				XMMatrixPerspectiveLH(1, 3.0f / 4.0f, 0.5f, 10.0f)
-			)
-		}
-	};
-
+			{
+				XMMatrixTranspose(
+					XMMatrixScaling(10, 10, 1) *
+					XMMatrixTranslation(-WIDTH/2, HEIGHT/2, 1) *
+					XMMatrixOrthographicLH(WIDTH, HEIGHT, -200, 200)
+				)
+			}
+		};
+	}
+	else {
+		rotationXTemp[index] += rotationX[index];
+		rotationYTemp[index] += rotationY[index];
+		rotationZTemp[index] += rotationZ[index];
+		constantBuffer =
+		{
+			{
+				XMMatrixTranspose(
+					XMMatrixScaling(scalingX[index], scalingY[index], scalingZ[index]) *
+					XMMatrixRotationX(rotationXTemp[index]) *
+					XMMatrixRotationY(rotationYTemp[index]) *
+					XMMatrixRotationZ(rotationZTemp[index]) *
+					XMMatrixTranslation(positionX[index], positionY[index], positionZ[index]) *
+					XMMatrixOrthographicLH(WIDTH, HEIGHT, -200, 200)
+				)
+			}
+		};
+	}
+	
 	
 	D3D11_BUFFER_DESC constantBufferDesc = {};
 	constantBufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
@@ -207,7 +252,6 @@ void CreateConstantBuffer() {
 	constantBufferDesc.MiscFlags = 0;
 	constantBufferDesc.ByteWidth = sizeof(constantBuffer);
 	constantBufferDesc.StructureByteStride = 0;
-
 
 	D3D11_SUBRESOURCE_DATA constantSubresourceData = {};
 	constantSubresourceData.pSysMem = &constantBuffer;
@@ -218,11 +262,49 @@ void CreateConstantBuffer() {
 	pConstantBuffer->Release();
 }
 
-void DrawRect(float angle)
+void DefineCubeVertices(int index)
 {
-	CreateConstantBuffer();
-	pContext->DrawIndexed(36, 0, 0);
+	vertices[0] = { -1, -1, -1, reds[index], greens[index], blues[index]};
+	vertices[1] = { 1, -1, -1, reds[index], greens[index], blues[index]};
+	vertices[2] = { -1, 1, -1, reds[index], greens[index], blues[index]};
+	vertices[3] = { 1, 1, -1, reds[index], greens[index], blues[index]};
+	vertices[4] = { -1, -1, 1, reds[index], greens[index], blues[index]};
+	vertices[5] = { 1, -1, 1, reds[index], greens[index], blues[index]};
+	vertices[6] = { -1, 1, 1, reds[index], greens[index], blues[index]};
+	vertices[7] = { 1, 1, 1, reds[index], greens[index], blues[index]};
 }
+
+void DrawCubes()
+{
+	for (int i = 0; i < NUM_CUBES; i++) {
+		DefineCubeVertices(i);
+		CreateVertexBuffer();
+		CreateIndexBuffers();
+		CreateConstantBuffer(i);
+		pContext->DrawIndexed(36, 0, 0);
+	}
+	vertices[0] = { -10, -10, 100, 1, 1, 1 };
+	vertices[1] = { 10, -10, 100, 1, 1, 1 };
+	vertices[2] = { -10, 10, 100, 1, 1, 1 };
+	vertices[3] = { 10, 10, 100, 1, 1, 1 };
+	CreateVertexBuffer();
+	CreateIndexBuffers();
+	CreateConstantBuffer(-1);
+	pContext->DrawIndexed(6, 0, 0);
+}
+
+
+void EndFrame()
+{
+	pSwapChain->Present(0, 0);
+}
+
+void ClearBuffer(float red, float green, float blue)
+{
+	const float color[] = { red, green, blue, 1.0f };
+	pContext->ClearRenderTargetView(pTarget, color);
+}
+
 
 void Cleanup()
 {
@@ -233,12 +315,6 @@ void Cleanup()
 	pConstantBuffer->Release();
 }
 
-void EndFrame()
-{
-	pSwapChain->Present(0, 0);
-}
-
-
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -246,11 +322,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_LBUTTONDOWN:
 		wasPressed = true;
-		CreateVertxAndIndexBuffers();
+		SetupRandomCubeValues();
 		break;
 	case WM_LBUTTONUP:
 		wasPressed = false;
-		angle = 0;
 		break;
 	case WM_CLOSE:
 		PostQuitMessage(0);
@@ -287,23 +362,25 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	);
 
 	CreateGraphics(hWnd);
-	ShowWindow(hWnd, SW_SHOW);
-
 	SetupRenderer();
-	
+	ShowWindow(hWnd, SW_SHOW);
 
 	MSG msg;
 	BOOL gResult;
-	while (gResult = (GetMessage(&msg, nullptr, 0, 0)) > 0)
-	{
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+	while (true) {
+		if (gResult = (PeekMessage(&msg, 0, 0, 0, PM_REMOVE)) > 0) {
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+
+			if (msg.message == WM_QUIT) {
+				break;
+			}
+		}
+
 		ClearBuffer(0, 0, 0);
 		if (wasPressed) {
-			DrawRect(angle);
-			angle += 0.01;
+			DrawCubes();
 		}
-		
 		EndFrame();
 	}
 

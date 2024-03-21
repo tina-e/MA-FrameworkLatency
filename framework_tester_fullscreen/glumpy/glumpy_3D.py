@@ -111,10 +111,10 @@ def on_draw(dt):
 
             model = np.eye(4, dtype=np.float32)
             glm.translate(model, x_positions[i], y_positions[i], z_positions[i])
-            glm.scale(model, scales[i])
             glm.rotate(model, x_axis_rotation_temp[i], 1, 0, 0)
             glm.rotate(model, y_axis_rotation_temp[i], 0, 1, 0)
             glm.rotate(model, z_axis_rotation_temp[i], 0, 0, 1)
+            glm.scale(model, scales[i])
             cube_programs[i]['model'] = model           
             cube_programs[i].draw(gl.GL_TRIANGLES, faces)
         rect_program.draw(gl.GL_TRIANGLES)
