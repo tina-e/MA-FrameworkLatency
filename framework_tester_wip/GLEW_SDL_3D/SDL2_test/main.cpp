@@ -67,7 +67,7 @@ void setupCubes() {
         rotationX[i] = (float) rand() / RAND_MAX;
         rotationY[i] = (float) rand() / RAND_MAX;
         rotationZ[i] = (float) rand() / RAND_MAX;
-        rotationFactor[i] = (float)rand() / RAND_MAX;
+        rotationFactor[i] = ((float)rand() / RAND_MAX) / 10;
 
         scalingX[i] = (float)rand() / RAND_MAX;
         scalingY[i] = (float)rand() / RAND_MAX;
