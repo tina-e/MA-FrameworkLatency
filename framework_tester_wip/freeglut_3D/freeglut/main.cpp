@@ -15,14 +15,14 @@ const int Y_RECT = -HEIGHT / 2 + 300;
 const int NUM_CUBES = 166;
 
 GLfloat VERTICES[][3] = {
-    {-200, -200, -200},
-    {200, -200, -200},
-    {200, 200, -200},
-    {-200, 200, -200},
-    {-200, -200, 200},
-    {200, -200, 200},
-    {200, 200, 200},
-    {-200, 200, 200}
+    {-100, -100, -100},
+    {100, -100, -100},
+    {100, 100, -100},
+    {-100, 100, -100},
+    {-100, -100, 100},
+    {100, -100, 100},
+    {100, 100, 100},
+    {-100, 100, 100}
 };
 
 GLuint INDICES[][4] = {
@@ -112,7 +112,7 @@ void reshape(int w, int h)
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-WIDTH / 2, WIDTH / 2, -HEIGHT / 2, HEIGHT / 2, -1, 1000);
+    glOrtho(-WIDTH / 2, WIDTH / 2, -HEIGHT / 2, HEIGHT / 2, -200, 200);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
@@ -159,7 +159,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     glutCreateWindow("framework");
     
     glutFullScreen();
-    glutGameModeString("1920x1080:16@500");
+    glutGameModeString("1920x1080:16@60");
     glutEnterGameMode();
 
     glEnable(GL_DEPTH_TEST);

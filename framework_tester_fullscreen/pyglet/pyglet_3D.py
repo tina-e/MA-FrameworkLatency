@@ -104,7 +104,7 @@ def init_cubes():
         program = shader.ShaderProgram(vertex_shader, fragment_shader)
 
         view_matrix = Mat4.from_translation(Vec3(x=0, y=0, z=-200))
-        projection_matrix = Mat4.orthogonal_projection(left=0, right=WIDTH, bottom=0, top=HEIGHT, z_near=0.1, z_far=1000)
+        projection_matrix = Mat4.orthogonal_projection(left=0, right=WIDTH, bottom=0, top=HEIGHT, z_near=-1000, z_far=1000)
         view_projection = projection_matrix @ view_matrix
         program['view_projection'] = view_projection
 

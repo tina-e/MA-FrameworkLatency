@@ -14,15 +14,16 @@ const int X_RECT = -WIDTH / 2 + 300;
 const int Y_RECT = -HEIGHT / 2 + 300;
 const int NUM_CUBES = 166;
 
+
 GLfloat VERTICES[][3] = {
-        {-200, -200, -200}, 
-        {200, -200, -200},  
-        {200, 200, -200},  
-        {-200, 200, -200},
-        {-200, -200, 200},  
-        {200, -200, 200},   
-        {200, 200, 200},  
-        {-200, 200, 200} 
+        {-100, -100, -100}, 
+        {100, -100, -100},  
+        {100, 100, -100},  
+        {-100, 100, -100},
+        {-100, -100, 100},  
+        {100, -100, 100},   
+        {100, 100, 100},  
+        {-100, 100, 100} 
 };
 
 GLuint INDICES[][4] = {
@@ -33,7 +34,6 @@ GLuint INDICES[][4] = {
     {3, 2, 6, 7}, 
     {4, 5, 1, 0}  
 };
-
 
 GLfloat reds[NUM_CUBES];
 GLfloat greens[NUM_CUBES];
@@ -95,9 +95,9 @@ int main(int argc, char* argv[]) {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glEnable(GL_DEPTH_TEST);
 
-    glMatrixMode(GL_PROJECTION);
+    //glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho((GLdouble)-(WIDTH / 2), (GLdouble)WIDTH / 2, (GLdouble)HEIGHT / 2, (GLdouble)-HEIGHT / 2, -1.0, 1000);
+    glOrtho((GLdouble)-(WIDTH / 2), (GLdouble)WIDTH / 2, (GLdouble)HEIGHT / 2, (GLdouble)-HEIGHT / 2, -200, 200);
 
     SDL_Event event;
    
