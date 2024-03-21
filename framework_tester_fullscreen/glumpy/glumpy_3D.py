@@ -1,4 +1,4 @@
-from random import random
+from random import random, randint, uniform
 import numpy as np
 from glumpy import app, gl, glm, gloo
 from glumpy.geometry import colorcube
@@ -55,10 +55,19 @@ void main()
 window = app.Window(width=WIDTH, height=HEIGHT, color=(0, 0, 0, 1.00), fullscreen=True, vsync=False, decoration=False, title="framework")
 
 rect_program = gloo.Program(RECT_VERTEX, RECT_FRAGMENT)
-rect_program['position'] = np.array([[-1, 1], [-0.5, 1], [-1, 0.5], [-1, 0.5], [-0.5, 1], [-0.5, 0.5]], dtype=np.float32)
+rect_program['position'] = np.array([[-1, 1], [-0.75, 1], [-1, 0.75], [-1, 0.75], [-0.75, 1], [-0.75, 0.75]], dtype=np.float32)
+
 
 vertices, faces, outline = colorcube()
-cube_programs = []
+cube = gloo.Program(VERTEX, FRAGMENT)
+cube.bind(vertices)
+cube['model'] = np.eye(4, dtype=np.float32)
+cube['view'] = glm.translation(0, 0, -5)
+
+
+reds = [0] * NUM_CUBES
+greens = [0] * NUM_CUBES
+blues = [0] * NUM_CUBES
 
 x_positions = [0] * NUM_CUBES
 y_positions = [0] * NUM_CUBES
@@ -76,28 +85,18 @@ scales = [0] * NUM_CUBES
 
 show_cubes = False 
 
-
-def setup_cubes():
-    start = time.time()
-    for i in range(NUM_CUBES):
-        cube = gloo.Program(VERTEX, FRAGMENT)
-        cube.bind(vertices)
-        cube['model'] = np.eye(4, dtype=np.float32)
-        cube['view'] = glm.translation(0, 0, -15)
-        cube_programs.append(cube)
-    print(time.time() - start) 
-
-
 def update():
     for i in range(NUM_CUBES):
-        cube_programs[i]['ucolor'] = random(), random(), random(), 1        
-        x_positions[i] = random() * 5
-        y_positions[i] = random() * 5
-        z_positions[i] = random() * 5
+        reds[i] = random()      
+        greens[i] = random()      
+        blues[i] = random()      
+        x_positions[i] = uniform(-10, 15)
+        y_positions[i] = uniform(-10, 10)
+        z_positions[i] = random()
         x_axis_rotation[i] = random()
         y_axis_rotation[i] = random()
         z_axis_rotation[i] = random()
-        scales[i] = random()
+        scales[i] = randint(25, 50)
 
 
 @window.event
@@ -108,22 +107,24 @@ def on_draw(dt):
             x_axis_rotation_temp[i] += x_axis_rotation[i]
             y_axis_rotation_temp[i] += y_axis_rotation[i]
             z_axis_rotation_temp[i] += z_axis_rotation[i]
-
+            cube['ucolor'] = reds[i], greens[i], blues[i], 1
+            
             model = np.eye(4, dtype=np.float32)
-            glm.translate(model, x_positions[i], y_positions[i], z_positions[i])
             glm.rotate(model, x_axis_rotation_temp[i], 1, 0, 0)
             glm.rotate(model, y_axis_rotation_temp[i], 0, 1, 0)
             glm.rotate(model, z_axis_rotation_temp[i], 0, 0, 1)
+            glm.translate(model, x_positions[i], y_positions[i], z_positions[i])
             glm.scale(model, scales[i])
-            cube_programs[i]['model'] = model           
-            cube_programs[i].draw(gl.GL_TRIANGLES, faces)
+
+            cube['model'] = model 
+            
+            cube.draw(gl.GL_TRIANGLES, faces)
         rect_program.draw(gl.GL_TRIANGLES)
 
 
 @window.event
 def on_resize(width, height):
-    for i in range(NUM_CUBES):
-        cube_programs[i]['projection'] = glm.perspective(45.0, width / float(height), 2.0, 100.0)
+    cube['projection'] = glm.ortho(-WIDTH/2, WIDTH/2, -HEIGHT/2, HEIGHT/2, -200, 200)
         
 
 @window.event
@@ -139,5 +140,4 @@ def on_mouse_release(x, y, button):
     show_cubes = False 
 
 
-setup_cubes() 
 app.run()

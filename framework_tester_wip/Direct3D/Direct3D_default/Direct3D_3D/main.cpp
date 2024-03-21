@@ -3,9 +3,10 @@
 
 #pragma comment(lib, "d3d11.lib")
 
-
-const int WIDTH = 500;
-const int HEIGHT = 500;
+const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+//const int WIDTH = 500;
+//const int HEIGHT = 500;
 bool wasPressed = false;
 
 ID3D11Device* pDevice = nullptr;
@@ -22,14 +23,14 @@ void CreateGraphics(HWND hWnd) {
 	sd.BufferDesc.RefreshRate.Numerator = 0;
 	sd.BufferDesc.RefreshRate.Denominator = 0;
 	sd.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
-	sd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED; //TODO?
-	sd.SampleDesc.Count = 1; //TODO?
-	sd.SampleDesc.Quality = 0; //TODO?
+	sd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
+	sd.SampleDesc.Count = 1;
+	sd.SampleDesc.Quality = 0;
 	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	sd.BufferCount = 1;
 	sd.OutputWindow = hWnd;
-	sd.Windowed = TRUE; //TODO
-	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD; //TODO?
+	sd.Windowed = TRUE;
+	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	sd.Flags = 0;
 
 
@@ -56,7 +57,7 @@ void CreateGraphics(HWND hWnd) {
 
 void EndFrame()
 {
-	pSwapChain->Present(0, 0); //TODO?
+	pSwapChain->Present(0, 0); 
 }
 
 void ClearBuffer(float red, float green, float blue)
@@ -99,14 +100,14 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	const auto pClassName = L"framework";
 	WNDCLASSEX wc = { 0 }; 
 	wc.cbSize = sizeof(wc);
-	wc.style = CS_OWNDC; //TODO window style anpassen später
+	wc.style = CS_GLOBALCLASS;
 	wc.lpfnWndProc = WndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
 	wc.hInstance = hInstance;
 	wc.hIcon = nullptr;
 	wc.hCursor = nullptr;
-	wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
+	//wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	wc.lpszMenuName = nullptr;
 	wc.lpszClassName = pClassName;
 	wc.hIconSm = nullptr;
@@ -114,7 +115,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
 	HWND hWnd = CreateWindowEx(
 		0, pClassName, L"framework",
-		WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU, // TODO
+		WS_POPUP | WS_VISIBLE,
 		0, 0, WIDTH, HEIGHT,
 		nullptr, nullptr, hInstance, nullptr
 	);
