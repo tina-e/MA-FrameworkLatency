@@ -23,15 +23,14 @@ struct ConstantBuffer
 };
 
 
-//const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-//const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-
-const int WIDTH = 800;
-const int HEIGHT = 800;
-const int NUM_RECTS = 166;
+const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+//const int WIDTH = 800;
+//const int HEIGHT = 800;
+const int NUM_CUBES = 166;
 const int NUM_VERTICES = 8;
-const int X_RECT = -WIDTH / 2 + 300;
-const int Y_RECT = -HEIGHT / 2 + 300;
+const int X_RECT = -WIDTH / 2 + 200;
+const int Y_RECT = -HEIGHT / 2 + 200;
 
 const unsigned short indices[] =
 {
@@ -44,48 +43,31 @@ const unsigned short indices[] =
 
 };
 
-Vertex rectVertices[4] = {
-	{ -WIDTH / 2, HEIGHT / 2, 1, 1, 1, 1 },
-	{ X_RECT, HEIGHT / 2, 1, 1, 1, 1 },
-	{ X_RECT, -Y_RECT, 1, 1, 1, 1 },
-	{ -WIDTH / 2, -Y_RECT, 1, 1, 1, 1 }
-};
+Vertex vertices[NUM_VERTICES] = {};
 
-unsigned short rectIndices[6] = {
-	0, 1, 2, 0, 3, 2
-};
+float reds[NUM_CUBES];
+float greens[NUM_CUBES];
+float blues[NUM_CUBES];
 
-Vertex vertices[8] = {};
+float positionX[NUM_CUBES];
+float positionY[NUM_CUBES];
+float positionZ[NUM_CUBES];
 
-float reds[NUM_RECTS];
-float greens[NUM_RECTS];
-float blues[NUM_RECTS];
+float rotationX[NUM_CUBES];
+float rotationY[NUM_CUBES];
+float rotationZ[NUM_CUBES];
+float rotationXTemp[NUM_CUBES];
+float rotationYTemp[NUM_CUBES];
+float rotationZTemp[NUM_CUBES];
 
-float positionX[NUM_RECTS];
-float positionY[NUM_RECTS];
-float positionZ[NUM_RECTS];
-
-float rotationX[NUM_RECTS];
-float rotationY[NUM_RECTS];
-float rotationZ[NUM_RECTS];
-float rotationXTemp[NUM_RECTS];
-float rotationYTemp[NUM_RECTS];
-float rotationZTemp[NUM_RECTS];
-
-float scalingX[NUM_RECTS];
-float scalingY[NUM_RECTS];
-float scalingZ[NUM_RECTS];
+float scalingX[NUM_CUBES];
+float scalingY[NUM_CUBES];
+float scalingZ[NUM_CUBES];
 
 ID3D11Device* pDevice = nullptr;
 IDXGISwapChain* pSwapChain = nullptr;
 ID3D11DeviceContext* pContext = nullptr;
 ID3D11RenderTargetView* pTarget = nullptr;
-
-ID3D11Buffer* pRectVertexBuffer;
-D3D11_BUFFER_DESC rectVertexBufferDesc = {};
-ID3D11Buffer* pRectIndexBuffer;
-D3D11_BUFFER_DESC rectIndexBufferDesc = {};
-//D3D11_BUFFER_DESC constantBufferRectDesc = {};
 
 ID3D11Buffer* pConstantBuffer = nullptr;
 bool wasPressed = false;
@@ -105,7 +87,7 @@ void CreateGraphics(HWND hWnd) {
 	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	sd.BufferCount = 1;
 	sd.OutputWindow = hWnd;
-	sd.Windowed = TRUE; //TODO
+	sd.Windowed = FALSE;
 	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	sd.Flags = 0;
 
@@ -167,34 +149,10 @@ void SetupRenderer()
 	pContext->RSSetViewports(1, &viewport);
 }
 
-void SetupRectBuffers()
-{
-	rectVertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-	rectVertexBufferDesc.Usage = D3D11_USAGE_DEFAULT;
-	rectVertexBufferDesc.CPUAccessFlags = 0;
-	rectVertexBufferDesc.MiscFlags = 0;
-	rectVertexBufferDesc.ByteWidth = sizeof(rectVertices);
-	rectVertexBufferDesc.StructureByteStride = sizeof(Vertex);
-
-	rectIndexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
-	rectIndexBufferDesc.Usage = D3D11_USAGE_DEFAULT;
-	rectIndexBufferDesc.CPUAccessFlags = 0;
-	rectIndexBufferDesc.MiscFlags = 0;
-	rectIndexBufferDesc.ByteWidth = sizeof(rectIndices);
-	rectIndexBufferDesc.StructureByteStride = sizeof(unsigned short);
-
-	//constantBufferRectDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-	//constantBufferRectDesc.Usage = D3D11_USAGE_DYNAMIC;
-	//constantBufferRectDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
-	//constantBufferRectDesc.MiscFlags = 0;
-	//constantBufferRectDesc.ByteWidth = sizeof(ConstantBuffer);
-	//constantBufferRectDesc.StructureByteStride = 0;
-}
-
 
 void SetupRandomCubeValues()
 {
-	for (int i = 0; i < NUM_RECTS; i++) {
+	for (int i = 0; i < NUM_CUBES; i++) {
 		reds[i] = (float)rand() / RAND_MAX;
 		greens[i] = (float)rand() / RAND_MAX;
 		blues[i] = (float)rand() / RAND_MAX;
@@ -254,64 +212,39 @@ void CreateIndexBuffers() {
 }
 
 void CreateConstantBuffer(int index) {
-	rotationXTemp[index] += rotationX[index];
-	rotationYTemp[index] += rotationY[index];
-	rotationZTemp[index] += rotationZ[index];
-	const ConstantBuffer constantBuffer =
-	{
+	ConstantBuffer constantBuffer;
+	if (index == -1) {
+		constantBuffer =
 		{
-			XMMatrixTranspose(
-				XMMatrixScaling(scalingX[index], scalingY[index], scalingZ[index]) *
-				XMMatrixRotationX(rotationXTemp[index]) *
-				XMMatrixRotationY(rotationYTemp[index]) *
-				XMMatrixRotationZ(rotationZTemp[index]) *
-				XMMatrixTranslation(positionX[index], positionY[index], positionZ[index]) *
-				XMMatrixOrthographicLH(WIDTH, HEIGHT, 0.1, 1000)
-			)
-		}
-	};
+			{
+				XMMatrixTranspose(
+					XMMatrixScaling(10, 10, 1) *
+					XMMatrixTranslation(-WIDTH/2, HEIGHT/2, 1) *
+					XMMatrixOrthographicLH(WIDTH, HEIGHT, -200, 200)
+				)
+			}
+		};
+	}
+	else {
+		rotationXTemp[index] += rotationX[index];
+		rotationYTemp[index] += rotationY[index];
+		rotationZTemp[index] += rotationZ[index];
+		constantBuffer =
+		{
+			{
+				XMMatrixTranspose(
+					XMMatrixScaling(scalingX[index], scalingY[index], scalingZ[index]) *
+					XMMatrixRotationX(rotationXTemp[index]) *
+					XMMatrixRotationY(rotationYTemp[index]) *
+					XMMatrixRotationZ(rotationZTemp[index]) *
+					XMMatrixTranslation(positionX[index], positionY[index], positionZ[index]) *
+					XMMatrixOrthographicLH(WIDTH, HEIGHT, -200, 200)
+				)
+			}
+		};
+	}
 	
-	D3D11_BUFFER_DESC constantBufferDesc = {};
-	constantBufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-	constantBufferDesc.Usage = D3D11_USAGE_DYNAMIC;
-	constantBufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
-	constantBufferDesc.MiscFlags = 0;
-	constantBufferDesc.ByteWidth = sizeof(constantBuffer);
-	constantBufferDesc.StructureByteStride = 0;
-
-	D3D11_SUBRESOURCE_DATA constantSubresourceData = {};
-	constantSubresourceData.pSysMem = &constantBuffer;
-
-	pDevice->CreateBuffer(&constantBufferDesc, &constantSubresourceData, &pConstantBuffer);
-	pContext->VSSetConstantBuffers(0, 1, &pConstantBuffer);
-
-	pConstantBuffer->Release();
-}
-
-void SwitchToRectBuffers()
-{
-	D3D11_SUBRESOURCE_DATA subresourceData = {};
-	subresourceData.pSysMem = rectVertices;
-	pDevice->CreateBuffer(&rectVertexBufferDesc, &subresourceData, &pRectVertexBuffer);
-	const UINT stride = sizeof(Vertex);
-	const UINT offset = 0;
-	pContext->IASetVertexBuffers(0, 1, &pRectVertexBuffer, &stride, &offset);
-
-	D3D11_SUBRESOURCE_DATA indexSubresourceData = {};
-	indexSubresourceData.pSysMem = rectIndices;
-	pDevice->CreateBuffer(&rectIndexBufferDesc, &indexSubresourceData, &pRectIndexBuffer);
-	pContext->IASetIndexBuffer(pRectIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
-
-	const ConstantBuffer constantBuffer =
-	{
-		{
-			XMMatrixTranspose(
-				XMMatrixOrthographicLH(WIDTH, HEIGHT, 0.1f, 1000.0f) *
-				XMMatrixTranslation(-WIDTH / 2.0f, HEIGHT / 2.0f, 0.0f)
-			)
-		}
-	};
-
+	
 	D3D11_BUFFER_DESC constantBufferDesc = {};
 	constantBufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
 	constantBufferDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -343,14 +276,20 @@ void DefineCubeVertices(int index)
 
 void DrawCubes()
 {
-	for (int i = 0; i < NUM_RECTS; i++) {
+	for (int i = 0; i < NUM_CUBES; i++) {
 		DefineCubeVertices(i);
 		CreateVertexBuffer();
 		CreateIndexBuffers();
 		CreateConstantBuffer(i);
 		pContext->DrawIndexed(36, 0, 0);
 	}
-	SwitchToRectBuffers();
+	vertices[0] = { -10, -10, 100, 1, 1, 1 };
+	vertices[1] = { 10, -10, 100, 1, 1, 1 };
+	vertices[2] = { -10, 10, 100, 1, 1, 1 };
+	vertices[3] = { 10, 10, 100, 1, 1, 1 };
+	CreateVertexBuffer();
+	CreateIndexBuffers();
+	CreateConstantBuffer(-1);
 	pContext->DrawIndexed(6, 0, 0);
 }
 
@@ -418,14 +357,12 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	HWND hWnd = CreateWindowEx(
 		0, pClassName, L"framework",
 		WS_POPUP | WS_VISIBLE,
-		1000, 100, WIDTH, HEIGHT,
+		0, 0, WIDTH, HEIGHT,
 		nullptr, nullptr, hInstance, nullptr
 	);
 
 	CreateGraphics(hWnd);
 	SetupRenderer();
-	SetupRectBuffers();
-
 	ShowWindow(hWnd, SW_SHOW);
 
 	MSG msg;
