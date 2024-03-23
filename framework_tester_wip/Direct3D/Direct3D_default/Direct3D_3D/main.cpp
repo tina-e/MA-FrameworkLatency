@@ -5,8 +5,8 @@
 
 const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
 const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-//const int WIDTH = 500;
-//const int HEIGHT = 500;
+//const int WIDTH = 100;
+//const int HEIGHT = 100;
 bool wasPressed = false;
 
 ID3D11Device* pDevice = nullptr;
@@ -29,7 +29,7 @@ void CreateGraphics(HWND hWnd) {
 	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	sd.BufferCount = 1;
 	sd.OutputWindow = hWnd;
-	sd.Windowed = TRUE;
+	sd.Windowed = FALSE;
 	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	sd.Flags = 0;
 
@@ -48,6 +48,8 @@ void CreateGraphics(HWND hWnd) {
 		nullptr,
 		&pContext
 	);
+
+	pSwapChain->SetFullscreenState(TRUE, nullptr);
 
 	ID3D11Resource* pBackBuffer = nullptr;
 	pSwapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));

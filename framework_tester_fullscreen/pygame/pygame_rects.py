@@ -25,8 +25,6 @@ background_color_white = (255,255,255)
 
 screen.fill(background_color_black)
 
-measure_counter = 0
-
 pygame.display.flip()
 
 def randint(a, b):
@@ -68,7 +66,6 @@ while running:
     
     if event.type == pygame.MOUSEBUTTONUP:
         screen.fill(background_color_black)
-        measure_counter+=1
             
     
     pygame.display.update()
