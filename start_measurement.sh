@@ -74,7 +74,7 @@ case "$TEST_PROGRAM" in
         PID_TEST_PROGRAM=$!
         ;;
 
-    *"DirectX"*)
+    *"Direct"*)
         cd "./framework_tester_${FULLSCREEN_OPTION}/${TEST_PROGRAM}_${TEST_COMPLEXITY}"
         start "./${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe" &
         PID_TEST_PROGRAM=$! 

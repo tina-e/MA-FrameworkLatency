@@ -1,0 +1,4 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
+0,0,509,GLUT,rects,GLUT_rects,fullscreen,2,windup_fullscreen,8844,5349,3495
+1,1,509,GLUT,rects,GLUT_rects,fullscreen,2,windup_fullscreen,8764,5285,3479
+2,2,509,GLUT,rects,GLUT_rects,fullscreen,2,windup_fullscreen,7470,3869,3601
