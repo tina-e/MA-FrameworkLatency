@@ -45,8 +45,10 @@ def update_rects():
         rect.fillColor = [r, g, b, 1]
 
 
+# this should be in update_rects for comparability to other fws,
+# but it is sooo damn slow - so we build the rect stimuli once
+rects = create_rects() 
 mouse = event.Mouse()
-rects = create_rects()
 
 
 while(1):
@@ -58,6 +60,10 @@ while(1):
             rect.draw()
     elif (mouse.getPressed()[0] == 0 and is_clicked):
         is_clicked = False
+    elif 'escape' in event.getKeys():
+        break
     #mywin.flip()
     mywin.update()
     
+
+mywin.close()
