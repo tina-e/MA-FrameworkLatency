@@ -1,4 +1,4 @@
-from psychopy import visual, event  # import some libraries from PsychoPy
+from psychopy import visual, event 
 from psychopy.hardware import mouse
 
 
