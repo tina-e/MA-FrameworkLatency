@@ -33,7 +33,7 @@ window = app.Window(width=WIDTH, height=HEIGHT, color=BLACK, decoration=False, f
 program = gloo.Program(vertex, fragment, count=4)
 program['position'] = [(-1,-1), (-1,+1), (+1,-1), (+1,+1)]
 program['texcoord'] = [( 0, 1), ( 0, 0), ( 1, 1), ( 1, 0)]
-program['texture'] = data.get("D:\Studium\Masterarbeit\MA-FrameworkLatency\\noise.png")
+program['texture'] = data.get("noise.png")
 
 pressed = False
 
