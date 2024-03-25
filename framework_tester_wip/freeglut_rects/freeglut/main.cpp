@@ -78,15 +78,13 @@ void input(int button, int state, int x, int y)
 {
     if (button == 0 && state == GLUT_DOWN && !is_pressed)
     {
-        glClear(GL_COLOR_BUFFER_BIT);
         is_pressed = true;
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
         drawRectangles();
     }
     else if (is_pressed)
     {
         is_pressed = false;
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
     }
     glutSwapBuffers();

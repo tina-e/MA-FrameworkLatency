@@ -1,0 +1,15 @@
+﻿  main.cpp
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(34,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(35,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(36,25): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(43,32): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(43,29): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\FLTK_rects\main.cpp(43,26): warning C4244: "Argument": Konvertierung von "float" in "uchar", möglicher Datenverlust
+  Code wird generiert.
+  2 of 17 functions (11.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Codegenerierung ist abgeschlossen.
+  FLTK_rects.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_rects\FLTK_rects\x64\Release\FLTK_rects.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

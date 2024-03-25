@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-66379efa21b773ec2128.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt5_image",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_image-Debug-6c10f31c04718b3404ce.json",
+					"name" : "Qt5_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_image_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_image_autogen-Debug-3189573b543c0f8a08d5.json",
+					"name" : "Qt5_image_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_image_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_image_autogen_timestamp_deps-Debug-88dc047c6152ae4b775b.json",
+					"name" : "Qt5_image_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_image-Desktop_Qt_5_15_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_image"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

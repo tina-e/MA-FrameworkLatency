@@ -3,12 +3,15 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class JavaSwing_image extends JFrame {
+    private static final int WIDTH = 1920;
+    private static final int HEIGHT = 1080;
+
     private Color color;
     private Image image;
     private boolean pressed = false;
 
     public JavaSwing_image() {
-        setSize(1920, 1080);
+        setSize(WIDTH, HEIGHT);
         setTitle("framework");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setVisible(true);
