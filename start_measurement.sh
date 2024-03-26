@@ -65,8 +65,8 @@ case "$TEST_PROGRAM" in
         ;;
 
     *"Godot"*)
-        start ./framework_tester_${FULLSCREEN_OPTION}/GameEngines/$TEST_PROGRAM/${TEST_PROGRAM}_${TEST_COMPLEXITY}.exe &
-        PID_TEST_PROGRAM=$!
+        start ./$FW_PATH.exe &
+        PID_TEST_PROGRAM=$! 
         ;;
 
     *"Unity"*)
