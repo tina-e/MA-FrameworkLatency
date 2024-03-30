@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
+0,0,482,JavaSwing,default,JavaSwing_default,no_fullscreen,,none,13985,-1,13986
+1,1,482,JavaSwing,default,JavaSwing_default,no_fullscreen,,none,11688,-1,11689
