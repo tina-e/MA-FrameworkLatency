@@ -39,6 +39,8 @@ int main(int argc, char** argv)
     SDL_GL_SetSwapInterval(0); // 0 immediate, 1 vsync, -1 adaptive sync
 
     glewInit();
+    SDL_Surface* image = IMG_Load("noise.png");
+
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 

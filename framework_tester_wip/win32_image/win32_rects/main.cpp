@@ -6,6 +6,10 @@
 
 typedef uint32_t u32;
 
+HWND Window = nullptr;
+HDC DeviceContext = nullptr;
+HBITMAP hBitmap = NULL; 
+
 void* BitmapMemory;
 
 int BitmapWidth;
@@ -17,44 +21,10 @@ int ClientHeight;
 const int n_rects = 1000;
 bool isPressed = false;
 
-
-int randint(int low, int high)
-{
-    return low + rand() % (high - low);
-}
-
-
-void DrawRects() {
-    int rectW = ClientWidth / 5;
-    int rectH = ClientHeight / 5;
-    for (int i = 0; i < n_rects; i++) {
-        int rectX = (rand() % (ClientWidth / 2 - rectW)) + ClientWidth / 2;
-        int rectY = rand() % (ClientHeight - rectH);
-
-        int r = randint(0, 255);
-        int g = randint(0, 255);
-        int b = randint(0, 255);
-        u32 color = (255 << 24) + (int(r) << 16) + (int(g) << 8) + int(b);
-
-        u32* pixel = (u32*)BitmapMemory;
-        pixel += rectY * BitmapWidth + rectX;
-
-        for (int y = 0; y < rectH; ++y) {
-            for (int x = 0; x < rectW; ++x) {
-                *pixel++ = color;
-            }
-            pixel += BitmapWidth - rectW;
-        }
-    }
-    // draw white rect
-    u32* pixel = (u32*)BitmapMemory;
-    for (int y = 0; y < rectH; ++y) {
-        for (int x = 0; x < rectW; ++x) {
-            *pixel++ = 0xffffff;
-        }
-        pixel += BitmapWidth - rectW;
-    }
-    //OutputDebugStringW(L"rects done\n");
+void DrawImage() {
+    RECT rect;
+    GetWindowRect(Window, &rect);
+    FillRect(DeviceContext, &rect, brush);
 }
 
 void clear() {
@@ -74,12 +44,10 @@ LRESULT CALLBACK WindowProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LPa
             }
         } break;
         case WM_LBUTTONDOWN: {
-            //OutputDebugStringW(L"down\n");
             isPressed = true;
-            DrawRects();
+            DrawImage();
         }; break;
         case WM_LBUTTONUP: {
-            //OutputDebugStringW(L"up\n");
             isPressed = false;
         }; break;
         case WM_DESTROY: {
@@ -106,7 +74,7 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
     int w = GetSystemMetrics(SM_CXSCREEN);
     int h = GetSystemMetrics(SM_CYSCREEN);
 
-    HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
+    Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
     if (!Window) return 0;
     ShowWindow(Window, SW_SHOW);
     //ShowWindow(Window, SW_SHOWMAXIMIZED);
@@ -142,7 +110,9 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
     BitmapInfo.bmiHeader.biBitCount = 32;
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
 
-    HDC DeviceContext = GetDC(Window);
+    DeviceContext = GetDC(Window);
+
+    hBitmap = (HBITMAP)LoadImage(hInst, L"noise.png", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 
     bool Running = true;
     while (Running) {
