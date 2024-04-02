@@ -8,7 +8,7 @@ import pandas as pd
 import uuid
 import pyautogui
 import pyttsx3
-
+import win32gui
 
 
 pyautogui.FAILSAFE = False
@@ -38,6 +38,10 @@ class FYALMDController:
 
 
     def ensure_focus(self):
+        if self.fw_name is 'Unity' and self.fullscreen_option is 'small':
+            hwnd = win32gui.FindWindow(None, u'framework')
+            rect = win32gui.GetWindowRect(hwnd)
+            win32gui.MoveWindow(hwnd, rect[0] - 3, rect[1] - 32, rect[2], rect[3], False)
         time.sleep(0.2)
         pyautogui.moveTo(10, 30)
         time.sleep(0.2)
@@ -95,7 +99,7 @@ class FYALMDController:
     # make sure focus is in framework test applications and start pixel reader
     def start(self):
         self.ensure_focus()
-        self.da_schmatzer.say(f'Ich teste jetzt {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}.')
+        self.da_schmatzer.say(f'Ich teste jetzt {self.fw_name} {self.complexity} in {self.fullscreen_option} mit {self.program_name}.')
         self.da_schmatzer.runAndWait()
         self.measuring = True
         signal.signal(signal.SIGINT, signal_handler)
@@ -122,10 +126,10 @@ class FYALMDController:
         df.to_csv(self.out_path)
         num_negative_diff = df[df['diff'] < 0].count().iloc[0]
         if num_negative_diff == 0:
-            self.da_schmatzer.say(f'Ohhhhh yeah, keine negative Werte für {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}')
+            self.da_schmatzer.say(f'Ohhhhh yeah, keine negative Werte für {self.fw_name} {self.complexity} in {self.fullscreen_option} mit {self.program_name}')
             self.da_schmatzer.runAndWait()
         else:
-            self.da_schmatzer.say(f'{str(num_negative_diff)} negative Werte für {self.fw_name} {self.complexity} in {"fullscreen" if self.fullscreen_mode else "nicht fullscreen"} mit {self.program_name}')
+            self.da_schmatzer.say(f'{str(num_negative_diff)} negative Werte für {self.fw_name} {self.complexity} in {self.fullscreen_option} mit {self.program_name}')
             self.da_schmatzer.runAndWait()
 
 
