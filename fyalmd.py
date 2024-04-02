@@ -38,7 +38,7 @@ class FYALMDController:
 
 
     def ensure_focus(self):
-        if self.fw_name is 'Unity' and self.fullscreen_option is 'small':
+        if self.fw_name == 'Unity' and self.fullscreen_option == 'small':
             hwnd = win32gui.FindWindow(None, u'framework')
             rect = win32gui.GetWindowRect(hwnd)
             win32gui.MoveWindow(hwnd, rect[0] - 3, rect[1] - 32, rect[2], rect[3], False)

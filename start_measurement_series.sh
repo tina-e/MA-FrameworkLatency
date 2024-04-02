@@ -11,7 +11,8 @@ FRAMEWORKS_3D=("Direct3D" "GLEW_SDL" "GLUT" "pygame" "pyglet" "Unity")
 FRAMEWORKS_IMAGE=("GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "tkinter" "Unity" "wxpython")
 FRAMEWORKS_FULLSCREEN_AND_RECTS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython" "psychopy_pyglet")
 FRAMEWORKS_NO_FULLSCREEN=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython")
-FRAMEWORKS_SMALL=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
+#FRAMEWORKS_SMALL=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
+FRAMEWORKS_SMALL=("Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
 
 FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
 
@@ -32,25 +33,38 @@ sleep "7s"
 #     f=$((f+1));
 # done
 
-# condition image
-for f in "${!FRAMEWORKS_IMAGE[@]}";
+# # condition image
+# for f in "${!FRAMEWORKS_IMAGE[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_IMAGE[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+# sleep "3s"
+
+# # no fullscreen
+# for f in "${!FRAMEWORKS_NO_FULLSCREEN[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NO_FULLSCREEN[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+# sleep "3s"
+
+# condition 3D
+for f in "${!FRAMEWORKS_3D[@]}";
 do
     for r in "${!READERS[@]}";
     do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_IMAGE[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
-        r=$((r+1));
-    done
-    f=$((f+1));
-done
-
-sleep "3s"
-
-# no fullscreen
-for f in "${!FRAMEWORKS_NO_FULLSCREEN[@]}";
-do
-    for r in "${!READERS[@]}";
-    do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NO_FULLSCREEN[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_3D[$f]}" 3D "${READERS[$r]}" fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));
@@ -64,19 +78,6 @@ do
     for r in "${!READERS[@]}";
     do
         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_SMALL[$f]}" default "${READERS[$r]}" small $DATA_DIR
-        r=$((r+1));
-    done
-    f=$((f+1));
-done
-
-sleep "3s"
-
-# condition 3D
-for f in "${!FRAMEWORKS_3D[@]}";
-do
-    for r in "${!READERS[@]}";
-    do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_3D[$f]}" 3D "${READERS[$r]}" fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));
