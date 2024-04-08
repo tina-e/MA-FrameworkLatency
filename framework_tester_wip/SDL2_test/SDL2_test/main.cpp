@@ -1,10 +1,11 @@
-#include "SDL.h"
+//#include "SDL.h"
 #include <windows.h>
 #include <signal.h>
 #include <iostream>
 //#include <GL/glut.h>
 //#include <GL/gl.h>
 #include <chrono>
+#include <SDL2/SDL.h>
 
 using namespace std;
 using namespace chrono;
@@ -14,17 +15,17 @@ using namespace chrono;
 //PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
 
 // screen size
-//int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-//int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-int WIDTH = 100;
-int HEIGHT = 100;
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+//int WIDTH = 100;
+//int HEIGHT = 100;
 
 // select SDL2 renderer: https://wiki.libsdl.org/SDL_RendererFlags
-//#define RENDERER SDL_RENDERER_ACCELERATED
-#define RENDERER SDL_RENDERER_PRESENTVSYNC
+#define RENDERER SDL_RENDERER_ACCELERATED
+//#define RENDERER SDL_RENDERER_PRESENTVSYNC
 
-#define WINDOW_STYLE SDL_WINDOW_BORDERLESS
-// #define WINDOW_STYLE SDL_WINDOW_FULLSCREEN_DESKTOP
+//#define WINDOW_STYLE SDL_WINDOW_BORDERLESS
+#define WINDOW_STYLE SDL_WINDOW_FULLSCREEN
 
 //#ifndef DRIVER
 // supported:
@@ -56,8 +57,8 @@ int main(int argc, char **argv)
     SDL_SetWindowTitle(window, "framework");
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, RENDERER);
-    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "1"); // sollte eig mit RENDERER schon abgedeckt sein
-    SDL_RenderSetVSync(renderer, SDL_TRUE);
+    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0"); // sollte eig mit RENDERER schon abgedeckt sein
+    SDL_RenderSetVSync(renderer, SDL_FALSE);
     
     // draw a black image
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);

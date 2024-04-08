@@ -1,8 +1,9 @@
-#include "SDL.h"
+//#include "SDL.h"
 #include <signal.h>
 #include <cstdlib>
 #include <ctime>
 #include <Windows.h>
+#include <SDL2/SDL.h>
 
 // supported:
 // direct3d
@@ -11,7 +12,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "software"
 
 // screen size
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
