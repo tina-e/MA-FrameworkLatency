@@ -3,6 +3,7 @@
 #include <signal.h>
 #include <windows.h>
 #include <SOIL/SOIL.h>
+//#include <SOIL2/SOIL2.h>
 
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
 int HEIGHT = GetSystemMetrics(SM_CYSCREEN);

@@ -1,1 +1,32 @@
-﻿
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (x64\Debug\) enthält freigegebene Dateien aus einem anderen Projekt (GLEW_SDL_default.vcxproj, SDL2_test.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
+LINK : warning LNK4098: Standardbibliothek "MSVCRTD" steht in Konflikt mit anderen Bibliotheken; /NODEFAULTLIB:Bibliothek verwenden.
+LINK : warning LNK4217: Das in "fclose" definierte Symbol "libucrtd.lib(fclose.obj)" wird durch "SOIL.lib(SOIL.c.obj)" in die Funktion "SOIL_direct_load_DDS" importiert.
+LINK : warning LNK4286: Das in "fclose" definierte Symbol "libucrtd.lib(fclose.obj)" wird durch "SOIL.lib(stb_image_aug.c.obj)" importiert.
+LINK : warning LNK4286: Das in "fclose" definierte Symbol "libucrtd.lib(fclose.obj)" wird durch "SOIL.lib(image_DXT.c.obj)" importiert.
+LINK : warning LNK4217: Das in "free" definierte Symbol "libucrtd.lib(free.obj)" wird durch "SOIL.lib(SOIL.c.obj)" in die Funktion "SOIL_free_image_data" importiert.
+LINK : warning LNK4286: Das in "free" definierte Symbol "libucrtd.lib(free.obj)" wird durch "SOIL.lib(stb_image_aug.c.obj)" importiert.
+LINK : warning LNK4286: Das in "free" definierte Symbol "libucrtd.lib(free.obj)" wird durch "SOIL.lib(image_DXT.c.obj)" importiert.
+LINK : warning LNK4217: Das in "malloc" definierte Symbol "libucrtd.lib(malloc.obj)" wird durch "SOIL.lib(SOIL.c.obj)" in die Funktion "SOIL_create_OGL_single_cubemap" importiert.
+LINK : warning LNK4286: Das in "malloc" definierte Symbol "libucrtd.lib(malloc.obj)" wird durch "SOIL.lib(stb_image_aug.c.obj)" importiert.
+LINK : warning LNK4286: Das in "malloc" definierte Symbol "libucrtd.lib(malloc.obj)" wird durch "SOIL.lib(image_DXT.c.obj)" importiert.
+LINK : warning LNK4217: Das in "strncmp" definierte Symbol "libucrtd.lib(strncmp.obj)" wird durch "SOIL.lib(stb_image_aug.c.obj)" in die Funktion "hdr_load" importiert.
+SOIL.lib(SOIL.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_fopen" in Funktion "SOIL_direct_load_DDS".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fopen".
+SOIL.lib(image_DXT.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fopen".
+SOIL.lib(SOIL.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_fread" in Funktion "SOIL_direct_load_DDS".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fread".
+SOIL.lib(SOIL.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_fseek" in Funktion "SOIL_direct_load_DDS".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fseek".
+SOIL.lib(SOIL.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_ftell" in Funktion "SOIL_direct_load_DDS".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ftell".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_feof" in Funktion "at_eof".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_fgetc" in Funktion "get8".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_fwrite" in Funktion "write8".
+SOIL.lib(image_DXT.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fwrite".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_ldexp" in Funktion "hdr_convert".
+SOIL.lib(image_helper.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ldexp".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_realloc" in Funktion "expand".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_strtol" in Funktion "hdr_load".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp__wassert" in Funktion "convert_format".
+SOIL.lib(image_helper.c.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "__imp_sqrtf" in Funktion "RGBE_to_RGBdivA2".
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_SDL_image\x64\Debug\GLEW_SDL_image.exe : fatal error LNK1120: 12 nicht aufgelöste Externe
