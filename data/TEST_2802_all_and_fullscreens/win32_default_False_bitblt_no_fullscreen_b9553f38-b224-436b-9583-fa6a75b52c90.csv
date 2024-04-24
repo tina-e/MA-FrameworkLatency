@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,win32,default,win32_default,False,,bitblt,False,bitblt_False,11031,-1,11032
-1,1,win32,default,win32_default,False,,bitblt,False,bitblt_False,9670,-1,9671
-2,2,win32,default,win32_default,False,,bitblt,False,bitblt_False,11696,-1,11697
-3,3,win32,default,win32_default,False,,bitblt,False,bitblt_False,11745,-1,11746
-4,4,win32,default,win32_default,False,,bitblt,False,bitblt_False,12668,-1,12669

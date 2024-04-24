@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,tkinter,default,tkinter_default,windup_python,False,windup_python_False,67904,-1,67905
-1,1,tkinter,default,tkinter_default,windup_python,False,windup_python_False,76664,-1,76665

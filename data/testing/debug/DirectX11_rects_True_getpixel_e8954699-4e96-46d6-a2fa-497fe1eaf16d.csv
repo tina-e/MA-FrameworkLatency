@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,DirectX11,rects,DirectX11_rects,getpixel,True,getpixel_True,18881,16336,2545
-1,1,DirectX11,rects,DirectX11_rects,getpixel,True,getpixel_True,18712,16285,2427

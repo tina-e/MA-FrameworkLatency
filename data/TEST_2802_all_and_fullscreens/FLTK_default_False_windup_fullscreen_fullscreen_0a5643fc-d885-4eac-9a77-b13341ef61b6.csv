@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,default,FLTK_default,True,,windup_fullscreen,False,windup_fullscreen_False,11870,-1,11871
-1,1,FLTK,default,FLTK_default,True,,windup_fullscreen,False,windup_fullscreen_False,10683,-1,10684
-2,2,FLTK,default,FLTK_default,True,,windup_fullscreen,False,windup_fullscreen_False,10725,-1,10726
-3,3,FLTK,default,FLTK_default,True,,windup_fullscreen,False,windup_fullscreen_False,12631,-1,12632
-4,4,FLTK,default,FLTK_default,True,,windup_fullscreen,False,windup_fullscreen_False,9754,-1,9755

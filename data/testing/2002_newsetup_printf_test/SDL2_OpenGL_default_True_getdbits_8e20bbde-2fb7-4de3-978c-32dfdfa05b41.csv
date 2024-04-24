@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_OpenGL,default,SDL2_OpenGL_default,getdbits,True,getdbits_True,6633,-1,6634
-1,1,SDL2_OpenGL,default,SDL2_OpenGL_default,getdbits,True,getdbits_True,6507,-1,6508

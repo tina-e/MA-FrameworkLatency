@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,win32,rects,win32_rects,getdbits,True,getdbits_True,181216,172687,8529
-1,1,win32,rects,win32_rects,getdbits,True,getdbits_True,171416,161139,10277

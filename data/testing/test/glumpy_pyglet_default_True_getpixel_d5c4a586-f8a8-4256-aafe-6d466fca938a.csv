@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,glumpy_pyglet,default,glumpy_pyglet_default,getpixel,True,getpixel_True,11996,3707,8289
-1,1,glumpy_pyglet,default,glumpy_pyglet_default,getpixel,True,getpixel_True,10528,2906,7622
-2,2,glumpy_pyglet,default,glumpy_pyglet_default,getpixel,True,getpixel_True,10304,2945,7359
-3,3,glumpy_pyglet,default,glumpy_pyglet_default,getpixel,True,getpixel_True,10864,3075,7789
-4,4,glumpy_pyglet,default,glumpy_pyglet_default,getpixel,True,getpixel_True,10872,2743,8129

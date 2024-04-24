@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,psychopy_pygame,default,psychopy_pygame_default,getpixel,True,getpixel_True,88,-1,89
-1,1,psychopy_pygame,default,psychopy_pygame_default,getpixel,True,getpixel_True,211,14285512,-14285301

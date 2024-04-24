@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,GTK,default,GTK_default,getdbits,True,getdbits_True,24590,-1,24591
-1,1,GTK,default,GTK_default,getdbits,True,getdbits_True,24501,-1,24502

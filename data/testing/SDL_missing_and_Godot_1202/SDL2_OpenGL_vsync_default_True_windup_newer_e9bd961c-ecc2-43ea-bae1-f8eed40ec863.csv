@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_OpenGL_vsync,default,SDL2_OpenGL_vsync_default,windup_newer,True,windup_newer_True,10312,-1,10313
-1,1,SDL2_OpenGL_vsync,default,SDL2_OpenGL_vsync_default,windup_newer,True,windup_newer_True,9420,-1,9421
-2,2,SDL2_OpenGL_vsync,default,SDL2_OpenGL_vsync_default,windup_newer,True,windup_newer_True,10424,-1,10425
-3,3,SDL2_OpenGL_vsync,default,SDL2_OpenGL_vsync_default,windup_newer,True,windup_newer_True,8516,-1,8517
-4,4,SDL2_OpenGL_vsync,default,SDL2_OpenGL_vsync_default,windup_newer,True,windup_newer_True,8624,-1,8625

@@ -1,6 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,511,glumpy_sdl,default,glumpy_sdl_default,fullscreen,3,getpixel,6346,-1,6347
-1,1,511,glumpy_sdl,default,glumpy_sdl_default,fullscreen,3,getpixel,5264,-1,5265
-2,2,511,glumpy_sdl,default,glumpy_sdl_default,fullscreen,3,getpixel,3943,-1,3944
-3,3,511,glumpy_sdl,default,glumpy_sdl_default,fullscreen,3,getpixel,4177,-1,4178
-4,4,511,glumpy_sdl,default,glumpy_sdl_default,fullscreen,3,getpixel,4257,-1,4258

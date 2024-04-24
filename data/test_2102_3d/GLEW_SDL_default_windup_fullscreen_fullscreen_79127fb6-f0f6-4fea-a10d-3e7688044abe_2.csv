@@ -1,4 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,506,GLEW_SDL,default,GLEW_SDL_default,fullscreen,3,windup_fullscreen,5951,2755,3196
-1,1,506,GLEW_SDL,default,GLEW_SDL_default,fullscreen,3,windup_fullscreen,5360,3363,1997
-2,2,506,GLEW_SDL,default,GLEW_SDL_default,fullscreen,3,windup_fullscreen,5934,2585,3349

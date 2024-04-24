@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyqt5,default,pyqt5_default,getpixel,True,getpixel_True,61056,21192,39864
-1,1,pyqt5,default,pyqt5_default,getpixel,True,getpixel_True,46176,21865,24311

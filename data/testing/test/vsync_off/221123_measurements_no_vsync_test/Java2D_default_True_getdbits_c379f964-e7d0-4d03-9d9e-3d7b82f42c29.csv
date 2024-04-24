@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,Java2D,default,Java2D_default,getdbits,True,getdbits_True,41772,17120,24652
-1,1,Java2D,default,Java2D_default,getdbits,True,getdbits_True,35736,10220,25516

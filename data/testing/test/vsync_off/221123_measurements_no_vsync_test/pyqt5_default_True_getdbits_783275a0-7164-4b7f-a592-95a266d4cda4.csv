@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,59608,19670,39938
-1,1,pyqt5,default,pyqt5_default,getdbits,True,getdbits_True,57904,18289,39615

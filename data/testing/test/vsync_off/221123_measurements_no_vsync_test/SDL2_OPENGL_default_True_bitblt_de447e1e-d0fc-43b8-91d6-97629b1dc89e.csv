@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_OPENGL,default,SDL2_OPENGL_default,bitblt,True,bitblt_True,40900,17840,23060
-1,1,SDL2_OPENGL,default,SDL2_OPENGL_default,bitblt,True,bitblt_True,34608,17378,17230

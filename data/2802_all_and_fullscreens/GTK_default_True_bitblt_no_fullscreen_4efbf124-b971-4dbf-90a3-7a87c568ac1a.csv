@@ -1,4 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,GTK,default,GTK_default,False,2,bitblt,True,bitblt_True,23958,17249,6709
-1,1,GTK,default,GTK_default,False,2,bitblt,True,bitblt_True,21582,18043,3539
-2,2,GTK,default,GTK_default,False,2,bitblt,True,bitblt_True,21670,15843,5827
