@@ -1,9 +1,21 @@
-﻿  main.cpp
-  Generating code
-  1 of 2 functions (50.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  SDL2_test.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_test\x64\Release\SDL2_test.exe
-  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
-  konnte nicht gefunden werden.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (x64\Release\) enthält freigegebene Dateien aus einem anderen Projekt (SDL2_test.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
+  main.cpp
+LINK : warning LNK4098: Standardbibliothek "MSVCRT" steht in Konflikt mit anderen Bibliotheken; /NODEFAULTLIB:Bibliothek verwenden.
+SOIL.lib(SOIL.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fopen".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fopen".
+SOIL.lib(image_DXT.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fopen".
+SOIL.lib(SOIL.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fread".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fread".
+SOIL.lib(SOIL.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fseek".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fseek".
+SOIL.lib(SOIL.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ftell".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ftell".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_feof".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fgetc".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fwrite".
+SOIL.lib(image_DXT.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_fwrite".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ldexp".
+SOIL.lib(image_helper.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_ldexp".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_realloc".
+SOIL.lib(stb_image_aug.c.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "__imp_strtol".
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_SDL_image\x64\Release\GLEW_SDL_image.exe : fatal error LNK1120: 10 nicht aufgelöste Externe

@@ -1,7 +1,8 @@
-#include "SDL.h"
+//#include "SDL.h"
 #include <GL/glew.h>
 #include <signal.h>
 #include <windows.h>
+#include <SDL2/SDL.h>
 #include <SOIL/SOIL.h>
 //#include <SOIL2/SOIL2.h>
 

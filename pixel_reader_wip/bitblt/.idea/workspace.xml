@@ -3,151 +3,46 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
-  <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="bitblt" targetName="bitblt" />
-    </generated>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b47bdf-1212-4e7e-afa1-d7929b4cda6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/DirectX11_default/DirectX11_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/DirectX11_default/DirectX11_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/GLUT/GLUT_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/GLUT/GLUT_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/SDL2_Software/SDL2_Software_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_fullscreen/pyqt6/pyqt6_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_fullscreen/pyqt6/pyqt6_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Direct3D/SDL2_Direct3D_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OPENGL/SDL2_OPENGL_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES/SDL2_OpenGLES_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_OpenGLES2/SDL2_OpenGLES2_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_no_fullscreen/SDL2_Software/SDL2_Software_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.vcxproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Chapter2_Tutorial6.vcxproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/fxc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/fxc.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX1.394F81AC.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.iobj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.ipdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/DirectX11_default.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Rect.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Rect.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Renderer.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/Window.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Release/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_default/Renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Chapter2_Tutorial6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/DirectX11_rects.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/DirectX11_rects.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/fxc.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/DirectX11_rects.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Rect.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Rect.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Renderer.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/Window.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Chapter2_Tutorial6.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Chapter2_Tutorial6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.iobj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.ipdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/DirectX11_rects.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/Renderer.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Release/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/Renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectPixelShader.cso" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectPixelShader.cso" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectVertexShader.cso" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/DirectX11_rects/rectVertexShader.cso" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QList.10E03A4296F712FD.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QList.10E03A4296F712FD.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QMouseEvent.915A4B2A1F0E56A1.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QMouseEvent.915A4B2A1F0E56A1.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QObject.6970A8F69698DF54.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QObject.6970A8F69698DF54.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QPainter.3B025E526FD30C21.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QPainter.3B025E526FD30C21.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QRect.79A06B016510AEB1.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QRect.79A06B016510AEB1.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QScreen.2FF7E964C78A852E.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QScreen.2FF7E964C78A852E.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSize.F73FE3F2E33A226A.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSize.F73FE3F2E33A226A.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSizeF.09DE3A0897FFCB62.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QSizeF.09DE3A0897FFCB62.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QTransform.0096A4DD8CEFAD92.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/QTransform.0096A4DD8CEFAD92.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/mainwindow.cpp.F468ADD9C6FCA1CE.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/mainwindow.cpp.F468ADD9C6FCA1CE.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qevent.h.CCF22C1616A3DC68.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qevent.h.CCF22C1616A3DC68.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfile.h.3328399C0817BD1F.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfile.h.3328399C0817BD1F.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfiledevice.h.974956746D0BF75D.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qfiledevice.h.974956746D0BF75D.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qpainter.h.2FACC58532DAAFC8.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qpainter.h.2FACC58532DAAFC8.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qscreen.h.E5FD48A49C5241D9.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qscreen.h.E5FD48A49C5241D9.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qset.h.59AA419B1C606380.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qset.h.59AA419B1C606380.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtextoption.h.3D330CFD0E6E0908.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtextoption.h.3D330CFD0E6E0908.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtouchdevice.h.D3DF5908BFFE263A.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qtouchdevice.h.D3DF5908BFFE263A.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qurl.h.2E3238F8430CD0AD.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qurl.h.2E3238F8430CD0AD.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qvector2d.h.C3E76D9F5D7DD146.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/.qtc_clangd/.cache/clangd/index/qvector2d.h.C3E76D9F5D7DD146.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt5_default.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Qt5_default.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/SDL2_rects.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/SDL2_rects.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_rects/SDL2_rects/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.Build.CppClean.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/SDL2_test.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/SDL2_test/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/SDL2_test/x64/Debug/SDL2_test.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/freeglut.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/freeglut/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/freeglut/x64/Debug/freeglut.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../fyalmd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/SDL2_test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/SDL2_test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/SDL2_test/x64/Release/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/x64/Debug/GLEW_SDL_image.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../framework_tester_wip/GLEW_SDL_image/x64/Debug/GLEW_SDL_image.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/CMakeFiles/getpixel.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/cmake-build-debug/getpixel.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/cmake-build-debug/getpixel.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../windup/windup.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/bitblt.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testing/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../testing/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +52,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -166,39 +60,26 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="2.2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
   <component name="ProjectId" id="2cfeG6YwmAa5T5xV4U4U4fwo492" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="bitblt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="bitblt" TARGET_NAME="bitblt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="bitblt" RUN_TARGET_NAME="bitblt">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -212,6 +93,7 @@
       <updated>1708506961728</updated>
       <workItem from="1708506962925" duration="47000" />
       <workItem from="1709129202420" duration="820000" />
+      <workItem from="1713967888440" duration="218000" />
     </task>
     <servers />
   </component>

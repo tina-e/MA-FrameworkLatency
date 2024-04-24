@@ -116,11 +116,11 @@
 
 
 
-# # # import pyttsx3
-# # # engine = pyttsx3.init()
-# # # engine.setProperty('rate', 130)
-# # # engine.say("Hallo Nici! Wie geht es dir heute? Ich piepse jetzt dann 200-mal. Ich hoffe, das stört nicht. Mit freundlichen Füßen!")
-# # # engine.runAndWait()
+import pyttsx3
+engine = pyttsx3.init()
+engine.setProperty('rate', 130)
+engine.say("Ding Dang Dong. Auswahl der Gebäckstücke vom 12. April 2024: Börekstange mit Spinat und Weichkäse. Breze. Pfefferbreze. Franzbrötchen. Schoki-Vanille-Gebäck. Vielen Dank für die Aufmerksamkeit und äh joa")
+engine.runAndWait()
 
 # # import pyautogui
 # # pyautogui.moveTo(10, 30)
