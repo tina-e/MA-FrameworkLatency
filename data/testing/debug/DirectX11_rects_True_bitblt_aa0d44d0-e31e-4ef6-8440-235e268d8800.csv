@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,DirectX11,rects,DirectX11_rects,bitblt,True,bitblt_True,21672,15133,6539
-1,1,DirectX11,rects,DirectX11_rects,bitblt,True,bitblt_True,21673,15818,5855

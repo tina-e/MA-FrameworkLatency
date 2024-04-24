@@ -1,1 +1,0 @@
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\SDL2_rects\SDL2_rects\x64\Debug\SDL2_rects.vcxproj.CopyComplete

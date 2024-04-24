@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_Software,default,SDL2_Software_default,getdbits,True,getdbits_True,52008,12284,39724
-1,1,SDL2_Software,default,SDL2_Software_default,getdbits,True,getdbits_True,45048,20466,24582

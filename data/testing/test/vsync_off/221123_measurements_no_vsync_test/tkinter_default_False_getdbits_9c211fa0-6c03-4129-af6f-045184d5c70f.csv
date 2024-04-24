@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,tkinter,default,tkinter_default,getdbits,False,getdbits_False,64176,-1,64177
-1,1,tkinter,default,tkinter_default,getdbits,False,getdbits_False,56336,-1,56337

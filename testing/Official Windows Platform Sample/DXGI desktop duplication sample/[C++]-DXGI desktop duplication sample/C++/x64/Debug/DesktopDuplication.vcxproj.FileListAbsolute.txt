@@ -1,2 +1,0 @@
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\DesktopDuplication.exe
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\pixel_reader_wip\Official Windows Platform Sample\DXGI desktop duplication sample\[C++]-DXGI desktop duplication sample\C++\x64\Debug\DesktopDuplication.exe

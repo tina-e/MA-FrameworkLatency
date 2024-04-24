@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,GLUT,rects,GLUT_rects,autoit_reader,False,autoit_reader_False,15924,-1,15925
-1,1,GLUT,rects,GLUT_rects,autoit_reader,False,autoit_reader_False,14788,-1,14789
-2,2,GLUT,rects,GLUT_rects,autoit_reader,False,autoit_reader_False,16132,-1,16133
-3,3,GLUT,rects,GLUT_rects,autoit_reader,False,autoit_reader_False,15804,-1,15805
-4,4,GLUT,rects,GLUT_rects,autoit_reader,False,autoit_reader_False,16244,-1,16245

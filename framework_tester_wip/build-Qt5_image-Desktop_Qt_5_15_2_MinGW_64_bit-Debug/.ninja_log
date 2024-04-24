@@ -1,9 +1,0 @@
-# ninja log v5
-1	748	7330592976731374	Qt5_image_autogen/timestamp	be28d10c2a82e6bb
-1	748	7330592976731374	Qt5_image_autogen/mocs_compilation.cpp	be28d10c2a82e6bb
-1	748	7330592976731374	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_image-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Qt5_image_autogen/timestamp	be28d10c2a82e6bb
-1	748	7330592976731374	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt5_image-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/Qt5_image_autogen/mocs_compilation.cpp	be28d10c2a82e6bb
-753	1983	7330592989575068	CMakeFiles/Qt5_image.dir/Qt5_image_autogen/mocs_compilation.cpp.obj	f778dd54d36d3299
-749	2096	7330592990711783	CMakeFiles/Qt5_image.dir/main.cpp.obj	6fceff7b299fa1f0
-757	2211	7330592991868685	CMakeFiles/Qt5_image.dir/mainwindow.cpp.obj	2ef90693946d2246
-2211	2409	7330592993814517	Qt5_image.exe	9fff6a44f9b8bd3d

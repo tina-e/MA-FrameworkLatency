@@ -1,3 +1,0 @@
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_default\GTK_default\GTK_default\x64\Debug\GTK_default.vcxproj.CopyComplete
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_rects\GTK_rects\GTK_default\x64\Debug\GTK_default.vcxproj.CopyComplete
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_image\GTK_rects\GTK_default\x64\Debug\GTK_default.vcxproj.CopyComplete
