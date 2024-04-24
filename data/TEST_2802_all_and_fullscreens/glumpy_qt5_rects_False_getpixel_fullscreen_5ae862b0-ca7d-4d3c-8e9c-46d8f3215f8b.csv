@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,glumpy_qt5,rects,glumpy_qt5_rects,True,,getpixel,False,getpixel_False,17914,-1,17915
-1,1,glumpy_qt5,rects,glumpy_qt5_rects,True,,getpixel,False,getpixel_False,19682,-1,19683

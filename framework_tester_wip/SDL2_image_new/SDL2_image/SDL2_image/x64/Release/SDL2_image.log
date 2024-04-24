@@ -1,2 +1,0 @@
-﻿  main.cpp
-LINK : fatal error LNK1181: Eingabedatei "SDL2_image.libkernel32.lib" kann nicht geöffnet werden.

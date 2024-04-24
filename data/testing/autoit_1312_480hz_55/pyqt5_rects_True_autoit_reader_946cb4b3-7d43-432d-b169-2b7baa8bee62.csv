@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyqt5,rects,pyqt5_rects,autoit_reader,True,autoit_reader_True,25648,2,25646
-1,1,pyqt5,rects,pyqt5_rects,autoit_reader,True,autoit_reader_True,23200,2,23198
-2,2,pyqt5,rects,pyqt5_rects,autoit_reader,True,autoit_reader_True,23636,2,23634
-3,3,pyqt5,rects,pyqt5_rects,autoit_reader,True,autoit_reader_True,24644,2,24642
-4,4,pyqt5,rects,pyqt5_rects,autoit_reader,True,autoit_reader_True,22864,3,22861

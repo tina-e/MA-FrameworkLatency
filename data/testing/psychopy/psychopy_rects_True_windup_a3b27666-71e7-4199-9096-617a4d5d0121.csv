@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,psychopy,rects,psychopy_rects,windup,True,windup_True,288990,286765,2225
-1,1,psychopy,rects,psychopy_rects,windup,True,windup_True,288702,1625393,-1336691

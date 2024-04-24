@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyglet,default,pyglet_default,windup_python,True,windup_python_True,2244,0,2244
-1,1,pyglet,default,pyglet_default,windup_python,True,windup_python_True,1460,0,1460
-2,2,pyglet,default,pyglet_default,windup_python,True,windup_python_True,3584,0,3584
-3,3,pyglet,default,pyglet_default,windup_python,True,windup_python_True,1348,0,1348
-4,4,pyglet,default,pyglet_default,windup_python,True,windup_python_True,228,0,228

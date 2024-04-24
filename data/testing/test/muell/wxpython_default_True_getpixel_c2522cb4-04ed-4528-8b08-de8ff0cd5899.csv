@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,wxpython,default,wxpython_default,getpixel,True,getpixel_True,53540,13214,40326
-1,1,wxpython,default,wxpython_default,getpixel,True,getpixel_True,50408,10161,40247

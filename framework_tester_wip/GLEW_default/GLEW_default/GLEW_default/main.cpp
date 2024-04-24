@@ -29,12 +29,10 @@ int main() {
         return -1;
     }
 
-    // GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    // const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    // int width = mode->width;
-    // int height = mode->height;
-    int width = 100;
-	int height = 100;
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+    int width = mode->width;
+    int height = mode->height;
 
     //GLFWwindow* window = glfwCreateWindow(width, height, "framework", monitor, NULL);
     glfwWindowHint(GLFW_DECORATED, 0);

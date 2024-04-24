@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,default,FLTK_default,getdbits,True,getdbits_True,8956,3151,5805
-1,1,FLTK,default,FLTK_default,getdbits,True,getdbits_True,8657,2782,5875
-2,2,FLTK,default,FLTK_default,getdbits,True,getdbits_True,8742,2967,5775
-3,3,FLTK,default,FLTK_default,getdbits,True,getdbits_True,7688,1753,5935
-4,4,FLTK,default,FLTK_default,getdbits,True,getdbits_True,7685,1762,5923

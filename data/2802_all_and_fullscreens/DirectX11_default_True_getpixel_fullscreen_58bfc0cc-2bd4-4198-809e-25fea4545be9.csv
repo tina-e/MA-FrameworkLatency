@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,DirectX11,default,DirectX11_default,True,2,getpixel,True,getpixel_True,116287,-1,116288
-1,1,DirectX11,default,DirectX11_default,True,2,getpixel,True,getpixel_True,925142,-1,925143
-2,2,DirectX11,default,DirectX11_default,True,2,getpixel,True,getpixel_True,905600,-1,905601
-3,3,DirectX11,default,DirectX11_default,True,2,getpixel,True,getpixel_True,1066721,-1,1066722
-4,4,DirectX11,default,DirectX11_default,True,2,getpixel,True,getpixel_True,1352421,-1,1352422

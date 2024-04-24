@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,JavaSwing,default,JavaSwing_default,autoit_reader,True,autoit_reader_True,10416,2,10414
-1,1,JavaSwing,default,JavaSwing_default,autoit_reader,True,autoit_reader_True,13788,1,13787
-2,2,JavaSwing,default,JavaSwing_default,autoit_reader,True,autoit_reader_True,11312,1,11311
-3,3,JavaSwing,default,JavaSwing_default,autoit_reader,True,autoit_reader_True,11760,2,11758
-4,4,JavaSwing,default,JavaSwing_default,autoit_reader,True,autoit_reader_True,8628,2,8626

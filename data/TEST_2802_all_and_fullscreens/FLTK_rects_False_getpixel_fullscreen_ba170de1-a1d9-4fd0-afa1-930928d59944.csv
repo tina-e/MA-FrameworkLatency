@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,rects,FLTK_rects,True,,getpixel,False,getpixel_False,30120,-1,30121
-1,1,FLTK,rects,FLTK_rects,True,,getpixel,False,getpixel_False,28680,-1,28681
-2,2,FLTK,rects,FLTK_rects,True,,getpixel,False,getpixel_False,29698,-1,29699
-3,3,FLTK,rects,FLTK_rects,True,,getpixel,False,getpixel_False,28687,-1,28688
-4,4,FLTK,rects,FLTK_rects,True,,getpixel,False,getpixel_False,52725,-1,52726

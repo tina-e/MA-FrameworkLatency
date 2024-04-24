@@ -1,1 +1,0 @@
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_rects\GLEW_rects\GLEW_rects\x64\Release\GLEW_rects.vcxproj.CopyComplete

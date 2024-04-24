@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pygame,rects,pygame_rects,getdbits,True,getdbits_True,60712,35056,25656
-1,1,pygame,rects,pygame_rects,getdbits,True,getdbits_True,74484,49135,25349
