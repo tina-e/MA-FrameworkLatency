@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyglet,default,pyglet_default,getpixel,True,getpixel_True,41020,0,41020
-1,1,pyglet,default,pyglet_default,getpixel,True,getpixel_True,30012,0,30012

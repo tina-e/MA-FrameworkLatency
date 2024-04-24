@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,503,SDL2_Software,default,SDL2_Software_default,no_fullscreen,,none,8799,-1,8800
-1,1,503,SDL2_Software,default,SDL2_Software_default,no_fullscreen,,none,9587,-1,9588

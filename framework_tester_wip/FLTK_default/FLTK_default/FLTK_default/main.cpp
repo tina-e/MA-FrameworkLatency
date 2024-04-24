@@ -5,40 +5,38 @@
 #include <iostream>
 
 using namespace std;
-//int width = 100;
-//int height = 100;
-int width = GetSystemMetrics(SM_CXSCREEN);
-int height = GetSystemMetrics(SM_CYSCREEN);
+int width = 100;
+int height = 100;
 
+class MainWindow : public Fl_Window
+{
+public:
+	MainWindow() : Fl_Window(0, 0, width, height)
+	{
+		color(FL_BLACK);
+		label("framework");
+		border(0);
+	}
 
-class MainWindow : public Fl_Window {
-	public:
-		MainWindow() : Fl_Window(0, 0, width, height)
+private:
+	int handle(int event) override
+	{
+		switch (event)
 		{
+		case FL_PUSH:
+			color(FL_WHITE);
+			redraw();
+			return 1;
+		case FL_RELEASE:
 			color(FL_BLACK);
-			label("framework");
-			//border(0);
-			fullscreen();
+			redraw();
+			return 1;
 		}
-	private:
-		int handle(int event) override
-		{
-			switch (event)
-			{
-				case FL_PUSH:
-					color(FL_WHITE);
-					redraw();
-					return 1;
-				case FL_RELEASE:
-					color(FL_BLACK);
-					redraw();
-					return 1;
-			}
-			return Fl_Window::handle(event);
-		}
+		return Fl_Window::handle(event);
+	}
 };
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	MainWindow window;
 	window.show();

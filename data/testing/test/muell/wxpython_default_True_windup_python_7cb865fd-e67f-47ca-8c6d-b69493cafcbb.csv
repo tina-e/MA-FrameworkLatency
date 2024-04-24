@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,wxpython,default,wxpython_default,windup_python,True,windup_python_True,48500,9975,38525
-1,1,wxpython,default,wxpython_default,windup_python,True,windup_python_True,53908,11967,41941

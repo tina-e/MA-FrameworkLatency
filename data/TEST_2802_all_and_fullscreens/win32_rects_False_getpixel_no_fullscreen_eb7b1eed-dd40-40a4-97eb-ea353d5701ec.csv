@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,win32,rects,win32_rects,False,,getpixel,False,getpixel_False,159658,-1,159659
-1,1,win32,rects,win32_rects,False,,getpixel,False,getpixel_False,159703,-1,159704
-2,2,win32,rects,win32_rects,False,,getpixel,False,getpixel_False,159697,-1,159698
-3,3,win32,rects,win32_rects,False,,getpixel,False,getpixel_False,159701,-1,159702
-4,4,win32,rects,win32_rects,False,,getpixel,False,getpixel_False,159697,-1,159698

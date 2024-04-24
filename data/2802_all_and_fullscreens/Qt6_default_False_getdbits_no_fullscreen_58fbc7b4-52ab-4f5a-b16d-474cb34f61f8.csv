@@ -1,5 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,Qt6,default,Qt6_default,False,,getdbits,False,getdbits_False,450512,-1,450513
-1,1,Qt6,default,Qt6_default,False,,getdbits,False,getdbits_False,112081,-1,112082
-2,2,Qt6,default,Qt6_default,False,,getdbits,False,getdbits_False,654754,-1,654755
-3,3,Qt6,default,Qt6_default,False,,getdbits,False,getdbits_False,1733584,-1,1733585

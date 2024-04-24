@@ -6,23 +6,17 @@ from pyglet import app
 from pyglet.window import Window
 import signal
 import sys
+import os
 
 
 # Define the width and height of the window
 WINDOW_WIDTH = 100
 WINDOW_HEIGHT = 100
 
-# display = pyglet.canvas.get_display()
-# screen = display.get_screens()[0]
-# screen_mode = screen.get_mode()
-
 # Create a Pyglet window
 win = Window(width=WINDOW_WIDTH, height=WINDOW_HEIGHT, vsync=False, style='borderless', fullscreen=False)
 win.set_location(0, 0)
 win.set_caption('framework')
-# win.switch_to()
-# win.activate()
-# print(win.vsync)
 
 rect = Rectangle(x=0, y=0, width=WINDOW_WIDTH, height=WINDOW_HEIGHT, color=(0, 0, 0))
 
@@ -42,6 +36,7 @@ def on_draw():
 
 def signal_handler(signal, frame):
     #print('got signal')
+    os._exit(0)
     sys.exit(0)
 
 signal.signal(signal.SIGTERM, signal_handler)

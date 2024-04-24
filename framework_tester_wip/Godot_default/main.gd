@@ -1,10 +1,8 @@
 extends Node
 
 var rect
-var width = DisplayServer.screen_get_size().x
-var height = DisplayServer.screen_get_size().y
-#var width = 100
-#var height = 100
+var width = 100
+var height = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

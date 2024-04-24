@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,tkinter,default,tkinter_default,autoit_reader,False,autoit_reader_False,16820,-1,16821
-1,1,tkinter,default,tkinter_default,autoit_reader,False,autoit_reader_False,23744,-1,23745
-2,2,tkinter,default,tkinter_default,autoit_reader,False,autoit_reader_False,16912,-1,16913
-3,3,tkinter,default,tkinter_default,autoit_reader,False,autoit_reader_False,16816,-1,16817
-4,4,tkinter,default,tkinter_default,autoit_reader,False,autoit_reader_False,11768,-1,11769

@@ -1,4 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,519,glumpy_qt5,default,glumpy_qt5_default,no_fullscreen,5,getpixel,7140,3638,3502
-1,1,519,glumpy_qt5,default,glumpy_qt5_default,no_fullscreen,5,getpixel,5576,2317,3259
-2,2,519,glumpy_qt5,default,glumpy_qt5_default,no_fullscreen,5,getpixel,6674,3239,3435

@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,JavaSwing,default,JavaSwing_default,getdbits,True,getdbits_True,43008,18077,24931
-1,1,JavaSwing,default,JavaSwing_default,getdbits,True,getdbits_True,37744,12345,25399

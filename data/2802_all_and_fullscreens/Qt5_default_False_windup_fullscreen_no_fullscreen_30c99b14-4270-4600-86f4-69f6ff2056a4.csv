@@ -1,4 +1,0 @@
-,id,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,Qt5,default,Qt5_default,False,,windup_fullscreen,False,windup_fullscreen_False,1737789,-1,1737790
-1,1,Qt5,default,Qt5_default,False,,windup_fullscreen,False,windup_fullscreen_False,396048,-1,396049
-2,2,Qt5,default,Qt5_default,False,,windup_fullscreen,False,windup_fullscreen_False,2378001,-1,2378002

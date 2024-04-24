@@ -51,9 +51,6 @@ static void activate(GtkApplication *app, gpointer user_data)
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "framework");
     gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
-
-    // for fullscreen / no-fullscreen
-    // gtk_window_fullscreen(GTK_WINDOW(window));
     gtk_widget_set_size_request(window, width, height);
 
     gtk_window_present(GTK_WINDOW(window));
@@ -78,9 +75,6 @@ static void activate(GtkApplication *app, gpointer user_data)
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
-    // width = GetSystemMetrics(SM_CXSCREEN);
-    // height = GetSystemMetrics(SM_CYSCREEN);
-
     GtkApplication *app;
     int status;
 

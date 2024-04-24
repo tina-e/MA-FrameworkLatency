@@ -10,7 +10,6 @@ public class Java2D_default extends JFrame {
     public Java2D_default() {
         setSize(WIDTH, HEIGHT);
         setTitle("framework");
-        // setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setVisible(true);
         color = new Color(0, 0, 0);

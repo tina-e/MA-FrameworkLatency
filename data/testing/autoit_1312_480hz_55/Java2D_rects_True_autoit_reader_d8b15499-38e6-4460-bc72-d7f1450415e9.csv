@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,Java2D,rects,Java2D_rects,autoit_reader,True,autoit_reader_True,13004,0,13004
-1,1,Java2D,rects,Java2D_rects,autoit_reader,True,autoit_reader_True,21516,1,21515
-2,2,Java2D,rects,Java2D_rects,autoit_reader,True,autoit_reader_True,11868,0,11868
-3,3,Java2D,rects,Java2D_rects,autoit_reader,True,autoit_reader_True,20384,0,20384
-4,4,Java2D,rects,Java2D_rects,autoit_reader,True,autoit_reader_True,14012,2,14010

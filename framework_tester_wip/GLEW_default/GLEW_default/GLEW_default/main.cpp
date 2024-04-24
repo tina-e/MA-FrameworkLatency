@@ -7,7 +7,7 @@ int r = 0;
 int g = 0;
 int b = 0;
 
-void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+void mouse_button_callback(GLFWwindow *window, int button, int action, int mods)
 {
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
     {
@@ -23,26 +23,24 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     }
 }
 
-int main() {
-    if (!glfwInit()) {
+int main()
+{
+    if (!glfwInit())
+    {
         cerr << "Error initializing GLFW" << endl;
         return -1;
     }
 
-    // GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    // const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    // int width = mode->width;
-    // int height = mode->height;
     int width = 100;
-	int height = 100;
+    int height = 100;
 
-    //GLFWwindow* window = glfwCreateWindow(width, height, "framework", monitor, NULL);
     glfwWindowHint(GLFW_DECORATED, 0);
-    GLFWwindow* window = glfwCreateWindow(width, height, "framework", NULL, NULL);
+    GLFWwindow *window = glfwCreateWindow(width, height, "framework", NULL, NULL);
     glfwMakeContextCurrent(window);
     glfwSetMouseButtonCallback(window, mouse_button_callback);
 
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window))
+    {
         glClearColor(r, g, b, 1);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
@@ -53,5 +51,4 @@ int main() {
     glfwTerminate();
 
     return 0;
-
 }

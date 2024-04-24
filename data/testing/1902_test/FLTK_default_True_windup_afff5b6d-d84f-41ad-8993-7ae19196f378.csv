@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,default,FLTK_default,windup,True,windup_True,7857,-1,7858
-1,1,FLTK,default,FLTK_default,windup,True,windup_True,8487,-1,8488
-2,2,FLTK,default,FLTK_default,windup,True,windup_True,9036,-1,9037
-3,3,FLTK,default,FLTK_default,windup,True,windup_True,7557,-1,7558
-4,4,FLTK,default,FLTK_default,windup,True,windup_True,7517,-1,7518

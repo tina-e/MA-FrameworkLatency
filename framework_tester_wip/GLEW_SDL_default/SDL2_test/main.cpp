@@ -5,8 +5,6 @@
 #include <signal.h>
 #include <windows.h>
 
-//int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-//int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 int WIDTH = 100;
 int HEIGHT = 100;
 
@@ -20,24 +18,22 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     signal(SIGINT, signalHandler);
 
     SDL_Init(SDL_INIT_VIDEO); // maybe we have to reduce this?
 
-    SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS | SDL_WINDOW_OPENGL);
+    SDL_Window *window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS | SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(window);
     SDL_GL_SetSwapInterval(0); // 0 immediate, 1 vsync, -1 adaptive sync
 
-    //glewExperimental = GL_TRUE;
+    // glewExperimental = GL_TRUE;
     glewInit();
 
-
-//#ifdef DOUBLEBUF
-//    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-//#endif
-
+    // #ifdef DOUBLEBUF
+    //     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+    // #endif
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 

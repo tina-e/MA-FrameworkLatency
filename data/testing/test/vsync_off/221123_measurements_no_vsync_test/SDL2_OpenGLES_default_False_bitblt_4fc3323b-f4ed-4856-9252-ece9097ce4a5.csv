@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_OpenGLES,default,SDL2_OpenGLES_default,bitblt,False,bitblt_False,30692,-1,30693
-1,1,SDL2_OpenGLES,default,SDL2_OpenGLES_default,bitblt,False,bitblt_False,43596,-1,43597
