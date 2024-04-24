@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,SDL2_OpenGL,default,SDL2_OpenGL_default,windup,True,windup_True,9927,9697,230
-1,1,SDL2_OpenGL,default,SDL2_OpenGL_default,windup,True,windup_True,6671,3780,2891
-2,2,SDL2_OpenGL,default,SDL2_OpenGL_default,windup,True,windup_True,5703,2507,3196
-3,3,SDL2_OpenGL,default,SDL2_OpenGL_default,windup,True,windup_True,6714,3422,3292
-4,4,SDL2_OpenGL,default,SDL2_OpenGL_default,windup,True,windup_True,6714,3278,3436

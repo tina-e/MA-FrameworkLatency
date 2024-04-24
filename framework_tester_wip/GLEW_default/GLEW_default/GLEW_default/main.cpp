@@ -1,6 +1,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <Windows.h>
+
 
 using namespace std;
 int r = 0;
@@ -23,18 +25,17 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     }
 }
 
-int main() {
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
+{
     if (!glfwInit()) {
         cerr << "Error initializing GLFW" << endl;
         return -1;
     }
 
-    // GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    // const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    // int width = mode->width;
-    // int height = mode->height;
-    int width = 100;
-	int height = 100;
+     GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+     const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+     int width = mode->width;
+     int height = mode->height - 1;
 
     //GLFWwindow* window = glfwCreateWindow(width, height, "framework", monitor, NULL);
     glfwWindowHint(GLFW_DECORATED, 0);

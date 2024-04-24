@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,Java2D,default,Java2D_default,getpixel,False,getpixel_False,17036,-1,17037
-1,1,Java2D,default,Java2D_default,getpixel,False,getpixel_False,16364,-1,16365

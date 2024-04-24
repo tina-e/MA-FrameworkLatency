@@ -2,7 +2,7 @@ extends Node
 
 var rect
 var width = DisplayServer.screen_get_size().x
-var height = DisplayServer.screen_get_size().y
+var height = DisplayServer.screen_get_size().y - 1
 #var width = 100
 #var height = 100
 

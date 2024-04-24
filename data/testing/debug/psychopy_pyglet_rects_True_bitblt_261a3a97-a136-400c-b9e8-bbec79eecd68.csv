@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,psychopy_pyglet,rects,psychopy_pyglet_rects,bitblt,True,bitblt_True,311975,307921,4054
-1,1,psychopy_pyglet,rects,psychopy_pyglet_rects,bitblt,True,bitblt_True,319676,315538,4138

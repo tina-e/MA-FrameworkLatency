@@ -1,7 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (GTK_default.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.c
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_rects\GTK_rects\GTK_default\main.c(114,52): warning C4047: 'function': 'int' differs in levels of indirection from 'void *'
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_rects\GTK_rects\GTK_default\main.c(114,52): warning C4024: 'g_application_run': different types for formal and actual parameter 2
-  GTK_default.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GTK_rects\GTK_rects\x64\Debug\GTK_rects.exe
-  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
-  konnte nicht gefunden werden.

@@ -1,4 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,516,glumpy_sdl,default,glumpy_sdl_default,no_fullscreen,3,bitblt,6422,-1,6423
-1,1,516,glumpy_sdl,default,glumpy_sdl_default,no_fullscreen,3,bitblt,4348,-1,4349
-2,2,516,glumpy_sdl,default,glumpy_sdl_default,no_fullscreen,3,bitblt,4897,-1,4898

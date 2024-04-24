@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,JavaSwing,default,JavaSwing_default,windup_python,True,windup_python_True,32256,9009,23247
-1,1,JavaSwing,default,JavaSwing_default,windup_python,True,windup_python_True,31152,11982,19170

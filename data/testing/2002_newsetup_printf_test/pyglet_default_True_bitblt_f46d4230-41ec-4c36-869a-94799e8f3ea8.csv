@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,pyglet,default,pyglet_default,bitblt,True,bitblt_True,19431,-1,19432
-1,1,pyglet,default,pyglet_default,bitblt,True,bitblt_True,25044,-1,25045

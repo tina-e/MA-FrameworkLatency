@@ -5,10 +5,8 @@
 #include <iostream>
 
 using namespace std;
-//int width = 100;
-//int height = 100;
 int width = GetSystemMetrics(SM_CXSCREEN);
-int height = GetSystemMetrics(SM_CYSCREEN);
+int height = GetSystemMetrics(SM_CYSCREEN) - 1;
 
 
 class MainWindow : public Fl_Window {
@@ -17,8 +15,7 @@ class MainWindow : public Fl_Window {
 		{
 			color(FL_BLACK);
 			label("framework");
-			//border(0);
-			fullscreen();
+			border(0);
 		}
 	private:
 		int handle(int event) override

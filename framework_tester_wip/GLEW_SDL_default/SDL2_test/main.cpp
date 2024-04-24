@@ -5,10 +5,8 @@
 #include <signal.h>
 #include <windows.h>
 
-//int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-//int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-int WIDTH = 100;
-int HEIGHT = 100;
+int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+int HEIGHT = GetSystemMetrics(SM_CYSCREEN) - 1;
 
 bool running = true;
 
@@ -34,9 +32,9 @@ int main(int argc, char** argv)
     glewInit();
 
 
-//#ifdef DOUBLEBUF
-//    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-//#endif
+    //#ifdef DOUBLEBUF
+    //    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+    //#endif
 
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

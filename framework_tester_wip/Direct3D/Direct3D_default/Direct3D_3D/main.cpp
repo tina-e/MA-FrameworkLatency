@@ -4,9 +4,7 @@
 #pragma comment(lib, "d3d11.lib")
 
 const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
-const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-//const int WIDTH = 100;
-//const int HEIGHT = 100;
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN) - 1;
 bool wasPressed = false;
 
 ID3D11Device* pDevice = nullptr;
@@ -29,7 +27,7 @@ void CreateGraphics(HWND hWnd) {
 	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	sd.BufferCount = 1;
 	sd.OutputWindow = hWnd;
-	sd.Windowed = FALSE;
+	sd.Windowed = TRUE;
 	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	sd.Flags = 0;
 
@@ -49,7 +47,7 @@ void CreateGraphics(HWND hWnd) {
 		&pContext
 	);
 
-	pSwapChain->SetFullscreenState(TRUE, nullptr);
+	pSwapChain->SetFullscreenState(FALSE, nullptr);
 
 	ID3D11Resource* pBackBuffer = nullptr;
 	pSwapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));

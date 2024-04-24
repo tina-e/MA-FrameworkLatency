@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,rects,FLTK_rects,bitblt,False,bitblt_False,29869,-1,29870
-1,1,FLTK,rects,FLTK_rects,bitblt,False,bitblt_False,29695,-1,29696
-2,2,FLTK,rects,FLTK_rects,bitblt,False,bitblt_False,28728,-1,28729
-3,3,FLTK,rects,FLTK_rects,bitblt,False,bitblt_False,30673,-1,30674
-4,4,FLTK,rects,FLTK_rects,bitblt,False,bitblt_False,29744,-1,29745

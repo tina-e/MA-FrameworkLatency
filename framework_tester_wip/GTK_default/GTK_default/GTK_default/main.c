@@ -4,8 +4,8 @@
 int r = 0;
 int g = 0;
 int b = 0;
-int width = 100;
-int height = 100;
+int width = 0;
+int height = 0;
 
 static void cairo_draw(cairo_t *cr)
 {
@@ -78,8 +78,8 @@ static void activate(GtkApplication *app, gpointer user_data)
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
-    // width = GetSystemMetrics(SM_CXSCREEN);
-    // height = GetSystemMetrics(SM_CYSCREEN);
+    width = GetSystemMetrics(SM_CXSCREEN);
+    height = GetSystemMetrics(SM_CYSCREEN) - 1;
 
     GtkApplication *app;
     int status;
