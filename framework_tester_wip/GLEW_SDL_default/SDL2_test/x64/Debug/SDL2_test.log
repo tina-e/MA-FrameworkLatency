@@ -1,3 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SDL2_test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (x64\Debug\) enthält freigegebene Dateien aus einem anderen Projekt (SDL2_test.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
   main.cpp
-LINK : fatal error LNK1104: cannot open file 'C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_SDL_default\x64\Debug\GLEW_SDL_default.exe'
+LIBCMTD.lib(exe_winmain.obj) : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol "WinMain" in Funktion ""int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)".
+D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_SDL_default\x64\Debug\GLEW_SDL_default.exe : fatal error LNK1120: 1 nicht aufgelöste Externe
