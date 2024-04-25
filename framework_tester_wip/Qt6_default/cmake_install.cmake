@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Qt6_default.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Qt6_default.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

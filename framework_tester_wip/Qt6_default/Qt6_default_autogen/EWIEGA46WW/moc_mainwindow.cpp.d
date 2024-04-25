@@ -1,5 +1,5 @@
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/mainwindow.h \
-  C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default_autogen/moc_predefs.h \
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/mainwindow.h \
+  C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default_autogen/moc_predefs.h \
   C:/Qt/6.6.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.6.1/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.6.1/mingw_64/include/QtCore/q20type_traits.h \
