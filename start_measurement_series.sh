@@ -16,18 +16,38 @@ FRAMEWORKS_SMALL=("Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SD
 
 FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
 
+FRAMEWORK_SDLS=("SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software")
 
 mkdir "./data/$DATA_DIR"
 sleep "7s"
 
 
+for f in "${!FRAMEWORK_SDLS[@]}";
+do
+    for r in "${!READERS[@]}";
+    do
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+        r=$((r+1));
+    done
+    f=$((f+1));
+done
+
 for r in "${!READERS[@]}";
 do
-    ./start_measurement.sh $ITERATIONS Godot 3D "${READERS[$r]}" fullscreen $DATA_DIR
-    ./start_measurement.sh $ITERATIONS Godot default "${READERS[$r]}" no_fullscreen $DATA_DIR
-    ./start_measurement.sh $ITERATIONS Godot default "${READERS[$r]}" small $DATA_DIR
+    ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" no_fullscreen $DATA_DIR
+    ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" small $DATA_DIR
     r=$((r+1));
 done
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Godot 3D "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Godot default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Godot default "${READERS[$r]}" small $DATA_DIR
+#     r=$((r+1));
+# done
 
 # default and rects
 # for f in "${!FRAMEWORKS_FULLSCREEN_AND_RECTS[@]}";
