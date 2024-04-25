@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-45a477ee2763f208a764.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt5_default",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default-Release-de876e37d79f32721cfe.json",
+					"name" : "Qt5_default",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen-Release-091a603688f87713d520.json",
+					"name" : "Qt5_default_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen_timestamp_deps-Release-e8bc877baccf6c3c6aa7.json",
+					"name" : "Qt5_default_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_default/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Release",
+		"source" : "D:/Studium/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt5_default/Qt5_default"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

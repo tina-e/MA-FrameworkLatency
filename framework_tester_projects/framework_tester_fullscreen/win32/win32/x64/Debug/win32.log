@@ -1,0 +1,5 @@
+﻿  main.cpp
+  LINK : C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\win32\x64\Debug\win32.exe not found or not built by the last incremental link; performing full link
+  win32.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\win32\x64\Debug\win32.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.
