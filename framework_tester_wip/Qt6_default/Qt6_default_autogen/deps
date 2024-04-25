@@ -572,14 +572,14 @@ Qt6_default_autogen/timestamp: \
 	C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
 	C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
+	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
+	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/CMakeLists.txt \
+	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default_autogen/moc_predefs.h \
 	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/main.cpp \
 	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/mainwindow.cpp \
 	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/mainwindow.h \
-	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/.qtc/package-manager/auto-setup.cmake \
-	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
-	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
-	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/CMakeFiles/3.27.7/CMakeSystem.cmake \
-	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default_autogen/moc_predefs.h \
 	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

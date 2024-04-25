@@ -1,9 +1,15 @@
 # ninja log v5
 1	1023	7264062701187203	Qt6_default_autogen/timestamp	6773f71d585e25f0
-1	1023	7264062701187203	Qt6_default_autogen/mocs_compilation.cpp	6773f71d585e25f0
-1	1023	7264062701187203	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default_autogen/timestamp	6773f71d585e25f0
-1	1023	7264062701187203	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Release/Qt6_default_autogen/mocs_compilation.cpp	6773f71d585e25f0
-1036	3618	7264062727936277	CMakeFiles/Qt6_default.dir/main.cpp.obj	fd7758e654dd1e01
 1029	3900	7264062730748243	CMakeFiles/Qt6_default.dir/mainwindow.cpp.obj	9b92b612bd447ea
+1	1023	7264062701187203	Qt6_default_autogen/mocs_compilation.cpp	6773f71d585e25f0
+1036	3618	7264062727936277	CMakeFiles/Qt6_default.dir/main.cpp.obj	fd7758e654dd1e01
 1024	3911	7264062730867992	CMakeFiles/Qt6_default.dir/Qt6_default_autogen/mocs_compilation.cpp.obj	98db052f5a14b072
 3912	4163	7264062733290770	Qt6_default.exe	146c6fecaa5c214d
+1	722	7357508166698455	Qt6_default_autogen/timestamp	61f82ed1563b35c1
+1	722	7357508166698455	Qt6_default_autogen/mocs_compilation.cpp	61f82ed1563b35c1
+1	722	7357508166698455	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default_autogen/timestamp	61f82ed1563b35c1
+1	722	7357508166698455	C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_wip/Qt6_default/Qt6_default_autogen/mocs_compilation.cpp	61f82ed1563b35c1
+722	2249	7357508182618034	CMakeFiles/Qt6_default.dir/Qt6_default_autogen/mocs_compilation.cpp.obj	a14445879ec12f5c
+726	2547	7357508185542338	CMakeFiles/Qt6_default.dir/mainwindow.cpp.obj	8f2b68dff0b9e745
+730	3385	7357508193931746	CMakeFiles/Qt6_default.dir/main.cpp.obj	15fb0e95e8caae73
+3388	3540	7357508195447230	Qt6_default.exe	146c6fecaa5c214d
