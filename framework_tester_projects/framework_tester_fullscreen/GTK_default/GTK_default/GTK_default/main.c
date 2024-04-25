@@ -4,8 +4,8 @@
 int r = 0;
 int g = 0;
 int b = 0;
-int width = 100;
-int height = 100;
+int width = 0;
+int height = 0;
 
 static void cairo_draw(cairo_t *cr)
 {
@@ -53,8 +53,8 @@ static void activate(GtkApplication *app, gpointer user_data)
     gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
 
     // for fullscreen / no-fullscreen
-    // gtk_window_fullscreen(GTK_WINDOW(window));
-    gtk_widget_set_size_request(window, width, height);
+    gtk_window_fullscreen(GTK_WINDOW(window));
+    //gtk_widget_set_size_request(window, width, height);
 
     gtk_window_present(GTK_WINDOW(window));
 
@@ -69,17 +69,17 @@ static void activate(GtkApplication *app, gpointer user_data)
     g_signal_connect(click_gesture, "released", G_CALLBACK(on_release_event), area);
     gtk_widget_add_controller(window, GTK_EVENT_CONTROLLER(click_gesture));
 
-    HWND frameworkWindow = FindWindow(NULL, L"framework");
+    /*HWND frameworkWindow = FindWindow(NULL, L"framework");
     if (frameworkWindow != NULL)
     {
         MoveWindow(frameworkWindow, 0, 0, width, height, FALSE);
-    }
+    }*/
 }
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
-    // width = GetSystemMetrics(SM_CXSCREEN);
-    // height = GetSystemMetrics(SM_CYSCREEN);
+    width = GetSystemMetrics(SM_CXSCREEN);
+    height = GetSystemMetrics(SM_CYSCREEN);
 
     GtkApplication *app;
     int status;

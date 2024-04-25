@@ -1,0 +1,11 @@
+FLTK,no_fullscreen,2
+FLTK,big,5
+FLTK,fullscreen,2
+win32,no_fullscreen,2
+win32,big,5
+win32,fullscreen,2
+Direct3D,no_fullscreen,5
+Direct3D,big,5
+Direct3D,fullscreen,5
+GLUT,no_fullscreen,2
+GLUT,big,5

@@ -83,18 +83,33 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
     WindowClass.lpszClassName = ClassName;
     RegisterClass(&WindowClass);
 
-    /*int w = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-    int h = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);*/
-    // int w = GetSystemMetrics(SM_CXSCREEN);
-    // int h = GetSystemMetrics(SM_CYSCREEN);
-    int w = 100;
-    int h = 100;
+    int w = GetSystemMetrics(SM_CXSCREEN);
+    int h = GetSystemMetrics(SM_CYSCREEN);
 
     HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
-    if (!Window)
-        return 0;
-    // ShowWindow(Window, SW_SHOWMAXIMIZED);
-    ShowWindow(Window, SW_SHOW);
+    if (!Window) return 0;
+    /*SetWindowLongPtr(Window, GWL_EXSTYLE, WS_EX_APPWINDOW | WS_EX_TOPMOST);
+    SetWindowLongPtr(Window, GWL_STYLE, WS_POPUP | WS_VISIBLE);
+    SetWindowPos(Window, HWND_TOPMOST, 0, 0, w, h, SWP_SHOWWINDOW);
+    ShowWindow(Window, SW_MAXIMIZE);*/
+
+    //WINDOWPLACEMENT g_wpPrev = { sizeof(g_wpPrev) };
+    //DWORD dwStyle = GetWindowLong(Window, GWL_STYLE);
+    //MONITORINFO mi = { sizeof(mi) };
+    //if (GetWindowPlacement(Window, &g_wpPrev) &&
+    //    GetMonitorInfo(MonitorFromWindow(Window,
+    //        MONITOR_DEFAULTTOPRIMARY), &mi)) {
+    //    SetWindowLong(Window, GWL_STYLE,
+    //        dwStyle & ~WS_OVERLAPPEDWINDOW);
+    //    SetWindowPos(Window, HWND_TOP,
+    //        mi.rcMonitor.left, mi.rcMonitor.top,
+    //        mi.rcMonitor.right - mi.rcMonitor.left,
+    //        mi.rcMonitor.bottom - mi.rcMonitor.top,
+    //        SWP_NOOWNERZORDER | SWP_FRAMECHANGED);
+    //}
+    
+    ShowWindow(Window, SW_SHOWMAXIMIZED);
+    //ShowWindow(Window, SW_SHOW);
 
     // Get client area dimensions
 

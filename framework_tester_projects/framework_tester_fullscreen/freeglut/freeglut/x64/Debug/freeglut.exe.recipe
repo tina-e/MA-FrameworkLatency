@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\freeglut\x64\Debug\freeglut.exe</FullPath>
+      <FullPath>C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\freeglut\x64\Debug\freeglut.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

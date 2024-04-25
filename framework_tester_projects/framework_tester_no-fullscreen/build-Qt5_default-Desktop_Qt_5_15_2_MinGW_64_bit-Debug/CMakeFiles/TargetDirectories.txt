@@ -1,0 +1,9 @@
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/Qt5_default.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/Qt5_default_autogen_timestamp_deps.dir
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/Qt5_default_autogen.dir

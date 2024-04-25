@@ -2,21 +2,21 @@
 
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "psychopy_pyglet" "Unity")
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "Qt5" "Qt6" "DirectX11" "JavaSwing" "Java2D" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2")
-FRAMEWORKS=("psychopy_pyglet")
-FULLSCREEN_OPTIONS=("fullscreen" "no_fullscreen" "small")
+FRAMEWORKS=("FLTK" "win32" "Direct3D" "GLUT" "GTK" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "SDL2_OpenGL" "SDL2_OpenGLES2" "Qt5" "Qt6" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "JavaSwing" "Java2D")
+FULLSCREEN_OPTIONS=("no_fullscreen" "big" "fullscreen")
 #FULLSCREEN_OPTIONS=("small")
 
-DATA_DIR="./data/fullscreen_states/testing_fullscreen_options_0503_noopt.csv"
+DATA_DIR="./data/fullscreen_states/testing_fullscreen_options_2504.csv"
 
 
 sleep "5s"
 #touch $DATA_DIR
 
-for framework in "${FRAMEWORKS[@]}";
+for fullscreen_option in "${FULLSCREEN_OPTIONS[@]}";
 do
-    for fullscreen_option in "${FULLSCREEN_OPTIONS[@]}";
+    for framework in "${FRAMEWORKS[@]}";
     do
-        FW_PATH="framework_tester_${fullscreen_option}/$framework/${framework}_default"
+        FW_PATH="framework_tester_apps/framework_tester_${fullscreen_option}/$framework/${framework}_default"
         case "$framework" in 
 
             *"psychopy"*)
@@ -71,17 +71,17 @@ do
                 ;;
 
             *"Godot"*)
-                start ./framework_tester_${fullscreen_option}/GameEngines/${framework}/${framework}_default.exe &
+                start ./framework_tester_apps/framework_tester_${fullscreen_option}/GameEngines/${framework}/${framework}_default.exe &
                 PID_framework=$!
                 ;;
 
             *"Unity"*)
-                start ./framework_tester_${fullscreen_option}/${framework}_default/framework.exe &
+                start ./framework_tester_apps/framework_tester_${fullscreen_option}/${framework}_default/framework.exe &
                 PID_framework=$!
                 ;;
 
             *"DirectX"*)
-                cd "./framework_tester_${fullscreen_option}/${framework}_default"
+                cd "./framework_tester_apps/framework_tester_${fullscreen_option}/${framework}_default"
                 start "./${framework}_default.exe" &
                 PID_framework=$! 
                 cd "../../"

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-45a477ee2763f208a764.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt5_default",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default-Debug-6750f626a371c624f969.json",
+					"name" : "Qt5_default",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen-Debug-5fa07347951cbe4d3609.json",
+					"name" : "Qt5_default_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen_timestamp_deps-Debug-9ac5035080d064204e20.json",
+					"name" : "Qt5_default_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/Qt5_default"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
