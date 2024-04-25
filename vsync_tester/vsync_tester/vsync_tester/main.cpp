@@ -1,40 +1,40 @@
-#include <Windows.h>
-#include <iostream>
-
-using namespace std;
-
-typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALFARPROC)(int);
-typedef int(APIENTRY* PFNWGLGETSWAPINTERVALEXTPROC)();
-PFNWGLSWAPINTERVALFARPROC wglSwapIntervalEXT = nullptr;
-PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
-
-
-int main() {
-    wglSwapIntervalEXT = (PFNWGLSWAPINTERVALFARPROC)wglGetProcAddress("wglSwapIntervalEXT");
-    wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC)wglGetProcAddress("wglGetSwapIntervalEXT");
-
-    if (wglSwapIntervalEXT == nullptr) {
-        std::cerr << "wglSwapIntervalEXT not supported!" << std::endl;
-        return 1;
-    }
-
-    Sleep(5000);
-
-    HWND frameworkWindow = FindWindow(NULL, L"framework");
-    HDC hdc = GetDC(frameworkWindow);
-    HGLRC hglrc = wglCreateContext(hdc);
-    wglMakeCurrent(hdc, hglrc);
-
-    int vsyncEnabled = wglGetSwapIntervalEXT();
-    //std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
-
-    //wglSwapIntervalEXT(1);
-
-    //vsyncEnabled = wglGetSwapIntervalEXT();
-    std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
-    Sleep(1000);
-    
-}
+//#include <Windows.h>
+//#include <iostream>
+//
+//using namespace std;
+//
+//typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALFARPROC)(int);
+//typedef int(APIENTRY* PFNWGLGETSWAPINTERVALEXTPROC)();
+//PFNWGLSWAPINTERVALFARPROC wglSwapIntervalEXT = nullptr;
+//PFNWGLGETSWAPINTERVALEXTPROC wglGetSwapIntervalEXT = nullptr;
+//
+//
+//int main() {
+//    wglSwapIntervalEXT = (PFNWGLSWAPINTERVALFARPROC)wglGetProcAddress("wglSwapIntervalEXT");
+//    wglGetSwapIntervalEXT = (PFNWGLGETSWAPINTERVALEXTPROC)wglGetProcAddress("wglGetSwapIntervalEXT");
+//
+//    if (wglSwapIntervalEXT == nullptr) {
+//        std::cerr << "wglSwapIntervalEXT not supported!" << std::endl;
+//        return 1;
+//    }
+//
+//    Sleep(5000);
+//
+//    HWND frameworkWindow = FindWindow(NULL, L"framework");
+//    HDC hdc = GetDC(frameworkWindow);
+//    HGLRC hglrc = wglCreateContext(hdc);
+//    wglMakeCurrent(hdc, hglrc);
+//
+//    int vsyncEnabled = wglGetSwapIntervalEXT();
+//    //std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
+//
+//    //wglSwapIntervalEXT(1);
+//
+//    //vsyncEnabled = wglGetSwapIntervalEXT();
+//    std::cout << "Vsync is currently " << (vsyncEnabled == 1 ? "enabled" : "disabled") << std::endl;
+//    Sleep(1000);
+//    
+//}
 
 
 //
@@ -115,6 +115,7 @@ int main() {
 //}
 //
 //int main() {
+//    Sleep(5000);
 //    if (isVSyncEnabled()) {
 //        std::cout << "VSync is enabled for the application." << std::endl;
 //    }
@@ -123,5 +124,32 @@ int main() {
 //    }
 //    return 0;
 //}
+
+#include <Windows.h>
+#include <iostream>
+
+// Function to get the refresh rate of the primary display
+float getDisplayRefreshRate() {
+    DEVMODE dm;
+    ZeroMemory(&dm, sizeof(dm));
+    dm.dmSize = sizeof(dm);
+    EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm);
+    return static_cast<float>(dm.dmDisplayFrequency);
+}
+
+int main() {
+    float refreshRate = getDisplayRefreshRate();
+    std::cout << "Display refresh rate: " << refreshRate << " Hz" << std::endl;
+
+    // Assuming VSync is enabled if the refresh rate is the same as the monitor's maximum refresh rate
+    if (refreshRate == 500.0f) {
+        std::cout << "VSync is likely enabled." << std::endl;
+    }
+    else {
+        std::cout << "VSync is likely disabled." << std::endl;
+    }
+
+    return 0;
+}
 
 
