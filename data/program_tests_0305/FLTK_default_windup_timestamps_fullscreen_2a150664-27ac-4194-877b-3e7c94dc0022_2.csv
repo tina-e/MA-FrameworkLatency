@@ -1,0 +1,9 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
+0,0,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,10361,255,10106
+1,1,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,7836,255,7581
+2,2,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,7506,255,7251
+3,3,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,8744,255,8489
+4,4,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,8236,255,7981
+5,5,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,7229,255,6974
+6,6,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,9051,255,8796
+7,7,512,FLTK,default,FLTK_default,fullscreen,2,windup_timestamps,8731,255,8476

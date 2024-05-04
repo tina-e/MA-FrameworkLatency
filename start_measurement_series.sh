@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ITERATIONS=250
-DATA_DIR="easteregg_everything_so_far_250_fix"
+ITERATIONS=20
+DATA_DIR="debug"
 
 READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
@@ -11,6 +11,14 @@ FRAMEWORKS_3D=("Direct3D" "GLEW_SDL" "GLUT" "pygame" "pyglet" "Unity")
 FRAMEWORKS_IMAGE=("GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "tkinter" "Unity" "wxpython")
 FRAMEWORKS_FULLSCREEN_AND_RECTS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython" "psychopy_pyglet")
 FRAMEWORKS_NO_FULLSCREEN=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython")
+
+
+# measurements 2704 recompileds
+FRAMEWORKS_BIG=("GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
+FRAMEWORKS_FS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
+# end measurements 2704 recompileds
+
+
 #FRAMEWORKS_SMALL=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
 FRAMEWORKS_SMALL=("Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
 
@@ -18,28 +26,46 @@ FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
 
 FRAMEWORK_SDLS=("SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software")
 
+FRAMEWORKS=("GLEW_SDL" "SDL_OpenGL")
+
 mkdir "./data/$DATA_DIR"
 sleep "7s"
 
 
-for f in "${!FRAMEWORK_SDLS[@]}";
+# measurements 2704 recompileds
+for f in "${!FRAMEWORKS[@]}";
 do
     for r in "${!READERS[@]}";
     do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" big $DATA_DIR
+        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" small $DATA_DIR
+        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
         r=$((r+1));
     done
     f=$((f+1));
 done
+# end measurements 2704 recompileds
 
-for r in "${!READERS[@]}";
-do
-    ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" no_fullscreen $DATA_DIR
-    ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" small $DATA_DIR
-    r=$((r+1));
-done
+
+# for f in "${!FRAMEWORK_SDLS[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORK_SDLS[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" small $DATA_DIR
+#     r=$((r+1));
+# done
 
 # for r in "${!READERS[@]}";
 # do

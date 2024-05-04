@@ -83,7 +83,7 @@ class FYALMDController:
 
     # init pixel reader
     def init_fw_latency_tester(self):
-        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py'] if 'y' in self.program_name else [f'.\pixel_readers\{self.program_name}.exe']
+        cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py'] if 'y' in self.program_name else [f'.\pixel_readers\{self.program_name}.exe', self.fw_name]
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:
             if line.startswith('mode'):
@@ -137,7 +137,7 @@ class FYALMDController:
     def get_latency(self, iteration):
         ser_bytes = self.yalmd.readline()
         decoded_bytes = ser_bytes[0:len(ser_bytes)-2].decode("utf-8")
-        if self.measuring:
+        if self.measuring and self.program_name != "windup_timestamps":
             if self.program_name != 'none':
                 waiting_start = time.time()
                 while not self.new_value:
