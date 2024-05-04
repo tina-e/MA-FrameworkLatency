@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Studium/Masterarbeit/MA-FrameworkLatency/pixel_reader_validation/programs/getpixel/main.cpp
+iostream
+-
+windef.h
+-
+wingdi.h
+-
+winuser.h
+-
+chrono
+-
+
