@@ -36,7 +36,7 @@ int main(int argc, char** argv)
                 for (int i = 0; i <= 10; i++) {
                     while (true) {
                         long current_time = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-                        if (current_time - start >= i * 200000) { // change color vlaue every 200ms
+                        if (current_time - start >= i * 50000) { // change color vlaue every 200ms
                             /*if (isWhite) {
                                 glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
                             }
