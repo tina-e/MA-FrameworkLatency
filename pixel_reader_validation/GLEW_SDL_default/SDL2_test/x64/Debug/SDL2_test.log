@@ -1,8 +1,8 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (x64\Debug\) enthält freigegebene Dateien aus einem anderen Projekt (SDL2_test.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
   main.cpp
-D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(51,62): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(51,53): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(51,44): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(54,66): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(54,57): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
+D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\main.cpp(54,48): warning C4244: "Argument": Konvertierung von "double" in "GLclampf", möglicher Datenverlust
   SDL2_test.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\x64\Debug\GLEW_SDL_default.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

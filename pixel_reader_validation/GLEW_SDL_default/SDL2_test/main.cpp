@@ -21,6 +21,7 @@ int main(int argc, char** argv)
     glewInit();
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+    int numClicks = 0;
     bool isWhite = false;
     bool running = 1;
     SDL_Event event;
@@ -29,35 +30,38 @@ int main(int argc, char** argv)
         {
             if (event.type == SDL_MOUSEBUTTONDOWN)
             {
-                Sleep(3000);
-                long start = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-                printf("start:-1:%ld\n", start);
-                fflush(stdout);
-                for (int i = 0; i <= 10; i++) {
-                    while (true) {
-                        long current_time = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-                        if (current_time - start >= i * 50000) { // change color vlaue every 200ms
-                            /*if (isWhite) {
-                                glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+                numClicks++;
+                if (numClicks == 3) {
+                    Sleep(50);
+                    long start = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
+                    printf("start:-1:%ld\n", start);
+                    fflush(stdout);
+                    for (int i = 0; i <= 10; i++) {
+                        while (true) {
+                            long current_time = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
+                            if (current_time - start >= i * 50000) { // change color vlaue every 200ms
+                                /*if (isWhite) {
+                                    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+                                }
+                                else {
+                                    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+                                }
+                                glClear(GL_COLOR_BUFFER_BIT);
+                                SDL_GL_SwapWindow(window);
+                                isWhite = !isWhite;*/
+                                printf("render_start:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
+                                fflush(stdout);
+                                glClearColor(i * 0.1, i * 0.1, i * 0.1, 1.0);
+                                glClear(GL_COLOR_BUFFER_BIT);
+                                SDL_GL_SwapWindow(window);
+                                printf("render_stop:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
+                                fflush(stdout);
+                                break;
                             }
-                            else {
-                                glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-                            } 
-                            glClear(GL_COLOR_BUFFER_BIT);
-                            SDL_GL_SwapWindow(window);
-                            isWhite = !isWhite;*/
-                            printf("render_start:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
-                            fflush(stdout);
-                            glClearColor(i * 0.1, i * 0.1, i * 0.1, 1.0);
-                            glClear(GL_COLOR_BUFFER_BIT);
-                            SDL_GL_SwapWindow(window);
-                            printf("render_stop:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
-                            fflush(stdout);
-                            break;
                         }
                     }
+                    running = 0;
                 }
-                running = 0;
             }
         }
     }
