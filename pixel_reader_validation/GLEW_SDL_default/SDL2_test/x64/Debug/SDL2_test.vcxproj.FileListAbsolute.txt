@@ -1,3 +1,2 @@
 D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_SDL_default\SDL2_test\x64\Debug\SDL2_test.vcxproj.CopyComplete
 D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_projects\GLEW_SDL_default\SDL2_test\x64\Debug\SDL2_test.vcxproj.CopyComplete
-D:\Studium\Masterarbeit\MA-FrameworkLatency\pixel_reader_validation\GLEW_SDL_default\SDL2_test\x64\Debug\SDL2_test.vcxproj.CopyComplete
