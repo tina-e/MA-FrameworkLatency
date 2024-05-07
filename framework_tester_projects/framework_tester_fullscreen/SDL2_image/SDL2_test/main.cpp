@@ -55,7 +55,7 @@ int main(int argc, char** argv)
     IMG_Init(IMG_INIT_PNG);
     SDL_Surface* imageSurface = IMG_Load("noise.png");
     SDL_Texture* imageTexture = SDL_CreateTextureFromSurface(renderer, imageSurface);
-    SDL_FreeSurface(imageSurface);
+    //SDL_FreeSurface(imageSurface);
 
     // draw a black image
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);

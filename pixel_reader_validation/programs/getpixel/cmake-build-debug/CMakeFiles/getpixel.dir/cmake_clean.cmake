@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/getpixel.dir/main.cpp.obj"
+  "CMakeFiles/getpixel.dir/main.cpp.obj.d"
   "getpixel.exe"
   "getpixel.exe.manifest"
   "getpixel.pdb"

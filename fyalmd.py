@@ -10,9 +10,9 @@ import pyautogui
 import pyttsx3
 import win32gui
 
-
+VSYNC_TESTING = True
 pyautogui.FAILSAFE = False
-DEVICE = 'COM7'
+DEVICE = 'COM3'
 
 
 class FYALMDController:
@@ -146,21 +146,41 @@ class FYALMDController:
                        self.da_schmatzer.say("Keinen Messwert erhalten.")
                        self.da_schmatzer.runAndWait()
                        break
-            ete = int(decoded_bytes)
-            diff = (ete - self.last_fw_latency)
-            self.new_value = False
-            self.measurements.append({'id': iteration, 
-                                        'threshold': self.threshold,
-                                        'framework': self.fw_name, 
-                                        'complexity': self.complexity, 
-                                        'framework_complexity': f'{self.fw_name}_{self.complexity}',
-                                        'fullscreen': self.fullscreen_option,
-                                        'fullscreen_mode': self.fullscreen_mode,
-                                        'program': f'{self.program_name}',
-                                        'ete': ete, 
-                                        'fw': self.last_fw_latency, 
-                                        'diff': diff
-                                    })
+            if VSYNC_TESTING:
+                ete_upper = int(decoded_bytes.split(',')[0])
+                ete_lower = int(decoded_bytes.split(',')[1])
+                diff = (ete_upper - self.last_fw_latency)
+                self.new_value = False
+                self.measurements.append({'id': iteration, 
+                                            'threshold': self.threshold,
+                                            'framework': self.fw_name, 
+                                            'complexity': self.complexity, 
+                                            'framework_complexity': f'{self.fw_name}_{self.complexity}',
+                                            'fullscreen': self.fullscreen_option,
+                                            'fullscreen_mode': self.fullscreen_mode,
+                                            'program': f'{self.program_name}',
+                                            'ete_upper': ete_upper, 
+                                            'ete_lower': ete_lower, 
+                                            'fw': self.last_fw_latency, 
+                                            'diff': diff
+                                        })
+
+            else:    
+                ete = int(decoded_bytes)
+                diff = (ete - self.last_fw_latency)
+                self.new_value = False
+                self.measurements.append({'id': iteration, 
+                                            'threshold': self.threshold,
+                                            'framework': self.fw_name, 
+                                            'complexity': self.complexity, 
+                                            'framework_complexity': f'{self.fw_name}_{self.complexity}',
+                                            'fullscreen': self.fullscreen_option,
+                                            'fullscreen_mode': self.fullscreen_mode,
+                                            'program': f'{self.program_name}',
+                                            'ete': ete, 
+                                            'fw': self.last_fw_latency, 
+                                            'diff': diff
+                                        })
             
 
     # make sure pixel reader windup has initializes its context before starting measurements

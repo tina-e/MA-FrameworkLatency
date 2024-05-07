@@ -3,15 +3,14 @@
 #include <signal.h>
 #include <windows.h>
 #include <SDL2/SDL.h>
-#include <SOIL/SOIL.h>
-//#include <SOIL2/SOIL2.h>
+#include <SDL2/SDL_image.h>
+
 
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
 int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
 bool is_pressed = false;
 bool running = true;
-unsigned char* image;
 
 // make sure we clean up when program is interrupted
 void signalHandler(int sig)
@@ -21,57 +20,46 @@ void signalHandler(int sig)
     exit(sig);
 }
 
-void setupTexture()
-{
-    glEnable(GL_TEXTURE_2D);
-    GLuint textureID;
-    glGenTextures(1, &textureID);
-    glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WIDTH, HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-}
-
-void drawTexture()
-{
-    glBegin(GL_QUADS);
-    glTexCoord2f(0.0f, 0.0f); glVertex2f(-1.0f, 1.0f);
-    glTexCoord2f(1.0f, 0.0f); glVertex2f(1.0f, 1.0f);
-    glTexCoord2f(1.0f, 1.0f); glVertex2f(1.0f, -1.0f);
-    glTexCoord2f(0.0f, 1.0f); glVertex2f(-1.0f, -1.0f);
-    glEnd();
-
-    glDisable(GL_TEXTURE_2D);
-}
-
 int main(int argc, char** argv)
 {
     signal(SIGINT, signalHandler);
 
-    image = SOIL_load_image("noise.png", &WIDTH, &HEIGHT, 0, SOIL_LOAD_RGB);
-
     SDL_Init(SDL_INIT_VIDEO); // maybe we have to reduce this?
-    SDL_Window* window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS | SDL_WINDOW_OPENGL);
+    SDL_Window* window = SDL_CreateWindow("framework", 0, 0, WIDTH, HEIGHT, SDL_WINDOW_FULLSCREEN | SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(window);
     SDL_GL_SetSwapInterval(0); // 0 immediate, 1 vsync, -1 adaptive sync
+
+    //glewExperimental = GL_TRUE;
     glewInit();
 
+    SDL_Surface* image = IMG_Load("noise.png");
+
+    // Create a texture object
+    GLuint texture;
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+
+    // Set the texture parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // Load the image data into the texture
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WIDTH, HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, image->pixels);
+
+    // Enable texturing
+    glEnable(GL_TEXTURE_2D);
+
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
     SDL_Event event;
-
     while (running)
     {
         while (SDL_PollEvent(&event))
         {
             if (event.type == SDL_MOUSEBUTTONDOWN)
             {
-                if (event.button.button == SDL_BUTTON_LEFT && !is_pressed)
+                if (event.button.button == SDL_BUTTON_LEFT)
                 {
                     is_pressed = true;
-                    glClearColor(0.0f, 0.0f, 0.0, 1.0f);
-                    setupTexture();
-                    drawTexture();
                 }
             }
 
@@ -80,11 +68,22 @@ int main(int argc, char** argv)
                 if (event.button.button == SDL_BUTTON_LEFT)
                 {
                     is_pressed = false;
-                    glClearColor(0.0f, 0.0f, 0.0, 1.0f);
                 }
             }
         }
-        glClear(GL_COLOR_BUFFER_BIT);
+        if (is_pressed)
+        {
+            glBegin(GL_QUADS);
+            glTexCoord2f(0.0f, 0.0f); glVertex2f(-1.0f, 1.0f);
+            glTexCoord2f(1.0f, 0.0f); glVertex2f(1.0f, 1.0f);
+            glTexCoord2f(1.0f, 1.0f); glVertex2f(1.0f, -1.0f);
+            glTexCoord2f(0.0f, 1.0f); glVertex2f(-1.0f, -1.0f);
+            glEnd();
+        }
+        else
+        {
+            glClear(GL_COLOR_BUFFER_BIT);
+        }
         SDL_GL_SwapWindow(window);
     }
 

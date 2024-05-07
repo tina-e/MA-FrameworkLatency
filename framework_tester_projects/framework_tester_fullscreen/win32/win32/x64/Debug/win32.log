@@ -1,4 +1,10 @@
 ﻿  main.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(14,51): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(14,51): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(30,51): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(30,51): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(36,51): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\win32\main.cpp(36,51): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
   win32.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32\x64\Debug\win32.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

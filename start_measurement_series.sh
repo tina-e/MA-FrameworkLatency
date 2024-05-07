@@ -1,9 +1,10 @@
 #!/bin/sh
 
-ITERATIONS=20
-DATA_DIR="debug"
+ITERATIONS=50
+DATA_DIR="vsync_tester_0605_60hz"
 
-READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
+#READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
+READERS=("windup_fullscreen" "getpixel")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "Unity" "psychopy_pyglet")
 
@@ -26,7 +27,7 @@ FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
 
 FRAMEWORK_SDLS=("SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software")
 
-FRAMEWORKS=("GLEW_SDL" "SDL_OpenGL")
+FRAMEWORKS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
 
 mkdir "./data/$DATA_DIR"
 sleep "7s"

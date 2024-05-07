@@ -1,168 +1,66 @@
-// based on tutorial: https://samulinatri.com/things/win32-drawing-rectangles/
-// #define WIN32_LEAN_AND_MEAN
-// #define UNICODE
 #include <Windows.h>
 #include <stdint.h>
 #include <iostream>
 
-typedef uint32_t u32;
+const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
-void *BitmapMemory;
-
-int BitmapWidth;
-int BitmapHeight;
-
-int ClientWidth;
-int ClientHeight;
-
-u32 color = 0x000000;
-
-// void SetPixelColor(int x, int y, u32 color) {
-//	u32* pixel = (u32*)BitmapMemory;
-//	pixel += y * BitmapWidth + x;
-//	*pixel = color;
-// }
-
-void fill()
+LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    u32 *pixel = (u32 *)BitmapMemory;
-    for (int i = 0; i < BitmapWidth * BitmapHeight; ++i)
+    switch (message)
     {
-        *pixel++ = color;
-    }
-}
-
-LRESULT CALLBACK WindowProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LParam)
-{
-    switch (Message)
+    case WM_CREATE:
     {
-    case WM_KEYDOWN:
-    {
-        switch (WParam)
-        {
-        case 'O':
-        {
-            DestroyWindow(Window);
-        };
-        break;
-        }
+        SetClassLongPtr(hWnd, GCLP_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(0, 0, 0)));
     }
     break;
+    case WM_PAINT:
+    {
+        PAINTSTRUCT ps;
+        HDC hdc = BeginPaint(hWnd, &ps);
+        SetBkColor(hdc, RGB(0, 0, 0));
+        EndPaint(hWnd, &ps);
+    }
+    break;
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
     case WM_LBUTTONDOWN:
     {
-        // OutputDebugStringW(L"down");
-        color = 0xffffff;
-    };
+        SetClassLongPtr(hWnd, GCLP_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(255, 255, 255)));
+        RedrawWindow(hWnd, NULL, NULL, RDW_ERASE | RDW_INVALIDATE);
+    }
     break;
     case WM_LBUTTONUP:
     {
-        // OutputDebugStringW(L"up");
-        color = 0x000000;
-    };
-    break;
-    case WM_DESTROY:
-    {
-        PostQuitMessage(0);
+        SetClassLongPtr(hWnd, GCLP_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(0, 0, 0)));
+        RedrawWindow(hWnd, NULL, NULL, RDW_ERASE | RDW_INVALIDATE);
     }
     break;
     default:
-    {
-        return DefWindowProc(Window, Message, WParam, LParam);
-    }
+        return DefWindowProc(hWnd, message, wParam, lParam);
     }
     return 0;
 }
 
-int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, int CmdShow)
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
+    WNDCLASS wc = { 0 };
+    wc.lpfnWndProc = WindowProc;
+    wc.hInstance = hInstance;
+    wc.lpszClassName = L"framework";
 
-    WNDCLASS WindowClass = {};
-    const wchar_t ClassName[] = L"framework";
-    WindowClass.lpfnWndProc = WindowProc;
-    WindowClass.hInstance = Instance;
-    WindowClass.lpszClassName = ClassName;
-    RegisterClass(&WindowClass);
+    RegisterClass(&wc);
 
-    int w = GetSystemMetrics(SM_CXSCREEN);
-    int h = GetSystemMetrics(SM_CYSCREEN);
+    HWND hWnd = CreateWindowEx(0, L"framework", L"framework", WS_POPUP, 0, 0, WIDTH, HEIGHT, NULL, NULL, hInstance, NULL);
+    if (!hWnd) return 0;
+    ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
-    HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
-    if (!Window) return 0;
-    /*SetWindowLongPtr(Window, GWL_EXSTYLE, WS_EX_APPWINDOW | WS_EX_TOPMOST);
-    SetWindowLongPtr(Window, GWL_STYLE, WS_POPUP | WS_VISIBLE);
-    SetWindowPos(Window, HWND_TOPMOST, 0, 0, w, h, SWP_SHOWWINDOW);
-    ShowWindow(Window, SW_MAXIMIZE);*/
-
-    //WINDOWPLACEMENT g_wpPrev = { sizeof(g_wpPrev) };
-    //DWORD dwStyle = GetWindowLong(Window, GWL_STYLE);
-    //MONITORINFO mi = { sizeof(mi) };
-    //if (GetWindowPlacement(Window, &g_wpPrev) &&
-    //    GetMonitorInfo(MonitorFromWindow(Window,
-    //        MONITOR_DEFAULTTOPRIMARY), &mi)) {
-    //    SetWindowLong(Window, GWL_STYLE,
-    //        dwStyle & ~WS_OVERLAPPEDWINDOW);
-    //    SetWindowPos(Window, HWND_TOP,
-    //        mi.rcMonitor.left, mi.rcMonitor.top,
-    //        mi.rcMonitor.right - mi.rcMonitor.left,
-    //        mi.rcMonitor.bottom - mi.rcMonitor.top,
-    //        SWP_NOOWNERZORDER | SWP_FRAMECHANGED);
-    //}
-    
-    ShowWindow(Window, SW_SHOWMAXIMIZED);
-    //ShowWindow(Window, SW_SHOW);
-
-    // Get client area dimensions
-
-    RECT ClientRect;
-    GetClientRect(Window, &ClientRect);
-    ClientWidth = ClientRect.right - ClientRect.left;
-    ClientHeight = ClientRect.bottom - ClientRect.top;
-
-    BitmapWidth = ClientWidth;
-    BitmapHeight = ClientHeight;
-
-    // Allocate memory for the bitmap
-
-    int BytesPerPixel = 4;
-
-    BitmapMemory = VirtualAlloc(0,
-                                BitmapWidth * BitmapHeight * BytesPerPixel,
-                                MEM_RESERVE | MEM_COMMIT,
-                                PAGE_READWRITE);
-
-    // BitmapInfo struct for StretchDIBits
-
-    BITMAPINFO BitmapInfo;
-    BitmapInfo.bmiHeader.biSize = sizeof(BitmapInfo.bmiHeader);
-    BitmapInfo.bmiHeader.biWidth = BitmapWidth;
-    BitmapInfo.bmiHeader.biHeight = -BitmapHeight;
-    BitmapInfo.bmiHeader.biPlanes = 1;
-    BitmapInfo.bmiHeader.biBitCount = 32;
-    BitmapInfo.bmiHeader.biCompression = BI_RGB;
-
-    HDC DeviceContext = GetDC(Window);
-
-    bool Running = true;
-    while (Running)
+    MSG msg = { 0 };
+    while (GetMessage(&msg, NULL, 0, 0))
     {
-        MSG Message;
-        while (PeekMessage(&Message, nullptr, 0, 0, PM_REMOVE))
-        {
-            if (Message.message == WM_QUIT)
-                Running = false;
-            TranslateMessage(&Message);
-            DispatchMessage(&Message);
-        }
-        fill();
-        // OutputDebugStringW(L"filled");
-        StretchDIBits(DeviceContext,
-                      0, 0,
-                      BitmapWidth, BitmapHeight,
-                      0, 0,
-                      ClientWidth, ClientHeight,
-                      BitmapMemory, &BitmapInfo,
-                      DIB_RGB_COLORS, SRCCOPY);
-        // OutputDebugStringW(L"stretched\n");
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
     }
 
     return 0;

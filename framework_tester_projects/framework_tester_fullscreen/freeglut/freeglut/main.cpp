@@ -26,7 +26,7 @@ void display()
     glClearColor(colorR, colorG, colorB, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     glutSwapBuffers();
-    // glFlush();
+    //glFlush();
 }
 
 void mouse(int button, int state, int x, int y)
@@ -54,7 +54,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     int argc = 1;
     argv[0] = _strdup("framework");
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+    glutInitDisplayMode( GLUT_RGBA);
     glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("framework");

@@ -1,21 +1,14 @@
-// based on tutorial: https://samulinatri.com/things/win32-drawing-rectangles/
 #include <Windows.h>
 #include <stdint.h>
 #include <iostream>
 #include <random>
 
-typedef uint32_t u32;
-
-void* BitmapMemory;
-
-int BitmapWidth;
-int BitmapHeight;
-
-int ClientWidth;
-int ClientHeight;
-
-const int n_rects = 1000;
+const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
+const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
+const int NUM_RECTS = 999;
 bool isPressed = false;
+RECT rects[1000] = {};
+COLORREF colors[1000] = {};
 
 
 int randint(int low, int high)
@@ -24,146 +17,86 @@ int randint(int low, int high)
 }
 
 
-void DrawRects() {
-    int rectW = ClientWidth / 5;
-    int rectH = ClientHeight / 5;
-    for (int i = 0; i < n_rects; i++) {
-        int rectX = (rand() % (ClientWidth / 2 - rectW)) + ClientWidth / 2;
-        int rectY = rand() % (ClientHeight - rectH);
-
-        int r = randint(0, 255);
-        int g = randint(0, 255);
-        int b = randint(0, 255);
-        u32 color = (255 << 24) + (int(r) << 16) + (int(g) << 8) + int(b);
-
-        u32* pixel = (u32*)BitmapMemory;
-        pixel += rectY * BitmapWidth + rectX;
-
-        for (int y = 0; y < rectH; ++y) {
-            for (int x = 0; x < rectW; ++x) {
-                *pixel++ = color;
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
+    switch (message) {
+    case WM_CREATE:
+    {
+        SetClassLongPtr(hWnd, GCLP_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(0, 0, 0)));
+    }
+    break;
+    case WM_PAINT: {
+        if (isPressed) {
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hWnd, &ps);
+            for (int i = 0; i < NUM_RECTS+1; i++) {
+                Rectangle(hdc, rects[i].left, rects[i].top, rects[i].right, rects[i].bottom);
+                HBRUSH hBrush = CreateSolidBrush(colors[i]);
+                HBRUSH hOldBrush = (HBRUSH)SelectObject(hdc, hBrush);
+                FillRect(hdc, &rects[i], hBrush);
+                SelectObject(hdc, hOldBrush);
+                DeleteObject(hBrush);
             }
-            pixel += BitmapWidth - rectW;
+            EndPaint(hWnd, &ps);
         }
+        
     }
-    // draw white rect
-    u32* pixel = (u32*)BitmapMemory;
-    for (int y = 0; y < rectH; ++y) {
-        for (int x = 0; x < rectW; ++x) {
-            *pixel++ = 0xffffff;
-        }
-        pixel += BitmapWidth - rectW;
-    }
-    //OutputDebugStringW(L"rects done\n");
-}
+    break;
+    case WM_LBUTTONDOWN:
+    {
+        isPressed = true;
+        for (int i = 0; i < NUM_RECTS; i++) {
+            int w = randint(100, 500);
+            int h = randint(100, 500);
+            int x = randint(100, WIDTH - w);
+            int y = randint(0, HEIGHT - h);
+            int r = randint(0, 255);
+            int g = randint(0, 255);
+            int b = randint(0, 255);
 
-void clear() {
-    u32* pixel = (u32*)BitmapMemory;
-    for (int i = 0; i < BitmapWidth * BitmapHeight; ++i) {
-        *pixel++ = 0x000000;
-    }
-}
-
-LRESULT CALLBACK WindowProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LParam) {
-    switch (Message) {
-        case WM_KEYDOWN: {
-            switch (WParam) {
-            case 'O': {
-                DestroyWindow(Window);
-            }; break;
-            }
-        } break;
-        case WM_LBUTTONDOWN: {
-            //OutputDebugStringW(L"down\n");
-            isPressed = true;
-            DrawRects();
-        }; break;
-        case WM_LBUTTONUP: {
-            //OutputDebugStringW(L"up\n");
-            isPressed = false;
-        }; break;
-        case WM_DESTROY: {
-            PostQuitMessage(0);
-        } break;
-        default: {
-            return DefWindowProc(Window, Message, WParam, LParam);
+            rects[i] = { x, y, x+w, y+h };
+            colors[i] = RGB(r, g, b);
         }
+        rects[999] = { 0, 0, 100, 100 };
+        colors[999] = RGB(255, 255, 255);
+
+        RedrawWindow(hWnd, NULL, NULL, RDW_ERASE | RDW_INVALIDATE);
+    }
+    break;
+    case WM_LBUTTONUP:
+    {
+        SetClassLongPtr(hWnd, GCLP_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(0, 0, 0)));
+        RedrawWindow(hWnd, NULL, NULL, RDW_ERASE | RDW_INVALIDATE);
+        isPressed = false;
+    }
+    break;
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
     }
     return 0;
 }
 
-int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, int CmdShow) {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+    WNDCLASS wc = { 0 };
+    wc.lpfnWndProc = WndProc;
+    wc.hInstance = hInstance;
+    wc.lpszClassName = L"framework";
+    RegisterClass(&wc);
 
-    WNDCLASS WindowClass = {};
-    const wchar_t ClassName[] = L"framework";
-    WindowClass.lpfnWndProc = WindowProc;
-    WindowClass.hInstance = Instance;
-    WindowClass.lpszClassName = ClassName;
-    RegisterClass(&WindowClass);
+    HWND hWnd = CreateWindowEx(0, L"framework", L"framework", WS_POPUP, 0, 0, WIDTH, HEIGHT, NULL, NULL, hInstance, NULL);
+    if (!hWnd) return 0;
+    ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
-    /*int w = (int) (GetSystemMetrics(SM_CXSCREEN) * 0.8);
-    int h = (int) (GetSystemMetrics(SM_CYSCREEN) * 0.8);*/
-    int w = GetSystemMetrics(SM_CXSCREEN);
-    int h = GetSystemMetrics(SM_CYSCREEN);
-
-    HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, w, h, 0, 0, Instance, 0);
-    if (!Window) return 0;
-    ShowWindow(Window, SW_SHOW);
-    //ShowWindow(Window, SW_SHOWMAXIMIZED);
-
-
-    // Get client area dimensions 
-
-    RECT ClientRect;
-    GetClientRect(Window, &ClientRect);
-    ClientWidth = ClientRect.right - ClientRect.left;
-    ClientHeight = ClientRect.bottom - ClientRect.top;
-
-    BitmapWidth = ClientWidth;
-    BitmapHeight = ClientHeight;
-
-    // Allocate memory for the bitmap
-
-    int BytesPerPixel = 4;
-
-    BitmapMemory = VirtualAlloc(0,
-        BitmapWidth * BitmapHeight * BytesPerPixel,
-        MEM_RESERVE | MEM_COMMIT,
-        PAGE_READWRITE
-    );
-
-    // BitmapInfo struct for StretchDIBits
-
-    BITMAPINFO BitmapInfo;
-    BitmapInfo.bmiHeader.biSize = sizeof(BitmapInfo.bmiHeader);
-    BitmapInfo.bmiHeader.biWidth = BitmapWidth;
-    BitmapInfo.bmiHeader.biHeight = -BitmapHeight;
-    BitmapInfo.bmiHeader.biPlanes = 1;
-    BitmapInfo.bmiHeader.biBitCount = 32;
-    BitmapInfo.bmiHeader.biCompression = BI_RGB;
-
-    HDC DeviceContext = GetDC(Window);
-
-    bool Running = true;
-    while (Running) {
-        MSG Message;
-        while (PeekMessage(&Message, nullptr, 0, 0, PM_REMOVE)) {
-            if (Message.message == WM_QUIT) Running = false;
-            TranslateMessage(&Message);
-            DispatchMessage(&Message);
-        }
-        // OutputDebugStringW(L"here\n");
-        if (!isPressed) {
-            clear();
-        }
-        StretchDIBits(DeviceContext,
-            0, 0,
-            BitmapWidth, BitmapHeight,
-            0, 0,
-            ClientWidth, ClientHeight,
-            BitmapMemory, &BitmapInfo,
-            DIB_RGB_COLORS, SRCCOPY);
+    MSG msg = { 0 };
+    while (GetMessage(&msg, NULL, 0, 0))
+    {
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
     }
 
     return 0;
 }
+
+
