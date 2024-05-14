@@ -30,7 +30,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "software"
 //#endif
 
 // make sure we clean up when program is interrupted
@@ -45,7 +45,9 @@ int main(int argc, char **argv)
     signal(SIGINT, signalHandler);
 
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
+    SDL_bool res = SDL_SetHint(SDL_HINT_RENDER_DRIVER, DRIVER);
+    //const char* driver = SDL_GetHint(SDL_HINT_RENDER_DRIVER);
+    //const char* driver2 = SDL_GetCurrentVideoDriver();
 
     // create SDL2 window and renderer
     SDL_Window *window = SDL_CreateWindow(__FILE__, 0, 0, WIDTH, HEIGHT, WINDOW_STYLE);
@@ -54,6 +56,8 @@ int main(int argc, char **argv)
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, RENDERER);
     SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0"); // sollte eig mit RENDERER schon abgedeckt sein
     SDL_RenderSetVSync(renderer, SDL_FALSE);
+    //SDL_RendererInfo rendererInfo;
+    //SDL_GetRendererInfo(renderer, &rendererInfo);
     
     // draw a black image
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);

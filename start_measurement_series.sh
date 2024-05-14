@@ -1,10 +1,10 @@
 #!/bin/sh
 
 ITERATIONS=50
-DATA_DIR="vsync_tester_0605_60hz"
+DATA_DIR="missing_image_and_new_winapi_0805"
 
-#READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
-READERS=("windup_fullscreen" "getpixel")
+READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
+# READERS=("windup_fullscreen" "getpixel")
 #READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
 #FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "Unity" "psychopy_pyglet")
 
@@ -27,25 +27,27 @@ FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
 
 FRAMEWORK_SDLS=("SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software")
 
-FRAMEWORKS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
+# FRAMEWORKS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
 
+
+FRAMEWORKS=("GLEW_SDL" "FLTK"  "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_Direct3D" "SDL2_Software")
 mkdir "./data/$DATA_DIR"
 sleep "7s"
 
 
 # measurements 2704 recompileds
-for f in "${!FRAMEWORKS[@]}";
-do
-    for r in "${!READERS[@]}";
-    do
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" big $DATA_DIR
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" small $DATA_DIR
-        #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
-        r=$((r+1));
-    done
-    f=$((f+1));
-done
+# for f in "${!FRAMEWORKS[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" big $DATA_DIR
+#         #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" small $DATA_DIR
+#         #./start_measurement.sh $ITERATIONS "${FRAMEWORKS_BIG[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
 # end measurements 2704 recompileds
 
 
@@ -61,12 +63,13 @@ done
 #     f=$((f+1));
 # done
 
-# for r in "${!READERS[@]}";
-# do
-#     ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" no_fullscreen $DATA_DIR
-#     ./start_measurement.sh $ITERATIONS psychopy_pyglet default "${READERS[$r]}" small $DATA_DIR
-#     r=$((r+1));
-# done
+for r in "${!READERS[@]}";
+do
+    ./start_measurement.sh $ITERATIONS win32 default "${READERS[$r]}" small $DATA_DIR
+    ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" big $DATA_DIR
+    ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" no_fullscreen $DATA_DIR
+    r=$((r+1));
+done
 
 # for r in "${!READERS[@]}";
 # do

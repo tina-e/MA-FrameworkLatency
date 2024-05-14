@@ -6,7 +6,7 @@ from subprocess import Popen, PIPE
 import pyautogui
 pyautogui.FAILSAFE = False
 
-DATA_DIR = 'data/setup_test_getdbits_60hz'
+DATA_DIR = 'data/setup_test_windup_60hz_vsync_on'
 PROGRAMS = ['getpixel', 'bitblt', 'getdbits', 'windup']
 
 
@@ -43,7 +43,7 @@ pyautogui.click()
 
 # start measurement program
 output_program = []
-command_program = [f'./{PROGRAMS[2]}.exe']
+command_program = [f'./{PROGRAMS[3]}.exe']
 process_program = Popen(command_program, stdout=PIPE, bufsize=1, universal_newlines=True)
 
 

@@ -1,5 +1,5 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Das Zwischenverzeichnis (x64\Debug\) enthält freigegebene Dateien aus einem anderen Projekt (FLTK_rects.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (FLTK_rects.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
-  FLTK_rects.vcxproj -> D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\FLTK_image\FLTK_image\x64\Debug\FLTK_image.exe
+  FLTK_rects.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\FLTK_image\FLTK_image\x64\Debug\FLTK_image.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.
