@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/Qt6_quick_default
+-cmake-output
+-output-file
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/build-Qt6_quick_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appQt6_quick_default.cmake
+-importPath
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/build-Qt6_quick_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/Qt6_quick_default
+-importPath
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/build-Qt6_quick_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.6.1/mingw_64/./qml
+-qrcFiles
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/build-Qt6_quick_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/.rcc/qmake_Qt6_quick_default.qrc
+C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/build-Qt6_quick_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/.rcc/appQt6_quick_default_raw_qml_0.qrc

@@ -1,0 +1,1 @@
+﻿D:\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\WinUI_default\packages\Microsoft.WindowsAppSDK.1.4.230913002\build\Microsoft.Build.Msix.Packaging.targets(144,5): error : Improper project configuration: WindowsPackageType is set to None, but AppxPackage is set to true.

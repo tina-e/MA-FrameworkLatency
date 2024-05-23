@@ -1,0 +1,17 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (winAPI_Blend2D.vcxproj, winAPI_cairo.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,61): warning C4244:         with
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,61): warning C4244:         [
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,61): warning C4244:             T=float
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,61): warning C4244:         ]
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,58): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,58): warning C4244:         with
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,58): warning C4244:         [
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,58): warning C4244:             T=float
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(45,58): warning C4244:         ]
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(47,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\winAPI_cairo\main.cpp(47,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  winAPI_cairo.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\SFML_rects\x64\Debug\SFML.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

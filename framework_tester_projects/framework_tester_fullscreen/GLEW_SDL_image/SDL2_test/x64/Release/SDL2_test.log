@@ -1,10 +1,10 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (SDL2_test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
   Generating code
-  1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  4 of 4 functions (100.0%) were compiled.
+    2 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  SDL2_test.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\GLEW_SDL_image\x64\Release\GLEW_SDL_image.exe
+  SDL2_test.vcxproj -> D:\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\GLEW_SDL_image\x64\Release\GLEW_SDL_image.exe
   Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
   konnte nicht gefunden werden.

@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\winAPI_cairo_image\winAPI_cairo\main.cpp(92,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  winAPI_cairo.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\winAPI_cairo_image\x64\Debug\winAPI_cairo.exe
+  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
+  konnte nicht gefunden werden.

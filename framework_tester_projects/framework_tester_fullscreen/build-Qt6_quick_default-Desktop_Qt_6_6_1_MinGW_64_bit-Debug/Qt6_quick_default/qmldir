@@ -1,0 +1,5 @@
+module Qt6_quick_default
+typeinfo appQt6_quick_default.qmltypes
+prefer :/Qt6_quick_default/
+Main 1.0 Main.qml
+
