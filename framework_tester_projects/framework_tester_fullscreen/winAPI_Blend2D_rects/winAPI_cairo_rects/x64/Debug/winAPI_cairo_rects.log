@@ -1,5 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (winAPI_cairo_rects.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-  winAPI_cairo_rects.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\winAPI_Blend2D_rects\x64\Debug\winAPI_Blend2D_rects.exe
-  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
-  konnte nicht gefunden werden.

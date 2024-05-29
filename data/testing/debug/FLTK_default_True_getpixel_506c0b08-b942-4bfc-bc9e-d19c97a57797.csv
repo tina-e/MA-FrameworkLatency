@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,FLTK,default,FLTK_default,getpixel,True,getpixel_True,7477,1331,6146
-1,1,FLTK,default,FLTK_default,getpixel,True,getpixel_True,9207,3312,5895
-2,2,FLTK,default,FLTK_default,getpixel,True,getpixel_True,8703,2718,5985
-3,3,FLTK,default,FLTK_default,getpixel,True,getpixel_True,8698,2879,5819
-4,4,FLTK,default,FLTK_default,getpixel,True,getpixel_True,7726,1989,5737

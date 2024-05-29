@@ -1,6 +1,0 @@
-﻿  main.cpp
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,28): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,25): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\GLEW_default\main.cpp(44,22): warning C4244: "Argument": Konvertierung von "int" in "GLclampf", möglicher Datenverlust
-MSVCRT.lib(exe_winmain.obj) : error LNK2001: Nicht aufgelöstes externes Symbol "WinMain".
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_wip\GLEW_default\GLEW_default\x64\Release\GLEW_default.exe : fatal error LNK1120: 1 nicht aufgelöste Externe

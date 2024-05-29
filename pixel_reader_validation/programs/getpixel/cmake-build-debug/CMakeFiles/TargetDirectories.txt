@@ -1,3 +1,0 @@
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_validation/programs/getpixel/cmake-build-debug/CMakeFiles/getpixel.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_validation/programs/getpixel/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_validation/programs/getpixel/cmake-build-debug/CMakeFiles/rebuild_cache.dir

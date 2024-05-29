@@ -1,2 +1,0 @@
-D:\Studium\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\winAPI_cairo\winAPI_cairo\x64\Debug\winAPI_cairo.vcxproj.CopyComplete
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\winAPI_Blend2D_default\winAPI_cairo\x64\Debug\winAPI_cairo.vcxproj.CopyComplete

@@ -1,3 +1,0 @@
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_wip/getdbits/cmake-build-debug/CMakeFiles/getdbits.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_wip/getdbits/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_wip/getdbits/cmake-build-debug/CMakeFiles/rebuild_cache.dir

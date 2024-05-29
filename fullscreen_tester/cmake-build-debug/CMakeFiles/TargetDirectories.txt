@@ -1,3 +1,0 @@
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/fullscreen_tester/cmake-build-debug/CMakeFiles/fullscreen_tester.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/fullscreen_tester/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/fullscreen_tester/cmake-build-debug/CMakeFiles/rebuild_cache.dir

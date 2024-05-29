@@ -1,8 +1,0 @@
-﻿  main.cpp
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32_rects\win32_rects\main.cpp(24,51): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32_rects\win32_rects\main.cpp(24,51): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32_rects\win32_rects\main.cpp(67,51): warning C4311: 'type cast': pointer truncation from 'HBRUSH' to 'LONG'
-C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32_rects\win32_rects\main.cpp(67,51): warning C4302: 'type cast': truncation from 'HBRUSH' to 'LONG'
-  win32_rects.vcxproj -> C:\Users\tina\Masterarbeit\MA-FrameworkLatency\framework_tester_projects\framework_tester_fullscreen\win32_rects\x64\Debug\win32_rects.exe
-  Der Befehl "pwsh.exe" ist entweder falsch geschrieben oder
-  konnte nicht gefunden werden.

@@ -1,3 +1,0 @@
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_readers/pixelreader_bitblt/cmake-build-debug/CMakeFiles/pixelreader_bitblt.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_readers/pixelreader_bitblt/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_readers/pixelreader_bitblt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

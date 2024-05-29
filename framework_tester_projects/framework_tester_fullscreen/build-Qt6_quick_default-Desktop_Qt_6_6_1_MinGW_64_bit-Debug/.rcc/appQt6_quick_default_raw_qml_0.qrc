@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/Qt6_quick_default/">
-    <file alias="Main.qml">C:/Users/tina/Masterarbeit/MA-FrameworkLatency/framework_tester_projects/framework_tester_fullscreen/Qt6_quick_default/Main.qml</file>
-  </qresource>
-</RCC>
-
