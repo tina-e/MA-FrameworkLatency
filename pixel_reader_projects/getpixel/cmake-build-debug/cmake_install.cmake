@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_wip/getpixel
+# Install script for directory: D:/MA-FrameworkLatency/pixel_reader_projects/getpixel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_wip/getpixel/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/MA-FrameworkLatency/pixel_reader_projects/getpixel/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

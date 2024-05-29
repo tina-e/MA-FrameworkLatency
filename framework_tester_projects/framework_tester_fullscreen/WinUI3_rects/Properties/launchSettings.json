@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUI3_rects (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUI3_rects (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Mm08txa1+Y=",
+  "success": true,
+  "projectFilePath": "D:\\MA-FrameworkLatency\\framework_tester_projects\\framework_tester_small\\WinUI3_deafult\\WinUI3_deafult.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240428000\\microsoft.windowsappsdk.1.5.240428000.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.5\\microsoft.netcore.app.runtime.win-x86.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.5\\microsoft.aspnetcore.app.runtime.win-x86.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.5\\microsoft.netcore.app.runtime.win-arm64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.5\\microsoft.aspnetcore.app.runtime.win-x64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.5\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.5\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.5\\microsoft.netcore.app.runtime.win-x64.8.0.5.nupkg.sha512",
+    "C:\\Users\\tina\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.5\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
