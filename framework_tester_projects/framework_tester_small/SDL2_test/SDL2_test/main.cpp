@@ -27,7 +27,7 @@ int HEIGHT = 100;
 //  opengles
 //  metal (apple)
 //  software
-#define DRIVER "software"
+#define DRIVER "direct3d"
 // #endif
 
 // make sure we clean up when program is interrupted

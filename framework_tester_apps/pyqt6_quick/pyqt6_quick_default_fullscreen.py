@@ -7,7 +7,7 @@ from PyQt6.QtCore import QUrl, QObject, pyqtSlot
 class CustomQuickView(QQuickView):
     def __init__(self):
         super().__init__()
-        self.setSource(QUrl.fromLocalFile('default.qml'))
+        self.setSource(QUrl('./framework_tester_apps/pyqt6_quick/default.qml'))
         self.rootContext().setContextProperty("app", self)
         # self.setGraphicsApi(QQuickView.graphicsApi().Direct3D11)  # is default
 

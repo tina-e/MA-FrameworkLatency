@@ -38,7 +38,7 @@ class MainWindow : public Fl_Window {
 		}
 };
 
-int main(int argc, char** argv)
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	MainWindow window;
 	window.show();

@@ -24,6 +24,7 @@
     <ProjectGuid>{18f59b56-dcdc-4925-b4f5-29c81b5a07d4}</ProjectGuid>
     <RootNamespace>win32rects</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>win32_image</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

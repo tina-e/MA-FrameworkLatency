@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2288,Qt6,default,Qt6_default,fullscreen,2,windup,11808,14129,9130,2678
+1,1,2288,Qt6,default,Qt6_default,fullscreen,2,windup,10078,12572,7530,2548

@@ -117,7 +117,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		nullptr, nullptr, hInstance, nullptr);
 
 	CreateGraphics(hWnd);
-	ShowWindow(hWnd, SW_SHOW);
+	ShowWindow(hWnd, nCmdShow);
 
 	MSG msg;
 	BOOL gResult;

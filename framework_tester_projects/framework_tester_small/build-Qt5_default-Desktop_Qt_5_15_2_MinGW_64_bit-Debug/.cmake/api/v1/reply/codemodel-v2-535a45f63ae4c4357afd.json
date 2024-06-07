@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-45a477ee2763f208a764.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt5_default",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default-Debug-aa3b0389c5d5b0e89351.json",
+					"name" : "Qt5_default",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen-Debug-b7646f2df4c3dab0f692.json",
+					"name" : "Qt5_default_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt5_default_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt5_default_autogen_timestamp_deps-Debug-e97887f5aae475c61a11.json",
+					"name" : "Qt5_default_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_small/build-Qt5_default-Desktop_Qt_5_15_2_MinGW_64_bit-Debug",
+		"source" : "D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_small/Qt5_default"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

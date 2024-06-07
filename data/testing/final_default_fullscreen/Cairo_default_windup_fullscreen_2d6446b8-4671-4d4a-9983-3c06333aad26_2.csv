@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2264,Cairo,default,Cairo_default,fullscreen,2,windup,13363,15685,10112,3251
+1,1,2264,Cairo,default,Cairo_default,fullscreen,2,windup,12146,14475,9985,2161

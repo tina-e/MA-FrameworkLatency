@@ -26,7 +26,7 @@ class FYALMDController:
         self.program_name = program_name
         self.fullscreen_option = fullscreen_option
         self.fullscreen_mode = None
-        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{fullscreen_option}_{uuid.uuid4()}_2.csv"
+        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{self.fullscreen_option}_{uuid.uuid4()}_2.csv"
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = -1
@@ -145,6 +145,7 @@ class FYALMDController:
                        self.last_fw_latency = -1
                        self.da_schmatzer.say("Keinen Messwert erhalten.")
                        self.da_schmatzer.runAndWait()
+                       self.measuring = False  # stop measurements if cannot read pixel color value
                        break
             if VSYNC_TESTING:
                 ete_upper = int(decoded_bytes.split(',')[0])

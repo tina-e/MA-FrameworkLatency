@@ -6,7 +6,7 @@
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
 int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 
-const int n_rects = 1000;
+const int n_rects = 999;
 int n_horizontal = 10;
 int n_vertical = 10;
 int rect_w = WIDTH / n_horizontal;
@@ -28,7 +28,7 @@ GLfloat* randomColor()
 GLfloat* randomPosition()
 {
     GLfloat* position = new GLfloat[2];
-    position[0] = static_cast<float>(rand() % (WIDTH - rect_w) + (WIDTH / 2));
+    position[0] = static_cast<float>(rand() % (WIDTH - rect_w) + (300));
     position[1] = static_cast<float>(rand() % (HEIGHT - rect_h));
     return position;
 }

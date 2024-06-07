@@ -1,6 +1,6 @@
 // code based on schmid & wimmer
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <GL/glew.h>
 #include <cstdlib>
 #include <signal.h>
@@ -72,7 +72,7 @@ int main(int argc, char** argv)
                         float b = (float)rand() / RAND_MAX;
                         glColor3f(r, g, b);
 
-                        int x = (rand() % WIDTH/2) + WIDTH/2;
+                        int x = (rand() % WIDTH/2) + 300;
                         int y = rand() % HEIGHT;
                         int width = rand() % (WIDTH - x);
                         int height = rand() % (HEIGHT - y);

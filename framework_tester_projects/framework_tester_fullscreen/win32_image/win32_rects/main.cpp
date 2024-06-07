@@ -33,6 +33,8 @@ void LoadImageFromFile()
 
     pDecoder->GetFrame(0, &pFrame);
 
+    pFrame->GetSize((UINT*)&BitmapWidth, (UINT*)&BitmapHeight);
+
     BitmapMemory = VirtualAlloc(nullptr, BitmapWidth * BitmapHeight * sizeof(u32), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
 }
 
@@ -109,13 +111,7 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
 
     HWND Window = CreateWindow(ClassName, L"framework", WS_POPUP, 0, 0, BitmapWidth, BitmapHeight, 0, 0, Instance, 0);
     if (!Window) return 0;
-    ShowWindow(Window, SW_SHOW);
-
-    // Allocate memory for the bitmap
-    int BytesPerPixel = sizeof(u32);
-    BitmapMemory = VirtualAlloc(0,
-        BitmapWidth * BitmapHeight * BytesPerPixel,
-        MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+    ShowWindow(Window, SW_SHOWMAXIMIZED);
 
     // BitmapInfo struct for StretchDIBits
     BITMAPINFO BitmapInfo;

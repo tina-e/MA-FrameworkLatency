@@ -24,6 +24,7 @@
     <ProjectGuid>{3a7bec78-405b-4785-80d0-e809b77e7b58}</ProjectGuid>
     <RootNamespace>GDIplusdefault</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GDIplus_rects</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -18,7 +18,7 @@ static void cairo_draw(cairo_t* cr) {
 
     if (pressed)
     {
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 999; i++)
         {
             
             float r = (float)rand() / RAND_MAX;
@@ -74,10 +74,8 @@ static void activate(GtkApplication* app, gpointer user_data)
     gtk_window_set_title(GTK_WINDOW(window), "framework");
     gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
     
-    // for fullscreen / no-fullscreen
-    //gtk_window_fullscreen(GTK_WINDOW(window));
-    
-    gtk_window_present(GTK_WINDOW(window));
+    // for fullscreen 
+    gtk_window_fullscreen(GTK_WINDOW(window));
 
     GtkWidget* area = gtk_drawing_area_new();
     gtk_drawing_area_set_content_width(GTK_DRAWING_AREA(area), width);

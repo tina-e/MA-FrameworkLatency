@@ -1,6 +1,6 @@
 // code based on schmid & wimmer
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <GL/glew.h>
 #include <signal.h>
 #include <windows.h>

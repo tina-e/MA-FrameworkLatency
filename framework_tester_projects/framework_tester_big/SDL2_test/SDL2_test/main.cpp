@@ -28,7 +28,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN) - 1;
 // opengles
 // metal (apple)
 // software
-#define DRIVER "direct3d"
+#define DRIVER "opengles2"
 //#endif
 
 // make sure we clean up when program is interrupted

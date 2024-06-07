@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2278,tkinter,default,tkinter_default,fullscreen,2,getdbits,8376,10689,3143,5233
+1,1,2278,tkinter,default,tkinter_default,fullscreen,2,getdbits,9051,11542,6351,2700

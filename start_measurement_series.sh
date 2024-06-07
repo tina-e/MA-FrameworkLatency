@@ -1,38 +1,91 @@
 #!/bin/sh
 
-ITERATIONS=50
-DATA_DIR="missing_image_and_new_winapi_0805"
+ITERATIONS=200
+DATA_DIR="finals_vsync_on_0606"
 
-READERS=("windup_fullscreen" "getpixel" "bitblt" "getdbits" "none")
-# READERS=("windup_fullscreen" "getpixel")
-#READERS=("getpixel" "bitblt" "getdbits" "pyautogui_reader" "ctypes_reader" "windup_python" "windup")
-#FRAMEWORKS=("FLTK" "win32" "pyglet" "tkinter" "pyqt5" "pyqt6" "wxpython" "pygame" "GLUT" "GTK" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "GLEW_SDL" "Qt5" "Qt6" "DirectX11" "Java2D" "JavaSwing" "Godot" "Unity" "psychopy_pyglet")
+READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
+READERS=("windup" "getpixel" "none")
 
-FRAMEWORKS_3D=("Direct3D" "GLEW_SDL" "GLUT" "pygame" "pyglet" "Unity")
-FRAMEWORKS_IMAGE=("GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "tkinter" "Unity" "wxpython")
-FRAMEWORKS_FULLSCREEN_AND_RECTS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "Godot" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython" "psychopy_pyglet")
-FRAMEWORKS_NO_FULLSCREEN=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "Unity" "win32" "wxpython")
+# todo: direct3d check fullscreen and stuff, WinUI ohne auto
+FRAMEWORKS=("Direct2D" "Blend2D" "Cairo" "FLTK" "GDIplus" "GLEW" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "pyqt6_quick" "SDL2_Software" "SDL2_OpenGL" "SDL2_OpenGLES" "SDL2_Direct3D" "SFML" "Skia" "tkinter" "wxpython" "wxpython_d2d" "WinAPI")
+FRAMEWORKS_3D=("GLEW" "GLUT" "pygame" "pyglet")
 
 
-# measurements 2704 recompileds
-FRAMEWORKS_BIG=("GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
-FRAMEWORKS_FS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
-# end measurements 2704 recompileds
-
-
-#FRAMEWORKS_SMALL=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
-FRAMEWORKS_SMALL=("Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
-
-FRAMEWORK_GLUMPY=("qt5" "sdl" "glfw")
-
-FRAMEWORK_SDLS=("SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software")
-
-# FRAMEWORKS=("Direct3D" "FLTK" "GLEW_SDL" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_OpenGLES" "SDL2_Direct3D" "SDL2_Software" "tkinter" "win32" "wxpython")
-
-
-FRAMEWORKS=("GLEW_SDL" "FLTK"  "SDL2_OpenGL" "SDL2_OpenGLES2" "SDL2_Direct3D" "SDL2_Software")
 mkdir "./data/$DATA_DIR"
 sleep "7s"
+
+
+# program validation
+# for f in "${!FRAMEWORKS[@]}";
+# do
+#     for r in "${!READERS_ALL[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS_ALL[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+# vsync
+for f in "${!FRAMEWORKS[@]}";
+do
+    for r in "${!READERS[@]}";
+    do
+        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+        r=$((r+1));
+    done
+    f=$((f+1));
+done
+
+# dimension
+# for f in "${!FRAMEWORKS_AGAIN_2[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_AGAIN_2[$f]}" default "${READERS[$r]}" large $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_AGAIN_2[$f]}" default "${READERS[$r]}" small $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_AGAIN_2[$f]}" default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+
+
+# complexity
+# for f in "${!FRAMEWORKS_AGAIN_4[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_AGAIN_4[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_AGAIN_4[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+# 3D
+# for f in "${!FRAMEWORKS_3D[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_3D[$f]}" 3D "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
+
+
+# fixes, todo
+# ./start_measurement.sh $ITERATIONS GLUT 3D windup fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS GTK rects none fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS GTK rects getpixel fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS GTK rects windup fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS SFML rects windup fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS GLEW 3D getpixel fullscreen $DATA_DIR
 
 
 # measurements 2704 recompileds
@@ -63,13 +116,13 @@ sleep "7s"
 #     f=$((f+1));
 # done
 
-for r in "${!READERS[@]}";
-do
-    ./start_measurement.sh $ITERATIONS win32 default "${READERS[$r]}" small $DATA_DIR
-    ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" big $DATA_DIR
-    ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" no_fullscreen $DATA_DIR
-    r=$((r+1));
-done
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS win32 default "${READERS[$r]}" small $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" big $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS win32 rects "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
 
 # for r in "${!READERS[@]}";
 # do

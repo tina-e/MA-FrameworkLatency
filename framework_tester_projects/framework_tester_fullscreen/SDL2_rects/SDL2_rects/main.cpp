@@ -12,7 +12,7 @@
 // opengles
 // metal (apple)
 // software
-#define DRIVER "software"
+#define DRIVER "direct3d"
 
 // screen size
 int WIDTH = GetSystemMetrics(SM_CXSCREEN);
@@ -45,7 +45,7 @@ void render(SDL_Renderer *renderer)
         uint8_t b = rand() % 255;
         uint8_t a = 255; // 55 + rand() % 200;
 
-        int x = rand() % (WIDTH - rect_w) + (WIDTH / 2);
+        int x = rand() % (WIDTH - rect_w) + 300;
         int y = rand() % (HEIGHT - rect_h);
 
         SDL_SetRenderDrawColor(renderer, r, g, b, a);

@@ -1,0 +1,9 @@
+# ninja log v5
+1	697	7389399507926507	Qt6_default_autogen/timestamp	cfe2eb7c69d17e48
+1	697	7389399507926507	Qt6_default_autogen/mocs_compilation.cpp	cfe2eb7c69d17e48
+1	697	7389399507926507	D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_big/Qt6_default/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/Qt6_default_autogen/timestamp	cfe2eb7c69d17e48
+1	697	7389399507926507	D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_big/Qt6_default/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/Qt6_default_autogen/mocs_compilation.cpp	cfe2eb7c69d17e48
+702	2490	7389399526475802	CMakeFiles/Qt6_default.dir/Qt6_default_autogen/mocs_compilation.cpp.obj	3c81752487a57f3f
+706	2859	7389399530179567	CMakeFiles/Qt6_default.dir/mainwindow.cpp.obj	3a23e0193dc959cd
+698	3504	7389399536535822	CMakeFiles/Qt6_default.dir/main.cpp.obj	35101be16aa80737
+3506	3749	7389399538991937	Qt6_default.exe	4aeb80acd5908643

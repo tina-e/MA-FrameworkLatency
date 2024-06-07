@@ -7,7 +7,7 @@ from PyQt6.QtCore import QUrl, QObject, pyqtSlot, Qt
 class CustomQuickView(QQuickView):
     def __init__(self):
         super().__init__()
-        self.setSource(QUrl.fromLocalFile('default_small.qml'))
+        self.setSource(QUrl('./framework_tester_apps/pyqt6_quick/default_small.qml'))
         self.rootContext().setContextProperty("app", self)
         self.setPosition(0, 0)
         self.setFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.BypassWindowManagerHint)

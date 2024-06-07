@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-48307ad7ccd0156aede2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt6_default",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6_default::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6_default-Debug-9bd799e9b368ac91392e.json",
+					"name" : "Qt6_default",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6_default_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6_default_autogen-Debug-4e90e080c5f11b746d82.json",
+					"name" : "Qt6_default_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6_default_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6_default_autogen_timestamp_deps-Debug-94c6368cc5b2b25861b0.json",
+					"name" : "Qt6_default_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/build-Qt6_default-Desktop_Qt_6_6_1_MinGW_64_bit-Debug",
+		"source" : "D:/MA-FrameworkLatency/framework_tester_projects/framework_tester_no-fullscreen/Qt6_default"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2286,wxpython,default,wxpython_default,fullscreen,2,getpixel,10270,12422,3196,7074
+1,1,2286,wxpython,default,wxpython_default,fullscreen,2,getpixel,8184,10502,3106,5078

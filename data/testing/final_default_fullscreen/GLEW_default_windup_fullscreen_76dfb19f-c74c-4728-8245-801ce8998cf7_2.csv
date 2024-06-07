@@ -1,0 +1,3 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2271,GLEW,default,GLEW_default,fullscreen,2,windup,9746,12063,8970,776
+1,1,2271,GLEW,default,GLEW_default,fullscreen,2,windup,9052,11543,6974,2078
