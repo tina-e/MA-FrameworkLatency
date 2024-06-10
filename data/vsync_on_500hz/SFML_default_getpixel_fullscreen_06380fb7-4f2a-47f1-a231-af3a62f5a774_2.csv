@@ -1,0 +1,2 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2391,SFML,default,SFML_default,fullscreen,3,getpixel,13700,16020,-1,13701

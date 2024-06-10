@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="finals_vsync_on_0606"
+DATA_DIR="finals_all_vsync_off_60hz"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("windup" "getpixel" "none")
@@ -86,6 +86,8 @@ done
 # ./start_measurement.sh $ITERATIONS SFML rects windup fullscreen $DATA_DIR
 
 # ./start_measurement.sh $ITERATIONS GLEW 3D getpixel fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
 
 
 # measurements 2704 recompileds
