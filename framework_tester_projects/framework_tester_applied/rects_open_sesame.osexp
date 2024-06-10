@@ -1,0 +1,93 @@
+---
+API: 3
+OpenSesame: 4.0.24
+Platform: nt
+---
+set width 1920
+set title "Neues Experiment"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend legacy
+set round_decimals 2
+set mouse_backend xpyriment
+set keyboard_backend legacy
+set height 1080
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 18
+set font_italic False
+set font_family mono
+set font_bold False
+set experiment_path "D:/"
+set disable_garbage_collection False
+set description "The main experiment item"
+set color_backend legacy
+set clock_backend legacy
+set canvas_backend xpyriment
+set background "#000000"
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Führt eine Anzahl von Elementen in einer Sequenz aus"
+	run new_loop True
+
+define inline_script new_inline_script
+	set description "Führt Python-Code aus"
+	___run__
+	button_states = mouse.get_click()
+	canvas.clear()
+	for i in range(num_rects):
+	    x = random.randint(-w/2, w/2) + 300
+	    y = random.randint(-h/2, h/2)
+	    rect_w = random.randint(10, 300)
+	    rect_h = random.randint(10, 300)
+	    r = random.randint(0, 255)
+	    g = random.randint(0, 255)
+	    b = random.randint(0, 255)
+	    canvas.rect(x, y, rect_w, rect_h, fill=True, color=f'rgb({r}, {g}, {b})')
+	canvas.rect(-w/2, -h/2, 100, 100, fill=True, color='white')
+	canvas.show()
+	
+	while mouse.get_pressed()[0] == 1:
+	    pass
+	
+	canvas.clear()
+	canvas.rect(-w/2, -h/2, w, h, fill=True, color="black")
+	canvas.show()
+	__end__
+	___prepare__
+	from openexp.canvas import canvas
+	from openexp.mouse import mouse
+	import random
+	
+	w = 1920
+	h = 1080
+	num_rects = 999
+	
+	canvas = canvas(exp)
+	mouse = mouse(exp)
+	
+	#canvas.clear()
+	#canvas.rect(-w/2, -h/2, w, h, fill=True, color="black")
+	#canvas.show()
+	__end__
+
+define loop new_loop
+	set source table
+	set repeat 5
+	set order random
+	set description "Führt wiederholt ein anderes Element aus"
+	set cycles 1
+	set continuous no
+	set break_if_on_first yes
+	set break_if False
+	setcycle 0 empty_column ""
+	run new_inline_script
+
