@@ -12,10 +12,12 @@ set sound_sample_size -16
 set sound_freq 48000
 set sound_channels 2
 set sound_buf_size 1024
-set sampler_backend legacy
+set sampler_backend psycho
 set round_decimals 2
-set mouse_backend xpyriment
-set keyboard_backend legacy
+set pygame_doublebuf no
+set psychopy_waitblanking no
+set mouse_backend psycho
+set keyboard_backend psycho
 set height 1080
 set fullscreen no
 set form_clicks no
@@ -25,12 +27,12 @@ set font_size 18
 set font_italic False
 set font_family mono
 set font_bold False
-set experiment_path "D:/"
+set experiment_path "D:\\MA-FrameworkLatency\\framework_tester_projects\\framework_tester_applied\\OpenSesame"
 set disable_garbage_collection False
 set description "The main experiment item"
-set color_backend legacy
-set clock_backend legacy
-set canvas_backend xpyriment
+set color_backend psycho
+set clock_backend psycho
+set canvas_backend psycho
 set background "#000000"
 
 define sequence experiment
@@ -81,7 +83,7 @@ define inline_script new_inline_script
 
 define loop new_loop
 	set source table
-	set repeat 5
+	set repeat 620
 	set order random
 	set description "Führt wiederholt ein anderes Element aus"
 	set cycles 1

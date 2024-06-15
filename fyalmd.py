@@ -141,7 +141,7 @@ class FYALMDController:
             if self.program_name != 'none':
                 waiting_start = time.time()
                 while not self.new_value:
-                    if (time.time() - waiting_start) > 5:  
+                    if (time.time() - waiting_start) > 10:  
                        self.last_fw_latency = -1
                        self.da_schmatzer.say("Keinen Messwert erhalten.")
                        self.da_schmatzer.runAndWait()
@@ -149,7 +149,7 @@ class FYALMDController:
                        break
             if VSYNC_TESTING:
                 ete_upper = int(decoded_bytes.split(',')[0])
-                ete_lower = int(decoded_bytes.split(',')[1])
+                ete_lower = int(decoded_bytes.split(',')[1])              
                 diff = (ete_upper - self.last_fw_latency)
                 self.new_value = False
                 self.measurements.append({'id': iteration, 

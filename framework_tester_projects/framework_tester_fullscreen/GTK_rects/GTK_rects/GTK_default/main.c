@@ -76,6 +76,7 @@ static void activate(GtkApplication* app, gpointer user_data)
     
     // for fullscreen 
     gtk_window_fullscreen(GTK_WINDOW(window));
+    gtk_window_present(GTK_WINDOW(window));
 
     GtkWidget* area = gtk_drawing_area_new();
     gtk_drawing_area_set_content_width(GTK_DRAWING_AREA(area), width);
@@ -88,26 +89,24 @@ static void activate(GtkApplication* app, gpointer user_data)
     g_signal_connect(click_gesture, "released", G_CALLBACK(on_release_event), area);
     gtk_widget_add_controller(window, GTK_EVENT_CONTROLLER(click_gesture));
 
-    HWND frameworkWindow = FindWindow(NULL, L"framework");
-    if (frameworkWindow != NULL) {
-        BringWindowToTop(frameworkWindow);
-        SetForegroundWindow(frameworkWindow);
-        MoveWindow(frameworkWindow, 0, 0, width, height, FALSE);
-        SetFocus(frameworkWindow);
-    }
+    //HWND frameworkWindow = FindWindow(NULL, L"framework");
+    //if (frameworkWindow != NULL) {
+    //    BringWindowToTop(frameworkWindow);
+    //    SetForegroundWindow(frameworkWindow);
+    //    MoveWindow(frameworkWindow, 0, 0, width, height, FALSE);
+    //    SetFocus(frameworkWindow);
+    //}
 }
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
     width = GetSystemMetrics(SM_CXSCREEN);
     height = GetSystemMetrics(SM_CYSCREEN);
-    /*width = 1000;
-    height = 1000;*/
 
     GtkApplication* app;
     int status;
 
-    app = gtk_application_new("framework.rects", G_APPLICATION_DEFAULT_FLAGS);
+    app = gtk_application_new("framework.default", G_APPLICATION_DEFAULT_FLAGS);
     g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
     status = g_application_run(G_APPLICATION(app), NULL, NULL);
     g_object_unref(app);

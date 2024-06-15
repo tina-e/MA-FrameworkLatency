@@ -8,9 +8,21 @@ FULLSCREEN_OPTION=$5
 DATA_DIR=$6
 
 
+#  *"psychopy"*)
+#         cd ./venv
+#         source Scripts/activate
+#         python ../$FW_PATH.py &
+#         PID_TEST_PROGRAM=$!
+#         deactivate
+#         cd ../
+#         ;;
+
 FW_PATH="framework_tester_apps/$TEST_APP/${TEST_APP}_${TEST_COMPLEXITY}_${FULLSCREEN_OPTION}"
 
 case "$TEST_APP" in 
+
+    *"OpenSesame_PsychoPy"*)
+        ;;
 
     *"Java"*)
         java ./$FW_PATH.java &

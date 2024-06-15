@@ -1,0 +1,2 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,3832,OpenSesame_Expyriment,rects,OpenSesame_Expyriment_rects,fullscreen,3,getpixel,144,229,-1,145

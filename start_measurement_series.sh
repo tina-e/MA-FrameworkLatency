@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="finals_all_vsync_off_60hz"
+DATA_DIR="finals_all_fix_06_1306"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("windup" "getpixel" "none")
@@ -13,6 +13,16 @@ FRAMEWORKS_3D=("GLEW" "GLUT" "pygame" "pyglet")
 
 mkdir "./data/$DATA_DIR"
 sleep "7s"
+
+./start_measurement.sh $ITERATIONS FLTK image none fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS FLTK image windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS FLTK image getpixel fullscreen $DATA_DIR
+
+./start_measurement.sh $ITERATIONS GLEW image none fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS GLEW image windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS GLEW image getpixel fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
 
 
 # program validation
@@ -27,15 +37,15 @@ sleep "7s"
 # done
 
 # vsync
-for f in "${!FRAMEWORKS[@]}";
-do
-    for r in "${!READERS[@]}";
-    do
-        ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
-        r=$((r+1));
-    done
-    f=$((f+1));
-done
+# for f in "${!FRAMEWORKS[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
 
 # dimension
 # for f in "${!FRAMEWORKS_AGAIN_2[@]}";
@@ -290,3 +300,16 @@ done
     # ./start_measurement.sh $ITERATIONS FX rects "${READERS[$r]}" no_fullscreen $DATA_DIR
 #     r=$((r+1));
 # done
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Skia default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Skia rects "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+
+# no auto start opensesame
+# sleep "10s"
+# ./start_measurement.sh $ITERATIONS EPrime rects windup fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS EPrime rects getpixel fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS EPrime rects none fullscreen $DATA_DIR

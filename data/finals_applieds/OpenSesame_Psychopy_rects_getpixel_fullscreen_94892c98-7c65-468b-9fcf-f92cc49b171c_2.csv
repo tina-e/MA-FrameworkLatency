@@ -1,0 +1,2 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,3644,OpenSesame_Psychopy,rects,OpenSesame_Psychopy_rects,fullscreen,3,getpixel,1707,223,-1,1708
