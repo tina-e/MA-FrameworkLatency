@@ -35,7 +35,7 @@ namespace WinUI3_deafult
             m_appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 100, Height = 100 });
             m_appWindow.SetPresenter(AppWindowPresenterKind.Overlapped);
             m_appWindow.TitleBar.ExtendsContentIntoTitleBar = true;
-            m_appWindow.Move(new Windows.Graphics.PointInt32 { X = 0, Y = 0 });
+            m_appWindow.Move(new Windows.Graphics.PointInt32 { X = -10, Y = -32 });
 
             var presenter = m_appWindow.Presenter as OverlappedPresenter;
             if (presenter != null)

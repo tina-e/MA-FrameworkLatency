@@ -141,11 +141,11 @@ class FYALMDController:
             if self.program_name != 'none':
                 waiting_start = time.time()
                 while not self.new_value:
-                    if (time.time() - waiting_start) > 10:  
+                    if (time.time() - waiting_start) > 3:  
                        self.last_fw_latency = -1
                        self.da_schmatzer.say("Keinen Messwert erhalten.")
                        self.da_schmatzer.runAndWait()
-                       self.measuring = False  # stop measurements if cannot read pixel color value
+                       # self.measuring = False  # stop measurements if cannot read pixel color value
                        break
             if VSYNC_TESTING:
                 ete_upper = int(decoded_bytes.split(',')[0])

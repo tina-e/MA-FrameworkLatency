@@ -49,6 +49,16 @@ case "$TEST_APP" in
         PID_TEST_APP=$! 
         ;;
 
+    *"Unity"*)
+        start "./framework_tester_projects/framework_tester_applied/Unity_${TEST_COMPLEXITY}/framework.exe" &
+        PID_TEST_APP=$! 
+        ;;
+
+    *"Godot"*)
+        start "./framework_tester_projects/framework_tester_applied/Godot/Godot_${TEST_COMPLEXITY}.exe" &
+        PID_TEST_APP=$! 
+        ;;
+
     *)
         start ./$FW_PATH.exe &
         PID_TEST_APP=$! 

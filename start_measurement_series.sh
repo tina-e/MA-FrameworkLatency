@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="finals_all_fix_06_1306"
+DATA_DIR="vsync_off_60hz"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("windup" "getpixel" "none")
@@ -10,19 +10,42 @@ READERS=("windup" "getpixel" "none")
 FRAMEWORKS=("Direct2D" "Blend2D" "Cairo" "FLTK" "GDIplus" "GLEW" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "pyqt6_quick" "SDL2_Software" "SDL2_OpenGL" "SDL2_OpenGLES" "SDL2_Direct3D" "SFML" "Skia" "tkinter" "wxpython" "wxpython_d2d" "WinAPI")
 FRAMEWORKS_3D=("GLEW" "GLUT" "pygame" "pyglet")
 
+FRAMEWORKS_NOW=("Unity" "Godot")
+
 
 mkdir "./data/$DATA_DIR"
 sleep "7s"
 
-./start_measurement.sh $ITERATIONS FLTK image none fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS FLTK image windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS FLTK image getpixel fullscreen $DATA_DIR
-
-./start_measurement.sh $ITERATIONS GLEW image none fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS GLEW image windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS GLEW image getpixel fullscreen $DATA_DIR
-
+# ./start_measurement.sh $ITERATIONS GLEW image getpixel fullscreen $DATA_DIR
 # ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
+
+
+./start_measurement.sh $ITERATIONS WinAPI default windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS WinAPI default getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS WinAPI default none fullscreen $DATA_DIR
+
+./start_measurement.sh $ITERATIONS wxpython default windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS wxpython default getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS wxpython default none fullscreen $DATA_DIR
+
+./start_measurement.sh $ITERATIONS wxpython_d2d default windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS wxpython_d2d default getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS wxpython_d2d default none fullscreen $DATA_DIR
+
+
+# game engines
+# for f in "${!FRAMEWORKS_NOW[@]}";
+# do
+#     for r in "${!READERS[@]}";
+#     do
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NOW[$f]}" default "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NOW[$f]}" image "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NOW[$f]}" rects "${READERS[$r]}" fullscreen $DATA_DIR
+#         ./start_measurement.sh $ITERATIONS "${FRAMEWORKS_NOW[$f]}" 3D "${READERS[$r]}" fullscreen $DATA_DIR
+#         r=$((r+1));
+#     done
+#     f=$((f+1));
+# done
 
 
 # program validation
@@ -298,13 +321,6 @@ sleep "7s"
 # do
     # ./start_measurement.sh $ITERATIONS FX default "${READERS[$r]}" no_fullscreen $DATA_DIR
     # ./start_measurement.sh $ITERATIONS FX rects "${READERS[$r]}" no_fullscreen $DATA_DIR
-#     r=$((r+1));
-# done
-
-# for r in "${!READERS[@]}";
-# do
-#     ./start_measurement.sh $ITERATIONS Skia default "${READERS[$r]}" no_fullscreen $DATA_DIR
-#     ./start_measurement.sh $ITERATIONS Skia rects "${READERS[$r]}" no_fullscreen $DATA_DIR
 #     r=$((r+1));
 # done
 
