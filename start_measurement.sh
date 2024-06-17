@@ -21,48 +21,48 @@ FW_PATH="framework_tester_apps/$TEST_APP/${TEST_APP}_${TEST_COMPLEXITY}_${FULLSC
 
 case "$TEST_APP" in 
 
-    *"OpenSesame_PsychoPy"*)
-        ;;
+    # *"OpenSesame_PsychoPy"*)
+    #     ;;
 
-    *"Java"*)
-        java ./$FW_PATH.java &
-        PID_TEST_APP=$!
-        ;;
+    # *"Java"*)
+    #     java ./$FW_PATH.java &
+    #     PID_TEST_APP=$!
+    #     ;;
 
-    *"py"*)
-        python ./$FW_PATH.py &
-        PID_TEST_APP=$! 
-        ;;
+    # *"py"*)
+    #     python ./$FW_PATH.py &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *"Skia"*)
-        python ./$FW_PATH.py &
-        PID_TEST_APP=$! 
-        ;;
+    # *"Skia"*)
+    #     python ./$FW_PATH.py &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *"tkinter"*)
-        python ./$FW_PATH.py &
-        PID_TEST_APP=$! 
-        ;;
+    # *"tkinter"*)
+    #     python ./$FW_PATH.py &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *"SDL"*)
-        start "./framework_tester_apps/SDL2/${TEST_APP}_${TEST_COMPLEXITY}_${FULLSCREEN_OPTION}.exe" &
-        PID_TEST_APP=$! 
-        ;;
+    # *"SDL"*)
+    #     start "./framework_tester_apps/SDL2/${TEST_APP}_${TEST_COMPLEXITY}_${FULLSCREEN_OPTION}.exe" &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *"Unity"*)
-        start "./framework_tester_projects/framework_tester_applied/Unity_${TEST_COMPLEXITY}/framework.exe" &
-        PID_TEST_APP=$! 
-        ;;
+    # *"Unity"*)
+    #     start "./framework_tester_projects/framework_tester_applied/Unity_${TEST_COMPLEXITY}/framework.exe" &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *"Godot"*)
-        start "./framework_tester_projects/framework_tester_applied/Godot/Godot_${TEST_COMPLEXITY}.exe" &
-        PID_TEST_APP=$! 
-        ;;
+    # *"Godot"*)
+    #     start "./framework_tester_projects/framework_tester_applied/Godot/Godot_${TEST_COMPLEXITY}.exe" &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
-    *)
-        start ./$FW_PATH.exe &
-        PID_TEST_APP=$! 
-        ;;
+    # *)
+    #     start ./$FW_PATH.exe &
+    #     PID_TEST_APP=$! 
+    #     ;;
 
 esac
 

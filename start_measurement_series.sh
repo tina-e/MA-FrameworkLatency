@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="vsync_off_60hz"
+DATA_DIR="finals_all_0106"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("windup" "getpixel" "none")
@@ -20,17 +20,9 @@ sleep "7s"
 # ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
 
 
-./start_measurement.sh $ITERATIONS WinAPI default windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS WinAPI default getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS WinAPI default none fullscreen $DATA_DIR
-
-./start_measurement.sh $ITERATIONS wxpython default windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS wxpython default getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS wxpython default none fullscreen $DATA_DIR
-
-./start_measurement.sh $ITERATIONS wxpython_d2d default windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS wxpython_d2d default getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS wxpython_d2d default none fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS WinUI default windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS WinUI default getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS WinUI default none fullscreen $DATA_DIR
 
 
 # game engines
