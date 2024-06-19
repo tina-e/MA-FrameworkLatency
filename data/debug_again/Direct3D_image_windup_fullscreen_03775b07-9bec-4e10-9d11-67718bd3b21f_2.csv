@@ -1,0 +1,4 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2779,Direct3D,image,Direct3D_image,fullscreen,2,windup,6253,8817,110843,-104590
+1,1,2779,Direct3D,image,Direct3D_image,fullscreen,2,windup,6202,8496,111112,-104910
+2,2,2779,Direct3D,image,Direct3D_image,fullscreen,2,windup,6472,9033,61414,-54942
