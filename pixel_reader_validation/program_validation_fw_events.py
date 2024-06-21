@@ -6,55 +6,41 @@ from subprocess import Popen, PIPE
 import pyautogui
 pyautogui.FAILSAFE = False
 
-DATA_DIR = 'data/setup_test_windup_60hz_vsync_on'
 PROGRAMS = ['getpixel', 'bitblt', 'getdbits', 'windup']
+TEST_APPS = ['GLEW_SDL', 'SDL2_OpenGL']
+# COMMANDS_PROGRAMS = [[f'./{PROGRAMS[0]}.exe'], [f'./{PROGRAMS[1]}.exe'], [f'./{PROGRAMS[2]}.exe'], [f'./{PROGRAMS[3]}.exe']]
+# COMMANDS_TEST_APPS = [[f'./test_apps/{TEST_APPS[0]}.exe'], [f'./test_apps/{TEST_APPS[1]}.exe'], [f'./test_apps/{TEST_APPS[2]}.exe']]
+DATA_DIR = 'data/final_2106_'
 
 
-# start test app
-output_test_app = []
-command_test_app = [f'./test_app_50ms.exe']
-process_test_app = Popen(command_test_app, stdout=PIPE, bufsize=1, universal_newlines=True)
+def start_test_app(test_app):
+    return Popen([f'./test_apps/{test_app}.exe'], stdout=PIPE, bufsize=1, universal_newlines=True)
 
-# ensure focus
-time.sleep(3)
-# pyautogui.mouseDown()
-# time.sleep(0.2)
-# pyautogui.mouseDown()
-pyautogui.click()
-time.sleep(1)
-pyautogui.click()
-# pyautogui.mouseDown()
-# time.sleep(0.2)
-# pyautogui.mouseDown()
 
-# read output of test app
+def ensure_focus():
+    time.sleep(3)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.click()
+
+
 def read_test_app_out():
     for line in process_test_app.stdout:
-        print(line)
+        #print(line)
         output_test_app.append(line)
 
 
-tester_app_thread = threading.Thread(target=read_test_app_out, daemon=True)
-tester_app_thread.start()
-
-# ensure focus
-time.sleep(1.5)
-pyautogui.click()
-
-# start measurement program
-output_program = []
-command_program = [f'./{PROGRAMS[3]}.exe']
-process_program = Popen(command_program, stdout=PIPE, bufsize=1, universal_newlines=True)
+def start_measurement_program(program):
+        return Popen([f'./{program}.exe'], stdout=PIPE, bufsize=1, universal_newlines=True)
 
 
-# save result to csv
-def save():
+def save(program, test_app):
     data = []
     for line in output_program:
         splitted_line = line.strip().split(':')
         data.append([splitted_line[0], splitted_line[1], splitted_line[2]])
     print(data)
-    with open(f'{DATA_DIR}_program.csv', 'w') as f:
+    with open(f'{DATA_DIR}_{test_app}_{program}_program.csv', 'w') as f:
         write = csv.writer(f)   
         write.writerow(['event_type', 'timestamp', 'color_equal'])
         write.writerows(data)
@@ -63,22 +49,49 @@ def save():
         splitted_line = line.strip().split(':')
         data.append([splitted_line[0], splitted_line[1], splitted_line[2]])
     print(data)
-    with open(f'{DATA_DIR}_app.csv', 'w') as f:
+    with open(f'{DATA_DIR}_{test_app}_{program}_app.csv', 'w') as f:
         write = csv.writer(f)   
         write.writerow(['event_type', 'color_value', 'timestamp'])
         write.writerows(data)
 
 
-# read output of measurement program data
-for line in process_program.stdout:
-    print(line)
-    if process_test_app.poll() != None:
-        tester_app_thread.join()
-        process_program.kill()
-        save()
-        break
-    else:
-        output_program.append(line)
+for test_app in TEST_APPS:
+    for program in PROGRAMS:
+    
+        output_test_app = []
+        process_test_app = start_test_app(test_app)
+
+        ensure_focus()
+
+        # start thread for reading test app output
+        tester_app_thread = threading.Thread(target=read_test_app_out, daemon=True)
+        tester_app_thread.start()
+
+        # ensure focus again, just to be sure
+        time.sleep(1.5)
+        pyautogui.click()
+
+        # start measurement program
+        output_program = []
+        process_program = start_measurement_program(program)
+
+        # read output of measurement program data
+        for line in process_program.stdout:
+            print(line)
+            if process_test_app.poll() != None:
+                tester_app_thread.join()
+                process_program.kill()
+                save(program, test_app)
+                break
+            else:
+                output_program.append(line)
+
+        
+
+
+
+
+
 
 
 
