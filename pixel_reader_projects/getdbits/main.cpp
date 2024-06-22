@@ -37,7 +37,7 @@ int getPixelData(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPoi
 void waitForWhite(HDC hdcCompatible, HDC hdcScreen, HBITMAP hBitmap, BYTE *bitPointer, BITMAPINFO bitmapinfo)
 {
     while(1) {
-        if (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) == 255) {
+        if (getPixelData(hdcCompatible, hdcScreen, hBitmap, bitPointer, bitmapinfo) > 0) {
             break;
         }
     }

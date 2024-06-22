@@ -1,10 +1,10 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="finals_all_0106"
+DATA_DIR="psychopy_2106"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
-READERS=("windup" "getpixel" "none")
+READERS=("getpixel" "none" "windup")
 
 # todo: direct3d check fullscreen and stuff, WinUI ohne auto
 FRAMEWORKS=("Direct2D" "Blend2D" "Cairo" "FLTK" "GDIplus" "GLEW" "GLUT" "GTK" "Java2D" "JavaSwing" "pygame" "pyglet" "pyqt5" "pyqt6" "Qt5" "Qt6" "pyqt6_quick" "SDL2_Software" "SDL2_OpenGL" "SDL2_OpenGLES" "SDL2_Direct3D" "SFML" "Skia" "tkinter" "wxpython" "wxpython_d2d" "WinAPI")
@@ -13,16 +13,101 @@ FRAMEWORKS_3D=("GLEW" "GLUT" "pygame" "pyglet")
 FRAMEWORKS_NOW=("Unity" "Godot")
 
 
+# ./start_measurement.sh $ITERATIONS pygame default windup fullscreen $DATA_DIR
+
 mkdir "./data/$DATA_DIR"
 sleep "7s"
+
+./start_measurement.sh $ITERATIONS psychopy default windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy default getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy default none fullscreen $DATA_DIR
+
+./start_measurement.sh $ITERATIONS psychopy image windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy image getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy image none fullscreen $DATA_DIR
+
+./start_measurement.sh $ITERATIONS psychopy rects windup fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy rects getpixel fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS psychopy rects none fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS EPrime default windup fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS EPrime default getpixel fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS EPrime default none fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS EPrime image windup fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS EPrime rects windup fullscreen $DATA_DIR
+
+
 
 # ./start_measurement.sh $ITERATIONS GLEW image getpixel fullscreen $DATA_DIR
 # ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
 
+# todo durchlaufen lassen wür direct3d getpixel
 
-./start_measurement.sh $ITERATIONS WinUI default windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS WinUI default getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS WinUI default none fullscreen $DATA_DIR
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D image "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D rects "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D 3D "${READERS[$r]}" fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Direct2D default "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct2D default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct2D image "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct2D rects "${READERS[$r]}" fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+
+
+
+
+
+
+
+
+
+# DATA_DIR="debug_1706"
+# mkdir "./data/$DATA_DIR"
+# sleep "7s"
+
+# ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
+
+# ./start_measurement.sh $ITERATIONS SFML default windup fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS SFML default getpixel fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS SFML default none fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS SFML default bitblt fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS SFML default getdbits fullscreen $DATA_DIR
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+
+
+# for r in "${!READERS_ALL[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS_ALL[$r]}" fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+# f=$((f+1));
+
+# for r in "${!READERS[@]}";
+# do
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" no_fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" large $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D default "${READERS[$r]}" small $DATA_DIR
+#     # ./start_measurement.sh $ITERATIONS Direct3D image "${READERS[$r]}" fullscreen $DATA_DIR
+#     ./start_measurement.sh $ITERATIONS Direct3D rects "${READERS[$r]}" fullscreen $DATA_DIR
+#     r=$((r+1));
+# done
+# f=$((f+1));
 
 
 # game engines

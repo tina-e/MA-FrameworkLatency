@@ -1,0 +1,16 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2711,EPrime,default,EPrime_default,fullscreen,3,windup,20042,22866,6983,13059
+1,1,2711,EPrime,default,EPrime_default,fullscreen,3,windup,20810,23626,7035,13775
+2,2,2711,EPrime,default,EPrime_default,fullscreen,3,windup,22390,25219,11123,11267
+3,3,2711,EPrime,default,EPrime_default,fullscreen,3,windup,19478,22302,7189,12289
+4,4,2711,EPrime,default,EPrime_default,fullscreen,3,windup,23994,26819,9779,14215
+5,5,2711,EPrime,default,EPrime_default,fullscreen,3,windup,18943,22030,7206,11737
+6,6,2711,EPrime,default,EPrime_default,fullscreen,3,windup,21318,24139,9362,11956
+7,7,2711,EPrime,default,EPrime_default,fullscreen,3,windup,18675,21497,7255,11420
+8,8,2711,EPrime,default,EPrime_default,fullscreen,3,windup,20801,23627,8691,12110
+9,9,2711,EPrime,default,EPrime_default,fullscreen,3,windup,21334,24159,11136,10198
+10,10,2711,EPrime,default,EPrime_default,fullscreen,3,windup,18944,22031,7146,11798
+11,11,2711,EPrime,default,EPrime_default,fullscreen,3,windup,14967,17792,9525,5442
+12,12,2711,EPrime,default,EPrime_default,fullscreen,3,windup,20797,23893,5309,15488
+13,13,2711,EPrime,default,EPrime_default,fullscreen,3,windup,19741,22827,7157,12584
+14,14,2711,EPrime,default,EPrime_default,fullscreen,3,windup,17090,19915,7090,10000

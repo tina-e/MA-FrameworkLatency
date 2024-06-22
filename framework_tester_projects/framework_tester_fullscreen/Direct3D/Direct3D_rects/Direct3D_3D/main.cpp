@@ -90,6 +90,8 @@ void CreateGraphics(HWND hWnd) {
 		&pContext
 	);
 
+	pSwapChain->SetFullscreenState(TRUE, nullptr);
+
 	ID3D11Resource* pBackBuffer = nullptr;
 	pSwapChain->GetBuffer(0, __uuidof(ID3D11Resource), reinterpret_cast<void**>(&pBackBuffer));
 	pDevice->CreateRenderTargetView(pBackBuffer, nullptr, &pTarget);
@@ -242,7 +244,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
 	CreateGraphics(hWnd);
 	SetupRenderer();
-	ShowWindow(hWnd, SW_SHOW);
+	ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
 	MSG msg;
 	BOOL gResult;

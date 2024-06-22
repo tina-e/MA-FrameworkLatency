@@ -137,8 +137,9 @@ int WINAPI wWinMain(HINSTANCE Instance, HINSTANCE PrevInstance, PWSTR CmdLine, i
             DispatchMessage(&Message);
         }
 
+        // have to stretch the image in width to fill the screen, dunno why
        StretchDIBits(DeviceContext,
-            0, 0, BitmapWidth, BitmapHeight,
+            0, 0, BitmapWidth * 1.34, BitmapHeight,
             0, 0, BitmapWidth, BitmapHeight,
             BitmapMemory, &BitmapInfo,
             DIB_RGB_COLORS, SRCCOPY);

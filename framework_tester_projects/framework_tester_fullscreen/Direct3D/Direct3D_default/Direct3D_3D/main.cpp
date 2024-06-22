@@ -5,8 +5,7 @@
 
 const int WIDTH = GetSystemMetrics(SM_CXSCREEN);
 const int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
-//const int WIDTH = 100;
-//const int HEIGHT = 100;
+
 bool wasPressed = false;
 
 ID3D11Device* pDevice = nullptr;
@@ -123,7 +122,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	);
 
 	CreateGraphics(hWnd);
-	ShowWindow(hWnd, SW_SHOW);
+	ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
 	MSG msg;
 	BOOL gResult;

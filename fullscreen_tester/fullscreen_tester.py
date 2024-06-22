@@ -5,7 +5,7 @@ import sys
 import serial
 
 
-DEVICE = 'COM7'
+DEVICE = 'COM3'
 FRAMEWORK = sys.argv[1]
 FULLSCREEN = sys.argv[2]
 PATH = sys.argv[3]

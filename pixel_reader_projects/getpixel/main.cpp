@@ -20,7 +20,7 @@ int getPixelData(HDC hdc)
 void waitForWhite(HDC hdcScreen)
 {
     while(true) {
-        if (getPixelData(hdcScreen) == 255) {
+        if (getPixelData(hdcScreen) > 0) {
             break;
         }
     }

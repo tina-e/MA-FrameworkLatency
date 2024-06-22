@@ -18,7 +18,8 @@ DEVICE = 'COM3'
 class FYALMDController:
     def __init__(self, num_measurements, fw_name, complexity, program_name, fullscreen_option, out_folder) -> None:
         self.da_schmatzer = pyttsx3.init()
-        #self.da_schmatzer.setProperty('rate', 120)
+        print("Huii huhu! Ich bin jetzt im python-Skript angekommen!")
+        self.da_schmatzer.setProperty('rate', 120)
         self.num_measurements = int(num_measurements)
         self.threshold = 0
         self.fw_name = fw_name
@@ -26,7 +27,7 @@ class FYALMDController:
         self.program_name = program_name
         self.fullscreen_option = fullscreen_option
         self.fullscreen_mode = None
-        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{self.fullscreen_option}_{uuid.uuid4()}_2.csv"
+        self.out_path = f"data/{out_folder}/{fw_name}_{complexity}_{program_name}_{self.fullscreen_option}_{uuid.uuid4()}.csv"
         self.measuring = False
         self.latency_tester_process = None
         self.last_fw_latency = -1
@@ -43,7 +44,7 @@ class FYALMDController:
             rect = win32gui.GetWindowRect(hwnd)
             win32gui.MoveWindow(hwnd, rect[0] - 3, rect[1] - 32, rect[2], rect[3], False)
         time.sleep(0.2)
-        pyautogui.moveTo(10, 30)
+        pyautogui.moveTo(70, 70)
         time.sleep(0.2)
         self.yalmd.write('o'.encode())
         time.sleep(0.5)
@@ -55,14 +56,25 @@ class FYALMDController:
 
 
     def calibrate_yalmd(self):
+        self.da_schmatzer.say(f'Ich kalibriiiiiiere.')
+        self.da_schmatzer.runAndWait()
         self.yalmd = serial.Serial(DEVICE)
         self.yalmd.flushInput()
         self.ensure_focus()
         time.sleep(5)  
+
+        # without calubration
+        # self.yalmd.write('o'.encode())
+        # time.sleep(0.5)
+        # self.yalmd.write('o'.encode())
+
+        # without calubration
         self.yalmd.write('c'.encode())
         yalmd_answer_byte = self.yalmd.readline()
         calibtration_answer = str(yalmd_answer_byte)
+        print(calibtration_answer)
         self.threshold = calibtration_answer.split(': ')[-1].strip().split('\\')[0]
+        print(self.threshold)
         #decoded_answer_bytes = yalmd_answer_byte[0:len(yalmd_answer_byte)-2].decode("utf-8").split('#')
         
 
@@ -83,6 +95,7 @@ class FYALMDController:
 
     # init pixel reader
     def init_fw_latency_tester(self):
+        print("starte jetzt dann gleich pixel reader")
         cmd = ['python', '-u', f'.\pixel_readers\{self.program_name}.py'] if 'y' in self.program_name else [f'.\pixel_readers\{self.program_name}.exe', self.fw_name]
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         for line in self.latency_tester_process.stdout:

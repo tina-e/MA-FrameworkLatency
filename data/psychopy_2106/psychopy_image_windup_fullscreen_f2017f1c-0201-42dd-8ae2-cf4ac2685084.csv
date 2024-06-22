@@ -1,0 +1,6 @@
+,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
+0,0,2675,psychopy,image,psychopy_image,fullscreen,2,windup,28273,31890,12966,15307
+1,1,2675,psychopy,image,psychopy_image,fullscreen,2,windup,26366,29721,10910,15456
+2,2,2675,psychopy,image,psychopy_image,fullscreen,2,windup,27698,31313,12386,15312
+3,3,2675,psychopy,image,psychopy_image,fullscreen,2,windup,25578,29203,10165,15413
+4,4,2675,psychopy,image,psychopy_image,fullscreen,2,windup,33290,36914,17964,15326
