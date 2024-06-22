@@ -838,12 +838,12 @@ crashlytics-build.properties
 #################################
 # Unreal Engine Generated Files #
 #################################
-[Bb]uild/*
-[Bb]uilds/*
-Binaries/*
-DerivedDataCache/*
-Intermediate/*
-Saved/*
+**/UnrealEngine5/[Bb]uild/*
+**/UnrealEngine5/[Bb]uilds/*
+**/UnrealEngine5/Binaries/*
+**/UnrealEngine5/DerivedDataCache/*
+**/UnrealEngine5/Intermediate/*
+**/UnrealEngine5/Saved/*
 
 
 # # Precompiled Assets
