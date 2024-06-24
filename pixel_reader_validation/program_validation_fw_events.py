@@ -10,7 +10,7 @@ PROGRAMS = ['getpixel', 'bitblt', 'getdbits', 'windup']
 TEST_APPS = ['GLEW_SDL', 'SDL2_OpenGL']
 # COMMANDS_PROGRAMS = [[f'./{PROGRAMS[0]}.exe'], [f'./{PROGRAMS[1]}.exe'], [f'./{PROGRAMS[2]}.exe'], [f'./{PROGRAMS[3]}.exe']]
 # COMMANDS_TEST_APPS = [[f'./test_apps/{TEST_APPS[0]}.exe'], [f'./test_apps/{TEST_APPS[1]}.exe'], [f'./test_apps/{TEST_APPS[2]}.exe']]
-DATA_DIR = 'data/final_2106_'
+DATA_DIR = 'data/final_'
 
 
 def start_test_app(test_app):
@@ -31,7 +31,7 @@ def read_test_app_out():
 
 
 def start_measurement_program(program):
-        return Popen([f'./{program}.exe'], stdout=PIPE, bufsize=1, universal_newlines=True)
+        return Popen([f'./programs/{program}.exe'], stdout=PIPE, bufsize=1, universal_newlines=True)
 
 
 def save(program, test_app):
