@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,win32,rects,win32_rects,getpixel,True,getpixel_True,174828,166085,8743
-1,1,win32,rects,win32_rects,getpixel,True,getpixel_True,169116,161140,7976

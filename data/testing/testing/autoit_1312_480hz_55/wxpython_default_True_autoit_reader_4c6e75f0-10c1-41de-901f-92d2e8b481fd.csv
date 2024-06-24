@@ -1,6 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,wxpython,default,wxpython_default,autoit_reader,True,autoit_reader_True,14108,1,14107
-1,1,wxpython,default,wxpython_default,autoit_reader,True,autoit_reader_True,14120,2,14118
-2,2,wxpython,default,wxpython_default,autoit_reader,True,autoit_reader_True,13108,2,13106
-3,3,wxpython,default,wxpython_default,autoit_reader,True,autoit_reader_True,14564,2,14562
-4,4,wxpython,default,wxpython_default,autoit_reader,True,autoit_reader_True,14460,2,14458

@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2288,Java2D,default,Java2D_default,fullscreen,3,bitblt,6638,6887,2838,3800
-1,1,2288,Java2D,default,Java2D_default,fullscreen,3,bitblt,6464,6542,3225,3239

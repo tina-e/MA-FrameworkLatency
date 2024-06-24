@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2293,WinAPI,default,WinAPI_default,fullscreen,,none,8890,11207,-1,8891
-1,1,2293,WinAPI,default,WinAPI_default,fullscreen,,none,8702,10847,-1,8703

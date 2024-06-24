@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2285,Qt5,default,Qt5_default,fullscreen,2,windup,10073,12389,7152,2921
-1,1,2285,Qt5,default,Qt5_default,fullscreen,2,windup,10074,12392,6985,3089

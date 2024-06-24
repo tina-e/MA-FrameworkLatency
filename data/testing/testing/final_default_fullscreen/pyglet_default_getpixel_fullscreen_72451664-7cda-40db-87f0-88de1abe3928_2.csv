@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2267,pyglet,default,pyglet_default,fullscreen,2,getpixel,11469,13793,6516,4953
-1,1,2267,pyglet,default,pyglet_default,fullscreen,2,getpixel,8347,10669,2895,5452

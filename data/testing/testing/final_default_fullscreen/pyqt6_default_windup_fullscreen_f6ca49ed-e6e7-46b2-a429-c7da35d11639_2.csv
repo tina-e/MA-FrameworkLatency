@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2337,pyqt6,default,pyqt6_default,fullscreen,2,windup,11634,13957,8603,3031
-1,1,2337,pyqt6,default,pyqt6_default,fullscreen,2,windup,9051,11209,6917,2134

@@ -1,4 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,509\r\n',Qt5,rects,Qt5_rects,True,2,bitblt,True,bitblt_True,26487,19675,6812
-1,1,509\r\n',Qt5,rects,Qt5_rects,True,2,bitblt,True,bitblt_True,24622,18825,5797
-2,2,509\r\n',Qt5,rects,Qt5_rects,True,2,bitblt,True,bitblt_True,25599,19661,5938

@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2283,GLUT,default,GLUT_default,fullscreen,,none,9910,12231,-1,9911
-1,1,2283,GLUT,default,GLUT_default,fullscreen,,none,11804,13955,-1,11805

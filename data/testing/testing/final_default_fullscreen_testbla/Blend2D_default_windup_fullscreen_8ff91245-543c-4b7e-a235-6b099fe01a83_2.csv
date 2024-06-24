@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2281,Blend2D,default,Blend2D_default,fullscreen,2,windup,12833,15152,9566,3267
-1,1,2281,Blend2D,default,Blend2D_default,fullscreen,2,windup,10079,12568,8232,1847

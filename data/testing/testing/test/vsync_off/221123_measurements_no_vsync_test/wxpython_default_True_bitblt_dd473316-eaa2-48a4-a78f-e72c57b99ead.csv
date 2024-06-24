@@ -1,3 +1,0 @@
-,id,framework,complexity,framework_complexity,program,fw_running,program_fwrunning,ete,fw,diff
-0,0,wxpython,default,wxpython_default,bitblt,True,bitblt_True,46140,5817,40323
-1,1,wxpython,default,wxpython_default,bitblt,True,bitblt_True,52420,11756,40664

@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2289,FLTK,default,FLTK_default,fullscreen,2,getdbits,9054,11378,3086,5968
-1,1,2289,FLTK,default,FLTK_default,fullscreen,2,getdbits,7678,9992,1582,6096

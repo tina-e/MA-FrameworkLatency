@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2191,GTK,default,GTK_default,fullscreen,2,getpixel,8896,11380,3299,5597
-1,1,2191,GTK,default,GTK_default,fullscreen,2,getpixel,7158,9651,3930,3228

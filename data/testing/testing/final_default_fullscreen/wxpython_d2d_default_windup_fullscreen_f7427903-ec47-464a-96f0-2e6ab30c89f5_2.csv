@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2284,wxpython_d2d,default,wxpython_d2d_default,fullscreen,2,windup,9583,11899,13095,-3512
-1,1,2284,wxpython_d2d,default,wxpython_d2d_default,fullscreen,2,windup,8364,10685,10676,-2312

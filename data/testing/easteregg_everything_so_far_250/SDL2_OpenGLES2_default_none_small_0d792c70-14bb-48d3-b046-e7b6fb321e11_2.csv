@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete,fw,diff
-0,0,498,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,small,,none,6825,-1,6826
-1,1,498,SDL2_OpenGLES2,default,SDL2_OpenGLES2_default,small,,none,5024,-1,5025

@@ -1,3 +1,0 @@
-,id,threshold,framework,complexity,framework_complexity,fullscreen,fullscreen_mode,program,ete_upper,ete_lower,fw,diff
-0,0,2271,pygame,default,pygame_default,fullscreen,,none,8197,10514,-1,8198
-1,1,2271,pygame,default,pygame_default,fullscreen,,none,10606,12920,-1,10607
