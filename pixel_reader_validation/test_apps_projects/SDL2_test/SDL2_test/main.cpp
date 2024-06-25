@@ -76,17 +76,17 @@ int main(int argc, char **argv)
             {
                 numClicks++;
                 if (numClicks == 3) {
-                    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+                    /*SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
                     SDL_RenderClear(renderer);
                     SDL_RenderPresent(renderer);
-                    Sleep(50);
+                    Sleep(50);*/
                     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
                     SDL_RenderClear(renderer);
                     SDL_RenderPresent(renderer);
                     long start = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-                    printf("start:-1:%ld\n", start);
+                    printf("start:0:%ld\n", start);
                     fflush(stdout);
-                    for (int i = 0; i <= 10; i++) {
+                    for (int i = 1; i <= 11; i++) {
                         while (true) {
                             long current_time = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
                             if (current_time - start >= i * 50000) {
