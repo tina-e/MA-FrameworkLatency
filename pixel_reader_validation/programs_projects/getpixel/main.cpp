@@ -11,20 +11,12 @@ int main(int argc, char **argv)
 {
     HDC hdcScreen = GetDC(NULL);
 
-    // is fullscreen exclusive?
-    /*QUERY_USER_NOTIFICATION_STATE nstate;
-    SHQueryUserNotificationState(&nstate);
-    printf("fullscreen-mode:%d\n", nstate);
-    fflush(stdout);*/
-
-    int pixelColor = 0;
     while (true)
     {
         int result = int(GetRValue(GetPixel(hdcScreen, 5, 5)));
         long timestamp = (long) (duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-        printf("got color at:%ld:%d\n", timestamp, pixelColor == result);
+        printf("got color at:%ld:%d\n", timestamp, result);
         fflush(stdout);
-        pixelColor = result;
     }
     return 0;
 }

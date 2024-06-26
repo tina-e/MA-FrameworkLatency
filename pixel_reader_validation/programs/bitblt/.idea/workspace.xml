@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -21,14 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2915d8e8-c981-4d28-be15-5ab8b5a768b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../bitblt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../bitblt.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../program_tester.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../program_tester.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../framework_tester_apps/Direct3D_default/Direct3D_deafult_small.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../program_validation_fw_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../program_validation_fw_events.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bitblt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bitblt.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bitblt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bitblt.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement_series.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +40,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2g5CIQmGpc3BwUc7kCRqG9uiMP5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,17 +56,12 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/tina/Masterarbeit/MA-FrameworkLatency/pixel_reader_validation/programs/getdbits",
+    "git-widget-placeholder": "release",
+    "last_opened_file_path": "D:/MA-FrameworkLatency/pixel_reader_validation/programs/getpixel/cmake-build-debug",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="bitblt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="bitblt" TARGET_NAME="bitblt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="bitblt" RUN_TARGET_NAME="bitblt">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -84,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714977972842</updated>
       <workItem from="1714977973838" duration="55000" />
+      <workItem from="1719338235070" duration="34000" />
     </task>
     <servers />
   </component>

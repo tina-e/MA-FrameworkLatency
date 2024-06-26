@@ -7,12 +7,12 @@ from subprocess import Popen, PIPE
 import pyautogui
 pyautogui.FAILSAFE = False
 
-ITERATIONS = 50
+ITERATIONS = 5
 PROGRAMS = ['getpixel', 'bitblt', 'getdbits', 'windup']
-TEST_APPS = ['SDL2_OpenGL']
+TEST_APPS = ['SDL2_OpenGL', 'Direct2D']
 # COMMANDS_PROGRAMS = [[f'./{PROGRAMS[0]}.exe'], [f'./{PROGRAMS[1]}.exe'], [f'./{PROGRAMS[2]}.exe'], [f'./{PROGRAMS[3]}.exe']]
 # COMMANDS_TEST_APPS = [[f'./test_apps/{TEST_APPS[0]}.exe'], [f'./test_apps/{TEST_APPS[1]}.exe'], [f'./test_apps/{TEST_APPS[2]}.exe']]
-DATA_DIR = f'./data/final_500hz/'
+DATA_DIR = f'./data/final_120hz/'
 
 
 def start_test_app(test_app):

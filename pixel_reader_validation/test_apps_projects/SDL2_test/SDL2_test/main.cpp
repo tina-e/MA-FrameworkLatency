@@ -76,27 +76,25 @@ int main(int argc, char **argv)
             {
                 numClicks++;
                 if (numClicks == 3) {
-                    /*SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-                    SDL_RenderClear(renderer);
-                    SDL_RenderPresent(renderer);
-                    Sleep(50);*/
                     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
                     SDL_RenderClear(renderer);
                     SDL_RenderPresent(renderer);
                     long start = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
                     printf("start:0:%ld\n", start);
                     fflush(stdout);
-                    for (int i = 1; i <= 11; i++) {
+                    for (int i = 1; i <= 255; i++) {
                         while (true) {
                             long current_time = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
                             if (current_time - start >= i * 50000) {
-                                printf("render_start:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
-                                fflush(stdout);
-                                color = 255 * (((double) i) / 10);
-                                SDL_SetRenderDrawColor(renderer, color, color, color, 255);
+                                long start = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
+
+                                SDL_SetRenderDrawColor(renderer, i, i, i, 255);
                                 SDL_RenderClear(renderer);
                                 SDL_RenderPresent(renderer);
-                                printf("render_stop:%d:%ld\n", i, (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count());
+
+                                long stop = (long)(duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
+                                printf("render_start:%d:%ld\n", i, start);
+                                printf("render_stop:%d:%ld\n", i, stop);
                                 fflush(stdout);
                                 break;
                             }

@@ -33,22 +33,14 @@ int main(int argc, char **argv)
     HBITMAP hBitmap = CreateCompatibleBitmap(hdcScreen, 1, 1);
     SelectObject(hdcCompatible, hBitmap);
 
-    // is fullscreen exclusive?
-    /*QUERY_USER_NOTIFICATION_STATE nstate;
-    SHQueryUserNotificationState(&nstate);
-    printf("fullscreen-mode:%d\n", nstate);
-    fflush(stdout);*/
-
-    int pixelColor = 0;
     while (true)
     {
         StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 5, 5, 1, 1, SRCCOPY);
         GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
         int result =  (int)bitPointer[2];
         long timestamp = (long) (duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-        printf("got color at:%ld:%d\n", timestamp, pixelColor == result);
+        printf("got color at:%ld:%d\n", timestamp, result);
         fflush(stdout);
-        pixelColor = result;
     }
     return 0;
 }
