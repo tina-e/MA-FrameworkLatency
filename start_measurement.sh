@@ -98,9 +98,9 @@ powershell kill -n "UnrealGame"
 powershell kill -n "java"
 powershell kill -n "python"
 
-cd ./framework_tester_projects/framework_tester_applied/psychopy/psychopy_venv
-deactivate
-cd ../../../../
+# cd ./framework_tester_projects/framework_tester_applied/psychopy/psychopy_venv
+# deactivate
+# cd ../../../../
 
 
 

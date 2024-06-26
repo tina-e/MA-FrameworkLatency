@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="bitblt" targetName="bitblt" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1b47bdf-1212-4e7e-afa1-d7929b4cda6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_bitblt_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getdbits_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_getpixel_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pixel_reader_validation/data/final_data_60hz/pyapp_windup_program_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../framework_tester_apps/Direct3D_default/Direct3D_deafult_small.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../fyalmd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pixel_reader_validation/programs_projects/getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../pixel_reader_validation/programs_projects/getpixel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../start_measurement_series.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2cfeG6YwmAa5T5xV4U4U4fwo492" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "release",
+    "last_opened_file_path": "D:/MA-FrameworkLatency/fraLa_tester/bitblt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bitblt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="bitblt" TARGET_NAME="bitblt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="bitblt" RUN_TARGET_NAME="bitblt">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1b47bdf-1212-4e7e-afa1-d7929b4cda6c" name="Changes" comment="" />
+      <created>1708506961728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708506961728</updated>
+      <workItem from="1708506962925" duration="47000" />
+      <workItem from="1709129202420" duration="820000" />
+      <workItem from="1713967888440" duration="218000" />
+      <workItem from="1718871957100" duration="16000" />
+      <workItem from="1718947835030" duration="22000" />
+      <workItem from="1719403512583" duration="917000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>

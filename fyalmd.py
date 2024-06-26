@@ -56,7 +56,7 @@ class FYALMDController:
 
 
     def calibrate_yalmd(self):
-        self.da_schmatzer.say(f'Ich kalibriiiiiiere.')
+        self.da_schmatzer.say(f'Ich kalibriere.')
         self.da_schmatzer.runAndWait()
         self.yalmd = serial.Serial(DEVICE)
         self.yalmd.flushInput()

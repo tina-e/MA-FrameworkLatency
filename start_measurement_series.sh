@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="psychopy_2106"
+DATA_DIR="last_fixes_2_480"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("getpixel" "none" "windup")
@@ -18,31 +18,8 @@ FRAMEWORKS_NOW=("Unity" "Godot")
 mkdir "./data/$DATA_DIR"
 sleep "7s"
 
-./start_measurement.sh $ITERATIONS psychopy default windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy default getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy default none fullscreen $DATA_DIR
-
-./start_measurement.sh $ITERATIONS psychopy image windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy image getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy image none fullscreen $DATA_DIR
-
-./start_measurement.sh $ITERATIONS psychopy rects windup fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy rects getpixel fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS psychopy rects none fullscreen $DATA_DIR
-
-# ./start_measurement.sh $ITERATIONS EPrime default windup fullscreen $DATA_DIR
-# ./start_measurement.sh $ITERATIONS EPrime default getpixel fullscreen $DATA_DIR
-# ./start_measurement.sh $ITERATIONS EPrime default none fullscreen $DATA_DIR
-
-# ./start_measurement.sh $ITERATIONS EPrime image windup fullscreen $DATA_DIR
-# ./start_measurement.sh $ITERATIONS EPrime rects windup fullscreen $DATA_DIR
-
-
-
-# ./start_measurement.sh $ITERATIONS GLEW image getpixel fullscreen $DATA_DIR
-# ./start_measurement.sh $ITERATIONS Direct2D default windup fullscreen $DATA_DIR
-
-# todo durchlaufen lassen wür direct3d getpixel
+./start_measurement.sh $ITERATIONS Direct3D default none fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS Direct3D default getpixel fullscreen $DATA_DIR
 
 
 # for r in "${!READERS[@]}";
