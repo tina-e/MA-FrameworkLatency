@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -22,37 +22,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9af04157-adb3-4e90-a6b9-17deed6bce2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../framework_tester_apps/Direct3D_default/Direct3D_deafult_small.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../program_validation_fw_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../program_validation_fw_events.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/bitblt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/bitblt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/getpixel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../bitblt/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../bitblt/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/getdbits.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/getdbits.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../fyalmd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getpixel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../getpixel/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getpixel/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/.clang-format" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/Resource.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/WinDesktopDup.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/WinDesktopDup.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/small.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement_series.sh" afterDir="false" />
     </list>
@@ -73,30 +47,30 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="2.2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2iNkZYHBETq3s9bqmC4UlLrHuZr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "release",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="getdbits" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="getdbits" TARGET_NAME="getdbits" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="getdbits" RUN_TARGET_NAME="getdbits">
@@ -114,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719338477254</updated>
       <workItem from="1719338478455" duration="56000" />
+      <workItem from="1719424886881" duration="51000" />
     </task>
     <servers />
   </component>

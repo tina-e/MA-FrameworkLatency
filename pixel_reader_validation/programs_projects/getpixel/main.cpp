@@ -14,8 +14,8 @@ int main(int argc, char **argv)
     while (true)
     {
         int result = int(GetRValue(GetPixel(hdcScreen, 5, 5)));
-        long timestamp = (long) (duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-        printf("got color at:%ld:%d\n", timestamp, result);
+        long long duration = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+        printf("got color at:%lld:%d\n", duration, result);
         fflush(stdout);
     }
     return 0;

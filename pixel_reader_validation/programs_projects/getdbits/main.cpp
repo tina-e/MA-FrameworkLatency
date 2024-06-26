@@ -38,8 +38,8 @@ int main(int argc, char **argv)
         StretchBlt(hdcCompatible, 0, 0, 1, 1, hdcScreen, 5, 5, 1, 1, SRCCOPY);
         GetDIBits(hdcCompatible, hBitmap, 0, 1, bitPointer, (BITMAPINFO *)&bitmapinfo, DIB_RGB_COLORS);
         int result =  (int)bitPointer[2];
-        long timestamp = (long) (duration_cast<microseconds>(system_clock::now().time_since_epoch())).count();
-        printf("got color at:%ld:%d\n", timestamp, result);
+        long long timestamp = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+        printf("got color at:%lld:%d\n", timestamp, result);
         fflush(stdout);
     }
     return 0;
