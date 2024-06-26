@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -21,37 +21,409 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d827f2a7-fb38-4953-b8fd-f5a4ae441863" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_bitblt_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getdbits_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_getpixel_program_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_app_9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data/final_data_60hz/pyapp_windup_program_9.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../framework_tester_apps/Direct3D_default/Direct3D_deafult_small.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../program_validation_fw_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../program_validation_fw_events.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/bitblt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/bitblt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/getpixel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/getpixel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../bitblt/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bitblt/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../bitblt/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getdbits/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../getdbits/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/.clang-format" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/Resource.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/WinDesktopDup.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/WinDesktopDup.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/small.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../windup/windup.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../test_apps_projects/SDL2_test/SDL2_test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../fyalmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../fyalmd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../start_measurement.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../start_measurement_series.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../start_measurement_series.sh" afterDir="false" />
     </list>
@@ -72,9 +444,9 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="2.2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2iNkLBqkLzLdmnN5ZNLzfRWn0hN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -89,15 +461,11 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "release",
+    "last_opened_file_path": "D:/MA-FrameworkLatency/fraLa_tester/getpixel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="getpixel" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="getpixel" TARGET_NAME="getpixel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="getpixel" RUN_TARGET_NAME="getpixel">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,6 +481,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719338363591</updated>
       <workItem from="1719338365168" duration="231000" />
+      <workItem from="1719403147301" duration="20000" />
     </task>
     <servers />
   </component>
