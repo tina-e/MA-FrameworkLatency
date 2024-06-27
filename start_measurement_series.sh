@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ITERATIONS=200
-DATA_DIR="last_fixes_2_480"
+DATA_DIR="last_fixes_d3d_vsync"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("getpixel" "none" "windup")
@@ -19,7 +19,7 @@ mkdir "./data/$DATA_DIR"
 sleep "7s"
 
 ./start_measurement.sh $ITERATIONS Direct3D default none fullscreen $DATA_DIR
-./start_measurement.sh $ITERATIONS Direct3D default getpixel fullscreen $DATA_DIR
+# ./start_measurement.sh $ITERATIONS Direct3D default getpixel fullscreen $DATA_DIR
 
 
 # for r in "${!READERS[@]}";

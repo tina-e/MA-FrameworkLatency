@@ -9,7 +9,7 @@ pyautogui.FAILSAFE = False
 ITERATIONS = 50
 PROGRAMS = ['windup', 'getpixel', 'bitblt', 'getdbits']
 TEST_APPS = ['pyapp']
-DATA_DIR = 'data/final_500/'
+DATA_DIR = 'data/final_60/'
 
 
 def start_test_app(test_app):
