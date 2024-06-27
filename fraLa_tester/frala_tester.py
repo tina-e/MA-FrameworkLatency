@@ -7,6 +7,8 @@ import winsound
 import threading
 import pyautogui
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 from subprocess import Popen, PIPE
 
 # otherwise, wont move mouse if it is out of screen area
@@ -53,7 +55,7 @@ class FraLaTester:
 
     # init pixel reader
     def init_fw_latency_tester(self):
-        cmd = [f'.\programs\{self.program_name}.exe']
+        cmd = [f'./programs/{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         # read output of measurement program
         for line in self.latency_tester_process.stdout:
@@ -84,12 +86,29 @@ class FraLaTester:
             pass
             
 
+    def visualize(self, data, id):
+        print(data)
+        data['fw'] = data['fw'] / 1000
+        sns.set_theme(style="whitegrid", context="paper", font_scale=1.3, rc={'figure.figsize':(3, 5), "xtick.bottom": True, "grid.linestyle": ":"})
+        plot = sns.boxplot(data=data, x='program', y='fw', color='#8E8E8D', linewidth=2, fill=False)
+        plot = sns.swarmplot(data=data, x='program', y='fw', color='#9C004B', size=3)
+        max_value = data['fw'].max()
+        max_plot = 2 * data['fw'].median()
+        plot.set_ylim(bottom=0, top=(max_value if (max_value > max_plot) else max_plot))
+        plot.set_ylabel('framework latency (ms)', labelpad=15, fontsize=14)
+        plot.set_xlabel('measurement program', labelpad=15, fontsize=14)
+        plt.savefig(f'{self.out_folder}/{self.program_name}_{id}_visualize.svg', format='svg', bbox_inches='tight')
+        plt.close()
+
+
     def save_data(self):
         print(f'{self.num_measurements} conducted. Saving data...')
         if not os.path.exists(self.out_folder):
             os.makedirs(self.out_folder)
+        id = uuid.uuid4()
         df = pd.DataFrame(self.measurements)
-        df.to_csv(f"{self.out_folder}/{self.program_name}_{uuid.uuid4()}.csv")
+        df.to_csv(f"{self.out_folder}/{self.program_name}_{id}.csv")
+        self.visualize(df, id)
         winsound.Beep(500, 500)
         print('measurements finished. terminating...')
 
