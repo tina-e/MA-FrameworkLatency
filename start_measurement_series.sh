@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ITERATIONS=200
-DATA_DIR="last_fixes_d3d_vsync"
+ITERATIONS=50
+DATA_DIR="finals_psycho"
 
 READERS_ALL=("windup" "getpixel" "bitblt" "getdbits" "none")
 READERS=("getpixel" "none" "windup")
@@ -16,9 +16,9 @@ FRAMEWORKS_NOW=("Unity" "Godot")
 # ./start_measurement.sh $ITERATIONS pygame default windup fullscreen $DATA_DIR
 
 mkdir "./data/$DATA_DIR"
-sleep "7s"
+sleep "25s"
 
-./start_measurement.sh $ITERATIONS Direct3D default none fullscreen $DATA_DIR
+./start_measurement.sh $ITERATIONS EPrime image none fullscreen $DATA_DIR
 # ./start_measurement.sh $ITERATIONS Direct3D default getpixel fullscreen $DATA_DIR
 
 
