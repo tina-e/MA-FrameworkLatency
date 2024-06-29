@@ -11,7 +11,7 @@ int HEIGHT = GetSystemMetrics(SM_CYSCREEN);
 //int HEIGHT = 800;
 
 const int X_RECT = -WIDTH / 2 + 300;
-const int Y_RECT = -HEIGHT / 2 + 300;
+const int Y_RECT = -HEIGHT / 2 + 1080;
 const int NUM_CUBES = 166;
 
 GLfloat VERTICES[][3] = {
@@ -159,7 +159,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
     glutCreateWindow("framework");
     
     glutFullScreen();
-    glutGameModeString("1920x1080:16@60");
+    glutGameModeString("1920x1080:16@500");
     glutEnterGameMode();
 
     glEnable(GL_DEPTH_TEST);
