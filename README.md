@@ -3,7 +3,7 @@
 ## Structure
 
 📁 **analysis**
-<br>Includes notebooks analysis measurement data, and all figures (generated plots)
+<br>Includes notebooks analysis measurement data, and all figures (plots) and illustrations
 <br>|___📁 pixel_reader_validation: validation data (graphics memory accessing frequency) and analysis notebooks for validation
 
 📁 **data**
