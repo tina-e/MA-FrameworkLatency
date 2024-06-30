@@ -10,9 +10,13 @@
 using namespace std;
 using namespace std::chrono;
 
+int x = 5;
+int y = 5;
+int initColor = 0;
+
 int getPixelData(HDC hdc)
 {
-    COLORREF _color = GetPixel(hdc, 5, 5);
+    COLORREF _color = GetPixel(hdc, x, y);
     return int(GetRValue(_color));
 }
 
@@ -20,7 +24,7 @@ void waitForChange(HDC hdcScreen)
 {
     while(true) {
         int color = getPixelData(hdcScreen);
-        if (color > 0) {
+        if (color != initColor) {
             break;
         }
     }
@@ -28,7 +32,20 @@ void waitForChange(HDC hdcScreen)
 
 int main(int argc, char **argv)
 {
+    if (argc == 2)
+    {
+        x = atoi(argv[1]);
+        y = atoi(argv[1]);
+    } else if (argc == 3)
+    {
+        x = atoi(argv[1]);
+        y = atoi(argv[2]);
+    }
+
     HDC hdcScreen = GetDC(NULL);
+    initColor = getPixelData(hdcScreen);
+    Beep(700, 250);
+    Beep(700, 350);
 
     SHORT state = GetKeyState(VK_LBUTTON);
     while (true)
