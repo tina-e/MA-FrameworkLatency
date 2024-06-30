@@ -64,11 +64,15 @@ Then, you can run your measurement series using FraLa:
 
 1. run `frala_tester.py` and pass required arguments: number of measurements and measurement program
    <br> example: `python frala_tester.py 200 windup`
-   <br> optionally, you can pass: - an output directory (default: `./data`) - a position of the pixel you want to observe (default: 5,5) - if the program should terminate as soon as the measurement program could not detect a change in graphics memory (default: False)
+   <br> optionally, you can pass:
+      - an output directory (default: `./data`)
+      - a position of the pixel you want to observe (default: 5,5)
+      - if the program should terminate as soon as the measurement program could not detect a change in graphics memory (default: False)
+   
    <br> example: `python frala_tester.py 200 windup ./my_data 100,100 True`
 
-2. Switch tabs to your test application
-3. FraLa will indicate the start of the measurement series by playing a short acoustic signal
-4. Wait...
-5. As soon as FraLa finished the measurements, you will hear another acoustic signal
-6. in the out folder, there is now a CSV file containing the measurement data as well as a visualization of the results (svg)
+3. Switch tabs to your test application
+4. FraLa will indicate the start of the measurement series by playing a short acoustic signal
+5. Wait...
+6. As soon as FraLa finished the measurements, you will hear another acoustic signal
+7. in the out folder, there is now a CSV file containing the measurement data as well as a visualization of the results (svg)
