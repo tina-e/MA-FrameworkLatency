@@ -44,7 +44,10 @@ class FraLaTester:
         time.sleep(1)
         print('starting in 1')
         time.sleep(1)
-        pyautogui.moveTo(70, 70)
+        if self.x_pos != None and self.y_pos != None:
+            pyautogui.moveTo(self.x_pos + 20, self.y_pos + 20)
+        else:
+            pyautogui.moveTo(25, 25)
         time.sleep(0.5)
         pyautogui.mouseDown()
         time.sleep(0.1)
