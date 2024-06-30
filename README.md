@@ -1,103 +1,74 @@
 # MA-FrameworkLatency
 
+## Structure
 
-## Repo Structure
+📁 **analysis**
+<br>Includes notebooks analysis measurement data, and all figures (generated plots)
+<br>|___📁 pixel_reader_validation: validation data (graphics memory accessing frequency) and analysis notebooks for validation
 
-📁 **framework_tester**
-<br>Includes test programs for different frameworks. Default (from black to hwite on click) and Rects (from black to 1000 random rects on click)
-- GLUT
-- (SDL2)
-- SDL2_OpenGl
-- SDL2_OpenGLES
-- SDL2_Software
-- Java2D
-- JavaSwing
-- pygame
-- pyglet
-- pyqt5
-- tkinter
-- wxpython
-- glumpy (glfw, pyglet, qt, sdl/pygame)
+📁 **data**
+<br>Includes measurement data (CSV files)
+<br>|___📁 finals_frameworks: measurement data for framework latency (all complexity conditions as well as small and large conditionn)
+<br>|___📁 finals_game_engines: measurement data for game engines
+<br>|___📁 finals_psycho: measurement data for software used for psychological experiments
+<br>|___📁 mouse_latency_data: data including mouse latency measurements
+<br>|___📁 vsync_off_60hz: measurement data with disabled VSYNC on 60hz
+<br>|___📁 vsync_on_60hz: measurement data with enabled VSYNC on 60hz
+<br>|___📁 vsync_on_500hz: measurement data with enabled VSYNC on 500hz
+
+📁 **fraLa_projects**
+<br>Includes project files for the FRAmework LAtenca tester
+
+📁 **fraLa_tester**
+<br>Includes executables for the FRAmework LAtenca tester
+<br>|___📁 data: by default, results of FraLa are placed within this directory. currently including data of one example measurement series
+
+📁 **framework_tester_apps**
+<br>Includes executables for all the frameworks
+
+📁 **framework_tester_projects**
+<br>Includes project files for all the frameworks
+
+📁 **fullscreen_tester**
+<br>Includes test scripts to query the current notification state of our default test applications
+
+📁 **pixel_reader_projects**
+<br>Includes project files for our measurement programs (adjusted version for our automated test runs including end-to-end measurements)
 
 📁 **pixel_readers**
-<br>Includes programs which allow for reading a certain pixels's color. Recognizes a click and waits then for certain pixel to turn white. Measures time passed between these events.
-- windows bitblt
-- windows getdbits
-- windows getpixel
-- windows desktop duplication (based on directX, python bindings)
+<br>Includes executables for our measurement programs (adjusted version for our automated test runs including end-to-end measurements)
 
-📁 **framework_tester_wip**
-<br>Work in progress for further frameworks...
-
-📁 **pixel_reader_wip**
-<br>Work in progrress for further pixel readers...
-
-📁 **data**: measurement data
-<br>|___📁 glumpy: glumpy measurements
-<br>|___📁 pilot: first few measurements
-<br>|___📁 test: test measurements to make sure script is working
-
-📁 **analysis**: notebooks for analysis of measurements
-<br>|___📁 glumpy: analysis of glumpy measurements
-<br>|___📁 other: analysis of non-glumpy measurements
-<br>|___📁 test: just messing around
+📁 **vsync_tester**
+<br> Includes scripts for automatically detect VSYNC state
 
 🗎 `fylamd.py`
-<br>controlls yalmd, starts measurement and saves data
-
-🗎 `start_measuremnet_glumpy.sh`
-<br>starts measurement and `fyalmd` for a given pixel reader and glumpy as framework tester
-
-🗎 `start_measurement_series_glumpy.sh`
-<br>starts a measurement series with each of the available pixel readers for glumpy framework tester (with each of the available backends)
+<br>controlls yalmd, starts framework measurements with simultaneously measuring end-to-end latency, and saves data
 
 🗎 `start_measuremnet.sh`
-<br>starts measurement and `fyalmd` for a given pixel reader and a given framework tester
+<br>starts a single measurement series and the `fyalmd`-script for a given pixel reader and a given framework tester
 
 🗎 `start_measurement_series.sh`
-<br>starts a measurement series width each of the available pixel readers for each of the available framework testers (without glumpy)
+<br>starts multiple measurement series with each of the available pixel readers for each of the available framework testers
 
-🗎 `test.py`
-<br>just messing around
+🗎 `noise.png`
+<br>the image displayed in test applications of image condition
 
-
-<br><br>*Testers and Readers compiled for Windows 11.*
+<br><br>_Testers and Readers compiled for Windows 11._
 
 ---
-## Usage
-For measurement series with glumpy:
-- adjust number of iterations and directory for resulting data in `start_measurement_series_glumpy.sh`
-- run `./start_measurement_series_glumpy.sh`
-- just to be safe: minimize/close all windows which do not belong to measurements
 
-For measurement series without glumpy:
-- adjust number of iterations and directory for resulting data in `start_measurement_series.sh`
-- run `./start_measurement_series.sh`
-- just to be safe: minimize/close all windows which do not belong to measurements
----
+## Usage of FraLa
 
-## Required:
-- Python 3.8
-- pip packages
-    - `pip install wxPython`
-    - `pip install pyqt5`
-    - `pip install pyqt6`
-    - `pip install pygame`
-    - `pip install pyglet`
-    - `pip install Pillow`
-    - `pip install d3dshot`
-    - `pip install win32api`
-    - `pip install pygetwindow`
-    - `pip install pyautogui`
-    - `pip install pandas`
-    - `pip install numpy`
-- `glumpy` as described here: https://glumpy.readthedocs.io/en/latest/installation.html
-- download and place `.dll`s next to your python.exe:
-    - `freeglut.dll` (https://freeglut.sourceforge.net/docs/install.php)
-    - `SDL2.dll` (https://github.com/libsdl-org/SDL/releases/tag/release-2.28.5)
+<br> To run a measurement series, start your application to test.
+Then, you can run your measurement series using FraLa:
 
+1. run `frala_tester.py` and pass required arguments: number of measurements and measurement program
+   <br> example: `python frala_tester.py 200 windup`
+   <br> optionally, you can pass: - an output directory (default: `./data`) - a position of the pixel you want to observe (default: 5,5) - if the program should terminate as soon as the measurement program could not detect a change in graphics memory (default: False)
+   <br> example: `python frala_tester.py 200 windup ./my_data 100,100 True`
 
-
-
-
-
+2. Switch tabs to your test application
+3. FraLa will indicate the start of the measurement series by playing a short acoustic signal
+4. Wait...
+5. As soon as FraLa finished the measurements, you will hear another acoustic signal
+6. in the out folder, there is now a CSV file containing the measurement data as well as a visualization of the results (svg)

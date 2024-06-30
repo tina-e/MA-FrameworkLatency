@@ -16,9 +16,11 @@ pyautogui.FAILSAFE = False
 
 
 class FraLaTester:
-    def __init__(self, num_measurements, program_name, out_folder='./data', terminate=False):
+    def __init__(self, num_measurements, program_name, x_pos=None, y_pos=None, out_folder='./data', terminate=False):
         self.num_measurements = num_measurements
         self.program_name = program_name
+        self.x_pos = x_pos
+        self.y_pos = y_pos
         self.out_folder = out_folder
         self.terminate = terminate
 
@@ -55,7 +57,10 @@ class FraLaTester:
 
     # init pixel reader
     def init_fw_latency_tester(self):
-        cmd = [f'./programs/{self.program_name}.exe']
+        if self.x_pos != None and self.y_pos != None:
+            cmd = [f'./programs/{self.program_name}.exe {self.x_pos} {self.y_pos}']
+        else:
+            cmd = [f'./programs/{self.program_name}.exe']
         self.latency_tester_process = Popen(cmd, stdout=PIPE, bufsize=1, universal_newlines=True)
         # read output of measurement program
         for line in self.latency_tester_process.stdout:
@@ -157,14 +162,14 @@ if __name__ == "__main__":
     
     if len(sys.argv) < 3:
         print('arguments required: num_measurements, program_name')
-        print('optional arguments: out_path, terminate')
+        print('optional arguments: pixel position, out_path, terminate')
         print('terminating...')
         sys.exit(-1)
 
-    if len(sys.argv) > 5:
+    if len(sys.argv) > 6:
         print('too many arguments')
         print('arguments required: num_measurements, program_name')
-        print('optional arguments: out_path, terminate')
+        print('optional arguments: pixel position, out_path, terminate')
         print('terminating...')
         sys.exit(-1)
 
@@ -180,13 +185,34 @@ if __name__ == "__main__":
         fraLa.save_data()
         sys.exit(0)
 
+    # two additional argument: out path and position
     if len(sys.argv) == 4:
-        fraLa = FraLaTester(iterations, sys.argv[2], sys.argv[3])
+        x_pos = y_pos = None
+        try:
+            position = sys.argv[3].split[',']
+            x_pos = int(position[0])
+            y_pos = int(position[1])
+        except:
+            print("input for 'position' has to be integer separated by a comma, e.g. 5,5. terminating...")
+            sys.exit(-1)
+        fraLa = FraLaTester(iterations, program_name=sys.argv[2], out_folder=sys.argv[3], x_pos=x_pos, y_pos=y_pos)
         fraLa.measure()
         fraLa.save_data()
         sys.exit(0)
 
+    # three additional arguments: out_path, position, and terminate
     if len(sys.argv) == 5:
+        # validate input for position
+        x_pos = y_pos = None
+        try:
+            position = sys.argv[3].split[',']
+            x_pos = int(position[0])
+            y_pos = int(position[1])
+        except:
+            print("input for 'position' has to be integer separated by a comma, e.g. 5,5. terminating...")
+            sys.exit(-1)
+
+        # validate input for terminate
         if (sys.argv[4] == 'True' or sys.argv[4] == 'true' or sys.argv[4] == '1'):
             terminate = True
         elif (sys.argv[4] == 'False' or sys.argv[4] == 'false' or sys.argv[4] == '0'):
@@ -194,7 +220,7 @@ if __name__ == "__main__":
         else:
             print("input for 'terminate' needs to be convertable to boolean (true/false, 0/1). terminating...")
             sys.exit(-1)
-        fraLa = FraLaTester(iterations, sys.argv[2], sys.argv[3], terminate)
+        fraLa = FraLaTester(iterations, program_name=sys.argv[2], out_folder=sys.argv[3], x_pos=x_pos, y_pos=y_pos, terminate=terminate)
         fraLa.measure()
         fraLa.save_data()
         sys.exit(0)
